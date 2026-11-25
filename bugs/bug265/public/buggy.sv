@@ -28,8 +28,8 @@ module TopModule (
         else if (dig) next = DIGR;
         else if (bump_right) next = WL;
         else next = WR;
-      FALLL: next = ground ? (fall_counter >= 20 ? DEAD : WL) : FALLL;
-      FALLR: next = ground ? (fall_counter >= 21 ? DEAD : WR) : FALLR;
+      FALLL: next = ground ? (fall_counter >= 21 ? DEAD : WL) : FALLL;
+      FALLR: next = ground ? (fall_counter >= 20 ? DEAD : WR) : FALLR;
       DIGL: next = ground ? DIGL : FALLL;
       DIGR: next = ground ? DIGR : FALLR;
       DEAD: next = DEAD;

@@ -1,80 +1,78 @@
 {
  "problem": "Prob155_lemmings4",
- "k": 59,
- "op": "const_pm1",
+ "k": 42,
+ "op": "state_swap",
  "category": "state",
- "line": 50,
- "old": "      fall_counter <= 0;",
- "new": "      fall_counter <= 1;",
- "note": "",
+ "line": 40,
+ "old": "    if (areset) state <= WL;",
+ "new": "    if (areset) state <= WR;",
+ "note": "WL->WR",
  "body_lines": 35,
  "sequential": true,
  "n_lines": 58,
  "text_lhs": [
-  "fall_counter"
+  "state"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 44,
+ "mismatches": 143,
  "samples": 1003,
- "t_fail": 360,
+ "t_fail": 5,
  "out_first_mismatch": {
-  "walk_left": 360,
-  "aaah": 370
+  "walk_left": 5,
+  "walk_right": 5
  },
  "out_mismatch_count": {
-  "walk_left": 2,
-  "aaah": 42
+  "walk_left": 143,
+  "walk_right": 143
  },
  "valid": true,
- "t_act": 5,
- "cyc_act": 1,
+ "t_act": 0,
+ "cyc_act": 0,
  "div_signals": [
-  "fall_counter"
+  "next",
+  "state",
+  "walk_left",
+  "walk_right"
  ],
  "div_order": [
   [
-   "fall_counter",
-   5,
-   1
-  ],
-  [
    "next",
-   345,
-   35
+   0,
+   0
   ],
   [
    "state",
-   355,
-   36
+   0,
+   0
   ],
   [
    "walk_left",
-   355,
-   36
+   0,
+   0
   ],
   [
-   "aaah",
-   365,
-   37
+   "walk_right",
+   0,
+   0
   ]
  ],
  "clk_edges": 502,
- "cyc_fail": 36,
+ "cyc_fail": 1,
  "failing_outputs": [
   "walk_left",
-  "aaah"
+  "walk_right"
  ],
- "latency_cycles": 35,
+ "latency_cycles": 1,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 1,
+ "cyc_act_any": 0,
  "bug_id": "bug266",
  "split": "test",
- "gt_line": 50,
+ "gt_line": 40,
  "gt_signals": [
-  "fall_counter"
+  "state"
  ],
- "long_horizon": true
+ "long_horizon": false
 }

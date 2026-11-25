@@ -176,8 +176,8 @@
     {
      "line": 40,
      "line_end": 40,
-     "stmt": "state <= WL",
-     "rhs": "WL",
+     "stmt": "state <= WR",
+     "rhs": "WR",
      "kind": "seq",
      "block": "always@39",
      "guard": "if (areset)",
@@ -189,7 +189,7 @@
       "areset"
      ],
      "nonblocking": true,
-     "const_rhs": "WL"
+     "const_rhs": "WR"
     },
     {
      "line": 41,
@@ -527,8 +527,8 @@
     {
      "line": 50,
      "line_end": 50,
-     "stmt": "fall_counter <= 1",
-     "rhs": "1",
+     "stmt": "fall_counter <= 0",
+     "rhs": "0",
      "kind": "seq",
      "block": "always@44",
      "guard": "!(state == FALLL || state == FALLR)",

@@ -175,8 +175,8 @@
     {
      "line": 19,
      "line_end": 19,
-     "stmt": "next = in3 ? BYTE3 : BYTE1",
-     "rhs": "in3 ? BYTE3 : BYTE1",
+     "stmt": "next = in3 ? BYTE2 : BYTE1",
+     "rhs": "in3 ? BYTE2 : BYTE1",
      "kind": "comb",
      "block": "alwayscomb@15",
      "guard": "case state == DONE",
@@ -336,7 +336,9 @@
    "kind": "seq",
    "line": 23,
    "clock": "clk",
-   "async_reset": []
+   "async_reset": [
+    "reset"
+   ]
   }
  ],
  "diagnostics": [

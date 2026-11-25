@@ -175,7 +175,7 @@
      "rhs": "pht[train_index] + 1",
      "kind": "seq",
      "block": "always@26",
-     "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)",
+     "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)",
      "guard_lines": [
       27,
       34,
@@ -200,7 +200,7 @@
      "rhs": "pht[train_index] - 1",
      "kind": "seq",
      "block": "always@26",
-     "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)",
+     "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)",
      "guard_lines": [
       27,
       34,
@@ -278,7 +278,7 @@
      "rhs": "{train_history, train_taken}",
      "kind": "seq",
      "block": "always@26",
-     "guard": "!(areset) && if (train_valid) && if (train_mispredicted)",
+     "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)",
      "guard_lines": [
       27,
       34,
@@ -408,7 +408,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)"
   },
   {
    "src": "train_index",
@@ -416,7 +416,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)"
   },
   {
    "src": "areset",
@@ -424,7 +424,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)"
   },
   {
    "src": "train_valid",
@@ -432,7 +432,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)"
   },
   {
    "src": "train_taken",
@@ -440,7 +440,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && if (pht[train_index] < 3 && train_taken)"
   },
   {
    "src": "pht",
@@ -448,7 +448,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_index",
@@ -456,7 +456,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "areset",
@@ -464,7 +464,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_valid",
@@ -472,7 +472,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_taken",
@@ -480,7 +480,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && train_taken)"
+   "guard": "!(areset) && if (!(train_valid)) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "areset",
@@ -528,7 +528,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 40,
-   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+   "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)"
   },
   {
    "src": "train_taken",
@@ -536,7 +536,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 40,
-   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+   "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)"
   },
   {
    "src": "areset",
@@ -544,7 +544,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 40,
-   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+   "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)"
   },
   {
    "src": "train_valid",
@@ -552,7 +552,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 40,
-   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+   "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)"
   },
   {
    "src": "train_mispredicted",
@@ -560,7 +560,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 40,
-   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+   "guard": "!(areset) && if (!(train_valid)) && if (train_mispredicted)"
   },
   {
    "src": "predict_history_r",

@@ -237,8 +237,8 @@
     {
      "line": 23,
      "line_end": 23,
-     "stmt": "next = s[1] ? C1 : (s[0] ? B2 : A2)",
-     "rhs": "s[1] ? C1 : (s[0] ? B2 : A2)",
+     "stmt": "next = s[1] ? C1 : (s[0] ? B2 : B1)",
+     "rhs": "s[1] ? C1 : (s[0] ? B2 : B1)",
      "kind": "comb",
      "block": "always@19",
      "guard": "case state == B2",
@@ -297,8 +297,8 @@
     {
      "line": 26,
      "line_end": 26,
-     "stmt": "next = s[2] ? D1 : D1",
-     "rhs": "s[2] ? D1 : D1",
+     "stmt": "next = s[2] ? D1 : C2",
+     "rhs": "s[2] ? D1 : C2",
      "kind": "comb",
      "block": "always@19",
      "guard": "case state == D1",

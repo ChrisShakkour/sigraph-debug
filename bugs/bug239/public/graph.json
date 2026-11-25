@@ -43,8 +43,8 @@
     {
      "line": 42,
      "line_end": 42,
-     "stmt": "out_byte = done ? byte_r[8:1] : 8'hx",
-     "rhs": "done ? byte_r[8:1] : 8'hx",
+     "stmt": "out_byte = done ? 8'hx : byte_r[8:1]",
+     "rhs": "done ? 8'hx : byte_r[8:1]",
      "kind": "comb",
      "block": "assign@42",
      "guard": "",
@@ -330,8 +330,8 @@
     {
      "line": 27,
      "line_end": 27,
-     "stmt": "next = in ? STOP : B0",
-     "rhs": "in ? STOP : B0",
+     "stmt": "next = in ? START : B0",
+     "rhs": "in ? START : B0",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == DONE",

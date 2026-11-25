@@ -8,7 +8,7 @@ module TopModule (
   parameter A=0,B=1,C=2,D=3,E=4,F=5;
   reg[2:0] state, next;
 
-  always @(posedge clk, posedge reset)
+  always @(posedge clk)
     if (reset) state <= A;
     else state <= next;
 
@@ -18,7 +18,7 @@ module TopModule (
       B: next = w ? C : D;
       C: next = w ? E : D;
       D: next = w ? F : A;
-      E: next = w ? E : D;
+      E: next = w ? F : D;
       F: next = w ? C : D;
       default: next = 'x;
     endcase

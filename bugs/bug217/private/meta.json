@@ -1,35 +1,36 @@
 {
  "problem": "Prob138_2012_q2fsm",
- "k": 5,
- "op": "ternary_swap",
- "category": "control",
- "line": 17,
- "old": "      A: next = w ? B : A;",
- "new": "      A: next = w ? A : B;",
- "note": "",
+ "k": 3,
+ "op": "state_swap",
+ "category": "state",
+ "line": 12,
+ "old": "    if (reset) state <= A;",
+ "new": "    if (reset) state <= B;",
+ "note": "A->B",
  "body_lines": 16,
  "sequential": true,
  "n_lines": 29,
  "text_lhs": [
-  "next"
+  "state"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 46,
+ "mismatches": 4,
  "samples": 400,
- "t_fail": 210,
+ "t_fail": 200,
  "out_first_mismatch": {
-  "z": 210
+  "z": 200
  },
  "out_mismatch_count": {
-  "z": 46
+  "z": 4
  },
  "valid": true,
  "t_act": 175,
- "cyc_act": 19,
+ "cyc_act": 18,
  "div_signals": [
-  "next"
+  "next",
+  "state"
  ],
  "div_order": [
   [
@@ -39,29 +40,29 @@
   ],
   [
    "state",
-   185,
-   19
+   175,
+   18
   ],
   [
    "z",
-   205,
-   21
+   195,
+   20
   ]
  ],
  "clk_edges": 200,
- "cyc_fail": 21,
+ "cyc_fail": 20,
  "failing_outputs": [
   "z"
  ],
  "latency_cycles": 2,
- "fails_seed1234": true,
+ "fails_seed1234": false,
  "fails_seed98765": true,
  "cyc_act_any": 18,
  "bug_id": "bug217",
  "split": "dev",
- "gt_line": 17,
+ "gt_line": 12,
  "gt_signals": [
-  "next"
+  "state"
  ],
  "long_horizon": false
 }

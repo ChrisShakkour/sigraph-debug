@@ -37,7 +37,7 @@ module TopModule (
   end
 
   always @(posedge clk, posedge areset) begin
-    if (areset) state <= WL;
+    if (areset) state <= WR;
       else state <= next;
   end
 
@@ -47,7 +47,7 @@ module TopModule (
         fall_counter <= fall_counter + 1'b1;
     end
     else
-      fall_counter <= 1;
+      fall_counter <= 0;
   end
 
   assign walk_left = (state==WL);

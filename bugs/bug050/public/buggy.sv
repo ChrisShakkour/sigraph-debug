@@ -7,12 +7,12 @@ module TopModule (
 
   reg [31:0] d_last;
 
-  always @(posedge clk, posedge reset) begin
+  always @(posedge clk) begin
     d_last <= in;
     if (reset)
       out <= '0;
     else
-      out <= out | (~in & d_last);
+      out <= out & (~in & d_last);
   end
 
 endmodule

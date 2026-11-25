@@ -1,69 +1,67 @@
 {
  "problem": "Prob107_fsm1s",
- "k": 2,
- "op": "sync_to_async",
- "category": "state",
- "line": 19,
- "old": "    always @(posedge clk) begin",
- "new": "    always @(posedge clk, posedge reset) begin",
+ "k": 0,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 14,
+ "old": "      A: next = in ? A : B;",
+ "new": "      A: next = in ? B : A;",
  "note": "",
  "body_lines": 12,
  "sequential": true,
  "n_lines": 26,
  "text_lhs": [
-  "state"
+  "next"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 57,
+ "mismatches": 118,
  "samples": 230,
- "t_fail": 85,
+ "t_fail": 40,
  "out_first_mismatch": {
-  "out": 85
+  "out": 40
  },
  "out_mismatch_count": {
-  "out": 57
+  "out": 118
  },
  "valid": true,
- "t_act": 0,
- "cyc_act": 0,
+ "t_act": 25,
+ "cyc_act": 4,
  "div_signals": [
-  "next",
-  "out",
-  "state"
+  "next"
  ],
  "div_order": [
   [
    "next",
-   0,
-   0
+   25,
+   3
   ],
   [
    "out",
-   0,
-   0
+   35,
+   4
   ],
   [
    "state",
-   0,
-   0
+   35,
+   4
   ]
  ],
  "clk_edges": 115,
- "cyc_fail": 9,
+ "cyc_fail": 4,
  "failing_outputs": [
   "out"
  ],
- "latency_cycles": 9,
+ "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 0,
+ "cyc_act_any": 3,
  "bug_id": "bug129",
  "split": "test",
- "gt_line": 19,
+ "gt_line": 14,
  "gt_signals": [
-  "state"
+  "next"
  ],
- "long_horizon": true
+ "long_horizon": false
 }

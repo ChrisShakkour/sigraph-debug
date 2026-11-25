@@ -1,12 +1,12 @@
 {
  "problem": "Prob151_review2015_fsm",
- "k": 14,
+ "k": 5,
  "op": "state_swap",
  "category": "control",
- "line": 26,
- "old": "      B2: next = B3;",
- "new": "      B2: next = Count;",
- "note": "B3->Count",
+ "line": 21,
+ "old": "      S1: next = States'(data ? S11: S);",
+ "new": "      S1: next = States'(data ? S11: S1);",
+ "note": "S->S1",
  "body_lines": 32,
  "sequential": true,
  "n_lines": 54,
@@ -16,68 +16,68 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 798,
+ "mismatches": 240,
  "samples": 5069,
- "t_fail": 120,
+ "t_fail": 2970,
  "out_first_mismatch": {
-  "shift_ena": 120,
-  "counting": 120,
-  "done": 140
+  "shift_ena": 2970,
+  "counting": 3010,
+  "done": 16830
  },
  "out_mismatch_count": {
-  "shift_ena": 796,
-  "counting": 798,
-  "done": 740
+  "shift_ena": 92,
+  "counting": 164,
+  "done": 40
  },
  "valid": true,
- "t_act": 105,
- "cyc_act": 12,
+ "t_act": 25,
+ "cyc_act": 4,
  "div_signals": [
   "next"
  ],
  "div_order": [
   [
    "next",
-   105,
-   11
-  ],
-  [
-   "counting",
-   115,
-   12
-  ],
-  [
-   "shift_ena",
-   115,
-   12
+   25,
+   3
   ],
   [
    "state",
-   115,
-   12
+   35,
+   4
+  ],
+  [
+   "shift_ena",
+   2965,
+   297
+  ],
+  [
+   "counting",
+   3005,
+   301
   ],
   [
    "done",
-   135,
-   14
+   16825,
+   1683
   ]
  ],
  "clk_edges": 2535,
- "cyc_fail": 12,
+ "cyc_fail": 297,
  "failing_outputs": [
   "shift_ena",
   "counting",
   "done"
  ],
- "latency_cycles": 0,
+ "latency_cycles": 293,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 11,
+ "cyc_act_any": 3,
  "bug_id": "bug253",
  "split": "test",
- "gt_line": 26,
+ "gt_line": 21,
  "gt_signals": [
   "next"
  ],
- "long_horizon": false
+ "long_horizon": true
 }

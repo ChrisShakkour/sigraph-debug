@@ -37,9 +37,9 @@ module TopModule (
   end
 
   always_comb begin
-    shift_ena = 0; counting = 0; done = 0;
+    shift_ena = 1; counting = 0; done = 0;
     if (state == B0 || state == B1 || state == B2 || state == B3)
-      shift_ena = 2;
+      shift_ena = 1;
     if (state == Count)
       counting = 1;
     if (state == Wait)

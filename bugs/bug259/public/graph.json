@@ -52,8 +52,8 @@
     {
      "line": 44,
      "line_end": 44,
-     "stmt": "predict_taken = predict_valid ? pht[predict_index][0] : 1'bx",
-     "rhs": "predict_valid ? pht[predict_index][0] : 1'bx",
+     "stmt": "predict_taken = predict_valid ? pht[predict_index][1] : 1'bx",
+     "rhs": "predict_valid ? pht[predict_index][1] : 1'bx",
      "kind": "comb",
      "block": "assign@44",
      "guard": "",
@@ -175,7 +175,7 @@
      "rhs": "pht[train_index] + 1",
      "kind": "seq",
      "block": "always@26",
-     "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)",
+     "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)",
      "guard_lines": [
       27,
       34,
@@ -200,7 +200,7 @@
      "rhs": "pht[train_index] - 1",
      "kind": "seq",
      "block": "always@26",
-     "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)",
+     "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)",
      "guard_lines": [
       27,
       34,
@@ -408,7 +408,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)"
   },
   {
    "src": "train_index",
@@ -416,7 +416,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)"
   },
   {
    "src": "areset",
@@ -424,7 +424,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)"
   },
   {
    "src": "train_valid",
@@ -432,7 +432,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)"
   },
   {
    "src": "train_taken",
@@ -440,7 +440,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 36,
-   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] > 3 && train_taken)"
   },
   {
    "src": "pht",
@@ -448,7 +448,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_index",
@@ -456,7 +456,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "areset",
@@ -464,7 +464,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_valid",
@@ -472,7 +472,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "train_taken",
@@ -480,7 +480,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 38,
-   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] > 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
   },
   {
    "src": "areset",

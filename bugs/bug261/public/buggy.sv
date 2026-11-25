@@ -17,11 +17,11 @@ module TopModule (
       BYTE1: next = in3 ? BYTE2 : BYTE1;
       BYTE2: next = BYTE3;
       BYTE3: next = DONE;
-      DONE: next = in3 ? BYTE2 : BYTE1;
+      DONE: next = in3 ? BYTE2 : BYTE2;
     endcase
   end
 
-  always @(posedge clk, posedge reset) begin
+  always @(posedge clk) begin
     if (reset) state <= BYTE1;
       else state <= next;
   end

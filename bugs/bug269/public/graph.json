@@ -567,8 +567,8 @@
     {
      "line": 70,
      "line_end": 70,
-     "stmt": "fcount <= fcount - 1'b1",
-     "rhs": "fcount - 1'b1",
+     "stmt": "fcount <= fcount + 1'b1",
+     "rhs": "fcount + 1'b1",
      "kind": "seq",
      "block": "always@64",
      "guard": "!(!counting) && !(fcount == 999)",
@@ -623,7 +623,7 @@
      "rhs": "scount - 1'b1",
      "kind": "seq",
      "block": "always@57",
-     "guard": "!(shift_ena) && if (counting && fcount == 999)",
+     "guard": "!(shift_ena) && if (counting && fcount == 998)",
      "guard_lines": [
       58,
       60
@@ -964,7 +964,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 61,
-   "guard": "!(shift_ena) && if (counting && fcount == 999)"
+   "guard": "!(shift_ena) && if (counting && fcount == 998)"
   },
   {
    "src": "shift_ena",
@@ -972,7 +972,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 61,
-   "guard": "!(shift_ena) && if (counting && fcount == 999)"
+   "guard": "!(shift_ena) && if (counting && fcount == 998)"
   },
   {
    "src": "counting",
@@ -980,7 +980,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 61,
-   "guard": "!(shift_ena) && if (counting && fcount == 999)"
+   "guard": "!(shift_ena) && if (counting && fcount == 998)"
   },
   {
    "src": "fcount",
@@ -988,7 +988,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 61,
-   "guard": "!(shift_ena) && if (counting && fcount == 999)"
+   "guard": "!(shift_ena) && if (counting && fcount == 998)"
   },
   {
    "src": "scount",

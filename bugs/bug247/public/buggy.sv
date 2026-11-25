@@ -22,7 +22,7 @@ module TopModule (
       B1: next = s[1] ? C1 : (s[0] ? B1 : A2);
       B2: next = s[1] ? C1 : (s[0] ? B2 : A2);
       C1: next = s[2] ? D1 : (s[1] ? C1 : B2);
-      C2: next = s[2] ? D1 : (s[1] ? C2 : B2);
+      C2: next = s[1] ? D1 : (s[1] ? C2 : B2);
       D1: next = s[2] ? D1 : C2;
       default: next = 'x;
     endcase
@@ -31,7 +31,7 @@ module TopModule (
   assign {fr2, fr1, fr0, dfr} = fr;
   always_comb begin
     case (state)
-      A2: fr = 4'b0;
+      A2: fr = 4'b1111;
       B1: fr = 4'b0110;
       B2: fr = 4'b0111;
       C1: fr = 4'b0010;

@@ -252,8 +252,8 @@
     {
      "line": 23,
      "line_end": 23,
-     "stmt": "next = r[0] ? C : A",
-     "rhs": "r[0] ? C : A",
+     "stmt": "next = r[1] ? C : A",
+     "rhs": "r[1] ? C : A",
      "kind": "comb",
      "block": "always@16",
      "guard": "case state == C",
@@ -272,8 +272,8 @@
     {
      "line": 24,
      "line_end": 24,
-     "stmt": "next = r[2] ? D : A",
-     "rhs": "r[2] ? D : A",
+     "stmt": "next = r[1] ? D : A",
+     "rhs": "r[1] ? D : A",
      "kind": "comb",
      "block": "always@16",
      "guard": "case state == D",

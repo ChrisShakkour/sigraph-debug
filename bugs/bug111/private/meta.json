@@ -1,69 +1,67 @@
 {
  "problem": "Prob095_review2015_fsmshift",
- "k": 6,
- "op": "cond_invert",
- "category": "state",
- "line": 22,
- "old": "    if (reset) state <= B0;",
- "new": "    if (!(reset)) state <= B0;",
- "note": "",
+ "k": 1,
+ "op": "state_swap",
+ "category": "control",
+ "line": 14,
+ "old": "      B1: next = B2;",
+ "new": "      B1: next = B3;",
+ "note": "B2->B3",
  "body_lines": 14,
  "sequential": true,
  "n_lines": 27,
  "text_lhs": [
-  "state"
+  "next"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 123,
+ "mismatches": 2,
  "samples": 200,
- "t_fail": 390,
+ "t_fail": 380,
  "out_first_mismatch": {
-  "shift_ena": 390
+  "shift_ena": 380
  },
  "out_mismatch_count": {
-  "shift_ena": 123
+  "shift_ena": 2
  },
  "valid": true,
- "t_act": 15,
- "cyc_act": 2,
+ "t_act": 355,
+ "cyc_act": 37,
  "div_signals": [
-  "next",
-  "shift_ena",
-  "state"
+  "next"
  ],
  "div_order": [
   [
    "next",
-   15,
-   2
-  ],
-  [
-   "shift_ena",
-   15,
-   2
+   355,
+   36
   ],
   [
    "state",
-   15,
-   2
+   365,
+   37
+  ],
+  [
+   "shift_ena",
+   375,
+   38
   ]
  ],
  "clk_edges": 100,
- "cyc_fail": 39,
+ "cyc_fail": 38,
  "failing_outputs": [
   "shift_ena"
  ],
- "latency_cycles": 37,
+ "latency_cycles": 1,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 2,
+ "cyc_act_any": 36,
  "bug_id": "bug111",
  "split": "test",
- "gt_line": 22,
+ "gt_line": 14,
  "gt_signals": [
-  "state"
+  "next"
  ],
- "long_horizon": true
+ "long_horizon": false
 }

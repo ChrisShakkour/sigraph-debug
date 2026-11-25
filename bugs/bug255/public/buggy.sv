@@ -17,7 +17,7 @@ module TopModule (
 
   always_comb begin
     case (state)
-      WL: if (!ground) next = FALLL;
+      WL: if (ground) next = FALLL;
         else if (dig) next = DIGL;
         else if (bump_left) next = WR;
         else next = WL;
@@ -39,7 +39,7 @@ module TopModule (
   end
 
   assign walk_left = (state==WL);
-  assign walk_right = (state!=WR);
+  assign walk_right = (state==WR);
   assign aaah = (state == FALLL) || (state == FALLR);
   assign digging = (state == DIGL) || (state == DIGR);
 

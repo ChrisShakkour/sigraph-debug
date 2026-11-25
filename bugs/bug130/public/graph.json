@@ -119,8 +119,8 @@
     {
      "line": 14,
      "line_end": 14,
-     "stmt": "next = in ? B : A",
-     "rhs": "in ? B : A",
+     "stmt": "next = in ? A : B",
+     "rhs": "in ? A : B",
      "kind": "comb",
      "block": "alwayscomb@13",
      "guard": "case state == A",
@@ -243,7 +243,9 @@
    "kind": "seq",
    "line": 19,
    "clock": "clk",
-   "async_reset": []
+   "async_reset": [
+    "reset"
+   ]
   }
  ],
  "diagnostics": [

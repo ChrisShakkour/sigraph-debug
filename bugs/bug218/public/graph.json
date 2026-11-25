@@ -119,8 +119,8 @@
     {
      "line": 17,
      "line_end": 17,
-     "stmt": "next = w ? B : A",
-     "rhs": "w ? B : A",
+     "stmt": "next = w ? A : B",
+     "rhs": "w ? A : B",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == A",
@@ -219,8 +219,8 @@
     {
      "line": 22,
      "line_end": 22,
-     "stmt": "next = w ? D : C",
-     "rhs": "w ? D : C",
+     "stmt": "next = w ? C : D",
+     "rhs": "w ? C : D",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == F",

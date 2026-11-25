@@ -269,7 +269,7 @@
   "gt_signals": [
    "q"
   ],
-  "latency_cycles": 7,
+  "latency_cycles": 1,
   "long_horizon": false,
   "mismatches": 185,
   "failing_outputs": [
@@ -369,7 +369,7 @@
   "gt_signals": [
    "q"
   ],
-  "latency_cycles": 6,
+  "latency_cycles": 1,
   "long_horizon": false,
   "mismatches": 41,
   "failing_outputs": [
@@ -429,7 +429,7 @@
   "gt_signals": [
    "d_last"
   ],
-  "latency_cycles": 3,
+  "latency_cycles": 0,
   "long_horizon": false,
   "mismatches": 205,
   "failing_outputs": [
@@ -869,7 +869,7 @@
   "gt_signals": [
    "sr"
   ],
-  "latency_cycles": 4,
+  "latency_cycles": 3,
   "long_horizon": false,
   "mismatches": 84,
   "failing_outputs": [
@@ -983,27 +983,6 @@
   "bug_id": "bug050",
   "problem": "Prob066_edgecapture",
   "split": "test",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 10,
-  "gt_signals": [
-   "out",
-   "d_last"
-  ],
-  "latency_cycles": 10,
-  "long_horizon": true,
-  "mismatches": 100,
-  "failing_outputs": [
-   "out"
-  ],
-  "sequential": true,
-  "body_lines": 8,
-  "gt_hops": 0
- },
- {
-  "bug_id": "bug051",
-  "problem": "Prob066_edgecapture",
-  "split": "test",
   "op": "bit_op",
   "category": "datapath",
   "gt_line": 15,
@@ -1021,7 +1000,7 @@
   "gt_hops": 0
  },
  {
-  "bug_id": "bug052",
+  "bug_id": "bug051",
   "problem": "Prob066_edgecapture",
   "split": "test",
   "op": "nb_to_b",
@@ -1039,6 +1018,26 @@
   "sequential": true,
   "body_lines": 8,
   "gt_hops": 1
+ },
+ {
+  "bug_id": "bug052",
+  "problem": "Prob066_edgecapture",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 239,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug053",
@@ -1709,26 +1708,6 @@
   "bug_id": "bug086",
   "problem": "Prob082_lfsr32",
   "split": "dev",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 16,
-  "gt_signals": [
-   "q"
-  ],
-  "latency_cycles": 77,
-  "long_horizon": true,
-  "mismatches": 21,
-  "failing_outputs": [
-   "q"
-  ],
-  "sequential": true,
-  "body_lines": 14,
-  "gt_hops": 0
- },
- {
-  "bug_id": "bug087",
-  "problem": "Prob082_lfsr32",
-  "split": "dev",
   "op": "index_shift",
   "category": "datapath",
   "gt_line": 12,
@@ -1744,6 +1723,26 @@
   "sequential": true,
   "body_lines": 14,
   "gt_hops": 1
+ },
+ {
+  "bug_id": "bug087",
+  "problem": "Prob082_lfsr32",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 18,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 199965,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug088",
@@ -1875,7 +1874,7 @@
   "gt_signals": [
    "q"
   ],
-  "latency_cycles": 7,
+  "latency_cycles": 1,
   "long_horizon": false,
   "mismatches": 26,
   "failing_outputs": [
@@ -2209,26 +2208,6 @@
   "bug_id": "bug111",
   "problem": "Prob095_review2015_fsmshift",
   "split": "test",
-  "op": "cond_invert",
-  "category": "state",
-  "gt_line": 22,
-  "gt_signals": [
-   "state"
-  ],
-  "latency_cycles": 37,
-  "long_horizon": true,
-  "mismatches": 123,
-  "failing_outputs": [
-   "shift_ena"
-  ],
-  "sequential": true,
-  "body_lines": 14,
-  "gt_hops": 1
- },
- {
-  "bug_id": "bug112",
-  "problem": "Prob095_review2015_fsmshift",
-  "split": "test",
   "op": "state_swap",
   "category": "control",
   "gt_line": 14,
@@ -2244,6 +2223,26 @@
   "sequential": true,
   "body_lines": 14,
   "gt_hops": 2
+ },
+ {
+  "bug_id": "bug112",
+  "problem": "Prob095_review2015_fsmshift",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 22,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 5,
+  "long_horizon": false,
+  "mismatches": 123,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": true,
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug113",
@@ -2572,26 +2571,6 @@
   "bug_id": "bug129",
   "problem": "Prob107_fsm1s",
   "split": "test",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 19,
-  "gt_signals": [
-   "state"
-  ],
-  "latency_cycles": 9,
-  "long_horizon": true,
-  "mismatches": 57,
-  "failing_outputs": [
-   "out"
-  ],
-  "sequential": true,
-  "body_lines": 12,
-  "gt_hops": 1
- },
- {
-  "bug_id": "bug130",
-  "problem": "Prob107_fsm1s",
-  "split": "test",
   "op": "ternary_swap",
   "category": "control",
   "gt_line": 14,
@@ -2607,6 +2586,26 @@
   "sequential": true,
   "body_lines": 12,
   "gt_hops": 2
+ },
+ {
+  "bug_id": "bug130",
+  "problem": "Prob107_fsm1s",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 19,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 57,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug131",
@@ -2792,26 +2791,6 @@
   "bug_id": "bug140",
   "problem": "Prob111_fsm2s",
   "split": "test",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 20,
-  "gt_signals": [
-   "state"
-  ],
-  "latency_cycles": 8,
-  "long_horizon": true,
-  "mismatches": 21,
-  "failing_outputs": [
-   "out"
-  ],
-  "sequential": true,
-  "body_lines": 12,
-  "gt_hops": 1
- },
- {
-  "bug_id": "bug141",
-  "problem": "Prob111_fsm2s",
-  "split": "test",
   "op": "ternary_swap",
   "category": "control",
   "gt_line": 16,
@@ -2827,6 +2806,26 @@
   "sequential": true,
   "body_lines": 12,
   "gt_hops": 2
+ },
+ {
+  "bug_id": "bug141",
+  "problem": "Prob111_fsm2s",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 21,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 128,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug142",
@@ -3358,7 +3357,7 @@
   "gt_signals": [
    "state"
   ],
-  "latency_cycles": 7,
+  "latency_cycles": 1,
   "long_horizon": false,
   "mismatches": 3,
   "failing_outputs": [
@@ -3816,26 +3815,6 @@
   "bug_id": "bug191",
   "problem": "Prob128_fsm_ps2",
   "split": "test",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 23,
-  "gt_signals": [
-   "state"
-  ],
-  "latency_cycles": 77,
-  "long_horizon": true,
-  "mismatches": 1,
-  "failing_outputs": [
-   "done"
-  ],
-  "sequential": true,
-  "body_lines": 14,
-  "gt_hops": 1
- },
- {
-  "bug_id": "bug192",
-  "problem": "Prob128_fsm_ps2",
-  "split": "test",
   "op": "state_swap",
   "category": "control",
   "gt_line": 19,
@@ -3851,6 +3830,26 @@
   "sequential": true,
   "body_lines": 14,
   "gt_hops": 2
+ },
+ {
+  "bug_id": "bug192",
+  "problem": "Prob128_fsm_ps2",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 23,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 1,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug193",
@@ -4262,7 +4261,7 @@
   "gt_signals": [
    "state"
   ],
-  "latency_cycles": 222,
+  "latency_cycles": 161,
   "long_horizon": true,
   "mismatches": 16,
   "failing_outputs": [
@@ -4316,15 +4315,35 @@
   "bug_id": "bug216",
   "problem": "Prob138_2012_q2fsm",
   "split": "dev",
-  "op": "sync_to_async",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 21,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 132,
+  "long_horizon": true,
+  "mismatches": 6,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16,
+  "gt_hops": 2
+ },
+ {
+  "bug_id": "bug217",
+  "problem": "Prob138_2012_q2fsm",
+  "split": "dev",
+  "op": "state_swap",
   "category": "state",
-  "gt_line": 11,
+  "gt_line": 12,
   "gt_signals": [
    "state"
   ],
-  "latency_cycles": 172,
-  "long_horizon": true,
-  "mismatches": 1,
+  "latency_cycles": 2,
+  "long_horizon": false,
+  "mismatches": 4,
   "failing_outputs": [
    "z"
   ],
@@ -4333,7 +4352,7 @@
   "gt_hops": 1
  },
  {
-  "bug_id": "bug217",
+  "bug_id": "bug218",
   "problem": "Prob138_2012_q2fsm",
   "split": "dev",
   "op": "ternary_swap",
@@ -4345,26 +4364,6 @@
   "latency_cycles": 2,
   "long_horizon": false,
   "mismatches": 46,
-  "failing_outputs": [
-   "z"
-  ],
-  "sequential": true,
-  "body_lines": 16,
-  "gt_hops": 2
- },
- {
-  "bug_id": "bug218",
-  "problem": "Prob138_2012_q2fsm",
-  "split": "dev",
-  "op": "ternary_swap",
-  "category": "control",
-  "gt_line": 22,
-  "gt_signals": [
-   "next"
-  ],
-  "latency_cycles": 14,
-  "long_horizon": true,
-  "mismatches": 20,
   "failing_outputs": [
    "z"
   ],
@@ -4713,7 +4712,7 @@
   "bug_id": "bug235",
   "problem": "Prob144_conwaylife",
   "split": "dev",
-  "op": "const_pm1",
+  "op": "rel_op",
   "category": "datapath",
   "gt_line": 10,
   "gt_signals": [
@@ -4733,15 +4732,15 @@
   "bug_id": "bug236",
   "problem": "Prob144_conwaylife",
   "split": "dev",
-  "op": "arith_op",
+  "op": "const_pm1",
   "category": "state",
-  "gt_line": 25,
+  "gt_line": 27,
   "gt_signals": [
    "q"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 778,
+  "mismatches": 780,
   "failing_outputs": [
    "q"
   ],
@@ -4779,7 +4778,7 @@
   "gt_signals": [
    "state"
   ],
-  "latency_cycles": 222,
+  "latency_cycles": 161,
   "long_horizon": true,
   "mismatches": 16,
   "failing_outputs": [
@@ -4794,43 +4793,42 @@
   "bug_id": "bug239",
   "problem": "Prob146_fsm_serialdata",
   "split": "test",
-  "op": "state_swap",
+  "op": "ternary_swap",
   "category": "control",
-  "gt_line": 27,
+  "gt_line": 42,
   "gt_signals": [
-   "next"
+   "out_byte"
   ],
-  "latency_cycles": 37,
-  "long_horizon": true,
-  "mismatches": 22,
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 38,
+  "failing_outputs": [
+   "out_byte"
+  ],
+  "sequential": true,
+  "body_lines": 26,
+  "gt_hops": 0
+ },
+ {
+  "bug_id": "bug240",
+  "problem": "Prob146_fsm_serialdata",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 41,
+  "gt_signals": [
+   "done"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 904,
   "failing_outputs": [
    "done",
    "out_byte"
   ],
   "sequential": true,
   "body_lines": 26,
-  "gt_hops": 2
- },
- {
-  "bug_id": "bug240",
-  "problem": "Prob146_fsm_serialdata",
-  "split": "test",
-  "op": "ternary_swap",
-  "category": "control",
-  "gt_line": 26,
-  "gt_signals": [
-   "next"
-  ],
-  "latency_cycles": 0,
-  "long_horizon": false,
-  "mismatches": 64,
-  "failing_outputs": [
-   "out_byte",
-   "done"
-  ],
-  "sequential": true,
-  "body_lines": 26,
-  "gt_hops": 2
+  "gt_hops": 0
  },
  {
   "bug_id": "bug241",
@@ -4844,7 +4842,7 @@
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 12,
+  "mismatches": 217,
   "failing_outputs": [
    "q",
    "state"
@@ -4879,13 +4877,13 @@
   "split": "test",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 22,
+  "gt_line": 19,
   "gt_signals": [
    "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 604,
+  "mismatches": 276,
   "failing_outputs": [
    "g"
   ],
@@ -4899,13 +4897,13 @@
   "split": "test",
   "op": "index_shift",
   "category": "datapath",
-  "gt_line": 23,
+  "gt_line": 24,
   "gt_signals": [
    "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 136,
+  "mismatches": 58,
   "failing_outputs": [
    "g"
   ],
@@ -4939,18 +4937,16 @@
   "split": "test",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 26,
+  "gt_line": 23,
   "gt_signals": [
    "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 1781,
+  "mismatches": 66,
   "failing_outputs": [
-   "fr0",
-   "dfr",
-   "fr1",
-   "fr2"
+   "fr2",
+   "dfr"
   ],
   "sequential": true,
   "body_lines": 28,
@@ -4960,24 +4956,24 @@
   "bug_id": "bug247",
   "problem": "Prob149_ece241_2013_q4",
   "split": "test",
-  "op": "const_pm1",
+  "op": "index_shift",
   "category": "datapath",
-  "gt_line": 34,
+  "gt_line": 25,
   "gt_signals": [
-   "fr"
+   "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 636,
+  "mismatches": 150,
   "failing_outputs": [
-   "fr2",
-   "fr1",
    "fr0",
-   "dfr"
+   "dfr",
+   "fr1",
+   "fr2"
   ],
   "sequential": true,
   "body_lines": 28,
-  "gt_hops": 1
+  "gt_hops": 3
  },
  {
   "bug_id": "bug248",
@@ -5008,15 +5004,15 @@
   "split": "test",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 24,
+  "gt_line": 21,
   "gt_signals": [
-   "done"
+   "Count_next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 52,
+  "mismatches": 28,
   "failing_outputs": [
-   "done"
+   "Count_next"
   ],
   "sequential": false,
   "body_lines": 9,
@@ -5034,7 +5030,7 @@
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 96,
+  "mismatches": 35,
   "failing_outputs": [
    "S_next"
   ],
@@ -5048,15 +5044,15 @@
   "split": "test",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 26,
+  "gt_line": 25,
   "gt_signals": [
-   "shift_ena"
+   "counting"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 27,
+  "mismatches": 52,
   "failing_outputs": [
-   "shift_ena"
+   "counting"
   ],
   "sequential": false,
   "body_lines": 9,
@@ -5090,13 +5086,13 @@
   "split": "test",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 26,
+  "gt_line": 21,
   "gt_signals": [
    "next"
   ],
-  "latency_cycles": 0,
-  "long_horizon": false,
-  "mismatches": 798,
+  "latency_cycles": 293,
+  "long_horizon": true,
+  "mismatches": 240,
   "failing_outputs": [
    "shift_ena",
    "counting",
@@ -5112,13 +5108,15 @@
   "split": "test",
   "op": "const_pm1",
   "category": "datapath",
-  "gt_line": 42,
+  "gt_line": 40,
   "gt_signals": [
-   "shift_ena"
+   "shift_ena",
+   "counting",
+   "done"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 256,
+  "mismatches": 4810,
   "failing_outputs": [
    "shift_ena"
   ],
@@ -5130,21 +5128,24 @@
   "bug_id": "bug255",
   "problem": "Prob152_lemmings3",
   "split": "dev",
-  "op": "eq_neq",
+  "op": "drop_not",
   "category": "control",
-  "gt_line": 42,
+  "gt_line": 20,
   "gt_signals": [
-   "walk_right"
+   "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 443,
+  "mismatches": 341,
   "failing_outputs": [
+   "walk_left",
+   "aaah",
+   "digging",
    "walk_right"
   ],
   "sequential": true,
   "body_lines": 26,
-  "gt_hops": 0
+  "gt_hops": 2
  },
  {
   "bug_id": "bug256",
@@ -5173,38 +5174,36 @@
   "bug_id": "bug257",
   "problem": "Prob152_lemmings3",
   "split": "dev",
-  "op": "state_swap",
+  "op": "eq_neq",
   "category": "control",
-  "gt_line": 22,
+  "gt_line": 43,
   "gt_signals": [
-   "next"
+   "aaah"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 69,
+  "mismatches": 439,
   "failing_outputs": [
-   "walk_right",
-   "aaah",
-   "walk_left",
-   "digging"
+   "aaah"
   ],
   "sequential": true,
   "body_lines": 26,
-  "gt_hops": 2
+  "gt_hops": 0
  },
  {
   "bug_id": "bug258",
   "problem": "Prob153_gshare",
   "split": "test",
-  "op": "drop_not",
+  "op": "cond_invert",
   "category": "control",
-  "gt_line": 37,
+  "gt_line": 34,
   "gt_signals": [
-   "pht"
+   "pht",
+   "predict_history_r"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 436,
+  "mismatches": 461,
   "failing_outputs": [
    "predict_taken",
    "predict_history"
@@ -5217,36 +5216,36 @@
   "bug_id": "bug259",
   "problem": "Prob153_gshare",
   "split": "test",
-  "op": "index_shift",
+  "op": "rel_op",
   "category": "datapath",
-  "gt_line": 44,
+  "gt_line": 35,
   "gt_signals": [
-   "predict_taken"
+   "pht"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 598,
+  "mismatches": 433,
   "failing_outputs": [
    "predict_taken",
    "predict_history"
   ],
   "sequential": true,
   "body_lines": 20,
-  "gt_hops": 0
+  "gt_hops": 1
  },
  {
   "bug_id": "bug260",
   "problem": "Prob153_gshare",
   "split": "test",
-  "op": "const_pm1",
+  "op": "nb_to_b",
   "category": "state",
-  "gt_line": 38,
+  "gt_line": 40,
   "gt_signals": [
-   "pht"
+   "predict_history_r"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 466,
+  "mismatches": 27,
   "failing_outputs": [
    "predict_taken",
    "predict_history"
@@ -5259,36 +5258,15 @@
   "bug_id": "bug261",
   "problem": "Prob154_fsm_ps2data",
   "split": "dev",
-  "op": "sync_to_async",
-  "category": "state",
-  "gt_line": 24,
-  "gt_signals": [
-   "state"
-  ],
-  "latency_cycles": 77,
-  "long_horizon": true,
-  "mismatches": 1,
-  "failing_outputs": [
-   "out_bytes",
-   "done"
-  ],
-  "sequential": true,
-  "body_lines": 17,
-  "gt_hops": 1
- },
- {
-  "bug_id": "bug262",
-  "problem": "Prob154_fsm_ps2data",
-  "split": "dev",
   "op": "state_swap",
   "category": "control",
   "gt_line": 20,
   "gt_signals": [
    "next"
   ],
-  "latency_cycles": 1,
+  "latency_cycles": 2,
   "long_horizon": false,
-  "mismatches": 608,
+  "mismatches": 914,
   "failing_outputs": [
    "done",
    "out_bytes"
@@ -5298,21 +5276,42 @@
   "gt_hops": 2
  },
  {
+  "bug_id": "bug262",
+  "problem": "Prob154_fsm_ps2data",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 25,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 2,
+  "long_horizon": false,
+  "mismatches": 36,
+  "failing_outputs": [
+   "done",
+   "out_bytes"
+  ],
+  "sequential": true,
+  "body_lines": 17,
+  "gt_hops": 1
+ },
+ {
   "bug_id": "bug263",
   "problem": "Prob154_fsm_ps2data",
   "split": "dev",
   "op": "state_swap",
   "category": "control",
-  "gt_line": 19,
+  "gt_line": 17,
   "gt_signals": [
    "next"
   ],
-  "latency_cycles": 0,
+  "latency_cycles": 2,
   "long_horizon": false,
-  "mismatches": 490,
+  "mismatches": 104,
   "failing_outputs": [
-   "out_bytes",
-   "done"
+   "done",
+   "out_bytes"
   ],
   "sequential": true,
   "body_lines": 17,
@@ -5347,16 +5346,16 @@
   "split": "test",
   "op": "const_pm1",
   "category": "datapath",
-  "gt_line": 32,
+  "gt_line": 31,
   "gt_signals": [
    "next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
-  "mismatches": 38,
+  "mismatches": 120,
   "failing_outputs": [
-   "walk_right",
    "walk_left",
+   "walk_right",
    "digging",
    "aaah"
   ],
@@ -5368,22 +5367,22 @@
   "bug_id": "bug266",
   "problem": "Prob155_lemmings4",
   "split": "test",
-  "op": "const_pm1",
+  "op": "state_swap",
   "category": "state",
-  "gt_line": 50,
+  "gt_line": 40,
   "gt_signals": [
-   "fall_counter"
+   "state"
   ],
-  "latency_cycles": 35,
-  "long_horizon": true,
-  "mismatches": 44,
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 143,
   "failing_outputs": [
    "walk_left",
-   "aaah"
+   "walk_right"
   ],
   "sequential": true,
   "body_lines": 35,
-  "gt_hops": 3
+  "gt_hops": 1
  },
  {
   "bug_id": "bug267",
@@ -5413,33 +5412,13 @@
   "split": "dev",
   "op": "const_pm1",
   "category": "datapath",
-  "gt_line": 50,
+  "gt_line": 46,
   "gt_signals": [
-   "done"
+   "shift_ena"
   ],
-  "latency_cycles": 0,
+  "latency_cycles": 3,
   "long_horizon": false,
-  "mismatches": 524,
-  "failing_outputs": [
-   "done"
-  ],
-  "sequential": true,
-  "body_lines": 46,
-  "gt_hops": 0
- },
- {
-  "bug_id": "bug269",
-  "problem": "Prob156_review2015_fancytimer",
-  "split": "dev",
-  "op": "arith_op",
-  "category": "state",
-  "gt_line": 70,
-  "gt_signals": [
-   "fcount"
-  ],
-  "latency_cycles": 25,
-  "long_horizon": true,
-  "mismatches": 191361,
+  "mismatches": 199339,
   "failing_outputs": [
    "count",
    "counting",
@@ -5448,5 +5427,27 @@
   "sequential": true,
   "body_lines": 46,
   "gt_hops": 2
+ },
+ {
+  "bug_id": "bug269",
+  "problem": "Prob156_review2015_fancytimer",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 60,
+  "gt_signals": [
+   "scount"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 81655,
+  "failing_outputs": [
+   "count",
+   "counting",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 46,
+  "gt_hops": 1
  }
 ]

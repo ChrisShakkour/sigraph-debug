@@ -37,7 +37,8 @@ The bugs come from the golden reference designs of
 - **Ground truth** per bug:
   - the mutated line and the signal it assigns
   - the TB's first failing time and outputs
-  - the activation cycle: the first cycle where a DUT register differs from the golden model, taken from
+  - the activation cycle: the first cycle where a DUT register differs from the golden model (under the
+    scoreboard's rule that an x in the golden value is a don't-care), taken from
     a full-depth VCD captured by an extra simulation top ([`sgd/sg_dump.sv`](sgd/sg_dump.sv)) so the TB
     file stays untouched
   - the latency between activation and failure
@@ -46,11 +47,11 @@ The bugs come from the golden reference designs of
 
 | | |
 |---|---|
-| candidate mutants | 1913 (1676 valid) |
+| candidate mutants | 1913 (1677 valid) |
 | designs used | 100 (72 sequential / 28 combinational) |
 | bugs | **269**: dev 56 / test 213 (split by design) |
 | categories | control 97 · datapath 98 · state 74 |
-| long-horizon (activation ≥ 8 cycles before failure) | 30 (max ≈ 52k cycles) |
+| long-horizon (activation ≥ 8 cycles before failure) | 20 (max ≈ 52k cycles) |
 
 Each bug lives in `bugs/<bug_id>/`:
 
@@ -94,7 +95,7 @@ every assignment line is a driver, node names match the VCD, the root cause lies
 the failing outputs, and each failing output's mismatch is visible in the public wave at its
 first-mismatch time.
 
-Hops from the failing output to the root-cause signal: **0: 177 · 1: 49 · 2: 40 · 3: 3**. On
+Hops from the failing output to the root-cause signal: **0: 177 · 1: 51 · 2: 38 · 3: 3**. On
 verilog-eval most bugs sit on the output's own driver, so graph traversal can only pay off on the
 92 bugs with 1–3 hops. Results are reported separately for that subset, and CVDP (multi-module) is
 the real test of traversal.

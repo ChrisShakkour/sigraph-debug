@@ -74,8 +74,8 @@
     {
      "line": 19,
      "line_end": 19,
-     "stmt": "S_next = state[S]|~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack",
-     "rhs": "state[S]|~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack",
+     "stmt": "S_next = state[S]&~d & state[S1]&~d | state[S110]&~d | state[Wait]&ack",
+     "rhs": "state[S]&~d & state[S1]&~d | state[S110]&~d | state[Wait]&ack",
      "kind": "comb",
      "block": "assign@19",
      "guard": "",

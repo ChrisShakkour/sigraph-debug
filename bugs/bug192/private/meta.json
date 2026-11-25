@@ -1,67 +1,68 @@
 {
  "problem": "Prob128_fsm_ps2",
- "k": 6,
- "op": "state_swap",
- "category": "control",
- "line": 19,
- "old": "      DONE: next = in3 ? BYTE2 : BYTE1;",
- "new": "      DONE: next = in3 ? BYTE3 : BYTE1;",
- "note": "BYTE2->BYTE3",
+ "k": 8,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 23,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
  "body_lines": 14,
  "sequential": true,
  "n_lines": 30,
  "text_lhs": [
-  "next"
+  "state"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 94,
+ "mismatches": 1,
  "samples": 400,
- "t_fail": 230,
+ "t_fail": 935,
  "out_first_mismatch": {
-  "done": 230
+  "done": 935
  },
  "out_mismatch_count": {
-  "done": 94
+  "done": 1
  },
  "valid": true,
- "t_act": 205,
- "cyc_act": 22,
+ "t_act": 930,
+ "cyc_act": 93,
  "div_signals": [
-  "next"
+  "done",
+  "state"
  ],
  "div_order": [
   [
-   "next",
-   205,
-   21
+   "done",
+   930,
+   93
   ],
   [
    "state",
-   215,
-   22
+   930,
+   93
   ],
   [
-   "done",
-   225,
-   23
+   "next",
+   1630,
+   163
   ]
  ],
  "clk_edges": 200,
- "cyc_fail": 23,
+ "cyc_fail": 94,
  "failing_outputs": [
   "done"
  ],
  "latency_cycles": 1,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 21,
+ "cyc_act_any": 93,
  "bug_id": "bug192",
  "split": "test",
- "gt_line": 19,
+ "gt_line": 23,
  "gt_signals": [
-  "next"
+  "state"
  ],
  "long_horizon": false
 }

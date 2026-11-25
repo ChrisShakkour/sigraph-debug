@@ -311,8 +311,8 @@
     {
      "line": 21,
      "line_end": 21,
-     "stmt": "next = States'(data ? S11: S)",
-     "rhs": "States'(data ? S11: S)",
+     "stmt": "next = States'(data ? S11: S1)",
+     "rhs": "States'(data ? S11: S1)",
      "kind": "comb",
      "block": "alwayscomb@19",
      "guard": "case state == S1",
@@ -407,8 +407,8 @@
     {
      "line": 26,
      "line_end": 26,
-     "stmt": "next = Count",
-     "rhs": "Count",
+     "stmt": "next = B3",
+     "rhs": "B3",
      "kind": "comb",
      "block": "alwayscomb@19",
      "guard": "case state == B2",
@@ -420,7 +420,7 @@
       "state"
      ],
      "nonblocking": false,
-     "const_rhs": "Count"
+     "const_rhs": "B3"
     },
     {
      "line": 27,

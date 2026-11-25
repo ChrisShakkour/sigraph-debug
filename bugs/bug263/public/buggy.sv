@@ -14,9 +14,9 @@ module TopModule (
 
   always_comb begin
     case (state)
-      BYTE1: next = in3 ? BYTE2 : BYTE1;
+      BYTE1: next = in3 ? BYTE2 : BYTE2;
       BYTE2: next = BYTE3;
-      BYTE3: next = BYTE1;
+      BYTE3: next = DONE;
       DONE: next = in3 ? BYTE2 : BYTE1;
     endcase
   end

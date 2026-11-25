@@ -20,8 +20,8 @@ module TopModule (
          else if (r[2]) next = D;
          else next = A;
       B: next = r[0] ? B : A;
-      C: next = r[0] ? C : A;
-      D: next = r[2] ? D : A;
+      C: next = r[1] ? C : A;
+      D: next = r[1] ? D : A;
       default: next = 'x;
     endcase
   end

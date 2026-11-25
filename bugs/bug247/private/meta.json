@@ -1,90 +1,96 @@
 {
  "problem": "Prob149_ece241_2013_q4",
- "k": 41,
- "op": "const_pm1",
+ "k": 30,
+ "op": "index_shift",
  "category": "datapath",
- "line": 34,
- "old": "      A2: fr = 4'b1111;",
- "new": "      A2: fr = 4'b0;",
+ "line": 25,
+ "old": "      C2: next = s[2] ? D1 : (s[1] ? C2 : B2);",
+ "new": "      C2: next = s[1] ? D1 : (s[1] ? C2 : B2);",
  "note": "",
  "body_lines": 28,
  "sequential": true,
  "n_lines": 44,
  "text_lhs": [
-  "fr"
+  "next"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 636,
+ "mismatches": 150,
  "samples": 2040,
- "t_fail": 10,
+ "t_fail": 170,
  "out_first_mismatch": {
-  "fr2": 10,
-  "fr1": 10,
-  "fr0": 10,
-  "dfr": 10
+  "fr2": 1290,
+  "fr1": 180,
+  "fr0": 170,
+  "dfr": 170
  },
  "out_mismatch_count": {
-  "fr2": 636,
-  "fr1": 636,
-  "fr0": 636,
-  "dfr": 636
+  "fr2": 4,
+  "fr1": 30,
+  "fr0": 110,
+  "dfr": 108
  },
  "valid": true,
- "t_act": 5,
- "cyc_act": 1,
+ "t_act": 155,
+ "cyc_act": 17,
  "div_signals": [
-  "dfr",
-  "fr",
-  "fr0",
-  "fr1",
-  "fr2"
+  "next"
  ],
  "div_order": [
   [
+   "next",
+   155,
+   16
+  ],
+  [
    "dfr",
-   5,
-   1
+   165,
+   17
   ],
   [
    "fr",
-   5,
-   1
+   165,
+   17
   ],
   [
    "fr0",
-   5,
-   1
+   165,
+   17
+  ],
+  [
+   "state",
+   165,
+   17
   ],
   [
    "fr1",
-   5,
-   1
+   175,
+   18
   ],
   [
    "fr2",
-   5,
-   1
+   1285,
+   129
   ]
  ],
  "clk_edges": 1020,
- "cyc_fail": 1,
+ "cyc_fail": 17,
  "failing_outputs": [
-  "fr2",
-  "fr1",
   "fr0",
-  "dfr"
+  "dfr",
+  "fr1",
+  "fr2"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 1,
+ "cyc_act_any": 16,
  "bug_id": "bug247",
  "split": "test",
- "gt_line": 34,
+ "gt_line": 25,
  "gt_signals": [
-  "fr"
+  "next"
  ],
  "long_horizon": false
 }

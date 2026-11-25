@@ -1,75 +1,65 @@
 {
  "problem": "Prob146_fsm_serialdata",
- "k": 11,
- "op": "ternary_swap",
+ "k": 26,
+ "op": "eq_neq",
  "category": "control",
- "line": 26,
- "old": "      STOP: next = in ? DONE : ERR;",
- "new": "      STOP: next = in ? ERR : DONE;",
+ "line": 41,
+ "old": "  assign done = (state==DONE);",
+ "new": "  assign done = (state!=DONE);",
  "note": "",
  "body_lines": 26,
  "sequential": true,
  "n_lines": 44,
  "text_lhs": [
-  "next"
+  "done"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 64,
+ "mismatches": 904,
  "samples": 905,
- "t_fail": 110,
+ "t_fail": 10,
  "out_first_mismatch": {
   "out_byte": 110,
-  "done": 110
+  "done": 10
  },
  "out_mismatch_count": {
   "out_byte": 38,
-  "done": 64
+  "done": 904
  },
  "valid": true,
- "t_act": 95,
- "cyc_act": 11,
+ "t_act": 5,
+ "cyc_act": 1,
  "div_signals": [
-  "next"
+  "done"
  ],
  "div_order": [
   [
-   "next",
-   95,
-   10
-  ],
-  [
    "done",
-   105,
-   11
+   5,
+   1
   ],
   [
    "out_byte",
    105,
    11
-  ],
-  [
-   "state",
-   105,
-   11
   ]
  ],
  "clk_edges": 453,
- "cyc_fail": 11,
+ "cyc_fail": 1,
  "failing_outputs": [
-  "out_byte",
-  "done"
+  "done",
+  "out_byte"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 10,
+ "cyc_act_any": 1,
  "bug_id": "bug240",
  "split": "test",
- "gt_line": 26,
+ "gt_line": 41,
  "gt_signals": [
-  "next"
+  "done"
  ],
  "long_horizon": false
 }

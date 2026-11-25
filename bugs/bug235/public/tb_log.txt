@@ -4,20 +4,20 @@ Hint:
 Hint: Cycle 2:         Your game state       Reference game state
 Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[223:208]     0000000000000000      0000000000000000
-Hint:   q[207:192]     0000000000000000      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
-Hint:   q[ 31: 16]     0000000000000010      0000000000000010
-Hint:   q[ 15:  0]     0000000000000010      0000000000000010
+Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000010
+Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:
 Hint:
 
@@ -25,18 +25,18 @@ Hint: Cycle 3:         Your game state       Reference game state
 Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[207:192]     0000000000000000      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
-Hint:   q[ 31: 16]     0000000000000000      0000000000000000
+Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000111
 Hint:
 Hint:
@@ -46,16 +46,16 @@ Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:
@@ -67,14 +67,14 @@ Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000111
@@ -86,20 +86,20 @@ Hint:
 Hint: Cycle 2:         Your game state       Reference game state
 Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[223:208]     0000000000000000      0000000000000000
-Hint:   q[207:192]     0000000000000000      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
-Hint:   q[ 31: 16]     0000000000000101      0000000000000101
-Hint:   q[ 15:  0]     0000000000000011      0000000000000011
+Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000101
+Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000011
 Hint:
 Hint:
 
@@ -107,18 +107,18 @@ Hint: Cycle 3:         Your game state       Reference game state
 Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000011
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[207:192]     0000000000000000      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
-Hint:   q[ 31: 16]     0000000000000001      0000000000000001
+Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000001
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      0000000000000101
 Hint:
 Hint:
@@ -128,16 +128,16 @@ Hint:   q[255:240]     xxxxxxxxxxxxxxxx      0000000000000011
 Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[191:176]     0000000000000000      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
-Hint:   q[ 47: 32]     0000000000000000      0000000000000000
+Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000010
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      1000000000000001
 Hint:
@@ -149,14 +149,14 @@ Hint:   q[239:224]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[175:160]     0000000000000000      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
-Hint:   q[ 63: 48]     0000000000000000      0000000000000000
+Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000001
 Hint:   q[ 15:  0]     xxxxxxxxxxxxxxxx      1000000000000000
@@ -170,12 +170,12 @@ Hint:   q[223:208]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[159:144]     0000000000000000      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
-Hint:   q[ 79: 64]     0000000000000000      0000000000000000
+Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 31: 16]     xxxxxxxxxxxxxxxx      0000000000000000
@@ -191,10 +191,10 @@ Hint:   q[207:192]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[143:128]     0000000000000000      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
-Hint:   q[ 95: 80]     0000000000000000      0000000000000000
+Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 47: 32]     xxxxxxxxxxxxxxxx      0000000000000000
@@ -212,8 +212,8 @@ Hint:   q[191:176]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[175:160]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[159:144]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[143:128]     xxxxxxxxxxxxxxxx      0000000000000000
-Hint:   q[127:112]     0000000000000000      0000000000000000
-Hint:   q[111: 96]     0000000000000000      0000000000000000
+Hint:   q[127:112]     xxxxxxxxxxxxxxxx      0000000000000000
+Hint:   q[111: 96]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 95: 80]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 79: 64]     xxxxxxxxxxxxxxxx      0000000000000000
 Hint:   q[ 63: 48]     xxxxxxxxxxxxxxxx      0000000000000000

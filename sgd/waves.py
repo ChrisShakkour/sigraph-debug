@@ -12,7 +12,7 @@ import bisect
 import re
 from pathlib import Path
 
-from .common import Vcd
+from .common import Vcd, tb_mismatch  # noqa: F401  (re-exported)
 
 DUT, EXP, SAMPLE = "top_module1", "tb_expected", "tb_sample"
 
@@ -33,16 +33,6 @@ def fmt(val: str | None, width: int) -> str:
     if re.fullmatch(r"[01]+", val) and width > 4:
         return f"{width}'h{int(val, 2):0{(width + 3) // 4}x}"
     return f"{width}'b{val}"
-
-
-def tb_mismatch(dut: str | None, exp: str | None) -> bool:
-    """verilog-eval scoreboard rule: an x/z bit in the expected value matches anything; otherwise the DUT
-    bit must equal it exactly (an x in the DUT does not match 0/1)."""
-    if dut is None or exp is None:
-        return False
-    n = max(len(dut), len(exp))
-    dut, exp = dut.rjust(n, dut[0] if dut[0] in "xz" else "0"), exp.rjust(n, exp[0] if exp[0] in "xz" else "0")
-    return any(e in "01" and d != e for d, e in zip(dut, exp))
 
 
 def _dedupe(tr: list[tuple[int, str]]) -> list[tuple[int, str]]:

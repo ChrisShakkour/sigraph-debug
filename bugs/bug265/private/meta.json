@@ -1,11 +1,11 @@
 {
  "problem": "Prob155_lemmings4",
- "k": 26,
+ "k": 18,
  "op": "const_pm1",
  "category": "datapath",
- "line": 32,
- "old": "      FALLR: next = ground ? (fall_counter >= 20 ? DEAD : WR) : FALLR;",
- "new": "      FALLR: next = ground ? (fall_counter >= 21 ? DEAD : WR) : FALLR;",
+ "line": 31,
+ "old": "      FALLL: next = ground ? (fall_counter >= 20 ? DEAD : WL) : FALLL;",
+ "new": "      FALLL: next = ground ? (fall_counter >= 21 ? DEAD : WL) : FALLL;",
  "note": "",
  "body_lines": 35,
  "sequential": true,
@@ -16,79 +16,79 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 38,
+ "mismatches": 120,
  "samples": 1003,
- "t_fail": 1050,
+ "t_fail": 580,
  "out_first_mismatch": {
-  "walk_left": 1080,
-  "walk_right": 1050,
-  "aaah": 1130,
-  "digging": 1120
+  "walk_left": 580,
+  "walk_right": 600,
+  "aaah": 690,
+  "digging": 620
  },
  "out_mismatch_count": {
-  "walk_left": 4,
-  "walk_right": 20,
-  "aaah": 6,
-  "digging": 8
+  "walk_left": 40,
+  "walk_right": 36,
+  "aaah": 14,
+  "digging": 30
  },
  "valid": true,
- "t_act": 1035,
- "cyc_act": 105,
+ "t_act": 565,
+ "cyc_act": 58,
  "div_signals": [
   "next"
  ],
  "div_order": [
   [
    "next",
-   1035,
-   104
+   565,
+   57
   ],
   [
    "state",
-   1045,
-   105
-  ],
-  [
-   "walk_right",
-   1045,
-   105
+   575,
+   58
   ],
   [
    "walk_left",
-   1075,
-   108
+   575,
+   58
+  ],
+  [
+   "walk_right",
+   595,
+   60
   ],
   [
    "digging",
-   1115,
-   112
+   615,
+   62
   ],
   [
    "aaah",
-   1125,
-   113
+   685,
+   69
   ],
   [
    "fall_counter",
-   1135,
-   114
+   695,
+   70
   ]
  ],
  "clk_edges": 502,
- "cyc_fail": 105,
+ "cyc_fail": 58,
  "failing_outputs": [
-  "walk_right",
   "walk_left",
+  "walk_right",
   "digging",
   "aaah"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 104,
+ "cyc_act_any": 57,
  "bug_id": "bug265",
  "split": "test",
- "gt_line": 32,
+ "gt_line": 31,
  "gt_signals": [
   "next"
  ],

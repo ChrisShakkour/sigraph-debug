@@ -1,10 +1,9 @@
 VCD info: dumpfile wave.vcd opened for output.
-Hint: Your FSM didn't pass the sample timing diagram posted with the problem statement. Perhaps try debugging that?
 <verilog-eval>/Prob151_review2015_fsm_test.sv:76: $finish called at 25346 (1ps)
-Hint: Output 'shift_ena' has 796 mismatches. First mismatch occurred at time 120.
-Hint: Output 'counting' has 798 mismatches. First mismatch occurred at time 120.
-Hint: Output 'done' has 740 mismatches. First mismatch occurred at time 140.
-Hint: Total mismatched samples is 798 out of 5069 samples
+Hint: Output 'shift_ena' has 92 mismatches. First mismatch occurred at time 2970.
+Hint: Output 'counting' has 164 mismatches. First mismatch occurred at time 3010.
+Hint: Output 'done' has 40 mismatches. First mismatch occurred at time 16830.
+Hint: Total mismatched samples is 240 out of 5069 samples
 
 Simulation finished at 25346 ps
-Mismatches: 798 in 5069 samples
+Mismatches: 240 in 5069 samples

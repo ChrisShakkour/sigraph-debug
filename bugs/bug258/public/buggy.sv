@@ -31,10 +31,10 @@ module TopModule (
         end  else begin
       if (predict_valid)
         predict_history_r <= {predict_history_r, predict_taken};
-      if(train_valid) begin
+      if(!(train_valid)) begin
         if(pht[train_index] < 3 && train_taken)
           pht[train_index] <= pht[train_index] + 1;
-        else if(pht[train_index] > 0 && train_taken)
+        else if(pht[train_index] > 0 && !train_taken)
           pht[train_index] <= pht[train_index] - 1;
         if (train_mispredicted)
           predict_history_r <= {train_history, train_taken};

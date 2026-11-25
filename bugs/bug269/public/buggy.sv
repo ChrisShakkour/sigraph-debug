@@ -57,7 +57,7 @@ module TopModule (
   always @(posedge clk) begin
     if (shift_ena)
       scount <= {scount[2:0], data};
-    else if (counting && fcount == 999)
+    else if (counting && fcount == 998)
       scount <= scount - 1'b1;
   end
 
@@ -67,7 +67,7 @@ module TopModule (
     else if (fcount == 999)
       fcount <= 10'h0;
     else
-      fcount <= fcount - 1'b1;
+      fcount <= fcount + 1'b1;
 
   assign count = counting ? scount : 'x;
 

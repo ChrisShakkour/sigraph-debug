@@ -202,8 +202,8 @@
     {
      "line": 20,
      "line_end": 20,
-     "stmt": "next = in3 ? BYTE2 : BYTE1",
-     "rhs": "in3 ? BYTE2 : BYTE1",
+     "stmt": "next = in3 ? BYTE2 : BYTE2",
+     "rhs": "in3 ? BYTE2 : BYTE2",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == DONE",
@@ -422,9 +422,7 @@
    "kind": "seq",
    "line": 24,
    "clock": "clk",
-   "async_reset": [
-    "reset"
-   ]
+   "async_reset": []
   },
   {
    "id": "always@32",

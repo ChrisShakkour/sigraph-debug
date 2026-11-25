@@ -26,22 +26,21 @@
   "out": 84
  },
  "valid": true,
- "t_act": 15,
- "cyc_act": 2,
+ "t_act": 25,
+ "cyc_act": 3,
  "div_signals": [
-  "out",
   "sr"
  ],
  "div_order": [
   [
-   "out",
-   15,
-   2
+   "sr",
+   25,
+   3
   ],
   [
-   "sr",
-   15,
-   2
+   "out",
+   55,
+   6
   ]
  ],
  "clk_edges": 150,
@@ -49,10 +48,10 @@
  "failing_outputs": [
   "out"
  ],
- "latency_cycles": 4,
+ "latency_cycles": 3,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 2,
+ "cyc_act_any": 3,
  "bug_id": "bug044",
  "split": "test",
  "gt_line": 10,

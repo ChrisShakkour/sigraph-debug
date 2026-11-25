@@ -32,7 +32,7 @@ module TopModule (
       if (predict_valid)
         predict_history_r <= {predict_history_r, predict_taken};
       if(train_valid) begin
-        if(pht[train_index] < 3 && train_taken)
+        if(pht[train_index] > 3 && train_taken)
           pht[train_index] <= pht[train_index] + 1;
         else if(pht[train_index] > 0 && !train_taken)
           pht[train_index] <= pht[train_index] - 1;
@@ -41,7 +41,7 @@ module TopModule (
       end
     end
 
-  assign predict_taken = predict_valid ? pht[predict_index][0] : 1'bx;
+  assign predict_taken = predict_valid ? pht[predict_index][1] : 1'bx;
   assign predict_history = predict_valid ? predict_history_r : {n{1'bx}};
 
 endmodule

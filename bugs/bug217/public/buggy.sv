@@ -9,12 +9,12 @@ module TopModule (
   reg[2:0] state, next;
 
   always @(posedge clk)
-    if (reset) state <= A;
+    if (reset) state <= B;
     else state <= next;
 
   always_comb begin
     case (state)
-      A: next = w ? A : B;
+      A: next = w ? B : A;
       B: next = w ? C : D;
       C: next = w ? E : D;
       D: next = w ? F : A;

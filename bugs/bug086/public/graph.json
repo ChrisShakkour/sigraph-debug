@@ -130,8 +130,8 @@
     {
      "line": 12,
      "line_end": 12,
-     "stmt": "q_next[1] ^= q[0]",
-     "rhs": "q_next[1] ^= q[0]",
+     "stmt": "q_next[1] ^= q[1]",
+     "rhs": "q_next[1] ^= q[1]",
      "kind": "comb",
      "block": "always@8",
      "guard": "",
@@ -243,9 +243,7 @@
    "kind": "seq",
    "line": 16,
    "clock": "clk",
-   "async_reset": [
-    "reset"
-   ]
+   "async_reset": []
   }
  ],
  "diagnostics": [

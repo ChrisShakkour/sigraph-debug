@@ -19,7 +19,7 @@ module TopModule (
     case (state)
       WL: if (!ground) next = FALLL;
         else if (dig) next = DIGL;
-        else if (bump_left) next = FALLL;
+        else if (bump_left) next = WR;
         else next = WL;
       WR:
         if (!ground) next = FALLR;
@@ -40,7 +40,7 @@ module TopModule (
 
   assign walk_left = (state==WL);
   assign walk_right = (state==WR);
-  assign aaah = (state == FALLL) || (state == FALLR);
+  assign aaah = (state != FALLL) || (state == FALLR);
   assign digging = (state == DIGL) || (state == DIGR);
 
 endmodule

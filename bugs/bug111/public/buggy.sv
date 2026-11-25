@@ -11,7 +11,7 @@ module TopModule (
   always_comb begin
     case (state)
       B0: next = B1;
-      B1: next = B2;
+      B1: next = B3;
       B2: next = B3;
       B3: next = Done;
       Done: next = Done;
@@ -19,7 +19,7 @@ module TopModule (
   end
 
   always @(posedge clk)
-    if (!(reset)) state <= B0;
+    if (reset) state <= B0;
     else state <= next;
 
   assign shift_ena = (state == B0 || state == B1 || state == B2 || state == B3);

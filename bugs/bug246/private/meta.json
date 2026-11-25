@@ -1,12 +1,12 @@
 {
  "problem": "Prob149_ece241_2013_q4",
- "k": 40,
+ "k": 22,
  "op": "state_swap",
  "category": "control",
- "line": 26,
- "old": "      D1: next = s[2] ? D1 : C2;",
- "new": "      D1: next = s[2] ? D1 : D1;",
- "note": "C2->D1",
+ "line": 23,
+ "old": "      B2: next = s[1] ? C1 : (s[0] ? B2 : A2);",
+ "new": "      B2: next = s[1] ? C1 : (s[0] ? B2 : B1);",
+ "note": "A2->B1",
  "body_lines": 28,
  "sequential": true,
  "n_lines": 44,
@@ -16,79 +16,63 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 1781,
+ "mismatches": 66,
  "samples": 2040,
- "t_fail": 160,
+ "t_fail": 200,
  "out_first_mismatch": {
   "fr2": 200,
-  "fr1": 180,
-  "fr0": 160,
-  "dfr": 160
+  "dfr": 200
  },
  "out_mismatch_count": {
-  "fr2": 622,
-  "fr1": 1214,
-  "fr0": 1781,
-  "dfr": 1226
+  "fr2": 66,
+  "dfr": 66
  },
  "valid": true,
- "t_act": 145,
- "cyc_act": 16,
+ "t_act": 185,
+ "cyc_act": 20,
  "div_signals": [
   "next"
  ],
  "div_order": [
   [
    "next",
-   145,
-   15
+   185,
+   19
   ],
   [
    "dfr",
-   155,
-   16
+   195,
+   20
   ],
   [
    "fr",
-   155,
-   16
-  ],
-  [
-   "fr0",
-   155,
-   16
-  ],
-  [
-   "state",
-   155,
-   16
-  ],
-  [
-   "fr1",
-   175,
-   18
+   195,
+   20
   ],
   [
    "fr2",
    195,
    20
+  ],
+  [
+   "state",
+   195,
+   20
   ]
  ],
  "clk_edges": 1020,
- "cyc_fail": 16,
+ "cyc_fail": 20,
  "failing_outputs": [
-  "fr0",
-  "dfr",
-  "fr1",
-  "fr2"
+  "fr2",
+  "dfr"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 15,
+ "cyc_act_any": 19,
  "bug_id": "bug246",
  "split": "test",
- "gt_line": 26,
+ "gt_line": 23,
  "gt_signals": [
   "next"
  ],

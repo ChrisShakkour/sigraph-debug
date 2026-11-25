@@ -1,11 +1,11 @@
 {
  "problem": "Prob138_2012_q2fsm",
- "k": 20,
+ "k": 5,
  "op": "ternary_swap",
  "category": "control",
- "line": 22,
- "old": "      F: next = w ? C : D;",
- "new": "      F: next = w ? D : C;",
+ "line": 17,
+ "old": "      A: next = w ? B : A;",
+ "new": "      A: next = w ? A : B;",
  "note": "",
  "body_lines": 16,
  "sequential": true,
@@ -16,52 +16,52 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 20,
+ "mismatches": 46,
  "samples": 400,
- "t_fail": 390,
+ "t_fail": 210,
  "out_first_mismatch": {
-  "z": 390
+  "z": 210
  },
  "out_mismatch_count": {
-  "z": 20
+  "z": 46
  },
  "valid": true,
- "t_act": 235,
- "cyc_act": 25,
+ "t_act": 175,
+ "cyc_act": 19,
  "div_signals": [
   "next"
  ],
  "div_order": [
   [
    "next",
-   235,
-   24
+   175,
+   18
   ],
   [
    "state",
-   245,
-   25
+   185,
+   19
   ],
   [
    "z",
-   385,
-   39
+   205,
+   21
   ]
  ],
  "clk_edges": 200,
- "cyc_fail": 39,
+ "cyc_fail": 21,
  "failing_outputs": [
   "z"
  ],
- "latency_cycles": 14,
+ "latency_cycles": 2,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 24,
+ "cyc_act_any": 18,
  "bug_id": "bug218",
  "split": "dev",
- "gt_line": 22,
+ "gt_line": 17,
  "gt_signals": [
   "next"
  ],
- "long_horizon": true
+ "long_horizon": false
 }

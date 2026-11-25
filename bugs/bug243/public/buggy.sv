@@ -16,10 +16,10 @@ module TopModule (
   always@(state,r) begin
     case (state)
       A: if (r[0]) next = B;
-         else if (r[1]) next = C;
+         else if (r[1]) next = D;
          else if (r[2]) next = D;
          else next = A;
-      B: next = r[0] ? B : B;
+      B: next = r[0] ? B : A;
       C: next = r[1] ? C : A;
       D: next = r[2] ? D : A;
       default: next = 'x;

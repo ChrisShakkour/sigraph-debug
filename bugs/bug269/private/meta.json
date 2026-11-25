@@ -1,103 +1,106 @@
 {
  "problem": "Prob156_review2015_fancytimer",
- "k": 79,
- "op": "arith_op",
+ "k": 62,
+ "op": "const_pm1",
  "category": "state",
- "line": 70,
- "old": "      fcount <= fcount + 1'b1;",
- "new": "      fcount <= fcount - 1'b1;",
+ "line": 60,
+ "old": "    else if (counting && fcount == 999)",
+ "new": "    else if (counting && fcount == 998)",
  "note": "",
  "body_lines": 46,
  "sequential": true,
  "n_lines": 74,
  "text_lhs": [
-  "fcount"
+  "scount"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": true,
- "mismatches": 191361,
+ "mismatches": 81655,
  "samples": 200000,
- "t_fail": 390,
+ "t_fail": 10120,
  "out_first_mismatch": {
-  "count": 390,
-  "counting": 650,
-  "done": 650
+  "count": 10120,
+  "counting": 10130,
+  "done": 10130
  },
  "out_mismatch_count": {
-  "count": 190573,
-  "counting": 84082,
-  "done": 72930
+  "count": 80867,
+  "counting": 56226,
+  "done": 55970
  },
  "valid": true,
- "t_act": 135,
- "cyc_act": 14,
+ "t_act": 10115,
+ "cyc_act": 1012,
  "div_signals": [
-  "fcount"
+  "count",
+  "done_counting",
+  "next",
+  "scount"
  ],
  "div_order": [
   [
-   "fcount",
-   135,
-   14
-  ],
-  [
    "count",
-   385,
-   39
-  ],
-  [
-   "scount",
-   385,
-   39
+   10115,
+   1012
   ],
   [
    "done_counting",
-   635,
-   64
+   10115,
+   1012
   ],
   [
    "next",
-   635,
-   64
+   10115,
+   1012
+  ],
+  [
+   "scount",
+   10115,
+   1012
   ],
   [
    "counting",
-   645,
-   65
+   10125,
+   1013
   ],
   [
    "done",
-   645,
-   65
+   10125,
+   1013
   ],
   [
    "state",
-   645,
-   65
+   10125,
+   1013
+  ],
+  [
+   "fcount",
+   10135,
+   1014
   ],
   [
    "shift_ena",
-   655,
-   66
+   10135,
+   1014
   ]
  ],
  "clk_edges": 100000,
- "cyc_fail": 39,
+ "cyc_fail": 1012,
  "failing_outputs": [
   "count",
   "counting",
   "done"
  ],
- "latency_cycles": 25,
+ "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 14,
+ "cyc_act_any": 1012,
  "bug_id": "bug269",
  "split": "dev",
- "gt_line": 70,
+ "gt_line": 60,
  "gt_signals": [
-  "fcount"
+  "scount"
  ],
- "long_horizon": true
+ "long_horizon": false
 }

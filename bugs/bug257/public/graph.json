@@ -122,8 +122,8 @@
     {
      "line": 43,
      "line_end": 43,
-     "stmt": "aaah = (state == FALLL) || (state == FALLR)",
-     "rhs": "(state == FALLL) || (state == FALLR)",
+     "stmt": "aaah = (state != FALLL) || (state == FALLR)",
+     "rhs": "(state != FALLL) || (state == FALLR)",
      "kind": "comb",
      "block": "assign@43",
      "guard": "",
@@ -264,8 +264,8 @@
     {
      "line": 22,
      "line_end": 22,
-     "stmt": "next = FALLL",
-     "rhs": "FALLL",
+     "stmt": "next = WR",
+     "rhs": "WR",
      "kind": "comb",
      "block": "alwayscomb@19",
      "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)",
@@ -282,7 +282,7 @@
       "bump_left"
      ],
      "nonblocking": false,
-     "const_rhs": "FALLL"
+     "const_rhs": "WR"
     },
     {
      "line": 23,

@@ -196,8 +196,8 @@
     {
      "line": 38,
      "line_end": 38,
-     "stmt": "pht[train_index] <= pht[train_index] - 2",
-     "rhs": "pht[train_index] - 2",
+     "stmt": "pht[train_index] <= pht[train_index] - 1",
+     "rhs": "pht[train_index] - 1",
      "kind": "seq",
      "block": "always@26",
      "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)",
@@ -274,7 +274,7 @@
     {
      "line": 40,
      "line_end": 40,
-     "stmt": "predict_history_r <= {train_history, train_taken}",
+     "stmt": "predict_history_r = {train_history, train_taken}",
      "rhs": "{train_history, train_taken}",
      "kind": "seq",
      "block": "always@26",
@@ -293,7 +293,7 @@
       "train_valid",
       "train_mispredicted"
      ],
-     "nonblocking": true,
+     "nonblocking": false,
      "const_rhs": null
     }
    ]
@@ -621,6 +621,6 @@
  ],
  "diagnostics": [
   "source:33:30: warning: implicit conversion truncates from 8 to 7 bits [-Wwidth-trunc]",
-  "source:40:32: warning: implicit conversion truncates from 8 to 7 bits [-Wwidth-trunc]"
+  "source:40:31: warning: implicit conversion truncates from 8 to 7 bits [-Wwidth-trunc]"
  ]
 }

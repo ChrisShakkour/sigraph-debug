@@ -95,7 +95,7 @@
      "rhs": "q[16*i +: 16]",
      "kind": "comb",
      "block": "always@9",
-     "guard": "for (i<15)",
+     "guard": "for (i>16)",
      "guard_lines": [
       10
      ],
@@ -216,7 +216,7 @@
    "dep": "data",
    "kind": "comb",
    "line": 11,
-   "guard": "for (i<15)"
+   "guard": "for (i>16)"
   },
   {
    "src": "q",

@@ -1,12 +1,12 @@
 {
  "problem": "Prob148_2013_q2afsm",
- "k": 18,
+ "k": 10,
  "op": "state_swap",
  "category": "control",
- "line": 22,
- "old": "      B: next = r[0] ? B : A;",
- "new": "      B: next = r[0] ? B : B;",
- "note": "A->B",
+ "line": 19,
+ "old": "         else if (r[1]) next = C;",
+ "new": "         else if (r[1]) next = D;",
+ "note": "C->D",
  "body_lines": 20,
  "sequential": true,
  "n_lines": 33,
@@ -16,50 +16,50 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 604,
+ "mismatches": 276,
  "samples": 1054,
- "t_fail": 140,
+ "t_fail": 150,
  "out_first_mismatch": {
-  "g": 140
+  "g": 150
  },
  "out_mismatch_count": {
-  "g": 604
+  "g": 276
  },
  "valid": true,
- "t_act": 125,
- "cyc_act": 14,
+ "t_act": 135,
+ "cyc_act": 15,
  "div_signals": [
   "next"
  ],
  "div_order": [
   [
    "next",
-   125,
-   13
+   135,
+   14
   ],
   [
    "g",
-   135,
-   14
+   145,
+   15
   ],
   [
    "state",
-   135,
-   14
+   145,
+   15
   ]
  ],
  "clk_edges": 527,
- "cyc_fail": 14,
+ "cyc_fail": 15,
  "failing_outputs": [
   "g"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 13,
+ "cyc_act_any": 14,
  "bug_id": "bug243",
  "split": "test",
- "gt_line": 22,
+ "gt_line": 19,
  "gt_signals": [
   "next"
  ],

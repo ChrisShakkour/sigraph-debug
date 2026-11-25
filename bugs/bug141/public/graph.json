@@ -84,7 +84,7 @@
      "rhs": "A",
      "kind": "seq",
      "block": "always@20",
-     "guard": "if (reset)",
+     "guard": "if (!(reset))",
      "guard_lines": [
       21
      ],
@@ -102,7 +102,7 @@
      "rhs": "next",
      "kind": "seq",
      "block": "always@20",
-     "guard": "!(reset)",
+     "guard": "!(!(reset))",
      "guard_lines": [
       21
      ],
@@ -148,8 +148,8 @@
     {
      "line": 16,
      "line_end": 16,
-     "stmt": "next = k ? B : A",
-     "rhs": "k ? B : A",
+     "stmt": "next = k ? A : B",
+     "rhs": "k ? A : B",
      "kind": "comb",
      "block": "alwayscomb@14",
      "guard": "case state == B",
@@ -183,7 +183,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 21,
-   "guard": "if (reset)"
+   "guard": "if (!(reset))"
   },
   {
    "src": "next",
@@ -191,7 +191,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 22,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "reset",
@@ -199,7 +199,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 22,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "j",

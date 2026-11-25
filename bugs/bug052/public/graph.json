@@ -47,7 +47,7 @@
      "rhs": "'0",
      "kind": "seq",
      "block": "always@10",
-     "guard": "if (reset)",
+     "guard": "if (!(reset))",
      "guard_lines": [
       12
      ],
@@ -65,7 +65,7 @@
      "rhs": "out | (~in & d_last)",
      "kind": "seq",
      "block": "always@10",
-     "guard": "!(reset)",
+     "guard": "!(!(reset))",
      "guard_lines": [
       12
      ],
@@ -93,7 +93,7 @@
     {
      "line": 11,
      "line_end": 11,
-     "stmt": "d_last = in",
+     "stmt": "d_last <= in",
      "rhs": "in",
      "kind": "seq",
      "block": "always@10",
@@ -103,7 +103,7 @@
       "in"
      ],
      "ctrl": [],
-     "nonblocking": false,
+     "nonblocking": true,
      "const_rhs": null
     }
    ]
@@ -116,7 +116,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 13,
-   "guard": "if (reset)"
+   "guard": "if (!(reset))"
   },
   {
    "src": "out",
@@ -124,7 +124,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 15,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "in",
@@ -132,7 +132,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 15,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "d_last",
@@ -140,7 +140,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 15,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "reset",
@@ -148,7 +148,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 15,
-   "guard": "!(reset)"
+   "guard": "!(!(reset))"
   },
   {
    "src": "in",

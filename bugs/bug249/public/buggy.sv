@@ -18,10 +18,10 @@ module TopModule (
   assign B3_next = state[B2];
   assign S_next = state[S]&~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack;
   assign S1_next = state[S]&d;
-  assign Count_next = state[B3] | state[Count]&~done_counting;
+  assign Count_next = state[B3] | state[Wait]&~done_counting;
   assign Wait_next = state[Count]&done_counting | state[Wait]&~ack;
 
-  assign done = state[S];
+  assign done = state[Wait];
   assign counting = state[Count];
   assign shift_ena = |state[B3:B0];
 

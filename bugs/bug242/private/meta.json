@@ -26,7 +26,7 @@
   "q": 6
  },
  "valid": true,
- "t_act": 0,
+ "t_act": 65,
  "cyc_act": 7,
  "div_signals": [
   "q"
@@ -34,8 +34,8 @@
  "div_order": [
   [
    "q",
-   0,
-   0
+   65,
+   7
   ]
  ],
  "clk_edges": 116,
@@ -46,7 +46,7 @@
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 0,
+ "cyc_act_any": 7,
  "bug_id": "bug242",
  "split": "test",
  "gt_line": 13,

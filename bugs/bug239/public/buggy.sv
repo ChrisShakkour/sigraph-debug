@@ -24,7 +24,7 @@ module TopModule (
       B6: next = B7;
       B7: next = STOP;
       STOP: next = in ? DONE : ERR;
-      DONE: next = in ? STOP : B0;
+      DONE: next = in ? START : B0;
       ERR: next = in ? START : ERR;
     endcase
   end
@@ -39,6 +39,6 @@ module TopModule (
   end
 
   assign done = (state==DONE);
-  assign out_byte = done ? byte_r[8:1] : 8'hx;
+  assign out_byte = done ? 8'hx : byte_r[8:1];
 
 endmodule

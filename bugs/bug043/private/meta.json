@@ -26,7 +26,7 @@
   "out": 100
  },
  "valid": true,
- "t_act": 35,
+ "t_act": 45,
  "cyc_act": 5,
  "div_signals": [
   "out"
@@ -34,8 +34,8 @@
  "div_order": [
   [
    "out",
-   35,
-   4
+   45,
+   5
   ]
  ],
  "clk_edges": 150,
@@ -46,7 +46,7 @@
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 4,
+ "cyc_act_any": 5,
  "bug_id": "bug043",
  "split": "test",
  "gt_line": 16,

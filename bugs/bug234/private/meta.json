@@ -50,8 +50,8 @@
   "q"
  ],
  "latency_cycles": 0,
- "fails_seed1234": false,
- "fails_seed98765": false,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
  "cyc_act_any": 1,
  "bug_id": "bug234",
  "split": "dev",

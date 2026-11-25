@@ -144,8 +144,8 @@
     {
      "line": 50,
      "line_end": 50,
-     "stmt": "done = 0",
-     "rhs": "0",
+     "stmt": "done = 1",
+     "rhs": "1",
      "kind": "comb",
      "block": "alwayscomb@43",
      "guard": "if (state == Wait)",
@@ -483,8 +483,8 @@
     {
      "line": 46,
      "line_end": 46,
-     "stmt": "shift_ena = 1",
-     "rhs": "1",
+     "stmt": "shift_ena = 2",
+     "rhs": "2",
      "kind": "comb",
      "block": "alwayscomb@43",
      "guard": "if (state == B0 || state == B1 || state == B2 || state == B3)",
@@ -1068,5 +1068,7 @@
    "async_reset": []
   }
  ],
- "diagnostics": []
+ "diagnostics": [
+  "source:46:17: warning: implicit conversion from 'logic signed[31:0]' to 'reg' changes value from 2 to 1'b0 [-Wconstant-conversion]"
+ ]
 }

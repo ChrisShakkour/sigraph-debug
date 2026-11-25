@@ -22,7 +22,7 @@ module TopModule (
   assign Wait_next = state[Count]&done_counting | state[Wait]&~ack;
 
   assign done = state[Wait];
-  assign counting = state[Count];
-  assign shift_ena = |state[Count:B0];
+  assign counting = state[Wait];
+  assign shift_ena = |state[B3:B0];
 
 endmodule

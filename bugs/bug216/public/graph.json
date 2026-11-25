@@ -199,8 +199,8 @@
     {
      "line": 21,
      "line_end": 21,
-     "stmt": "next = w ? E : D",
-     "rhs": "w ? E : D",
+     "stmt": "next = w ? F : D",
+     "rhs": "w ? F : D",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == E",
@@ -417,9 +417,7 @@
    "kind": "seq",
    "line": 11,
    "clock": "clk",
-   "async_reset": [
-    "reset"
-   ]
+   "async_reset": []
   },
   {
    "id": "alwayscomb@16",

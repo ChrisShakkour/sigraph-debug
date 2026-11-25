@@ -61,8 +61,8 @@
     {
      "line": 15,
      "line_end": 15,
-     "stmt": "out <= out | (~in & d_last)",
-     "rhs": "out | (~in & d_last)",
+     "stmt": "out <= out & (~in & d_last)",
+     "rhs": "out & (~in & d_last)",
      "kind": "seq",
      "block": "always@10",
      "guard": "!(reset)",
@@ -167,9 +167,7 @@
    "kind": "seq",
    "line": 10,
    "clock": "clk",
-   "async_reset": [
-    "reset"
-   ]
+   "async_reset": []
   }
  ],
  "diagnostics": []

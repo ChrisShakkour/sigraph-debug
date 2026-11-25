@@ -1,17 +1,17 @@
 {
  "problem": "Prob066_edgecapture",
- "k": 5,
- "op": "bit_op",
- "category": "datapath",
- "line": 15,
- "old": "      out <= out | (~in & d_last);",
- "new": "      out <= out & (~in & d_last);",
+ "k": 1,
+ "op": "nb_to_b",
+ "category": "state",
+ "line": 11,
+ "old": "    d_last <= in;",
+ "new": "    d_last = in;",
  "note": "",
  "body_lines": 8,
  "sequential": true,
  "n_lines": 18,
  "text_lhs": [
-  "out"
+  "d_last"
  ],
  "compiled": true,
  "wall_timeout": false,
@@ -49,9 +49,9 @@
  "cyc_act_any": 10,
  "bug_id": "bug051",
  "split": "test",
- "gt_line": 15,
+ "gt_line": 11,
  "gt_signals": [
-  "out"
+  "d_last"
  ],
  "long_horizon": false
 }

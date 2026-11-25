@@ -1,11 +1,11 @@
 {
  "problem": "Prob147_circuit10",
- "k": 2,
+ "k": 3,
  "op": "bit_op",
  "category": "datapath",
  "line": 11,
  "old": "    c <= a&b | a&c | b&c;",
- "new": "    c <= a&b & a&c | b&c;",
+ "new": "    c <= a&b | a|c | b&c;",
  "note": "",
  "body_lines": 5,
  "sequential": true,
@@ -16,20 +16,20 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 12,
+ "mismatches": 217,
  "samples": 232,
- "t_fail": 80,
+ "t_fail": 20,
  "out_first_mismatch": {
-  "q": 80,
-  "state": 80
+  "q": 20,
+  "state": 20
  },
  "out_mismatch_count": {
-  "q": 12,
-  "state": 12
+  "q": 217,
+  "state": 217
  },
  "valid": true,
- "t_act": 75,
- "cyc_act": 8,
+ "t_act": 15,
+ "cyc_act": 2,
  "div_signals": [
   "c",
   "q",
@@ -38,22 +38,22 @@
  "div_order": [
   [
    "c",
-   75,
-   8
+   15,
+   2
   ],
   [
    "q",
-   75,
-   8
+   15,
+   2
   ],
   [
    "state",
-   75,
-   8
+   15,
+   2
   ]
  ],
  "clk_edges": 116,
- "cyc_fail": 8,
+ "cyc_fail": 2,
  "failing_outputs": [
   "q",
   "state"
@@ -61,7 +61,7 @@
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 8,
+ "cyc_act_any": 2,
  "bug_id": "bug241",
  "split": "test",
  "gt_line": 11,

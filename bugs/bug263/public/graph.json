@@ -146,8 +146,8 @@
     {
      "line": 17,
      "line_end": 17,
-     "stmt": "next = in3 ? BYTE2 : BYTE1",
-     "rhs": "in3 ? BYTE2 : BYTE1",
+     "stmt": "next = in3 ? BYTE2 : BYTE2",
+     "rhs": "in3 ? BYTE2 : BYTE2",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == BYTE1",
@@ -184,8 +184,8 @@
     {
      "line": 19,
      "line_end": 19,
-     "stmt": "next = BYTE1",
-     "rhs": "BYTE1",
+     "stmt": "next = DONE",
+     "rhs": "DONE",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == BYTE3",
@@ -197,7 +197,7 @@
       "state"
      ],
      "nonblocking": false,
-     "const_rhs": "BYTE1"
+     "const_rhs": "DONE"
     },
     {
      "line": 20,

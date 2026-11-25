@@ -43,11 +43,11 @@ module TopModule (
   always_comb begin
     shift_ena = 0; counting = 0; done = 0;
     if (state == B0 || state == B1 || state == B2 || state == B3)
-      shift_ena = 1;
+      shift_ena = 2;
     if (state == Count)
       counting = 1;
     if (state == Wait)
-      done = 0;
+      done = 1;
 
     if (|state === 1'bx) begin
       {shift_ena, counting, done} = 'x;

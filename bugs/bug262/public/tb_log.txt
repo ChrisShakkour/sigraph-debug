@@ -1,8 +1,8 @@
 VCD info: dumpfile wave.vcd opened for output.
 <verilog-eval>/Prob154_fsm_ps2data_test.sv:31: $finish called at 8096 (1ps)
-Hint: Output 'out_bytes' has 276 mismatches. First mismatch occurred at time 240.
-Hint: Output 'done' has 608 mismatches. First mismatch occurred at time 230.
-Hint: Total mismatched samples is 608 out of 1619 samples
+Hint: Output 'out_bytes' has 16 mismatches. First mismatch occurred at time 210.
+Hint: Output 'done' has 36 mismatches. First mismatch occurred at time 200.
+Hint: Total mismatched samples is 36 out of 1619 samples
 
 Simulation finished at 8096 ps
-Mismatches: 608 in 1619 samples
+Mismatches: 36 in 1619 samples

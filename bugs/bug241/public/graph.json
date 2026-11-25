@@ -95,8 +95,8 @@
     {
      "line": 11,
      "line_end": 11,
-     "stmt": "c <= a&b & a&c | b&c",
-     "rhs": "a&b & a&c | b&c",
+     "stmt": "c <= a&b | a|c | b&c",
+     "rhs": "a&b | a|c | b&c",
      "kind": "seq",
      "block": "always@10",
      "guard": "",
@@ -183,7 +183,7 @@
   }
  ],
  "diagnostics": [
-  "source:11:17: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:11:11: warning: '&' within '|' [-Wbitwise-op-parentheses]",
   "source:11:23: warning: '&' within '|' [-Wbitwise-op-parentheses]"
  ]
 }

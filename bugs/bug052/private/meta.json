@@ -1,57 +1,57 @@
 {
  "problem": "Prob066_edgecapture",
- "k": 1,
- "op": "nb_to_b",
+ "k": 2,
+ "op": "cond_invert",
  "category": "state",
- "line": 11,
- "old": "    d_last <= in;",
- "new": "    d_last = in;",
+ "line": 12,
+ "old": "    if (reset)",
+ "new": "    if (!(reset))",
  "note": "",
  "body_lines": 8,
  "sequential": true,
  "n_lines": 18,
  "text_lhs": [
-  "d_last"
+  "out"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 227,
+ "mismatches": 239,
  "samples": 266,
- "t_fail": 100,
+ "t_fail": 10,
  "out_first_mismatch": {
-  "out": 100
+  "out": 10
  },
  "out_mismatch_count": {
-  "out": 227
+  "out": 239
  },
  "valid": true,
- "t_act": 95,
- "cyc_act": 10,
+ "t_act": 5,
+ "cyc_act": 1,
  "div_signals": [
   "out"
  ],
  "div_order": [
   [
    "out",
-   95,
-   10
+   5,
+   1
   ]
  ],
  "clk_edges": 133,
- "cyc_fail": 10,
+ "cyc_fail": 1,
  "failing_outputs": [
   "out"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 10,
+ "cyc_act_any": 1,
  "bug_id": "bug052",
  "split": "test",
- "gt_line": 11,
+ "gt_line": 12,
  "gt_signals": [
-  "d_last"
+  "out"
  ],
  "long_horizon": false
 }

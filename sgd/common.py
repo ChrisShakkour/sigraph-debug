@@ -205,8 +205,19 @@ class Vcd:
         return self.scope_vars(scope).get(name)
 
 
+def tb_mismatch(dut: str | None, exp: str | None) -> bool:
+    """verilog-eval scoreboard rule: an x/z bit in the expected value matches anything; otherwise the DUT
+    bit must equal it exactly (an x in the DUT does not match 0/1)."""
+    if dut is None or exp is None:
+        return False
+    n = max(len(dut), len(exp))
+    dut, exp = dut.rjust(n, dut[0] if dut[0] in "xz" else "0"), exp.rjust(n, exp[0] if exp[0] in "xz" else "0")
+    return any(e in "01" and d != e for d, e in zip(dut, exp))
+
+
 def first_divergence(a: list[tuple[int, str]], b: list[tuple[int, str]]) -> int | None:
-    """Earliest time at which the two piecewise-constant traces differ (exact string compare)."""
+    """Earliest time at which trace a (DUT) mismatches trace b (golden) under the testbench rule: an x/z
+    bit in the golden value is a don't-care, so an uninitialized golden register is not a divergence."""
     times = sorted({t for t, _ in a} | {t for t, _ in b})
     ia = ib = 0
     va = vb = None
@@ -215,7 +226,7 @@ def first_divergence(a: list[tuple[int, str]], b: list[tuple[int, str]]) -> int 
             va = a[ia][1]; ia += 1
         while ib < len(b) and b[ib][0] <= t:
             vb = b[ib][1]; ib += 1
-        if va != vb:
+        if va is not None and tb_mismatch(va, vb):
             return t
     return None
 

@@ -210,8 +210,8 @@
     {
      "line": 25,
      "line_end": 25,
-     "stmt": "counting = state[Count]",
-     "rhs": "state[Count]",
+     "stmt": "counting = state[Wait]",
+     "rhs": "state[Wait]",
      "kind": "comb",
      "block": "assign@25",
      "guard": "",
@@ -236,8 +236,8 @@
     {
      "line": 26,
      "line_end": 26,
-     "stmt": "shift_ena = |state[Count:B0]",
-     "rhs": "|state[Count:B0]",
+     "stmt": "shift_ena = |state[B3:B0]",
+     "rhs": "|state[B3:B0]",
      "kind": "comb",
      "block": "assign@26",
      "guard": "",

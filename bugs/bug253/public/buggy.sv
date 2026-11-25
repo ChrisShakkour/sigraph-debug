@@ -18,12 +18,12 @@ module TopModule (
   always_comb begin
     case (state)
       S: next = States'(data ? S1: S);
-      S1: next = States'(data ? S11: S);
+      S1: next = States'(data ? S11: S1);
       S11: next = States'(data ? S11 : S110);
       S110: next = States'(data ? B0 : S);
       B0: next = B1;
       B1: next = B2;
-      B2: next = Count;
+      B2: next = B3;
       B3: next = Count;
       Count: next = States'(done_counting ? Wait : Count);
       Wait: next = States'(ack ? S : Wait);

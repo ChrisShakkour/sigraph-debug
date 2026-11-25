@@ -71,8 +71,8 @@
     {
      "line": 12,
      "line_end": 12,
-     "stmt": "state <= A",
-     "rhs": "A",
+     "stmt": "state <= B",
+     "rhs": "B",
      "kind": "seq",
      "block": "always@11",
      "guard": "if (reset)",
@@ -84,7 +84,7 @@
       "reset"
      ],
      "nonblocking": true,
-     "const_rhs": "A"
+     "const_rhs": "B"
     },
     {
      "line": 13,
@@ -119,8 +119,8 @@
     {
      "line": 17,
      "line_end": 17,
-     "stmt": "next = w ? A : B",
-     "rhs": "w ? A : B",
+     "stmt": "next = w ? B : A",
+     "rhs": "w ? B : A",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == A",

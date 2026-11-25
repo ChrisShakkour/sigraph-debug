@@ -21,9 +21,11 @@ Every arm gets the same model, caps, spec text and TB log.
 - Ground truth: mutated line and statement LHS, T_fail and failing outputs (TB hints), and T_activation =
   first divergence from `good1` of a **sequentially-assigned** signal, capped at T_fail. Combinational
   divergence that never gets latched is masked and doesn't count; the raw value is kept as `cyc_act_any`.
+  Divergence uses the scoreboard rule: an x bit in the golden value is a don't-care, so an uninitialized
+  golden register is not a divergence (exact compare labelled e.g. reset bugs as active from cycle 2).
   latency = cycles(T_fail − T_activation); `long_horizon` if ≥ 8.
-- Result (2026-11-25): 1913 candidates → 1676 valid → 100 eligible problems (72 seq / 28 comb) →
-  **269 bugs** (dev 56 / test 213; control 97 / datapath 98 / state 74; 69 with latency > 0, 30 long-horizon,
+- Result (2026-11-26, x-aware activation): 1913 candidates → 1677 valid → 100 eligible problems (72 seq / 28 comb) →
+  **269 bugs** (dev 56 / test 213; control 97 / datapath 98 / state 74; 66 with latency > 0, 20 long-horizon,
   max 52k cycles in fancytimer).
 - Robustness oracle: `tb_reseed/` = TB **copies** with `$random(sg_seed)` in `stimulus_gen` only
   (seeds 1234, 98765). Every ref passes the original TB and both reseeded copies.

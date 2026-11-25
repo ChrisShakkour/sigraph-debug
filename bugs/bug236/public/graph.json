@@ -41,8 +41,8 @@
     {
      "line": 24,
      "line_end": 27,
-     "stmt": "q[i*16+j] <= ((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] - q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) == 3'h3",
-     "rhs": "((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] - q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) == 3'h3",
+     "stmt": "q[i*16+j] <= ((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] + q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h0 | q[i*16+j]) == 3'h3",
+     "rhs": "((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] + q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h0 | q[i*16+j]) == 3'h3",
      "kind": "seq",
      "block": "always@21",
      "guard": "for (i<16) && for (j<16)",
@@ -270,9 +270,7 @@
   }
  ],
  "diagnostics": [
-  "source:27:92: warning: bitwise operation between operands of different types ('logic' and 'bit[2:0]') [-Wbitwise-op-mismatch]",
   "source:27:92: warning: '&' within '|' [-Wbitwise-op-parentheses]",
-  "source:27:99: warning: bitwise operation between operands of different types ('logic[2:0]' and 'reg') [-Wbitwise-op-mismatch]",
   "source:30:5: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]"
  ]
 }

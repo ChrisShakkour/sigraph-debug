@@ -26,16 +26,16 @@
   "anyedge": 205
  },
  "valid": true,
- "t_act": 5,
- "cyc_act": 1,
+ "t_act": 35,
+ "cyc_act": 4,
  "div_signals": [
   "anyedge"
  ],
  "div_order": [
   [
    "anyedge",
-   5,
-   1
+   35,
+   4
   ]
  ],
  "clk_edges": 114,
@@ -43,10 +43,10 @@
  "failing_outputs": [
   "anyedge"
  ],
- "latency_cycles": 3,
+ "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 1,
+ "cyc_act_any": 4,
  "bug_id": "bug022",
  "split": "test",
  "gt_line": 10,

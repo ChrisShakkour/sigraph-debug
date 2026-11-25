@@ -35,9 +35,9 @@ module TopModule (
         if(pht[train_index] < 3 && train_taken)
           pht[train_index] <= pht[train_index] + 1;
         else if(pht[train_index] > 0 && !train_taken)
-          pht[train_index] <= pht[train_index] - 2;
+          pht[train_index] <= pht[train_index] - 1;
         if (train_mispredicted)
-          predict_history_r <= {train_history, train_taken};
+          predict_history_r = {train_history, train_taken};
       end
     end
 

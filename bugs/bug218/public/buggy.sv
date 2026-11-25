@@ -14,12 +14,12 @@ module TopModule (
 
   always_comb begin
     case (state)
-      A: next = w ? B : A;
+      A: next = w ? A : B;
       B: next = w ? C : D;
       C: next = w ? E : D;
       D: next = w ? F : A;
       E: next = w ? E : D;
-      F: next = w ? D : C;
+      F: next = w ? C : D;
       default: next = 'x;
     endcase
   end

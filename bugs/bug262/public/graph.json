@@ -98,8 +98,8 @@
     {
      "line": 25,
      "line_end": 25,
-     "stmt": "state <= BYTE1",
-     "rhs": "BYTE1",
+     "stmt": "state <= BYTE2",
+     "rhs": "BYTE2",
      "kind": "seq",
      "block": "always@24",
      "guard": "if (reset)",
@@ -111,7 +111,7 @@
       "reset"
      ],
      "nonblocking": true,
-     "const_rhs": "BYTE1"
+     "const_rhs": "BYTE2"
     },
     {
      "line": 26,
@@ -202,8 +202,8 @@
     {
      "line": 20,
      "line_end": 20,
-     "stmt": "next = in3 ? BYTE3 : BYTE1",
-     "rhs": "in3 ? BYTE3 : BYTE1",
+     "stmt": "next = in3 ? BYTE2 : BYTE1",
+     "rhs": "in3 ? BYTE2 : BYTE1",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == DONE",

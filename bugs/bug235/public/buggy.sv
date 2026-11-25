@@ -7,7 +7,7 @@ module TopModule (
 
   logic [323:0] q_pad;
   always@(*) begin
-    for (int i=0;i<15;i++)
+    for (int i=0;i>16;i++)
       q_pad[18*(i+1)+1 +: 16] = q[16*i +: 16];
     q_pad[1 +: 16] = q[16*15 +: 16];
     q_pad[18*17+1 +: 16] = q[0 +: 16];

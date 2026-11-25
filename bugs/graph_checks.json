@@ -557,7 +557,7 @@
   "diagnostics": 0,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 0,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -568,7 +568,7 @@
   "diagnostics": 0,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 0,
   "gt_line_in_cone": true
  },
  {
@@ -942,7 +942,7 @@
   "diagnostics": 1,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 0,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -953,7 +953,7 @@
   "diagnostics": 1,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 0,
   "gt_line_in_cone": true
  },
  {
@@ -1217,7 +1217,7 @@
   "diagnostics": 10,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -1228,7 +1228,7 @@
   "diagnostics": 10,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -1415,7 +1415,7 @@
   "diagnostics": 6,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -1426,7 +1426,7 @@
   "diagnostics": 6,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -1536,7 +1536,7 @@
   "diagnostics": 6,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -1547,7 +1547,7 @@
   "diagnostics": 6,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2097,7 +2097,7 @@
   "diagnostics": 8,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -2108,7 +2108,7 @@
   "diagnostics": 8,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2372,7 +2372,7 @@
   "diagnostics": 14,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -2383,7 +2383,7 @@
   "diagnostics": 14,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2589,7 +2589,7 @@
   "nodes": 5,
   "edges": 9,
   "missing_driver_lines": [],
-  "diagnostics": 4,
+  "diagnostics": 2,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
   "gt_hops": 0,
@@ -2625,7 +2625,7 @@
   "diagnostics": 18,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 0,
   "gt_line_in_cone": true
  },
  {
@@ -2636,7 +2636,7 @@
   "diagnostics": 18,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 0,
   "gt_line_in_cone": true
  },
  {
@@ -2713,7 +2713,7 @@
   "diagnostics": 18,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 3,
   "gt_line_in_cone": true
  },
  {
@@ -2787,7 +2787,7 @@
   "nodes": 10,
   "edges": 26,
   "missing_driver_lines": [],
-  "diagnostics": 1,
+  "diagnostics": 0,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
   "gt_hops": 0,
@@ -2801,7 +2801,7 @@
   "diagnostics": 17,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 0,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -2823,7 +2823,7 @@
   "diagnostics": 17,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 0,
   "gt_line_in_cone": true
  },
  {
@@ -2845,7 +2845,7 @@
   "diagnostics": 2,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 0,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2867,7 +2867,7 @@
   "diagnostics": 8,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 1,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -2878,7 +2878,7 @@
   "diagnostics": 8,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2922,7 +2922,7 @@
   "diagnostics": 20,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 3,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  },
  {
@@ -2941,10 +2941,10 @@
   "nodes": 13,
   "edges": 42,
   "missing_driver_lines": [],
-  "diagnostics": 0,
+  "diagnostics": 1,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 0,
+  "gt_hops": 2,
   "gt_line_in_cone": true
  },
  {
@@ -2955,7 +2955,7 @@
   "diagnostics": 0,
   "missing_in_vcd": [],
   "gt_signal_in_cone": true,
-  "gt_hops": 2,
+  "gt_hops": 1,
   "gt_line_in_cone": true
  }
 ]

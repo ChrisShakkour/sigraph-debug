@@ -1,69 +1,67 @@
 {
  "problem": "Prob138_2012_q2fsm",
- "k": 0,
- "op": "sync_to_async",
- "category": "state",
- "line": 11,
- "old": "  always @(posedge clk)",
- "new": "  always @(posedge clk, posedge reset)",
- "note": "",
+ "k": 18,
+ "op": "state_swap",
+ "category": "control",
+ "line": 21,
+ "old": "      E: next = w ? E : D;",
+ "new": "      E: next = w ? F : D;",
+ "note": "E->F",
  "body_lines": 16,
  "sequential": true,
  "n_lines": 29,
  "text_lhs": [
-  "state"
+  "next"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 1,
+ "mismatches": 6,
  "samples": 400,
- "t_fail": 1885,
+ "t_fail": 1540,
  "out_first_mismatch": {
-  "z": 1885
+  "z": 1540
  },
  "out_mismatch_count": {
-  "z": 1
+  "z": 6
  },
  "valid": true,
- "t_act": 170,
- "cyc_act": 17,
+ "t_act": 205,
+ "cyc_act": 22,
  "div_signals": [
-  "next",
-  "state",
-  "z"
+  "next"
  ],
  "div_order": [
   [
    "next",
-   170,
-   17
+   205,
+   21
   ],
   [
    "state",
-   170,
-   17
+   215,
+   22
   ],
   [
    "z",
-   170,
-   17
+   1535,
+   154
   ]
  ],
  "clk_edges": 200,
- "cyc_fail": 189,
+ "cyc_fail": 154,
  "failing_outputs": [
   "z"
  ],
- "latency_cycles": 172,
- "fails_seed1234": false,
- "fails_seed98765": false,
- "cyc_act_any": 17,
+ "latency_cycles": 132,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 21,
  "bug_id": "bug216",
  "split": "dev",
- "gt_line": 11,
+ "gt_line": 21,
  "gt_signals": [
-  "state"
+  "next"
  ],
  "long_horizon": true
 }

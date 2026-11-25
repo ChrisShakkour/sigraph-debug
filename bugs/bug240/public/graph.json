@@ -70,8 +70,8 @@
     {
      "line": 41,
      "line_end": 41,
-     "stmt": "done = (state==DONE)",
-     "rhs": "state==DONE",
+     "stmt": "done = (state!=DONE)",
+     "rhs": "state!=DONE",
      "kind": "comb",
      "block": "assign@41",
      "guard": "",
@@ -310,8 +310,8 @@
     {
      "line": 26,
      "line_end": 26,
-     "stmt": "next = in ? ERR : DONE",
-     "rhs": "in ? ERR : DONE",
+     "stmt": "next = in ? DONE : ERR",
+     "rhs": "in ? DONE : ERR",
      "kind": "comb",
      "block": "alwayscomb@16",
      "guard": "case state == STOP",

@@ -1,7 +1,7 @@
 VCD info: dumpfile wave.vcd opened for output.
 <verilog-eval>/Prob138_2012_q2fsm_test.sv:18: $finish called at 2001 (1ps)
-Hint: Output 'z' has 1 mismatches. First mismatch occurred at time 1885.
-Hint: Total mismatched samples is 1 out of 400 samples
+Hint: Output 'z' has 6 mismatches. First mismatch occurred at time 1540.
+Hint: Total mismatched samples is 6 out of 400 samples
 
 Simulation finished at 2001 ps
-Mismatches: 1 in 400 samples
+Mismatches: 6 in 400 samples

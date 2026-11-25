@@ -66,7 +66,7 @@
      "rhs": "B0",
      "kind": "seq",
      "block": "always@21",
-     "guard": "if (!(reset))",
+     "guard": "if (reset)",
      "guard_lines": [
       22
      ],
@@ -84,7 +84,7 @@
      "rhs": "next",
      "kind": "seq",
      "block": "always@21",
-     "guard": "!(!(reset))",
+     "guard": "!(reset)",
      "guard_lines": [
       22
      ],
@@ -128,8 +128,8 @@
     {
      "line": 14,
      "line_end": 14,
-     "stmt": "next = B2",
-     "rhs": "B2",
+     "stmt": "next = B3",
+     "rhs": "B3",
      "kind": "comb",
      "block": "alwayscomb@12",
      "guard": "case state == B1",
@@ -141,7 +141,7 @@
       "state"
      ],
      "nonblocking": false,
-     "const_rhs": "B2"
+     "const_rhs": "B3"
     },
     {
      "line": 15,
@@ -215,7 +215,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 22,
-   "guard": "if (!(reset))"
+   "guard": "if (reset)"
   },
   {
    "src": "next",
@@ -223,7 +223,7 @@
    "dep": "data",
    "kind": "seq",
    "line": 23,
-   "guard": "!(!(reset))"
+   "guard": "!(reset)"
   },
   {
    "src": "reset",
@@ -231,7 +231,7 @@
    "dep": "ctrl",
    "kind": "seq",
    "line": 23,
-   "guard": "!(!(reset))"
+   "guard": "!(reset)"
   },
   {
    "src": "state",

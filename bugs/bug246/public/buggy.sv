@@ -20,10 +20,10 @@ module TopModule (
     case (state)
       A2: next = s[0] ? B1 : A2;
       B1: next = s[1] ? C1 : (s[0] ? B1 : A2);
-      B2: next = s[1] ? C1 : (s[0] ? B2 : A2);
+      B2: next = s[1] ? C1 : (s[0] ? B2 : B1);
       C1: next = s[2] ? D1 : (s[1] ? C1 : B2);
       C2: next = s[2] ? D1 : (s[1] ? C2 : B2);
-      D1: next = s[2] ? D1 : D1;
+      D1: next = s[2] ? D1 : C2;
       default: next = 'x;
     endcase
   end

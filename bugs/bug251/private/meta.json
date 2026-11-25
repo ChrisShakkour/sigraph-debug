@@ -1,57 +1,57 @@
 {
  "problem": "Prob150_review2015_fsmonehot",
- "k": 30,
+ "k": 29,
  "op": "state_swap",
  "category": "control",
- "line": 26,
- "old": "  assign shift_ena = |state[B3:B0];",
- "new": "  assign shift_ena = |state[Count:B0];",
- "note": "B3->Count",
+ "line": 25,
+ "old": "  assign counting = state[Count];",
+ "new": "  assign counting = state[Wait];",
+ "note": "Count->Wait",
  "body_lines": 9,
  "sequential": false,
  "n_lines": 28,
  "text_lhs": [
-  "shift_ena"
+  "counting"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 27,
+ "mismatches": 52,
  "samples": 300,
- "t_fail": 130,
+ "t_fail": 30,
  "out_first_mismatch": {
-  "shift_ena": 130
+  "counting": 30
  },
  "out_mismatch_count": {
-  "shift_ena": 27
+  "counting": 52
  },
  "valid": true,
- "t_act": 125,
- "cyc_act": 13,
+ "t_act": 25,
+ "cyc_act": 3,
  "div_signals": [
-  "shift_ena"
+  "counting"
  ],
  "div_order": [
   [
-   "shift_ena",
-   125,
-   13
+   "counting",
+   25,
+   3
   ]
  ],
  "clk_edges": 150,
- "cyc_fail": 13,
+ "cyc_fail": 3,
  "failing_outputs": [
-  "shift_ena"
+  "counting"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 13,
+ "cyc_act_any": 3,
  "bug_id": "bug251",
  "split": "test",
- "gt_line": 26,
+ "gt_line": 25,
  "gt_signals": [
-  "shift_ena"
+  "counting"
  ],
  "long_horizon": false
 }

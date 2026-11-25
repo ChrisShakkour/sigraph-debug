@@ -1,11 +1,11 @@
 {
  "problem": "Prob082_lfsr32",
- "k": 7,
- "op": "index_shift",
- "category": "datapath",
- "line": 12,
- "old": "    q_next[1] ^= q[0];",
- "new": "    q_next[1] ^= q[1];",
+ "k": 15,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 18,
+ "old": "      q <= 32'h1;",
+ "new": "      q <= 32'h0;",
  "note": "",
  "body_lines": 14,
  "sequential": true,
@@ -16,35 +16,36 @@
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": true,
- "mismatches": 199953,
+ "mismatches": 199965,
  "samples": 200000,
- "t_fail": 190,
+ "t_fail": 180,
  "out_first_mismatch": {
-  "q": 190
+  "q": 180
  },
  "out_mismatch_count": {
-  "q": 199953
+  "q": 199965
  },
  "valid": true,
  "t_act": 175,
- "cyc_act": 19,
+ "cyc_act": 18,
  "div_signals": [
+  "q",
   "q_next"
  ],
  "div_order": [
   [
-   "q_next",
+   "q",
    175,
    18
   ],
   [
-   "q",
-   185,
-   19
+   "q_next",
+   175,
+   18
   ]
  ],
  "clk_edges": 100000,
- "cyc_fail": 19,
+ "cyc_fail": 18,
  "failing_outputs": [
   "q"
  ],
@@ -54,9 +55,9 @@
  "cyc_act_any": 18,
  "bug_id": "bug087",
  "split": "dev",
- "gt_line": 12,
+ "gt_line": 18,
  "gt_signals": [
-  "q_next"
+  "q"
  ],
  "long_horizon": false
 }

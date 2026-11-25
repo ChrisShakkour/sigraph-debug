@@ -1,57 +1,61 @@
 {
  "problem": "Prob151_review2015_fsm",
- "k": 42,
+ "k": 27,
  "op": "const_pm1",
  "category": "datapath",
- "line": 42,
- "old": "      shift_ena = 1;",
- "new": "      shift_ena = 2;",
+ "line": 40,
+ "old": "    shift_ena = 0; counting = 0; done = 0;",
+ "new": "    shift_ena = 1; counting = 0; done = 0;",
  "note": "",
  "body_lines": 32,
  "sequential": true,
  "n_lines": 54,
  "text_lhs": [
-  "shift_ena"
+  "shift_ena",
+  "counting",
+  "done"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 256,
+ "mismatches": 4810,
  "samples": 5069,
- "t_fail": 90,
+ "t_fail": 20,
  "out_first_mismatch": {
-  "shift_ena": 90
+  "shift_ena": 20
  },
  "out_mismatch_count": {
-  "shift_ena": 256
+  "shift_ena": 4810
  },
  "valid": true,
- "t_act": 85,
- "cyc_act": 9,
+ "t_act": 15,
+ "cyc_act": 2,
  "div_signals": [
   "shift_ena"
  ],
  "div_order": [
   [
    "shift_ena",
-   85,
-   9
+   15,
+   2
   ]
  ],
  "clk_edges": 2535,
- "cyc_fail": 9,
+ "cyc_fail": 2,
  "failing_outputs": [
   "shift_ena"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 9,
+ "cyc_act_any": 2,
  "bug_id": "bug254",
  "split": "test",
- "gt_line": 42,
+ "gt_line": 40,
  "gt_signals": [
-  "shift_ena"
+  "shift_ena",
+  "counting",
+  "done"
  ],
  "long_horizon": false
 }

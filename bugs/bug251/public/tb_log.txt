@@ -6,9 +6,9 @@ Hint: Output 'S1_next' has no mismatches.
 Hint: Output 'Count_next' has no mismatches.
 Hint: Output 'Wait_next' has no mismatches.
 Hint: Output 'done' has no mismatches.
-Hint: Output 'counting' has no mismatches.
-Hint: Output 'shift_ena' has 27 mismatches. First mismatch occurred at time 130.
-Hint: Total mismatched samples is 27 out of 300 samples
+Hint: Output 'counting' has 52 mismatches. First mismatch occurred at time 30.
+Hint: Output 'shift_ena' has no mismatches.
+Hint: Total mismatched samples is 52 out of 300 samples
 
 Simulation finished at 1501 ps
-Mismatches: 27 in 300 samples
+Mismatches: 52 in 300 samples

@@ -13,11 +13,11 @@ module TopModule (
     always_comb begin
     case (state)
       A: next = j ? B : A;
-      B: next = k ? A : B;
+      B: next = k ? B : A;
     endcase
     end
 
-    always @(posedge clk, posedge reset) begin
+    always @(posedge clk) begin
     if (reset) state <= A;
         else state <= next;
   end

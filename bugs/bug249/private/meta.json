@@ -1,39 +1,39 @@
 {
  "problem": "Prob150_review2015_fsmonehot",
- "k": 28,
+ "k": 19,
  "op": "state_swap",
  "category": "control",
- "line": 24,
- "old": "  assign done = state[Wait];",
- "new": "  assign done = state[S];",
- "note": "Wait->S",
+ "line": 21,
+ "old": "  assign Count_next = state[B3] | state[Count]&~done_counting;",
+ "new": "  assign Count_next = state[B3] | state[Wait]&~done_counting;",
+ "note": "Count->Wait",
  "body_lines": 9,
  "sequential": false,
  "n_lines": 28,
  "text_lhs": [
-  "done"
+  "Count_next"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 52,
+ "mismatches": 28,
  "samples": 300,
  "t_fail": 30,
  "out_first_mismatch": {
-  "done": 30
+  "Count_next": 30
  },
  "out_mismatch_count": {
-  "done": 52
+  "Count_next": 28
  },
  "valid": true,
  "t_act": 25,
  "cyc_act": 3,
  "div_signals": [
-  "done"
+  "Count_next"
  ],
  "div_order": [
   [
-   "done",
+   "Count_next",
    25,
    3
   ]
@@ -41,7 +41,7 @@
  "clk_edges": 150,
  "cyc_fail": 3,
  "failing_outputs": [
-  "done"
+  "Count_next"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
@@ -49,9 +49,9 @@
  "cyc_act_any": 3,
  "bug_id": "bug249",
  "split": "test",
- "gt_line": 24,
+ "gt_line": 21,
  "gt_signals": [
-  "done"
+  "Count_next"
  ],
  "long_horizon": false
 }

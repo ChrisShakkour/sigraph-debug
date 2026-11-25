@@ -148,8 +148,8 @@
     {
      "line": 16,
      "line_end": 16,
-     "stmt": "next = k ? A : B",
-     "rhs": "k ? A : B",
+     "stmt": "next = k ? B : A",
+     "rhs": "k ? B : A",
      "kind": "comb",
      "block": "alwayscomb@14",
      "guard": "case state == B",
@@ -252,9 +252,7 @@
    "kind": "seq",
    "line": 20,
    "clock": "clk",
-   "async_reset": [
-    "reset"
-   ]
+   "async_reset": []
   }
  ],
  "diagnostics": [

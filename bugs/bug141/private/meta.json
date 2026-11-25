@@ -1,67 +1,69 @@
 {
  "problem": "Prob111_fsm2s",
- "k": 1,
- "op": "ternary_swap",
- "category": "control",
- "line": 16,
- "old": "      B: next = k ? A : B;",
- "new": "      B: next = k ? B : A;",
+ "k": 3,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 21,
+ "old": "    if (reset) state <= A;",
+ "new": "    if (!(reset)) state <= A;",
  "note": "",
  "body_lines": 12,
  "sequential": true,
  "n_lines": 27,
  "text_lhs": [
-  "next"
+  "state"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": false,
- "mismatches": 82,
+ "mismatches": 128,
  "samples": 241,
- "t_fail": 30,
+ "t_fail": 10,
  "out_first_mismatch": {
-  "out": 30
+  "out": 10
  },
  "out_mismatch_count": {
-  "out": 82
+  "out": 128
  },
  "valid": true,
- "t_act": 15,
- "cyc_act": 3,
+ "t_act": 5,
+ "cyc_act": 1,
  "div_signals": [
-  "next"
+  "next",
+  "out",
+  "state"
  ],
  "div_order": [
   [
    "next",
-   15,
-   2
+   5,
+   1
   ],
   [
    "out",
-   25,
-   3
+   5,
+   1
   ],
   [
    "state",
-   25,
-   3
+   5,
+   1
   ]
  ],
  "clk_edges": 121,
- "cyc_fail": 3,
+ "cyc_fail": 1,
  "failing_outputs": [
   "out"
  ],
  "latency_cycles": 0,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 2,
+ "cyc_act_any": 1,
  "bug_id": "bug141",
  "split": "test",
- "gt_line": 16,
+ "gt_line": 21,
  "gt_signals": [
-  "next"
+  "state"
  ],
  "long_horizon": false
 }

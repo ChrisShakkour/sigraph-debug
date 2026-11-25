@@ -1,14 +1,14 @@
 VCD info: dumpfile wave.vcd opened for output.
 <verilog-eval>/Prob150_review2015_fsmonehot_test.sv:22: $finish called at 1501 (1ps)
 Hint: Output 'B3_next' has no mismatches.
-Hint: Output 'S_next' has 96 mismatches. First mismatch occurred at time 5.
+Hint: Output 'S_next' has 35 mismatches. First mismatch occurred at time 65.
 Hint: Output 'S1_next' has no mismatches.
 Hint: Output 'Count_next' has no mismatches.
 Hint: Output 'Wait_next' has no mismatches.
 Hint: Output 'done' has no mismatches.
 Hint: Output 'counting' has no mismatches.
 Hint: Output 'shift_ena' has no mismatches.
-Hint: Total mismatched samples is 96 out of 300 samples
+Hint: Total mismatched samples is 35 out of 300 samples
 
 Simulation finished at 1501 ps
-Mismatches: 96 in 300 samples
+Mismatches: 35 in 300 samples

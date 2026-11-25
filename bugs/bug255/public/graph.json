@@ -96,8 +96,8 @@
     {
      "line": 42,
      "line_end": 42,
-     "stmt": "walk_right = (state!=WR)",
-     "rhs": "state!=WR",
+     "stmt": "walk_right = (state==WR)",
+     "rhs": "state==WR",
      "kind": "comb",
      "block": "assign@42",
      "guard": "",
@@ -228,7 +228,7 @@
      "rhs": "FALLL",
      "kind": "comb",
      "block": "alwayscomb@19",
-     "guard": "case state == WL && if (!ground)",
+     "guard": "case state == WL && if (ground)",
      "guard_lines": [
       20
      ],
@@ -247,7 +247,7 @@
      "rhs": "DIGL",
      "kind": "comb",
      "block": "alwayscomb@19",
-     "guard": "case state == WL && !(!ground) && if (dig)",
+     "guard": "case state == WL && !(ground) && if (dig)",
      "guard_lines": [
       20,
       21
@@ -268,7 +268,7 @@
      "rhs": "WR",
      "kind": "comb",
      "block": "alwayscomb@19",
-     "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)",
+     "guard": "case state == WL && !(ground) && !(dig) && if (bump_left)",
      "guard_lines": [
       20,
       21,
@@ -291,7 +291,7 @@
      "rhs": "WL",
      "kind": "comb",
      "block": "alwayscomb@19",
-     "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)",
+     "guard": "case state == WL && !(ground) && !(dig) && !(bump_left)",
      "guard_lines": [
       20,
       21,
@@ -539,7 +539,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 20,
-   "guard": "case state == WL && if (!ground)"
+   "guard": "case state == WL && if (ground)"
   },
   {
    "src": "ground",
@@ -547,7 +547,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 20,
-   "guard": "case state == WL && if (!ground)"
+   "guard": "case state == WL && if (ground)"
   },
   {
    "src": "state",
@@ -555,7 +555,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 21,
-   "guard": "case state == WL && !(!ground) && if (dig)"
+   "guard": "case state == WL && !(ground) && if (dig)"
   },
   {
    "src": "ground",
@@ -563,7 +563,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 21,
-   "guard": "case state == WL && !(!ground) && if (dig)"
+   "guard": "case state == WL && !(ground) && if (dig)"
   },
   {
    "src": "dig",
@@ -571,7 +571,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 21,
-   "guard": "case state == WL && !(!ground) && if (dig)"
+   "guard": "case state == WL && !(ground) && if (dig)"
   },
   {
    "src": "state",
@@ -579,7 +579,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 22,
-   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && if (bump_left)"
   },
   {
    "src": "ground",
@@ -587,7 +587,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 22,
-   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && if (bump_left)"
   },
   {
    "src": "dig",
@@ -595,7 +595,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 22,
-   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && if (bump_left)"
   },
   {
    "src": "bump_left",
@@ -603,7 +603,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 22,
-   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && if (bump_left)"
   },
   {
    "src": "state",
@@ -611,7 +611,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 23,
-   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && !(bump_left)"
   },
   {
    "src": "ground",
@@ -619,7 +619,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 23,
-   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && !(bump_left)"
   },
   {
    "src": "dig",
@@ -627,7 +627,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 23,
-   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && !(bump_left)"
   },
   {
    "src": "bump_left",
@@ -635,7 +635,7 @@
    "dep": "ctrl",
    "kind": "comb",
    "line": 23,
-   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+   "guard": "case state == WL && !(ground) && !(dig) && !(bump_left)"
   },
   {
    "src": "state",

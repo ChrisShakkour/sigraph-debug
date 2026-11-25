@@ -1,57 +1,103 @@
 {
  "problem": "Prob156_review2015_fancytimer",
- "k": 53,
+ "k": 42,
  "op": "const_pm1",
  "category": "datapath",
- "line": 50,
- "old": "      done = 1;",
- "new": "      done = 0;",
+ "line": 46,
+ "old": "      shift_ena = 1;",
+ "new": "      shift_ena = 2;",
  "note": "",
  "body_lines": 46,
  "sequential": true,
  "n_lines": 74,
  "text_lhs": [
-  "done"
+  "shift_ena"
  ],
  "compiled": true,
  "wall_timeout": false,
  "tb_watchdog": true,
- "mismatches": 524,
+ "mismatches": 199339,
  "samples": 200000,
- "t_fail": 20130,
+ "t_fail": 130,
  "out_first_mismatch": {
-  "done": 20130
+  "count": 130,
+  "counting": 10130,
+  "done": 10140
  },
  "out_mismatch_count": {
-  "done": 524
+  "count": 198551,
+  "counting": 174697,
+  "done": 174677
  },
  "valid": true,
- "t_act": 20125,
- "cyc_act": 2013,
+ "t_act": 85,
+ "cyc_act": 10,
  "div_signals": [
-  "done"
+  "shift_ena"
  ],
  "div_order": [
   [
+   "shift_ena",
+   85,
+   9
+  ],
+  [
+   "scount",
+   95,
+   10
+  ],
+  [
+   "count",
+   125,
+   13
+  ],
+  [
+   "done_counting",
+   10115,
+   1012
+  ],
+  [
+   "next",
+   10115,
+   1012
+  ],
+  [
+   "counting",
+   10125,
+   1013
+  ],
+  [
+   "state",
+   10125,
+   1013
+  ],
+  [
    "done",
-   20125,
-   2013
+   10135,
+   1014
+  ],
+  [
+   "fcount",
+   10135,
+   1014
   ]
  ],
  "clk_edges": 100000,
- "cyc_fail": 2013,
+ "cyc_fail": 13,
  "failing_outputs": [
+  "count",
+  "counting",
   "done"
  ],
- "latency_cycles": 0,
+ "latency_cycles": 3,
  "fails_seed1234": true,
  "fails_seed98765": true,
- "cyc_act_any": 2013,
+ "cyc_act_any": 9,
  "bug_id": "bug268",
  "split": "dev",
- "gt_line": 50,
+ "gt_line": 46,
  "gt_signals": [
-  "done"
+  "shift_ena"
  ],
  "long_horizon": false
 }

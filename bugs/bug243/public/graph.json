@@ -170,8 +170,8 @@
     {
      "line": 19,
      "line_end": 19,
-     "stmt": "next = C",
-     "rhs": "C",
+     "stmt": "next = D",
+     "rhs": "D",
      "kind": "comb",
      "block": "always@16",
      "guard": "case state == A && !(r[0]) && if (r[1])",
@@ -185,7 +185,7 @@
       "r"
      ],
      "nonblocking": false,
-     "const_rhs": "C"
+     "const_rhs": "D"
     },
     {
      "line": 20,
@@ -232,8 +232,8 @@
     {
      "line": 22,
      "line_end": 22,
-     "stmt": "next = r[0] ? B : B",
-     "rhs": "r[0] ? B : B",
+     "stmt": "next = r[0] ? B : A",
+     "rhs": "r[0] ? B : A",
      "kind": "comb",
      "block": "always@16",
      "guard": "case state == B",

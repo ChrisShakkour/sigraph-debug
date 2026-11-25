@@ -277,8 +277,8 @@
     {
      "line": 25,
      "line_end": 25,
-     "stmt": "next = s[2] ? D1 : (s[1] ? C2 : B2)",
-     "rhs": "s[2] ? D1 : (s[1] ? C2 : B2)",
+     "stmt": "next = s[1] ? D1 : (s[1] ? C2 : B2)",
+     "rhs": "s[1] ? D1 : (s[1] ? C2 : B2)",
      "kind": "comb",
      "block": "always@19",
      "guard": "case state == C2",
@@ -345,8 +345,8 @@
     {
      "line": 34,
      "line_end": 34,
-     "stmt": "fr = 4'b0",
-     "rhs": "4'b0",
+     "stmt": "fr = 4'b1111",
+     "rhs": "4'b1111",
      "kind": "comb",
      "block": "alwayscomb@33",
      "guard": "case state == A2",

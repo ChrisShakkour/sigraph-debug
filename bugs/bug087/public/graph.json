@@ -34,8 +34,8 @@
     {
      "line": 18,
      "line_end": 18,
-     "stmt": "q <= 32'h1",
-     "rhs": "32'h1",
+     "stmt": "q <= 32'h0",
+     "rhs": "32'h0",
      "kind": "seq",
      "block": "always@16",
      "guard": "if (reset)",
@@ -130,8 +130,8 @@
     {
      "line": 12,
      "line_end": 12,
-     "stmt": "q_next[1] ^= q[1]",
-     "rhs": "q_next[1] ^= q[1]",
+     "stmt": "q_next[1] ^= q[0]",
+     "rhs": "q_next[1] ^= q[0]",
      "kind": "comb",
      "block": "always@8",
      "guard": "",
