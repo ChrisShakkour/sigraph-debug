@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+
+# scratch + regenerable artifacts
+work/
+tb_reseed/
+*.vvp
+*.vcd
+!tests/fixtures/*.vcd
+
+# experiment run outputs (trajectories can be large; results summaries are committed separately)
+runs/
