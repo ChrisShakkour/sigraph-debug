@@ -48,6 +48,8 @@
  "bug_id": "bug059",
  "split": "test",
  "gt_line": 9,
- "gt_signals": [],
+ "gt_signals": [
+  "f"
+ ],
  "long_horizon": false
 }

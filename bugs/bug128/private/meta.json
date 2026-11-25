@@ -51,7 +51,10 @@
  "split": "test",
  "gt_line": 10,
  "gt_signals": [
-  "left"
+  "left",
+  "down",
+  "right",
+  "up"
  ],
  "long_horizon": false
 }

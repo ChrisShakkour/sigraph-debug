@@ -1,0 +1,210 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "c": {
+   "name": "c",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out = w1&w2",
+     "rhs": "w1&w2",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "w1",
+      "w2"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_n": {
+   "name": "out_n",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "out_n = ~out",
+     "rhs": "~out",
+     "kind": "comb",
+     "block": "assign@14",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "out"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "w1": {
+   "name": "w1",
+   "dir": "internal",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "w1 = a&b",
+     "rhs": "a&b",
+     "kind": "comb",
+     "block": "assign@11",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "w2": {
+   "name": "w2",
+   "dir": "internal",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "w2 = c&d",
+     "rhs": "c&d",
+     "kind": "comb",
+     "block": "assign@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "d"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "w1",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "w2",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "out",
+   "dst": "out_n",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "w1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "w1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "c",
+   "dst": "w2",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "w2",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

@@ -1,0 +1,187 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "resetn": {
+   "name": "resetn",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "byteena": {
+   "name": "byteena",
+   "dir": "in",
+   "width": 2,
+   "type": "logic[1:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 16,
+   "type": "logic[15:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 16,
+   "type": "reg[15:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "if (!resetn)",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "resetn"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "q[7:0] <= d[7:0]",
+     "rhs": "d[7:0]",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(!resetn) && if (byteena[0])",
+     "guard_lines": [
+      10,
+      13
+     ],
+     "data": [
+      "d"
+     ],
+     "ctrl": [
+      "resetn",
+      "byteena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "q[15:8] <= d[15:8]",
+     "rhs": "d[15:8]",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(!resetn) && if (!(byteena[1]))",
+     "guard_lines": [
+      10,
+      15
+     ],
+     "data": [
+      "d"
+     ],
+     "ctrl": [
+      "resetn",
+      "byteena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "resetn",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (!resetn)"
+  },
+  {
+   "src": "d",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!resetn) && if (byteena[0])"
+  },
+  {
+   "src": "resetn",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!resetn) && if (byteena[0])"
+  },
+  {
+   "src": "byteena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!resetn) && if (byteena[0])"
+  },
+  {
+   "src": "d",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!resetn) && if (!(byteena[1]))"
+  },
+  {
+   "src": "resetn",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!resetn) && if (!(byteena[1]))"
+  },
+  {
+   "src": "byteena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!resetn) && if (!(byteena[1]))"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "seq",
+   "line": 9,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

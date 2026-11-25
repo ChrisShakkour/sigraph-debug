@@ -1,0 +1,276 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "c": {
+   "name": "c",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out_sop": {
+   "name": "out_sop",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "out_sop = c&d | ~a|~b&c",
+     "rhs": "c&d | ~a|~b&c",
+     "kind": "comb",
+     "block": "assign@11",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "d",
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_pos": {
+   "name": "out_pos",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out_pos = (pos0 == pos1) ? pos0 : 1'bx",
+     "rhs": "(pos0 == pos1) ? pos0 : 1'bx",
+     "kind": "comb",
+     "block": "assign@15",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "pos0",
+      "pos1"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "pos0": {
+   "name": "pos0",
+   "dir": "internal",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "pos0 = c & (~b|d)&(~a|b)",
+     "rhs": "c & (~b|d)&(~a|b)",
+     "kind": "comb",
+     "block": "assign@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "b",
+      "d",
+      "a"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "pos1": {
+   "name": "pos1",
+   "dir": "internal",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "pos1 = c & (~b|d)&(~a|d)",
+     "rhs": "c & (~b|d)&(~a|d)",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "b",
+      "d",
+      "a"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "c",
+   "dst": "out_sop",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "out_sop",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_sop",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_sop",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "pos0",
+   "dst": "out_pos",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "pos1",
+   "dst": "out_pos",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "c",
+   "dst": "pos0",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "pos0",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "pos0",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "pos0",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "c",
+   "dst": "pos1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "pos1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "pos1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "pos1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": [
+  "source:11:21: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:11:31: warning: '&' within '|' [-Wbitwise-op-parentheses]"
+ ]
+}

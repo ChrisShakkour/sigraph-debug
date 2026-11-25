@@ -1,0 +1,254 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 32,
+   "type": "reg[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "q <= 32'h1",
+     "rhs": "32'h1",
+     "kind": "seq",
+     "block": "always@16",
+     "guard": "if (reset)",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "q <= q_next",
+     "rhs": "q_next",
+     "kind": "seq",
+     "block": "always@16",
+     "guard": "!(reset)",
+     "guard_lines": [
+      17
+     ],
+     "data": [
+      "q_next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "q_next": {
+   "name": "q_next",
+   "dir": "internal",
+   "width": 32,
+   "type": "logic[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "q_next = q[31:1]",
+     "rhs": "q[31:1]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "q_next[31] = q[0]",
+     "rhs": "q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q_next[21] ^= q[0]",
+     "rhs": "q_next[21] ^= q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "q_next[1] ^= q[0]",
+     "rhs": "q_next[1] ^= q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q_next[0] ^= q[0]",
+     "rhs": "q_next[0] ^= q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "q_next",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@8",
+   "kind": "comb",
+   "line": 8,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@16",
+   "kind": "seq",
+   "line": 16,
+   "clock": "clk",
+   "async_reset": [
+    "reset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:9:14: warning: implicit conversion expands from 31 to 32 bits [-Wwidth-expand]"
+ ]
+}

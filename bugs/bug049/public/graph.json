@@ -1,0 +1,158 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "shift_ena": {
+   "name": "shift_ena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "count_ena": {
+   "name": "count_ena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q <= { q[2:0], data }",
+     "rhs": "{ q[2:0], data }",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "if (!(shift_ena))",
+     "guard_lines": [
+      10
+     ],
+     "data": [
+      "q",
+      "data"
+     ],
+     "ctrl": [
+      "shift_ena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q <= q - 1'b1",
+     "rhs": "q - 1'b1",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(!(shift_ena)) && if (count_ena)",
+     "guard_lines": [
+      10,
+      12
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "shift_ena",
+      "count_ena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (!(shift_ena))"
+  },
+  {
+   "src": "data",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (!(shift_ena))"
+  },
+  {
+   "src": "shift_ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (!(shift_ena))"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(!(shift_ena)) && if (count_ena)"
+  },
+  {
+   "src": "shift_ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(!(shift_ena)) && if (count_ena)"
+  },
+  {
+   "src": "count_ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(!(shift_ena)) && if (count_ena)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "seq",
+   "line": 9,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

@@ -1,0 +1,158 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "w": {
+   "name": "w",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "R": {
+   "name": "R",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "E": {
+   "name": "E",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "L": {
+   "name": "L",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "Q": {
+   "name": "Q",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "Q <= R",
+     "rhs": "R",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "if (!(L))",
+     "guard_lines": [
+      11
+     ],
+     "data": [
+      "R"
+     ],
+     "ctrl": [
+      "L"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "Q <= w",
+     "rhs": "w",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(!(L)) && if (E)",
+     "guard_lines": [
+      11,
+      13
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "L",
+      "E"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "R",
+   "dst": "Q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": "if (!(L))"
+  },
+  {
+   "src": "L",
+   "dst": "Q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 12,
+   "guard": "if (!(L))"
+  },
+  {
+   "src": "w",
+   "dst": "Q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!(L)) && if (E)"
+  },
+  {
+   "src": "L",
+   "dst": "Q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!(L)) && if (E)"
+  },
+  {
+   "src": "E",
+   "dst": "Q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(!(L)) && if (E)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

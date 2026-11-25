@@ -1,0 +1,90 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "x3": {
+   "name": "x3",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "x2": {
+   "name": "x2",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "x1": {
+   "name": "x1",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "f": {
+   "name": "f",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 11,
+     "stmt": "f = ( ~x3 & x2 & x1 ) | ( ~x3 & x2 & x1 ) | ( x3 & ~x2 & x1 ) | ( x3 & x2 & x1 )",
+     "rhs": "( ~x3 & x2 & x1 ) | ( ~x3 & x2 & x1 ) | ( x3 & ~x2 & x1 ) | ( x3 & x2 & x1 )",
+     "kind": "comb",
+     "block": "assign@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "x3",
+      "x2",
+      "x1"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "x3",
+   "dst": "f",
+   "dep": "data",
+   "kind": "comb",
+   "line": 8,
+   "guard": ""
+  },
+  {
+   "src": "x2",
+   "dst": "f",
+   "dep": "data",
+   "kind": "comb",
+   "line": 8,
+   "guard": ""
+  },
+  {
+   "src": "x1",
+   "dst": "f",
+   "dep": "data",
+   "kind": "comb",
+   "line": 8,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

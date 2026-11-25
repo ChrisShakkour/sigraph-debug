@@ -1,0 +1,187 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "cpu_overheated": {
+   "name": "cpu_overheated",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "shut_off_computer": {
+   "name": "shut_off_computer",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "shut_off_computer = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "if (cpu_overheated)",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "cpu_overheated"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "shut_off_computer = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "!(cpu_overheated)",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "cpu_overheated"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "arrived": {
+   "name": "arrived",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "gas_tank_empty": {
+   "name": "gas_tank_empty",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "keep_driving": {
+   "name": "keep_driving",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "keep_driving = gas_tank_empty",
+     "rhs": "gas_tank_empty",
+     "kind": "comb",
+     "block": "always@16",
+     "guard": "if (~arrived)",
+     "guard_lines": [
+      17
+     ],
+     "data": [
+      "gas_tank_empty"
+     ],
+     "ctrl": [
+      "arrived"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "keep_driving = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "always@16",
+     "guard": "!(~arrived)",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "arrived"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "cpu_overheated",
+   "dst": "shut_off_computer",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "if (cpu_overheated)"
+  },
+  {
+   "src": "cpu_overheated",
+   "dst": "shut_off_computer",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "!(cpu_overheated)"
+  },
+  {
+   "src": "gas_tank_empty",
+   "dst": "keep_driving",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": "if (~arrived)"
+  },
+  {
+   "src": "arrived",
+   "dst": "keep_driving",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "if (~arrived)"
+  },
+  {
+   "src": "arrived",
+   "dst": "keep_driving",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "!(~arrived)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@16",
+   "kind": "comb",
+   "line": 16,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

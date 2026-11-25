@@ -1,0 +1,184 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out_assign": {
+   "name": "out_assign",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "out_assign = a ^ b",
+     "rhs": "a ^ b",
+     "kind": "comb",
+     "block": "assign@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_always_comb": {
+   "name": "out_always_comb",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "out_always_comb = a | b",
+     "rhs": "a | b",
+     "kind": "comb",
+     "block": "always@11",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_always_ff": {
+   "name": "out_always_ff",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "out_always_ff <= a ^ b",
+     "rhs": "a ^ b",
+     "kind": "seq",
+     "block": "always@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "a",
+   "dst": "out_assign",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_assign",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_always_comb",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_always_comb",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_always_ff",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_always_ff",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@11",
+   "kind": "comb",
+   "line": 11,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@12",
+   "kind": "seq",
+   "line": 12,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

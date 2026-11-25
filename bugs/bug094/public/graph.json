@@ -1,0 +1,206 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 5,
+   "type": "reg[4:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "q <= 5'h1",
+     "rhs": "5'h1",
+     "kind": "seq",
+     "block": "always@14",
+     "guard": "if (reset)",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "q <= q_next",
+     "rhs": "q_next",
+     "kind": "seq",
+     "block": "always@14",
+     "guard": "!(reset)",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "q_next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "q_next": {
+   "name": "q_next",
+   "dir": "internal",
+   "width": 5,
+   "type": "logic[4:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "q_next = q[4:1]",
+     "rhs": "q[4:1]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "q_next[4] = q[0]",
+     "rhs": "q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q_next[2] ^= q[0]",
+     "rhs": "q_next[2] ^= q[0]",
+     "kind": "comb",
+     "block": "always@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "q_next",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@8",
+   "kind": "comb",
+   "line": 8,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@14",
+   "kind": "seq",
+   "line": 14,
+   "clock": "clk",
+   "async_reset": [
+    "reset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:9:14: warning: implicit conversion expands from 4 to 5 bits [-Wwidth-expand]"
+ ]
+}

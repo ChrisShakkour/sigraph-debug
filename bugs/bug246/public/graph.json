@@ -1,0 +1,751 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "s": {
+   "name": "s",
+   "dir": "in",
+   "width": 3,
+   "type": "logic[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "fr2": {
+   "name": "fr2",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "{fr2, fr1, fr0, dfr} = fr",
+     "rhs": "fr",
+     "kind": "comb",
+     "block": "assign@31",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "fr"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "fr1": {
+   "name": "fr1",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "{fr2, fr1, fr0, dfr} = fr",
+     "rhs": "fr",
+     "kind": "comb",
+     "block": "assign@31",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "fr"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "fr0": {
+   "name": "fr0",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "{fr2, fr1, fr0, dfr} = fr",
+     "rhs": "fr",
+     "kind": "comb",
+     "block": "assign@31",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "fr"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "dfr": {
+   "name": "dfr",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "{fr2, fr1, fr0, dfr} = fr",
+     "rhs": "fr",
+     "kind": "comb",
+     "block": "assign@31",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "fr"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "state <= A2",
+     "rhs": "A2",
+     "kind": "seq",
+     "block": "always@14",
+     "guard": "if (reset)",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "A2"
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@14",
+     "guard": "!(reset)",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "next = s[0] ? B1 : A2",
+     "rhs": "s[0] ? B1 : A2",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == A2",
+     "guard_lines": [
+      21
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "next = s[1] ? C1 : (s[0] ? B1 : A2)",
+     "rhs": "s[1] ? C1 : (s[0] ? B1 : A2)",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == B1",
+     "guard_lines": [
+      22
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "next = s[1] ? C1 : (s[0] ? B2 : A2)",
+     "rhs": "s[1] ? C1 : (s[0] ? B2 : A2)",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == B2",
+     "guard_lines": [
+      23
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "next = s[2] ? D1 : (s[1] ? C1 : B2)",
+     "rhs": "s[2] ? D1 : (s[1] ? C1 : B2)",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == C1",
+     "guard_lines": [
+      24
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "next = s[2] ? D1 : (s[1] ? C2 : B2)",
+     "rhs": "s[2] ? D1 : (s[1] ? C2 : B2)",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == C2",
+     "guard_lines": [
+      25
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "next = s[2] ? D1 : D1",
+     "rhs": "s[2] ? D1 : D1",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == D1",
+     "guard_lines": [
+      26
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "next = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "always@19",
+     "guard": "case state == default",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "fr": {
+   "name": "fr",
+   "dir": "internal",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 34,
+     "line_end": 34,
+     "stmt": "fr = 4'b1111",
+     "rhs": "4'b1111",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == A2",
+     "guard_lines": [
+      34
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 35,
+     "line_end": 35,
+     "stmt": "fr = 4'b0110",
+     "rhs": "4'b0110",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == B1",
+     "guard_lines": [
+      35
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 36,
+     "line_end": 36,
+     "stmt": "fr = 4'b0111",
+     "rhs": "4'b0111",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == B2",
+     "guard_lines": [
+      36
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 37,
+     "line_end": 37,
+     "stmt": "fr = 4'b0010",
+     "rhs": "4'b0010",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == C1",
+     "guard_lines": [
+      37
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 38,
+     "line_end": 38,
+     "stmt": "fr = 4'b0011",
+     "rhs": "4'b0011",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == C2",
+     "guard_lines": [
+      38
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 39,
+     "line_end": 39,
+     "stmt": "fr = 4'b0000",
+     "rhs": "4'b0000",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == D1",
+     "guard_lines": [
+      39
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "fr = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "alwayscomb@33",
+     "guard": "case state == default",
+     "guard_lines": [
+      40
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "fr",
+   "dst": "fr2",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": ""
+  },
+  {
+   "src": "fr",
+   "dst": "fr1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": ""
+  },
+  {
+   "src": "fr",
+   "dst": "fr0",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": ""
+  },
+  {
+   "src": "fr",
+   "dst": "dfr",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": ""
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == A2"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == A2"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == B1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == B1"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == B2"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == B2"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == C1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == C1"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == C2"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == C2"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case state == D1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case state == D1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case state == default"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 34,
+   "guard": "case state == A2"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 35,
+   "guard": "case state == B1"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 36,
+   "guard": "case state == B2"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 37,
+   "guard": "case state == C1"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 38,
+   "guard": "case state == C2"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 39,
+   "guard": "case state == D1"
+  },
+  {
+   "src": "state",
+   "dst": "fr",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 40,
+   "guard": "case state == default"
+  }
+ ],
+ "constants": {
+  "A2": "0",
+  "B1": "1",
+  "B2": "2",
+  "C1": "3",
+  "C2": "4",
+  "D1": "5"
+ },
+ "state_constants": [
+  "A2",
+  "B1",
+  "B2",
+  "C1",
+  "C2",
+  "D1"
+ ],
+ "blocks": [
+  {
+   "id": "always@14",
+   "kind": "seq",
+   "line": 14,
+   "clock": "clk",
+   "async_reset": []
+  },
+  {
+   "id": "always@19",
+   "kind": "comb",
+   "line": 19,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "alwayscomb@33",
+   "kind": "comb",
+   "line": 33,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:21:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:21:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:22:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:22:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:23:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:23:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:24:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:24:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:25:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:25:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:26:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:26:18: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:34:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:35:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:36:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:37:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:38:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:39:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]"
+ ]
+}

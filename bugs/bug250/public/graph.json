@@ -1,0 +1,402 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "done_counting": {
+   "name": "done_counting",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ack": {
+   "name": "ack",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "state": {
+   "name": "state",
+   "dir": "in",
+   "width": 10,
+   "type": "logic[9:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "B3_next": {
+   "name": "B3_next",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "B3_next = state[B2]",
+     "rhs": "state[B2]",
+     "kind": "comb",
+     "block": "assign@18",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "S_next": {
+   "name": "S_next",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "S_next = state[S]|~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack",
+     "rhs": "state[S]|~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack",
+     "kind": "comb",
+     "block": "assign@19",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "d",
+      "ack"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "S1_next": {
+   "name": "S1_next",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "S1_next = state[S]&d",
+     "rhs": "state[S]&d",
+     "kind": "comb",
+     "block": "assign@20",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "d"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "Count_next": {
+   "name": "Count_next",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "Count_next = state[B3] | state[Count]&~done_counting",
+     "rhs": "state[B3] | state[Count]&~done_counting",
+     "kind": "comb",
+     "block": "assign@21",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "done_counting"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "Wait_next": {
+   "name": "Wait_next",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "Wait_next = state[Count]&done_counting | state[Wait]&~ack",
+     "rhs": "state[Count]&done_counting | state[Wait]&~ack",
+     "kind": "comb",
+     "block": "assign@22",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "done_counting",
+      "ack"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "done": {
+   "name": "done",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "done = state[Wait]",
+     "rhs": "state[Wait]",
+     "kind": "comb",
+     "block": "assign@24",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "counting": {
+   "name": "counting",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "counting = state[Count]",
+     "rhs": "state[Count]",
+     "kind": "comb",
+     "block": "assign@25",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "shift_ena": {
+   "name": "shift_ena",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "shift_ena = |state[B3:B0]",
+     "rhs": "|state[B3:B0]",
+     "kind": "comb",
+     "block": "assign@26",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "B3_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "S_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "S_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "ack",
+   "dst": "S_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "S1_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "S1_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "Count_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": ""
+  },
+  {
+   "src": "done_counting",
+   "dst": "Count_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "Wait_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": ""
+  },
+  {
+   "src": "done_counting",
+   "dst": "Wait_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": ""
+  },
+  {
+   "src": "ack",
+   "dst": "Wait_next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "done",
+   "dep": "data",
+   "kind": "comb",
+   "line": 24,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "counting",
+   "dep": "data",
+   "kind": "comb",
+   "line": 25,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "shift_ena",
+   "dep": "data",
+   "kind": "comb",
+   "line": 26,
+   "guard": ""
+  }
+ ],
+ "constants": {
+  "S": "0",
+  "S1": "1",
+  "S11": "2",
+  "S110": "3",
+  "B0": "4",
+  "B1": "5",
+  "B2": "6",
+  "B3": "7",
+  "Count": "8",
+  "Wait": "9"
+ },
+ "state_constants": [
+  "B0",
+  "B1",
+  "B2",
+  "B3",
+  "Count",
+  "S",
+  "S1",
+  "S11",
+  "S110",
+  "Wait"
+ ],
+ "blocks": [],
+ "diagnostics": [
+  "source:19:42: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:19:59: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:19:76: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:21:47: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:22:34: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:22:62: warning: '&' within '|' [-Wbitwise-op-parentheses]"
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 32,
+   "type": "logic[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 32,
+   "type": "reg[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out <= '0",
+     "rhs": "'0",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "if (reset)",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out <= out | (~in & d_last)",
+     "rhs": "out | (~in & d_last)",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(reset)",
+     "guard_lines": [
+      12
+     ],
+     "data": [
+      "out",
+      "in",
+      "d_last"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "d_last": {
+   "name": "d_last",
+   "dir": "internal",
+   "width": 32,
+   "type": "reg[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "d_last = in",
+     "rhs": "in",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "out",
+   "dst": "out",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "in",
+   "dst": "out",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "d_last",
+   "dst": "out",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "in",
+   "dst": "d_last",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

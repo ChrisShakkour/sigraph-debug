@@ -1,0 +1,250 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 3,
+   "type": "logic[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 16,
+   "type": "reg[15:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "q = 4658",
+     "rhs": "4658",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 0",
+     "guard_lines": [
+      8
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "q = 44768",
+     "rhs": "44768",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 1",
+     "guard_lines": [
+      9
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "q = 10196",
+     "rhs": "10196",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 2",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q = 23054",
+     "rhs": "23054",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 3",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "q = 8295",
+     "rhs": "8295",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 4",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q = 25806",
+     "rhs": "25806",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 5",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "q = 50470",
+     "rhs": "50470",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 6",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "q = 12057",
+     "rhs": "12057",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case a == 7",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "a"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 8,
+   "guard": "case a == 0"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "case a == 1"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 10,
+   "guard": "case a == 2"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case a == 3"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case a == 4"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case a == 5"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case a == 6"
+  },
+  {
+   "src": "a",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case a == 7"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@6",
+   "kind": "comb",
+   "line": 6,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:7:5: warning: 'case' missing 'default' label [-Wcase-default]"
+ ]
+}

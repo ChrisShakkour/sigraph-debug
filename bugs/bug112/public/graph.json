@@ -1,0 +1,319 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "shift_ena": {
+   "name": "shift_ena",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "shift_ena = (state == B0 || state == B1 || state == B2 || state == B3)",
+     "rhs": "state == B0 || state == B1 || state == B2 || state == B3",
+     "kind": "comb",
+     "block": "assign@25",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "state <= B0",
+     "rhs": "B0",
+     "kind": "seq",
+     "block": "always@21",
+     "guard": "if (reset)",
+     "guard_lines": [
+      22
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "B0"
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@21",
+     "guard": "!(reset)",
+     "guard_lines": [
+      22
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "next = B1",
+     "rhs": "B1",
+     "kind": "comb",
+     "block": "alwayscomb@12",
+     "guard": "case state == B0",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B1"
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "next = B3",
+     "rhs": "B3",
+     "kind": "comb",
+     "block": "alwayscomb@12",
+     "guard": "case state == B1",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B3"
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "next = B3",
+     "rhs": "B3",
+     "kind": "comb",
+     "block": "alwayscomb@12",
+     "guard": "case state == B2",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B3"
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "next = Done",
+     "rhs": "Done",
+     "kind": "comb",
+     "block": "alwayscomb@12",
+     "guard": "case state == B3",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "Done"
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "next = Done",
+     "rhs": "Done",
+     "kind": "comb",
+     "block": "alwayscomb@12",
+     "guard": "case state == Done",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "Done"
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "shift_ena",
+   "dep": "data",
+   "kind": "comb",
+   "line": 25,
+   "guard": ""
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 23,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 23,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case state == B0"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case state == B1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case state == B2"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case state == B3"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case state == Done"
+  }
+ ],
+ "constants": {
+  "B0": "0",
+  "B1": "1",
+  "B2": "2",
+  "B3": "3",
+  "Done": "4"
+ },
+ "state_constants": [
+  "B0",
+  "B1",
+  "B2",
+  "B3",
+  "Done"
+ ],
+ "blocks": [
+  {
+   "id": "alwayscomb@12",
+   "kind": "comb",
+   "line": 12,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@21",
+   "kind": "seq",
+   "line": 21,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:12:5: warning: 'case' missing 'default' label [-Wcase-default]",
+  "source:13:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:14:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:15:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:16:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:17:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:25:29: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:25:44: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:25:59: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:25:74: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]"
+ ]
+}

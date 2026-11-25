@@ -1,0 +1,134 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "load": {
+   "name": "load",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 512,
+   "type": "logic[511:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 512,
+   "type": "reg[511:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "q <= data",
+     "rhs": "data",
+     "kind": "seq",
+     "block": "always@8",
+     "guard": "if (load)",
+     "guard_lines": [
+      9
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 15,
+     "stmt": "q <= ~((q[$bits(q)-1:1] & q[$bits(q)-1:0] & {q[$bits(q)-2:0], 1'b0}) | (q[$bits(q)-1:1] & ~q[$bits(q)-1:0] & ~{q[$bits(q)-2:0], 1'b0}) | (q[$bits(q)-1:1] & ~q[$bits(q)-1:0] & ~{q[$bits(q)-2:0], 1'b0}) )",
+     "rhs": "~((q[$bits(q)-1:1] & q[$bits(q)-1:0] & {q[$bits(q)-2:0], 1'b0}) | (q[$bits(q)-1:1] & ~q[$bits(q)-1:0] & ~{q[$bits(q)-2:0], 1'b0}) | (q[$bits(q)-1:1] & ~q[$bits(q)-1:0] & ~{q[$bits(q)-2:0], 1'b0}) )",
+     "kind": "seq",
+     "block": "always@8",
+     "guard": "!(load)",
+     "guard_lines": [
+      9
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "data",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 10,
+   "guard": "if (load)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 10,
+   "guard": "if (load)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": "!(load)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 12,
+   "guard": "!(load)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@8",
+   "kind": "seq",
+   "line": 8,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:13:26: warning: bitwise operation between operands of different types ('reg[511:1]' and 'reg[511:0]') [-Wbitwise-op-mismatch]",
+  "source:14:24: warning: bitwise operation between operands of different types ('reg[511:1]' and 'reg[511:0]') [-Wbitwise-op-mismatch]",
+  "source:15:24: warning: bitwise operation between operands of different types ('reg[511:1]' and 'reg[511:0]') [-Wbitwise-op-mismatch]"
+ ]
+}

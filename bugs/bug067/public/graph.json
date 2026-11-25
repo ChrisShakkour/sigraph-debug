@@ -1,0 +1,274 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 8,
+   "type": "logic[7:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "pos": {
+   "name": "pos",
+   "dir": "out",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "pos = 3'h0",
+     "rhs": "3'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzzzzzzz1",
+     "guard_lines": [
+      9
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "pos = 3'h1",
+     "rhs": "3'h1",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzzzzzz1z",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "pos = 3'h2",
+     "rhs": "3'h2",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzzzzz1zz",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "pos = 3'h3",
+     "rhs": "3'h3",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzzzz1zzz",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "pos = 3'h4",
+     "rhs": "3'h4",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzzz1zzzz",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "pos = 3'h5",
+     "rhs": "3'h5",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bzz1zzzzz",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "pos = 3'h6",
+     "rhs": "3'h6",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'bz1zzzzzz",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "pos = 3'h6",
+     "rhs": "3'h6",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 8'b1zzzzzzz",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == default",
+     "guard_lines": [
+      8
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "case in == 8'bzzzzzzz1"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 10,
+   "guard": "case in == 8'bzzzzzz1z"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case in == 8'bzzzzz1zz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case in == 8'bzzzz1zzz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case in == 8'bzzz1zzzz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case in == 8'bzz1zzzzz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case in == 8'bz1zzzzzz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case in == 8'b1zzzzzzz"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 8,
+   "guard": "case in == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@6",
+   "kind": "comb",
+   "line": 6,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

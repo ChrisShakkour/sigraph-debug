@@ -1,0 +1,179 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "slowena": {
+   "name": "slowena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "q <= 1",
+     "rhs": "1",
+     "kind": "seq",
+     "block": "always@8",
+     "guard": "if (reset)",
+     "guard_lines": [
+      9
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@8",
+     "guard": "!(reset) && if (slowena) && if (q == 9)",
+     "guard_lines": [
+      9,
+      11,
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "slowena",
+      "q"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "q <= q+1",
+     "rhs": "q+1",
+     "kind": "seq",
+     "block": "always@8",
+     "guard": "!(reset) && if (slowena) && !(q == 9)",
+     "guard_lines": [
+      9,
+      11,
+      12
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "reset",
+      "slowena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 10,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(reset) && if (slowena) && if (q == 9)"
+  },
+  {
+   "src": "slowena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(reset) && if (slowena) && if (q == 9)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(reset) && if (slowena) && if (q == 9)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset) && if (slowena) && !(q == 9)"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset) && if (slowena) && !(q == 9)"
+  },
+  {
+   "src": "slowena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(reset) && if (slowena) && !(q == 9)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@8",
+   "kind": "seq",
+   "line": 8,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

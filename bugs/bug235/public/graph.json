@@ -1,0 +1,278 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "load": {
+   "name": "load",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 256,
+   "type": "logic[255:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 256,
+   "type": "reg[255:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 24,
+     "line_end": 27,
+     "stmt": "q[i*16+j] <= ((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] + q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) == 3'h3",
+     "rhs": "((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] + q_pad[(i+1)*18+j+1 -1] + q_pad[(i+1)*18+j+1+1] + q_pad[(i+1)*18+j+1 -1-18] + q_pad[(i+1)*18+j+1 -18] + q_pad[(i+1)*18+j+1 +1-18]) & 3'h7 | q[i*16+j]) == 3'h3",
+     "kind": "seq",
+     "block": "always@21",
+     "guard": "for (i<16) && for (j<16)",
+     "guard_lines": [
+      22,
+      23
+     ],
+     "data": [
+      "q_pad",
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "q <= data",
+     "rhs": "data",
+     "kind": "seq",
+     "block": "always@21",
+     "guard": "if (load)",
+     "guard_lines": [
+      30
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "q_pad": {
+   "name": "q_pad",
+   "dir": "internal",
+   "width": 324,
+   "type": "logic[323:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q_pad[18*(i+1)+1 +: 16] = q[16*i +: 16]",
+     "rhs": "q[16*i +: 16]",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "for (i<15)",
+     "guard_lines": [
+      10
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "q_pad[1 +: 16] = q[16*15 +: 16]",
+     "rhs": "q[16*15 +: 16]",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q_pad[18*17+1 +: 16] = q[0 +: 16]",
+     "rhs": "q[0 +: 16]",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "q_pad[i*18] = q_pad[i*18+16]",
+     "rhs": "q_pad[i*18+16]",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "for (i<18)",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "q_pad"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "q_pad[i*18+17] = q_pad[i*18+1]",
+     "rhs": "q_pad[i*18+1]",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "for (i<18)",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "q_pad"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "q_pad",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 24,
+   "guard": "for (i<16) && for (j<16)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 24,
+   "guard": "for (i<16) && for (j<16)"
+  },
+  {
+   "src": "data",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 31,
+   "guard": "if (load)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 31,
+   "guard": "if (load)"
+  },
+  {
+   "src": "q",
+   "dst": "q_pad",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": "for (i<15)"
+  },
+  {
+   "src": "q",
+   "dst": "q_pad",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q_pad",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "q_pad",
+   "dst": "q_pad",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": "for (i<18)"
+  },
+  {
+   "src": "q_pad",
+   "dst": "q_pad",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": "for (i<18)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@21",
+   "kind": "seq",
+   "line": 21,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:27:92: warning: bitwise operation between operands of different types ('logic' and 'bit[2:0]') [-Wbitwise-op-mismatch]",
+  "source:27:92: warning: '&' within '|' [-Wbitwise-op-parentheses]",
+  "source:27:99: warning: bitwise operation between operands of different types ('logic[2:0]' and 'reg') [-Wbitwise-op-mismatch]",
+  "source:30:5: warning: this statement is misleadingly indented as if it is part of the preceding for loop [-Wmisleading-indentation]"
+ ]
+}

@@ -56,7 +56,7 @@
  "split": "test",
  "gt_line": 11,
  "gt_signals": [
-  "q"
+  "q_next"
  ],
  "long_horizon": false
 }

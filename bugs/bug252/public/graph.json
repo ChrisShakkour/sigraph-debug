@@ -1,0 +1,762 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "shift_ena": {
+   "name": "shift_ena",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "shift_ena = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 42,
+     "line_end": 42,
+     "stmt": "shift_ena = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (state == B0 || state == B1 || state == B2 || state == B3)",
+     "guard_lines": [
+      41
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 49,
+     "line_end": 49,
+     "stmt": "{shift_ena, counting, done} = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (|state === 1'bx)",
+     "guard_lines": [
+      48
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "counting": {
+   "name": "counting",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "counting = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 44,
+     "line_end": 44,
+     "stmt": "counting = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (state == Count)",
+     "guard_lines": [
+      43
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 49,
+     "line_end": 49,
+     "stmt": "{shift_ena, counting, done} = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (|state === 1'bx)",
+     "guard_lines": [
+      48
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "done_counting": {
+   "name": "done_counting",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "done": {
+   "name": "done",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "done = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 46,
+     "line_end": 46,
+     "stmt": "done = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (state == Wait)",
+     "guard_lines": [
+      45
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 49,
+     "line_end": 49,
+     "stmt": "{shift_ena, counting, done} = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "alwayscomb@39",
+     "guard": "if (|state === 1'bx)",
+     "guard_lines": [
+      48
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "ack": {
+   "name": "ack",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 4,
+   "type": "TopModule.States",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 35,
+     "line_end": 35,
+     "stmt": "state <= S1",
+     "rhs": "S1",
+     "kind": "seq",
+     "block": "always@34",
+     "guard": "if (reset)",
+     "guard_lines": [
+      35
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "S1"
+    },
+    {
+     "line": 36,
+     "line_end": 36,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@34",
+     "guard": "!(reset)",
+     "guard_lines": [
+      35
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 4,
+   "type": "TopModule.States",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "next = States'(data ? S1: S)",
+     "rhs": "States'(data ? S1: S)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == S",
+     "guard_lines": [
+      20
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "next = States'(data ? S11: S)",
+     "rhs": "States'(data ? S11: S)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == S1",
+     "guard_lines": [
+      21
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "next = States'(data ? S11 : S110)",
+     "rhs": "States'(data ? S11 : S110)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == S11",
+     "guard_lines": [
+      22
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "next = States'(data ? B0 : S)",
+     "rhs": "States'(data ? B0 : S)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == S110",
+     "guard_lines": [
+      23
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "next = B1",
+     "rhs": "B1",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == B0",
+     "guard_lines": [
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B1"
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "next = B2",
+     "rhs": "B2",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == B1",
+     "guard_lines": [
+      25
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B2"
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "next = B3",
+     "rhs": "B3",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == B2",
+     "guard_lines": [
+      26
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B3"
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "next = Count",
+     "rhs": "Count",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == B3",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "Count"
+    },
+    {
+     "line": 28,
+     "line_end": 28,
+     "stmt": "next = States'(done_counting ? Wait : Count)",
+     "rhs": "States'(done_counting ? Wait : Count)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == Count",
+     "guard_lines": [
+      28
+     ],
+     "data": [
+      "done_counting"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 29,
+     "line_end": 29,
+     "stmt": "next = States'(ack ? S : Wait)",
+     "rhs": "States'(ack ? S : Wait)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == Wait",
+     "guard_lines": [
+      29
+     ],
+     "data": [
+      "ack"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 30,
+     "line_end": 30,
+     "stmt": "next = States'(4'bx)",
+     "rhs": "States'(4'bx)",
+     "kind": "comb",
+     "block": "alwayscomb@19",
+     "guard": "case state == default",
+     "guard_lines": [
+      30
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "shift_ena",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 42,
+   "guard": "if (state == B0 || state == B1 || state == B2 || state == B3)"
+  },
+  {
+   "src": "state",
+   "dst": "shift_ena",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 49,
+   "guard": "if (|state === 1'bx)"
+  },
+  {
+   "src": "state",
+   "dst": "counting",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 44,
+   "guard": "if (state == Count)"
+  },
+  {
+   "src": "state",
+   "dst": "counting",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 49,
+   "guard": "if (|state === 1'bx)"
+  },
+  {
+   "src": "state",
+   "dst": "done",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 46,
+   "guard": "if (state == Wait)"
+  },
+  {
+   "src": "state",
+   "dst": "done",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 49,
+   "guard": "if (|state === 1'bx)"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 35,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "data",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case state == S"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case state == S"
+  },
+  {
+   "src": "data",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == S1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == S1"
+  },
+  {
+   "src": "data",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == S11"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == S11"
+  },
+  {
+   "src": "data",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == S110"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == S110"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == B0"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == B1"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case state == B2"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case state == B3"
+  },
+  {
+   "src": "done_counting",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case state == Count"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case state == Count"
+  },
+  {
+   "src": "ack",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == Wait"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == Wait"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case state == default"
+  }
+ ],
+ "constants": {
+  "S": "4'b0",
+  "S1": "4'b1",
+  "S11": "4'b10",
+  "S110": "4'b11",
+  "B0": "4'b100",
+  "B1": "4'b101",
+  "B2": "4'b110",
+  "B3": "4'b111",
+  "Count": "4'b1000",
+  "Wait": "4'b1001"
+ },
+ "state_constants": [
+  "B0",
+  "B1",
+  "B2",
+  "B3",
+  "Count",
+  "S",
+  "S1",
+  "S11",
+  "S110",
+  "Wait"
+ ],
+ "blocks": [
+  {
+   "id": "alwayscomb@19",
+   "kind": "comb",
+   "line": 19,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@34",
+   "kind": "seq",
+   "line": 34,
+   "clock": "clk",
+   "async_reset": []
+  },
+  {
+   "id": "alwayscomb@39",
+   "kind": "comb",
+   "line": 39,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

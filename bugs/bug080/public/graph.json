@@ -1,0 +1,215 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "state": {
+   "name": "state",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "next_state": {
+   "name": "next_state",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "next_state[A] = (state[A] | state[C]) & ~in",
+     "rhs": "(state[A] | state[C]) & ~in",
+     "kind": "comb",
+     "block": "assign@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "next_state[B] = (state[B] | state[B] | state[D]) & in",
+     "rhs": "(state[B] | state[B] | state[D]) & in",
+     "kind": "comb",
+     "block": "assign@11",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "next_state[C] = (state[B] | state[D]) & ~in",
+     "rhs": "(state[B] | state[D]) & ~in",
+     "kind": "comb",
+     "block": "assign@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "next_state[D] = state[C] & in",
+     "rhs": "state[C] & in",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state",
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out = (state[D])",
+     "rhs": "state[D]",
+     "kind": "comb",
+     "block": "assign@15",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  }
+ ],
+ "constants": {
+  "A": "0",
+  "B": "1",
+  "C": "2",
+  "D": "3"
+ },
+ "state_constants": [
+  "A",
+  "B",
+  "C",
+  "D"
+ ],
+ "blocks": [],
+ "diagnostics": []
+}

@@ -1,0 +1,232 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "scancode": {
+   "name": "scancode",
+   "dir": "in",
+   "width": 16,
+   "type": "logic[15:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "left": {
+   "name": "left",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "{up, left, down, right} = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "left = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case scancode == 16'he06b",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "scancode"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "down": {
+   "name": "down",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "{up, left, down, right} = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "down = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case scancode == 16'he072",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "scancode"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "right": {
+   "name": "right",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "{up, left, down, right} = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "right = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case scancode == 16'he074",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "scancode"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "up": {
+   "name": "up",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "{up, left, down, right} = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "up = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case scancode == 16'he075",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "scancode"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "scancode",
+   "dst": "left",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case scancode == 16'he06b"
+  },
+  {
+   "src": "scancode",
+   "dst": "down",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case scancode == 16'he072"
+  },
+  {
+   "src": "scancode",
+   "dst": "right",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case scancode == 16'he074"
+  },
+  {
+   "src": "scancode",
+   "dst": "up",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case scancode == 16'he075"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:11:5: warning: 'case' missing 'default' label [-Wcase-default]"
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "x": {
+   "name": "x",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "z": {
+   "name": "z",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "z = (state == C)",
+     "rhs": "state == C",
+     "kind": "comb",
+     "block": "assign@22",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 2,
+   "type": "reg[1:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "state <= A",
+     "rhs": "A",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "if (!(areset))",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "A"
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "state <= x ? C : A",
+     "rhs": "x ? C : A",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(!(areset)) && case state == A",
+     "guard_lines": [
+      11,
+      15
+     ],
+     "data": [
+      "x"
+     ],
+     "ctrl": [
+      "areset",
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "state <= x ? B : C",
+     "rhs": "x ? B : C",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(!(areset)) && case state == B",
+     "guard_lines": [
+      11,
+      16
+     ],
+     "data": [
+      "x"
+     ],
+     "ctrl": [
+      "areset",
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "state <= x ? B : C",
+     "rhs": "x ? B : C",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(!(areset)) && case state == C",
+     "guard_lines": [
+      11,
+      17
+     ],
+     "data": [
+      "x"
+     ],
+     "ctrl": [
+      "areset",
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": ""
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 12,
+   "guard": "if (!(areset))"
+  },
+  {
+   "src": "x",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(!(areset)) && case state == A"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(!(areset)) && case state == A"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(!(areset)) && case state == A"
+  },
+  {
+   "src": "x",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!(areset)) && case state == B"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!(areset)) && case state == B"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(!(areset)) && case state == B"
+  },
+  {
+   "src": "x",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(!(areset)) && case state == C"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(!(areset)) && case state == C"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(!(areset)) && case state == C"
+  }
+ ],
+ "constants": {
+  "A": "0",
+  "B": "1",
+  "C": "2"
+ },
+ "state_constants": [
+  "A",
+  "B",
+  "C"
+ ],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:14:7: warning: 'case' missing 'default' label [-Wcase-default]",
+  "source:15:9: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[1:0]') [-Wcase-type]",
+  "source:15:21: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[1:0]' [-Wsign-conversion]",
+  "source:16:9: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[1:0]') [-Wcase-type]",
+  "source:16:21: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[1:0]' [-Wsign-conversion]",
+  "source:17:9: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[1:0]') [-Wcase-type]",
+  "source:17:21: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[1:0]' [-Wsign-conversion]",
+  "source:22:21: warning: comparison of differently signed types ('reg[1:0]' and 'logic signed[31:0]') [-Wsign-compare]"
+ ]
+}

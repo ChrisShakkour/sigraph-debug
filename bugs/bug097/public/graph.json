@@ -1,0 +1,330 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out_and": {
+   "name": "out_and",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out_and = a&b",
+     "rhs": "a&b",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_or": {
+   "name": "out_or",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "out_or = a|b",
+     "rhs": "a|b",
+     "kind": "comb",
+     "block": "assign@14",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_xor": {
+   "name": "out_xor",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out_xor = a^b",
+     "rhs": "a^b",
+     "kind": "comb",
+     "block": "assign@15",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_nand": {
+   "name": "out_nand",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "out_nand = ~(a|b)",
+     "rhs": "~(a|b)",
+     "kind": "comb",
+     "block": "assign@16",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_nor": {
+   "name": "out_nor",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "out_nor = ~(a|b)",
+     "rhs": "~(a|b)",
+     "kind": "comb",
+     "block": "assign@17",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_xnor": {
+   "name": "out_xnor",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "out_xnor = a^~b",
+     "rhs": "a^~b",
+     "kind": "comb",
+     "block": "assign@18",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_anotb": {
+   "name": "out_anotb",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "out_anotb = a & ~b",
+     "rhs": "a & ~b",
+     "kind": "comb",
+     "block": "assign@19",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "a",
+   "dst": "out_and",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_and",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_or",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_or",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_xor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_xor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_nand",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_nand",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_nor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_nor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_xnor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_xnor",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": ""
+  },
+  {
+   "src": "a",
+   "dst": "out_anotb",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "b",
+   "dst": "out_anotb",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

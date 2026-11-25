@@ -1,0 +1,523 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "s": {
+   "name": "s",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "w": {
+   "name": "w",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "z": {
+   "name": "z",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "z = (state != C)",
+     "rhs": "state != C",
+     "kind": "comb",
+     "block": "assign@31",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "state <= A",
+     "rhs": "A",
+     "kind": "seq",
+     "block": "always@12",
+     "guard": "if (reset)",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "A"
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@12",
+     "guard": "!(reset)",
+     "guard_lines": [
+      13
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "next = s ? B : A",
+     "rhs": "s ? B : A",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == A",
+     "guard_lines": [
+      19
+     ],
+     "data": [
+      "s"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "next = w ? S11 : S10",
+     "rhs": "w ? S11 : S10",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == B",
+     "guard_lines": [
+      20
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "next = w ? S11 : S10",
+     "rhs": "w ? S11 : S10",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == C",
+     "guard_lines": [
+      21
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "next = w ? S21 : S20",
+     "rhs": "w ? S21 : S20",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == S10",
+     "guard_lines": [
+      22
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "next = w ? S22 : S21",
+     "rhs": "w ? S22 : S21",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == S11",
+     "guard_lines": [
+      23
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "next = B",
+     "rhs": "B",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == S20",
+     "guard_lines": [
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "B"
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "next = w ? C : B",
+     "rhs": "w ? C : B",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == S21",
+     "guard_lines": [
+      25
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "next = w ? B : C",
+     "rhs": "w ? B : C",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == S22",
+     "guard_lines": [
+      26
+     ],
+     "data": [
+      "w"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "next = 'x",
+     "rhs": "'x",
+     "kind": "comb",
+     "block": "alwayscomb@18",
+     "guard": "case state == default",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": ""
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(reset)"
+  },
+  {
+   "src": "s",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case state == A"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case state == A"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case state == B"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case state == B"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == C"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case state == C"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == S10"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == S10"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == S11"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == S11"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == S20"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == S21"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == S21"
+  },
+  {
+   "src": "w",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case state == S22"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case state == S22"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case state == default"
+  }
+ ],
+ "constants": {
+  "A": "0",
+  "B": "1",
+  "C": "2",
+  "S10": "3",
+  "S11": "4",
+  "S20": "5",
+  "S21": "6",
+  "S22": "7"
+ },
+ "state_constants": [
+  "A",
+  "B",
+  "C",
+  "S10",
+  "S11",
+  "S20",
+  "S21",
+  "S22"
+ ],
+ "blocks": [
+  {
+   "id": "always@12",
+   "kind": "seq",
+   "line": 12,
+   "clock": "clk",
+   "async_reset": []
+  },
+  {
+   "id": "alwayscomb@18",
+   "kind": "comb",
+   "line": 18,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:19:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:19:17: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:20:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:20:17: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:21:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:21:17: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:22:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:22:19: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:23:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:23:19: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:24:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:25:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:25:19: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:26:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:26:19: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:31:21: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]"
+ ]
+}

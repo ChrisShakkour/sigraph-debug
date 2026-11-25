@@ -1,0 +1,120 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "q <= 1",
+     "rhs": "1",
+     "kind": "seq",
+     "block": "always@7",
+     "guard": "if (reset || q == 10)",
+     "guard_lines": [
+      8
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "q"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q <= q+0",
+     "rhs": "q+0",
+     "kind": "seq",
+     "block": "always@7",
+     "guard": "!(reset || q == 10)",
+     "guard_lines": [
+      8
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 9,
+   "guard": "if (reset || q == 10)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 9,
+   "guard": "if (reset || q == 10)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": "!(reset || q == 10)"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "!(reset || q == 10)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@7",
+   "kind": "seq",
+   "line": 7,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

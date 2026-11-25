@@ -1,0 +1,259 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "out = (state==B)",
+     "rhs": "state==B",
+     "kind": "comb",
+     "block": "assign@24",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "state <= B",
+     "rhs": "B",
+     "kind": "seq",
+     "block": "always@19",
+     "guard": "if (!(areset))",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "B"
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@19",
+     "guard": "!(!(areset))",
+     "guard_lines": [
+      20
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "next = in ? A : B",
+     "rhs": "in ? A : B",
+     "kind": "comb",
+     "block": "alwayscomb@13",
+     "guard": "case state == A",
+     "guard_lines": [
+      14
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "next = in ? B : A",
+     "rhs": "in ? B : A",
+     "kind": "comb",
+     "block": "alwayscomb@13",
+     "guard": "case state == B",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 24,
+   "guard": ""
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "if (!(areset))"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 21,
+   "guard": "!(!(areset))"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 21,
+   "guard": "!(!(areset))"
+  },
+  {
+   "src": "in",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case state == A"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case state == A"
+  },
+  {
+   "src": "in",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case state == B"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case state == B"
+  }
+ ],
+ "constants": {
+  "A": "0",
+  "B": "1"
+ },
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "alwayscomb@13",
+   "kind": "comb",
+   "line": 13,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@19",
+   "kind": "seq",
+   "line": 19,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:13:5: warning: 'case' missing 'default' label [-Wcase-default]",
+  "source:14:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg') [-Wcase-type]",
+  "source:14:17: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg' [-Wsign-conversion]",
+  "source:15:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg') [-Wcase-type]",
+  "source:15:17: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg' [-Wsign-conversion]",
+  "source:24:22: warning: comparison of differently signed types ('reg' and 'logic signed[31:0]') [-Wsign-compare]"
+ ]
+}

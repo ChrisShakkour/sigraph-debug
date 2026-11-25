@@ -1,0 +1,991 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "bump_left": {
+   "name": "bump_left",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "bump_right": {
+   "name": "bump_right",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ground": {
+   "name": "ground",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "dig": {
+   "name": "dig",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "walk_left": {
+   "name": "walk_left",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 53,
+     "line_end": 53,
+     "stmt": "walk_left = (state==WL)",
+     "rhs": "state==WL",
+     "kind": "comb",
+     "block": "assign@53",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "walk_right": {
+   "name": "walk_right",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 54,
+     "line_end": 54,
+     "stmt": "walk_right = (state==WR)",
+     "rhs": "state==WR",
+     "kind": "comb",
+     "block": "assign@54",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "aaah": {
+   "name": "aaah",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 55,
+     "line_end": 55,
+     "stmt": "aaah = (state == FALLL) || (state == FALLR)",
+     "rhs": "(state == FALLL) || (state == FALLR)",
+     "kind": "comb",
+     "block": "assign@55",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "digging": {
+   "name": "digging",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 56,
+     "line_end": 56,
+     "stmt": "digging = (state == DIGL) || (state == DIGR)",
+     "rhs": "(state == DIGL) || (state == DIGR)",
+     "kind": "comb",
+     "block": "assign@56",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "state <= WL",
+     "rhs": "WL",
+     "kind": "seq",
+     "block": "always@39",
+     "guard": "if (areset)",
+     "guard_lines": [
+      40
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "WL"
+    },
+    {
+     "line": 41,
+     "line_end": 41,
+     "stmt": "state <= next",
+     "rhs": "next",
+     "kind": "seq",
+     "block": "always@39",
+     "guard": "!(areset)",
+     "guard_lines": [
+      40
+     ],
+     "data": [
+      "next"
+     ],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 3,
+   "type": "reg[2:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "next = FALLL",
+     "rhs": "FALLL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WL && if (!ground)",
+     "guard_lines": [
+      22
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground"
+     ],
+     "nonblocking": false,
+     "const_rhs": "FALLL"
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "next = DIGL",
+     "rhs": "DIGL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WL && !(!ground) && if (dig)",
+     "guard_lines": [
+      22,
+      23
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig"
+     ],
+     "nonblocking": false,
+     "const_rhs": "DIGL"
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "next = WR",
+     "rhs": "WR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)",
+     "guard_lines": [
+      22,
+      23,
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig",
+      "bump_left"
+     ],
+     "nonblocking": false,
+     "const_rhs": "WR"
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "next = WL",
+     "rhs": "WL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)",
+     "guard_lines": [
+      22,
+      23,
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig",
+      "bump_left"
+     ],
+     "nonblocking": false,
+     "const_rhs": "WL"
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "next = FALLR",
+     "rhs": "FALLR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WR && if (!ground)",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground"
+     ],
+     "nonblocking": false,
+     "const_rhs": "FALLR"
+    },
+    {
+     "line": 28,
+     "line_end": 28,
+     "stmt": "next = DIGR",
+     "rhs": "DIGR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WR && !(!ground) && if (dig)",
+     "guard_lines": [
+      27,
+      28
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig"
+     ],
+     "nonblocking": false,
+     "const_rhs": "DIGR"
+    },
+    {
+     "line": 29,
+     "line_end": 29,
+     "stmt": "next = WL",
+     "rhs": "WL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WR && !(!ground) && !(dig) && if (bump_right)",
+     "guard_lines": [
+      27,
+      28,
+      29
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig",
+      "bump_right"
+     ],
+     "nonblocking": false,
+     "const_rhs": "WL"
+    },
+    {
+     "line": 30,
+     "line_end": 30,
+     "stmt": "next = WR",
+     "rhs": "WR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == WR && !(!ground) && !(dig) && !(bump_right)",
+     "guard_lines": [
+      27,
+      28,
+      29
+     ],
+     "data": [],
+     "ctrl": [
+      "state",
+      "ground",
+      "dig",
+      "bump_right"
+     ],
+     "nonblocking": false,
+     "const_rhs": "WR"
+    },
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "next = ground ? (fall_counter >= 20 ? DEAD : WL) : FALLL",
+     "rhs": "ground ? (fall_counter >= 20 ? DEAD : WL) : FALLL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == FALLL",
+     "guard_lines": [
+      31
+     ],
+     "data": [
+      "ground",
+      "fall_counter"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 32,
+     "line_end": 32,
+     "stmt": "next = ground ? (fall_counter >= 21 ? DEAD : WR) : FALLR",
+     "rhs": "ground ? (fall_counter >= 21 ? DEAD : WR) : FALLR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == FALLR",
+     "guard_lines": [
+      32
+     ],
+     "data": [
+      "ground",
+      "fall_counter"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 33,
+     "line_end": 33,
+     "stmt": "next = ground ? DIGL : FALLL",
+     "rhs": "ground ? DIGL : FALLL",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == DIGL",
+     "guard_lines": [
+      33
+     ],
+     "data": [
+      "ground"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 34,
+     "line_end": 34,
+     "stmt": "next = ground ? DIGR : FALLR",
+     "rhs": "ground ? DIGR : FALLR",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == DIGR",
+     "guard_lines": [
+      34
+     ],
+     "data": [
+      "ground"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 35,
+     "line_end": 35,
+     "stmt": "next = DEAD",
+     "rhs": "DEAD",
+     "kind": "comb",
+     "block": "alwayscomb@21",
+     "guard": "case state == DEAD",
+     "guard_lines": [
+      35
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": false,
+     "const_rhs": "DEAD"
+    }
+   ]
+  },
+  "fall_counter": {
+   "name": "fall_counter",
+   "dir": "internal",
+   "width": 5,
+   "type": "reg[4:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 47,
+     "line_end": 47,
+     "stmt": "fall_counter <= fall_counter + 1'b1",
+     "rhs": "fall_counter + 1'b1",
+     "kind": "seq",
+     "block": "always@44",
+     "guard": "if (state == FALLL || state == FALLR) && if (fall_counter < 20)",
+     "guard_lines": [
+      45,
+      46
+     ],
+     "data": [
+      "fall_counter"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 50,
+     "line_end": 50,
+     "stmt": "fall_counter <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@44",
+     "guard": "!(state == FALLL || state == FALLR)",
+     "guard_lines": [
+      45
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "walk_left",
+   "dep": "data",
+   "kind": "comb",
+   "line": 53,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "walk_right",
+   "dep": "data",
+   "kind": "comb",
+   "line": 54,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "aaah",
+   "dep": "data",
+   "kind": "comb",
+   "line": 55,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "digging",
+   "dep": "data",
+   "kind": "comb",
+   "line": 56,
+   "guard": ""
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "if (areset)"
+  },
+  {
+   "src": "next",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 41,
+   "guard": "!(areset)"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 41,
+   "guard": "!(areset)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == WL && if (!ground)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case state == WL && if (!ground)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == WL && !(!ground) && if (dig)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == WL && !(!ground) && if (dig)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case state == WL && !(!ground) && if (dig)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+  },
+  {
+   "src": "bump_left",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case state == WL && !(!ground) && !(dig) && if (bump_left)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+  },
+  {
+   "src": "bump_left",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case state == WL && !(!ground) && !(dig) && !(bump_left)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case state == WR && if (!ground)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case state == WR && if (!ground)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case state == WR && !(!ground) && if (dig)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case state == WR && !(!ground) && if (dig)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case state == WR && !(!ground) && if (dig)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == WR && !(!ground) && !(dig) && if (bump_right)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == WR && !(!ground) && !(dig) && if (bump_right)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == WR && !(!ground) && !(dig) && if (bump_right)"
+  },
+  {
+   "src": "bump_right",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case state == WR && !(!ground) && !(dig) && if (bump_right)"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case state == WR && !(!ground) && !(dig) && !(bump_right)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case state == WR && !(!ground) && !(dig) && !(bump_right)"
+  },
+  {
+   "src": "dig",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case state == WR && !(!ground) && !(dig) && !(bump_right)"
+  },
+  {
+   "src": "bump_right",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case state == WR && !(!ground) && !(dig) && !(bump_right)"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": "case state == FALLL"
+  },
+  {
+   "src": "fall_counter",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 31,
+   "guard": "case state == FALLL"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 31,
+   "guard": "case state == FALLL"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 32,
+   "guard": "case state == FALLR"
+  },
+  {
+   "src": "fall_counter",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 32,
+   "guard": "case state == FALLR"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 32,
+   "guard": "case state == FALLR"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 33,
+   "guard": "case state == DIGL"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 33,
+   "guard": "case state == DIGL"
+  },
+  {
+   "src": "ground",
+   "dst": "next",
+   "dep": "data",
+   "kind": "comb",
+   "line": 34,
+   "guard": "case state == DIGR"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 34,
+   "guard": "case state == DIGR"
+  },
+  {
+   "src": "state",
+   "dst": "next",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 35,
+   "guard": "case state == DEAD"
+  },
+  {
+   "src": "fall_counter",
+   "dst": "fall_counter",
+   "dep": "data",
+   "kind": "seq",
+   "line": 47,
+   "guard": "if (state == FALLL || state == FALLR) && if (fall_counter < 20)"
+  },
+  {
+   "src": "state",
+   "dst": "fall_counter",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 47,
+   "guard": "if (state == FALLL || state == FALLR) && if (fall_counter < 20)"
+  },
+  {
+   "src": "state",
+   "dst": "fall_counter",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 50,
+   "guard": "!(state == FALLL || state == FALLR)"
+  }
+ ],
+ "constants": {
+  "WL": "0",
+  "WR": "1",
+  "FALLL": "2",
+  "FALLR": "3",
+  "DIGL": "4",
+  "DIGR": "5",
+  "DEAD": "6"
+ },
+ "state_constants": [
+  "DEAD",
+  "DIGL",
+  "DIGR",
+  "FALLL",
+  "FALLR",
+  "WL",
+  "WR"
+ ],
+ "blocks": [
+  {
+   "id": "alwayscomb@21",
+   "kind": "comb",
+   "line": 21,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@39",
+   "kind": "seq",
+   "line": 39,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  },
+  {
+   "id": "always@44",
+   "kind": "seq",
+   "line": 44,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:21:5: warning: 'case' missing 'default' label [-Wcase-default]",
+  "source:22:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:26:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:31:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:31:21: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:32:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:32:21: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:33:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:33:20: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:34:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:34:20: warning: implicit conversion changes signedness from 'logic signed[31:0]' to 'reg[2:0]' [-Wsign-conversion]",
+  "source:35:7: warning: comparison of different types in 'case' statement ('logic signed[31:0]' and 'reg[2:0]') [-Wcase-type]",
+  "source:45:15: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:45:33: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:53:28: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:54:29: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:55:24: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:55:44: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:56:27: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]",
+  "source:56:46: warning: comparison of differently signed types ('reg[2:0]' and 'logic signed[31:0]') [-Wsign-compare]"
+ ]
+}

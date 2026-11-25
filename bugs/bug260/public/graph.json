@@ -1,0 +1,626 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "predict_valid": {
+   "name": "predict_valid",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "predict_pc": {
+   "name": "predict_pc",
+   "dir": "in",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "predict_taken": {
+   "name": "predict_taken",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 44,
+     "line_end": 44,
+     "stmt": "predict_taken = predict_valid ? pht[predict_index][1] : 1'bx",
+     "rhs": "predict_valid ? pht[predict_index][1] : 1'bx",
+     "kind": "comb",
+     "block": "assign@44",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "predict_valid",
+      "pht",
+      "predict_index"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "predict_history": {
+   "name": "predict_history",
+   "dir": "out",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 45,
+     "line_end": 45,
+     "stmt": "predict_history = predict_valid ? predict_history_r : {n{1'bx}}",
+     "rhs": "predict_valid ? predict_history_r : {n{1'bx}}",
+     "kind": "comb",
+     "block": "assign@45",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "predict_valid",
+      "predict_history_r"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "train_valid": {
+   "name": "train_valid",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_taken": {
+   "name": "train_taken",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_mispredicted": {
+   "name": "train_mispredicted",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_history": {
+   "name": "train_history",
+   "dir": "in",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_pc": {
+   "name": "train_pc",
+   "dir": "in",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "pht": {
+   "name": "pht",
+   "dir": "internal",
+   "width": 2,
+   "type": "logic[1:0]$[127:0]",
+   "memory": true,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 29,
+     "line_end": 29,
+     "stmt": "pht[i] = LNT",
+     "rhs": "LNT",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "if (areset) && for (i<2**n)",
+     "guard_lines": [
+      27,
+      28
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": false,
+     "const_rhs": "LNT"
+    },
+    {
+     "line": 36,
+     "line_end": 36,
+     "stmt": "pht[train_index] <= pht[train_index] + 1",
+     "rhs": "pht[train_index] + 1",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)",
+     "guard_lines": [
+      27,
+      34,
+      35
+     ],
+     "data": [
+      "pht",
+      "train_index"
+     ],
+     "ctrl": [
+      "areset",
+      "train_valid",
+      "train_taken"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 38,
+     "line_end": 38,
+     "stmt": "pht[train_index] <= pht[train_index] - 2",
+     "rhs": "pht[train_index] - 2",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)",
+     "guard_lines": [
+      27,
+      34,
+      35,
+      37
+     ],
+     "data": [
+      "pht",
+      "train_index"
+     ],
+     "ctrl": [
+      "areset",
+      "train_valid",
+      "train_taken"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ],
+   "depth": 128
+  },
+  "predict_history_r": {
+   "name": "predict_history_r",
+   "dir": "internal",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 30,
+     "line_end": 30,
+     "stmt": "predict_history_r = 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "if (areset)",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 33,
+     "line_end": 33,
+     "stmt": "predict_history_r <= {predict_history_r, predict_taken}",
+     "rhs": "{predict_history_r, predict_taken}",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "!(areset) && if (predict_valid)",
+     "guard_lines": [
+      27,
+      32
+     ],
+     "data": [
+      "predict_history_r",
+      "predict_taken"
+     ],
+     "ctrl": [
+      "areset",
+      "predict_valid"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "predict_history_r <= {train_history, train_taken}",
+     "rhs": "{train_history, train_taken}",
+     "kind": "seq",
+     "block": "always@26",
+     "guard": "!(areset) && if (train_valid) && if (train_mispredicted)",
+     "guard_lines": [
+      27,
+      34,
+      39
+     ],
+     "data": [
+      "train_history",
+      "train_taken"
+     ],
+     "ctrl": [
+      "areset",
+      "train_valid",
+      "train_mispredicted"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "predict_index": {
+   "name": "predict_index",
+   "dir": "internal",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "predict_index = predict_history_r ^ predict_pc",
+     "rhs": "predict_history_r ^ predict_pc",
+     "kind": "comb",
+     "block": "wire@predict_index",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "predict_history_r",
+      "predict_pc"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "train_index": {
+   "name": "train_index",
+   "dir": "internal",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "train_index = train_history ^ train_pc",
+     "rhs": "train_history ^ train_pc",
+     "kind": "comb",
+     "block": "wire@train_index",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "train_history",
+      "train_pc"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "predict_valid",
+   "dst": "predict_taken",
+   "dep": "data",
+   "kind": "comb",
+   "line": 44,
+   "guard": ""
+  },
+  {
+   "src": "pht",
+   "dst": "predict_taken",
+   "dep": "data",
+   "kind": "comb",
+   "line": 44,
+   "guard": ""
+  },
+  {
+   "src": "predict_index",
+   "dst": "predict_taken",
+   "dep": "data",
+   "kind": "comb",
+   "line": 44,
+   "guard": ""
+  },
+  {
+   "src": "predict_valid",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "comb",
+   "line": 45,
+   "guard": ""
+  },
+  {
+   "src": "predict_history_r",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "comb",
+   "line": 45,
+   "guard": ""
+  },
+  {
+   "src": "areset",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 29,
+   "guard": "if (areset) && for (i<2**n)"
+  },
+  {
+   "src": "pht",
+   "dst": "pht",
+   "dep": "data",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+  },
+  {
+   "src": "train_index",
+   "dst": "pht",
+   "dep": "data",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+  },
+  {
+   "src": "areset",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+  },
+  {
+   "src": "train_valid",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(areset) && if (train_valid) && if (pht[train_index] < 3 && train_taken)"
+  },
+  {
+   "src": "pht",
+   "dst": "pht",
+   "dep": "data",
+   "kind": "seq",
+   "line": 38,
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+  },
+  {
+   "src": "train_index",
+   "dst": "pht",
+   "dep": "data",
+   "kind": "seq",
+   "line": 38,
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+  },
+  {
+   "src": "areset",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 38,
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+  },
+  {
+   "src": "train_valid",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 38,
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "pht",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 38,
+   "guard": "!(areset) && if (train_valid) && !(pht[train_index] < 3 && train_taken) && if (pht[train_index] > 0 && !train_taken)"
+  },
+  {
+   "src": "areset",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 30,
+   "guard": "if (areset)"
+  },
+  {
+   "src": "predict_history_r",
+   "dst": "predict_history_r",
+   "dep": "data",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(areset) && if (predict_valid)"
+  },
+  {
+   "src": "predict_taken",
+   "dst": "predict_history_r",
+   "dep": "data",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(areset) && if (predict_valid)"
+  },
+  {
+   "src": "areset",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(areset) && if (predict_valid)"
+  },
+  {
+   "src": "predict_valid",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(areset) && if (predict_valid)"
+  },
+  {
+   "src": "train_history",
+   "dst": "predict_history_r",
+   "dep": "data",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "predict_history_r",
+   "dep": "data",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+  },
+  {
+   "src": "areset",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+  },
+  {
+   "src": "train_valid",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+  },
+  {
+   "src": "train_mispredicted",
+   "dst": "predict_history_r",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(areset) && if (train_valid) && if (train_mispredicted)"
+  },
+  {
+   "src": "predict_history_r",
+   "dst": "predict_index",
+   "dep": "data",
+   "kind": "comb",
+   "line": 23,
+   "guard": ""
+  },
+  {
+   "src": "predict_pc",
+   "dst": "predict_index",
+   "dep": "data",
+   "kind": "comb",
+   "line": 23,
+   "guard": ""
+  },
+  {
+   "src": "train_history",
+   "dst": "train_index",
+   "dep": "data",
+   "kind": "comb",
+   "line": 24,
+   "guard": ""
+  },
+  {
+   "src": "train_pc",
+   "dst": "train_index",
+   "dep": "data",
+   "kind": "comb",
+   "line": 24,
+   "guard": ""
+  }
+ ],
+ "constants": {
+  "n": "7",
+  "SNT": "2'b0",
+  "LNT": "2'b1",
+  "LT": "2'b10",
+  "ST": "2'b11"
+ },
+ "state_constants": [
+  "LNT",
+  "LT",
+  "SNT",
+  "ST"
+ ],
+ "blocks": [
+  {
+   "id": "always@26",
+   "kind": "seq",
+   "line": 26,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:33:30: warning: implicit conversion truncates from 8 to 7 bits [-Wwidth-trunc]",
+  "source:40:32: warning: implicit conversion truncates from 8 to 7 bits [-Wwidth-trunc]"
+ ]
+}

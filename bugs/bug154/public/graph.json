@@ -1,0 +1,384 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "load": {
+   "name": "load",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ena": {
+   "name": "ena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "amount": {
+   "name": "amount",
+   "dir": "in",
+   "width": 2,
+   "type": "logic[1:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 64,
+   "type": "logic[63:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 64,
+   "type": "reg[63:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "q <= data",
+     "rhs": "data",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "if (load)",
+     "guard_lines": [
+      11
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "q <= {q[62:0], 1'b0}",
+     "rhs": "{q[62:0], 1'b0}",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (ena) && case amount == 2'b00",
+     "guard_lines": [
+      11,
+      13,
+      14
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena",
+      "amount"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "q <= {q[55:0], 8'b11111111}",
+     "rhs": "{q[55:0], 8'b11111111}",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (ena) && case amount == 2'b01",
+     "guard_lines": [
+      11,
+      13,
+      15
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena",
+      "amount"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "q <= {q[63], q[63:1]}",
+     "rhs": "{q[63], q[63:1]}",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (ena) && case amount == 2'b10",
+     "guard_lines": [
+      11,
+      13,
+      16
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena",
+      "amount"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "q <= {{8{q[63]}}, q[63:8]}",
+     "rhs": "{{8{q[63]}}, q[63:8]}",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (ena) && case amount == 2'b11",
+     "guard_lines": [
+      11,
+      13,
+      17
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena",
+      "amount"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "q <= 64'hx",
+     "rhs": "64'hx",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (ena) && case amount == default",
+     "guard_lines": [
+      11,
+      13,
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "load",
+      "ena",
+      "amount"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "data",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": "if (load)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 12,
+   "guard": "if (load)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(load) && if (ena) && case amount == 2'b00"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(load) && if (ena) && case amount == 2'b00"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(load) && if (ena) && case amount == 2'b00"
+  },
+  {
+   "src": "amount",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(load) && if (ena) && case amount == 2'b00"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && if (ena) && case amount == 2'b01"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && if (ena) && case amount == 2'b01"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && if (ena) && case amount == 2'b01"
+  },
+  {
+   "src": "amount",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && if (ena) && case amount == 2'b01"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(load) && if (ena) && case amount == 2'b10"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(load) && if (ena) && case amount == 2'b10"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(load) && if (ena) && case amount == 2'b10"
+  },
+  {
+   "src": "amount",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(load) && if (ena) && case amount == 2'b10"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(load) && if (ena) && case amount == 2'b11"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(load) && if (ena) && case amount == 2'b11"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(load) && if (ena) && case amount == 2'b11"
+  },
+  {
+   "src": "amount",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 17,
+   "guard": "!(load) && if (ena) && case amount == 2'b11"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(load) && if (ena) && case amount == default"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(load) && if (ena) && case amount == default"
+  },
+  {
+   "src": "amount",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(load) && if (ena) && case amount == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

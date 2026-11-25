@@ -1,0 +1,165 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "load": {
+   "name": "load",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 10,
+   "type": "logic[9:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "tc": {
+   "name": "tc",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "tc = count_value == 0",
+     "rhs": "count_value == 0",
+     "kind": "comb",
+     "block": "assign@14",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "count_value"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "count_value": {
+   "name": "count_value",
+   "dir": "internal",
+   "width": 10,
+   "type": "logic[9:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "count_value <= data",
+     "rhs": "data",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "if (load)",
+     "guard_lines": [
+      11
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "count_value <= count_value - 0",
+     "rhs": "count_value - 0",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "!(load) && if (count_value != 0)",
+     "guard_lines": [
+      11,
+      12
+     ],
+     "data": [
+      "count_value"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "count_value",
+   "dst": "tc",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "data",
+   "dst": "count_value",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (load)"
+  },
+  {
+   "src": "load",
+   "dst": "count_value",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (load)"
+  },
+  {
+   "src": "count_value",
+   "dst": "count_value",
+   "dep": "data",
+   "kind": "seq",
+   "line": 12,
+   "guard": "!(load) && if (count_value != 0)"
+  },
+  {
+   "src": "load",
+   "dst": "count_value",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 12,
+   "guard": "!(load) && if (count_value != 0)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

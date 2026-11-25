@@ -1,0 +1,336 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "sel": {
+   "name": "sel",
+   "dir": "in",
+   "width": 3,
+   "type": "logic[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "data0": {
+   "name": "data0",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data1": {
+   "name": "data1",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data2": {
+   "name": "data2",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data3": {
+   "name": "data3",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data4": {
+   "name": "data4",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data5": {
+   "name": "data5",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "out = data0",
+     "rhs": "data0",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h0",
+     "guard_lines": [
+      14
+     ],
+     "data": [
+      "data0"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out = data1",
+     "rhs": "data1",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h1",
+     "guard_lines": [
+      15
+     ],
+     "data": [
+      "data1"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "out = data2",
+     "rhs": "data2",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h2",
+     "guard_lines": [
+      16
+     ],
+     "data": [
+      "data2"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "out = data3",
+     "rhs": "data3",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h3",
+     "guard_lines": [
+      17
+     ],
+     "data": [
+      "data3"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "out = data4",
+     "rhs": "data4",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h4",
+     "guard_lines": [
+      18
+     ],
+     "data": [
+      "data4"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "out = data5",
+     "rhs": "data5",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == 3'h5",
+     "guard_lines": [
+      19
+     ],
+     "data": [
+      "data5"
+     ],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "out = 4'b1",
+     "rhs": "4'b1",
+     "kind": "comb",
+     "block": "always@12",
+     "guard": "case sel == default",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "sel"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "data0",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case sel == 3'h0"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case sel == 3'h0"
+  },
+  {
+   "src": "data1",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case sel == 3'h1"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case sel == 3'h1"
+  },
+  {
+   "src": "data2",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case sel == 3'h2"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case sel == 3'h2"
+  },
+  {
+   "src": "data3",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case sel == 3'h3"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case sel == 3'h3"
+  },
+  {
+   "src": "data4",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case sel == 3'h4"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case sel == 3'h4"
+  },
+  {
+   "src": "data5",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case sel == 3'h5"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case sel == 3'h5"
+  },
+  {
+   "src": "sel",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case sel == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@12",
+   "kind": "comb",
+   "line": 12,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

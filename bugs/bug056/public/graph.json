@@ -1,0 +1,209 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ena": {
+   "name": "ena",
+   "dir": "out",
+   "width": 3,
+   "type": "logic[3:1]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "ena = enable[3:1]",
+     "rhs": "enable[3:1]",
+     "kind": "comb",
+     "block": "assign@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "enable"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 16,
+   "type": "reg[15:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q[i*4 +:4] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "for (i<4) && if (reset || (q[i*4 +:4] == 9 && enable[i]))",
+     "guard_lines": [
+      11,
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "q",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "q[i*4 +:4] <= q[i*4 +:4]+1",
+     "rhs": "q[i*4 +:4]+1",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "for (i<4) && !(reset || (q[i*4 +:4] == 9 && enable[i])) && if (!(enable[i]))",
+     "guard_lines": [
+      11,
+      12,
+      14
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "reset",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "enable": {
+   "name": "enable",
+   "dir": "internal",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "enable = { q[11:0]==12'h999, q[7:0]==8'h99, q[3:0] == 4'h9, 1'b1}",
+     "rhs": "{ q[11:0]==12'h999, q[7:0]==8'h99, q[3:0] == 4'h9, 1'b1}",
+     "kind": "comb",
+     "block": "wire@enable",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "enable",
+   "dst": "ena",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "for (i<4) && if (reset || (q[i*4 +:4] == 9 && enable[i]))"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "for (i<4) && if (reset || (q[i*4 +:4] == 9 && enable[i]))"
+  },
+  {
+   "src": "enable",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "for (i<4) && if (reset || (q[i*4 +:4] == 9 && enable[i]))"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "for (i<4) && !(reset || (q[i*4 +:4] == 9 && enable[i])) && if (!(enable[i]))"
+  },
+  {
+   "src": "reset",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "for (i<4) && !(reset || (q[i*4 +:4] == 9 && enable[i])) && if (!(enable[i]))"
+  },
+  {
+   "src": "enable",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "for (i<4) && !(reset || (q[i*4 +:4] == 9 && enable[i])) && if (!(enable[i]))"
+  },
+  {
+   "src": "q",
+   "dst": "enable",
+   "dep": "data",
+   "kind": "comb",
+   "line": 8,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

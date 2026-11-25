@@ -1,0 +1,83 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ena": {
+   "name": "ena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "q = d",
+     "rhs": "d",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "if (!(ena))",
+     "guard_lines": [
+      8
+     ],
+     "data": [
+      "d"
+     ],
+     "ctrl": [
+      "ena"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "d",
+   "dst": "q",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": "if (!(ena))"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "if (!(ena))"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@7",
+   "kind": "comb",
+   "line": 7,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

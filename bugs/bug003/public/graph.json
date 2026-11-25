@@ -1,0 +1,89 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 255,
+   "type": "logic[254:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 7,
+     "line_end": 7,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@6",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "out = out + in[i]",
+     "rhs": "out + in[i]",
+     "kind": "comb",
+     "block": "alwayscomb@6",
+     "guard": "for (i<=255)",
+     "guard_lines": [
+      8
+     ],
+     "data": [
+      "out",
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "out",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": "for (i<=255)"
+  },
+  {
+   "src": "in",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": "for (i<=255)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "alwayscomb@6",
+   "kind": "comb",
+   "line": 6,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:9:17: warning: arithmetic between operands of different types ('reg[7:0]' and 'logic') [-Warith-op-mismatch]"
+ ]
+}

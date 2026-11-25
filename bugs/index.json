@@ -16,7 +16,8 @@
    "q"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug002",
@@ -35,7 +36,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug003",
@@ -54,7 +56,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug004",
@@ -73,7 +76,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug005",
@@ -92,7 +96,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug006",
@@ -111,7 +116,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug007",
@@ -130,7 +136,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug008",
@@ -149,7 +156,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug009",
@@ -168,7 +176,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug010",
@@ -187,7 +196,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug011",
@@ -206,7 +216,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug012",
@@ -225,7 +236,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug013",
@@ -244,7 +256,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug014",
@@ -263,7 +276,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug015",
@@ -282,7 +296,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug016",
@@ -301,7 +316,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug017",
@@ -320,7 +336,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug018",
@@ -339,7 +356,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug019",
@@ -358,7 +376,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug020",
@@ -377,7 +396,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug021",
@@ -396,7 +416,8 @@
    "anyedge"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug022",
@@ -415,7 +436,8 @@
    "anyedge"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug023",
@@ -434,7 +456,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug024",
@@ -453,7 +476,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug025",
@@ -472,7 +496,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug026",
@@ -491,7 +516,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug027",
@@ -510,7 +536,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug028",
@@ -529,7 +556,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug029",
@@ -548,7 +576,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug030",
@@ -567,7 +596,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug031",
@@ -586,7 +616,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug032",
@@ -605,7 +636,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug033",
@@ -624,7 +656,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug034",
@@ -643,7 +676,8 @@
    "pedge"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug035",
@@ -662,7 +696,8 @@
    "pedge"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug036",
@@ -681,7 +716,8 @@
    "min"
   ],
   "sequential": false,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug037",
@@ -700,7 +736,8 @@
    "min"
   ],
   "sequential": false,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug038",
@@ -719,7 +756,8 @@
    "min"
   ],
   "sequential": false,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug039",
@@ -738,7 +776,8 @@
    "Q"
   ],
   "sequential": true,
-  "body_lines": 3
+  "body_lines": 3,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug040",
@@ -757,7 +796,8 @@
    "out_always_comb"
   ],
   "sequential": true,
-  "body_lines": 4
+  "body_lines": 4,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug041",
@@ -776,7 +816,8 @@
    "out_assign"
   ],
   "sequential": true,
-  "body_lines": 4
+  "body_lines": 4,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug042",
@@ -795,7 +836,8 @@
    "out_always_ff"
   ],
   "sequential": true,
-  "body_lines": 4
+  "body_lines": 4,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug043",
@@ -814,7 +856,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug044",
@@ -833,7 +876,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug045",
@@ -852,7 +896,8 @@
    "Q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug046",
@@ -871,7 +916,8 @@
    "Q"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug047",
@@ -890,7 +936,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug048",
@@ -909,7 +956,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug049",
@@ -928,7 +976,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug050",
@@ -938,6 +987,7 @@
   "category": "state",
   "gt_line": 10,
   "gt_signals": [
+   "out",
    "d_last"
   ],
   "latency_cycles": 10,
@@ -947,7 +997,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug051",
@@ -966,7 +1017,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug052",
@@ -985,7 +1037,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug053",
@@ -1004,7 +1057,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug054",
@@ -1023,7 +1077,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug055",
@@ -1042,7 +1097,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug056",
@@ -1062,7 +1118,8 @@
    "ena"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug057",
@@ -1082,7 +1139,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug058",
@@ -1102,7 +1160,8 @@
    "ena"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug059",
@@ -1111,7 +1170,9 @@
   "op": "bit_op",
   "category": "datapath",
   "gt_line": 9,
-  "gt_signals": [],
+  "gt_signals": [
+   "f"
+  ],
   "latency_cycles": 0,
   "long_horizon": false,
   "mismatches": 4,
@@ -1119,7 +1180,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug060",
@@ -1128,7 +1190,9 @@
   "op": "bit_op",
   "category": "datapath",
   "gt_line": 10,
-  "gt_signals": [],
+  "gt_signals": [
+   "f"
+  ],
   "latency_cycles": 0,
   "long_horizon": false,
   "mismatches": 6,
@@ -1136,7 +1200,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug061",
@@ -1155,7 +1220,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug062",
@@ -1174,7 +1240,8 @@
    "out_pos"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug063",
@@ -1193,7 +1260,8 @@
    "out_pos"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug064",
@@ -1212,7 +1280,8 @@
    "out_sop"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug065",
@@ -1231,7 +1300,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug066",
@@ -1250,7 +1320,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug067",
@@ -1269,7 +1340,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug068",
@@ -1288,7 +1360,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug069",
@@ -1307,7 +1380,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug070",
@@ -1326,7 +1400,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug071",
@@ -1345,7 +1420,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug072",
@@ -1364,7 +1440,8 @@
    "state"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug073",
@@ -1383,7 +1460,8 @@
    "state"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug074",
@@ -1402,7 +1480,8 @@
    "state"
   ],
   "sequential": true,
-  "body_lines": 11
+  "body_lines": 11,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug075",
@@ -1421,7 +1500,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug076",
@@ -1441,7 +1521,8 @@
    "out_n"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug077",
@@ -1461,7 +1542,8 @@
    "out_n"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug078",
@@ -1480,7 +1562,8 @@
    "out_n"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug079",
@@ -1499,7 +1582,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 7
+  "body_lines": 7,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug080",
@@ -1518,7 +1602,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug081",
@@ -1537,7 +1622,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug082",
@@ -1556,7 +1642,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug083",
@@ -1575,7 +1662,8 @@
    "tc"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug084",
@@ -1594,7 +1682,8 @@
    "tc"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug085",
@@ -1613,7 +1702,8 @@
    "tc"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug086",
@@ -1632,7 +1722,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug087",
@@ -1642,7 +1733,7 @@
   "category": "datapath",
   "gt_line": 12,
   "gt_signals": [
-   "q"
+   "q_next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
@@ -1651,7 +1742,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug088",
@@ -1670,7 +1762,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug089",
@@ -1689,7 +1782,8 @@
    "Z"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug090",
@@ -1708,7 +1802,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug091",
@@ -1727,7 +1822,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug092",
@@ -1746,7 +1842,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug093",
@@ -1765,7 +1862,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug094",
@@ -1784,7 +1882,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug095",
@@ -1794,7 +1893,7 @@
   "category": "datapath",
   "gt_line": 11,
   "gt_signals": [
-   "q"
+   "q_next"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
@@ -1803,7 +1902,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug096",
@@ -1822,7 +1922,8 @@
    "out_or"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug097",
@@ -1841,7 +1942,8 @@
    "out_nand"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug098",
@@ -1860,7 +1962,8 @@
    "out_anotb"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug099",
@@ -1879,7 +1982,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug100",
@@ -1898,7 +2002,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug101",
@@ -1917,7 +2022,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug102",
@@ -1936,7 +2042,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug103",
@@ -1955,7 +2062,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug104",
@@ -1974,7 +2082,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug105",
@@ -1993,7 +2102,8 @@
    "mux_in"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug106",
@@ -2012,7 +2122,8 @@
    "mux_in"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug107",
@@ -2031,7 +2142,8 @@
    "mux_in"
   ],
   "sequential": false,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug108",
@@ -2050,7 +2162,8 @@
    "out_both"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug109",
@@ -2069,7 +2182,8 @@
    "out_different"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug110",
@@ -2088,7 +2202,8 @@
    "out_any"
   ],
   "sequential": false,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug111",
@@ -2107,7 +2222,8 @@
    "shift_ena"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug112",
@@ -2126,7 +2242,8 @@
    "shift_ena"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug113",
@@ -2145,7 +2262,8 @@
    "shift_ena"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug114",
@@ -2164,7 +2282,8 @@
    "start_shifting"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug115",
@@ -2183,7 +2302,8 @@
    "start_shifting"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug116",
@@ -2202,7 +2322,8 @@
    "start_shifting"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug117",
@@ -2221,7 +2342,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 3
+  "body_lines": 3,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug118",
@@ -2240,7 +2362,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug119",
@@ -2259,7 +2382,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug120",
@@ -2278,7 +2402,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug121",
@@ -2297,7 +2422,8 @@
    "Q"
   ],
   "sequential": true,
-  "body_lines": 4
+  "body_lines": 4,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug122",
@@ -2316,7 +2442,8 @@
    "Q"
   ],
   "sequential": true,
-  "body_lines": 4
+  "body_lines": 4,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug123",
@@ -2335,7 +2462,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug124",
@@ -2354,7 +2482,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug125",
@@ -2373,7 +2502,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug126",
@@ -2392,7 +2522,8 @@
    "down"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug127",
@@ -2411,7 +2542,8 @@
    "right"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug128",
@@ -2421,7 +2553,10 @@
   "category": "datapath",
   "gt_line": 10,
   "gt_signals": [
-   "left"
+   "left",
+   "down",
+   "right",
+   "up"
   ],
   "latency_cycles": 0,
   "long_horizon": false,
@@ -2430,7 +2565,8 @@
    "right"
   ],
   "sequential": false,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug129",
@@ -2449,7 +2585,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug130",
@@ -2468,7 +2605,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug131",
@@ -2487,7 +2625,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug132",
@@ -2506,7 +2645,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug133",
@@ -2525,7 +2665,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug134",
@@ -2544,7 +2685,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug135",
@@ -2563,7 +2705,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug136",
@@ -2582,7 +2725,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug137",
@@ -2601,7 +2745,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug138",
@@ -2620,7 +2765,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug139",
@@ -2639,7 +2785,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug140",
@@ -2658,7 +2805,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug141",
@@ -2677,7 +2825,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug142",
@@ -2696,7 +2845,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug143",
@@ -2715,7 +2865,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug144",
@@ -2734,7 +2885,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug145",
@@ -2753,7 +2905,8 @@
    "pos"
   ],
   "sequential": false,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug146",
@@ -2772,7 +2925,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug147",
@@ -2791,7 +2945,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug148",
@@ -2810,7 +2965,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug149",
@@ -2829,7 +2985,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug150",
@@ -2848,7 +3005,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug151",
@@ -2867,7 +3025,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug152",
@@ -2886,7 +3045,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug153",
@@ -2905,7 +3065,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug154",
@@ -2924,7 +3085,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug155",
@@ -2943,7 +3105,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug156",
@@ -2962,7 +3125,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug157",
@@ -2981,7 +3145,8 @@
    "f"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug158",
@@ -3000,7 +3165,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug159",
@@ -3019,7 +3185,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug160",
@@ -3038,7 +3205,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug161",
@@ -3057,7 +3225,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug162",
@@ -3076,7 +3245,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug163",
@@ -3095,7 +3265,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 10
+  "body_lines": 10,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug164",
@@ -3114,7 +3285,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug165",
@@ -3133,7 +3305,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug166",
@@ -3152,7 +3325,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug167",
@@ -3171,7 +3345,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug168",
@@ -3190,7 +3365,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug169",
@@ -3209,7 +3385,8 @@
    "out"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug170",
@@ -3228,7 +3405,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug171",
@@ -3247,7 +3425,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug172",
@@ -3266,7 +3445,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug173",
@@ -3285,7 +3465,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug174",
@@ -3304,7 +3485,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug175",
@@ -3323,7 +3505,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug176",
@@ -3342,7 +3525,8 @@
    "result_is_zero"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug177",
@@ -3362,7 +3546,8 @@
    "result_is_zero"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug178",
@@ -3382,7 +3567,8 @@
    "result_is_zero"
   ],
   "sequential": false,
-  "body_lines": 8
+  "body_lines": 8,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug179",
@@ -3401,7 +3587,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug180",
@@ -3410,7 +3597,9 @@
   "op": "drop_not",
   "category": "datapath",
   "gt_line": 14,
-  "gt_signals": [],
+  "gt_signals": [
+   "q"
+  ],
   "latency_cycles": 0,
   "long_horizon": false,
   "mismatches": 6220,
@@ -3418,7 +3607,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug181",
@@ -3427,7 +3617,9 @@
   "op": "const_pm1",
   "category": "state",
   "gt_line": 13,
-  "gt_signals": [],
+  "gt_signals": [
+   "q"
+  ],
   "latency_cycles": 0,
   "long_horizon": false,
   "mismatches": 2018,
@@ -3435,7 +3627,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug182",
@@ -3454,7 +3647,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug183",
@@ -3473,7 +3667,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug184",
@@ -3492,7 +3687,8 @@
    "out"
   ],
   "sequential": false,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug185",
@@ -3511,7 +3707,8 @@
    "q"
   ],
   "sequential": false,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug186",
@@ -3530,7 +3727,8 @@
    "q"
   ],
   "sequential": false,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug187",
@@ -3549,7 +3747,8 @@
    "q"
   ],
   "sequential": false,
-  "body_lines": 12
+  "body_lines": 12,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug188",
@@ -3569,7 +3768,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug189",
@@ -3589,7 +3789,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug190",
@@ -3608,7 +3809,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug191",
@@ -3627,7 +3829,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug192",
@@ -3646,7 +3849,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug193",
@@ -3665,7 +3869,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 14
+  "body_lines": 14,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug194",
@@ -3684,7 +3889,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug195",
@@ -3703,7 +3909,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug196",
@@ -3722,7 +3929,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug197",
@@ -3741,7 +3949,8 @@
    "q"
   ],
   "sequential": false,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug198",
@@ -3760,7 +3969,8 @@
    "shut_off_computer"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug199",
@@ -3779,7 +3989,8 @@
    "keep_driving"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug200",
@@ -3798,7 +4009,8 @@
    "keep_driving"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug201",
@@ -3817,7 +4029,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug202",
@@ -3836,7 +4049,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug203",
@@ -3855,7 +4069,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug204",
@@ -3874,7 +4089,8 @@
    "z"
   ],
   "sequential": false,
-  "body_lines": 24
+  "body_lines": 24,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug205",
@@ -3893,7 +4109,8 @@
    "Y0"
   ],
   "sequential": false,
-  "body_lines": 24
+  "body_lines": 24,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug206",
@@ -3912,7 +4129,8 @@
    "Y0"
   ],
   "sequential": false,
-  "body_lines": 24
+  "body_lines": 24,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug207",
@@ -3931,7 +4149,8 @@
    "Y1"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug208",
@@ -3950,7 +4169,8 @@
    "Y1"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug209",
@@ -3969,7 +4189,8 @@
    "Y1"
   ],
   "sequential": false,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug210",
@@ -3988,7 +4209,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug211",
@@ -4007,7 +4229,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug212",
@@ -4026,7 +4249,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 18
+  "body_lines": 18,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug213",
@@ -4045,7 +4269,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug214",
@@ -4064,7 +4289,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug215",
@@ -4083,7 +4309,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug216",
@@ -4102,7 +4329,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug217",
@@ -4121,7 +4349,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug218",
@@ -4140,7 +4369,8 @@
    "z"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug219",
@@ -4159,7 +4389,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug220",
@@ -4179,7 +4410,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug221",
@@ -4198,7 +4430,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 21
+  "body_lines": 21,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug222",
@@ -4217,7 +4450,8 @@
    "err"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug223",
@@ -4238,7 +4472,8 @@
    "flag"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug224",
@@ -4259,7 +4494,8 @@
    "flag"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug225",
@@ -4281,7 +4517,8 @@
    "pm"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug226",
@@ -4301,7 +4538,8 @@
    "pm"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug227",
@@ -4323,7 +4561,8 @@
    "pm"
   ],
   "sequential": true,
-  "body_lines": 19
+  "body_lines": 19,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug228",
@@ -4344,7 +4583,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug229",
@@ -4364,7 +4604,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug230",
@@ -4385,7 +4626,8 @@
    "walk_left"
   ],
   "sequential": true,
-  "body_lines": 16
+  "body_lines": 16,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug231",
@@ -4404,7 +4646,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug232",
@@ -4423,7 +4666,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug233",
@@ -4442,7 +4686,8 @@
    "next_state"
   ],
   "sequential": false,
-  "body_lines": 13
+  "body_lines": 13,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug234",
@@ -4461,7 +4706,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug235",
@@ -4480,7 +4726,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug236",
@@ -4499,7 +4746,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 22
+  "body_lines": 22,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug237",
@@ -4518,7 +4766,8 @@
    "p"
   ],
   "sequential": true,
-  "body_lines": 6
+  "body_lines": 6,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug238",
@@ -4538,7 +4787,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug239",
@@ -4558,7 +4808,8 @@
    "out_byte"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug240",
@@ -4578,7 +4829,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug241",
@@ -4598,7 +4850,8 @@
    "state"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug242",
@@ -4617,7 +4870,8 @@
    "q"
   ],
   "sequential": true,
-  "body_lines": 5
+  "body_lines": 5,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug243",
@@ -4636,7 +4890,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug244",
@@ -4655,7 +4910,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug245",
@@ -4674,7 +4930,8 @@
    "g"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug246",
@@ -4696,7 +4953,8 @@
    "fr2"
   ],
   "sequential": true,
-  "body_lines": 28
+  "body_lines": 28,
+  "gt_hops": 3
  },
  {
   "bug_id": "bug247",
@@ -4718,7 +4976,8 @@
    "dfr"
   ],
   "sequential": true,
-  "body_lines": 28
+  "body_lines": 28,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug248",
@@ -4740,7 +4999,8 @@
    "dfr"
   ],
   "sequential": true,
-  "body_lines": 28
+  "body_lines": 28,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug249",
@@ -4759,7 +5019,8 @@
    "done"
   ],
   "sequential": false,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug250",
@@ -4778,7 +5039,8 @@
    "S_next"
   ],
   "sequential": false,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug251",
@@ -4797,7 +5059,8 @@
    "shift_ena"
   ],
   "sequential": false,
-  "body_lines": 9
+  "body_lines": 9,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug252",
@@ -4818,7 +5081,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 32
+  "body_lines": 32,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug253",
@@ -4839,7 +5103,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 32
+  "body_lines": 32,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug254",
@@ -4858,7 +5123,8 @@
    "shift_ena"
   ],
   "sequential": true,
-  "body_lines": 32
+  "body_lines": 32,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug255",
@@ -4877,7 +5143,8 @@
    "walk_right"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug256",
@@ -4899,7 +5166,8 @@
    "digging"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug257",
@@ -4921,7 +5189,8 @@
    "digging"
   ],
   "sequential": true,
-  "body_lines": 26
+  "body_lines": 26,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug258",
@@ -4941,7 +5210,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug259",
@@ -4961,7 +5231,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug260",
@@ -4981,7 +5252,8 @@
    "predict_history"
   ],
   "sequential": true,
-  "body_lines": 20
+  "body_lines": 20,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug261",
@@ -5001,7 +5273,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 17
+  "body_lines": 17,
+  "gt_hops": 1
  },
  {
   "bug_id": "bug262",
@@ -5021,7 +5294,8 @@
    "out_bytes"
   ],
   "sequential": true,
-  "body_lines": 17
+  "body_lines": 17,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug263",
@@ -5041,7 +5315,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 17
+  "body_lines": 17,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug264",
@@ -5063,7 +5338,8 @@
    "aaah"
   ],
   "sequential": true,
-  "body_lines": 35
+  "body_lines": 35,
+  "gt_hops": 3
  },
  {
   "bug_id": "bug265",
@@ -5085,7 +5361,8 @@
    "aaah"
   ],
   "sequential": true,
-  "body_lines": 35
+  "body_lines": 35,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug266",
@@ -5105,7 +5382,8 @@
    "aaah"
   ],
   "sequential": true,
-  "body_lines": 35
+  "body_lines": 35,
+  "gt_hops": 3
  },
  {
   "bug_id": "bug267",
@@ -5126,7 +5404,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 46
+  "body_lines": 46,
+  "gt_hops": 2
  },
  {
   "bug_id": "bug268",
@@ -5145,7 +5424,8 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 46
+  "body_lines": 46,
+  "gt_hops": 0
  },
  {
   "bug_id": "bug269",
@@ -5166,6 +5446,7 @@
    "done"
   ],
   "sequential": true,
-  "body_lines": 46
+  "body_lines": 46,
+  "gt_hops": 2
  }
 ]

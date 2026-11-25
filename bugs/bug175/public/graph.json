@@ -1,0 +1,924 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "c": {
+   "name": "c",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h0",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h1",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h3",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h2",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out = 2",
+     "rhs": "2",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h4",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h5",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h7",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h6",
+     "guard_lines": [
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'hc",
+     "guard_lines": [
+      19
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'hd",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'hf",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'he",
+     "guard_lines": [
+      22
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h8",
+     "guard_lines": [
+      23
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'h9",
+     "guard_lines": [
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'hb",
+     "guard_lines": [
+      25
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case {a,b,c,d} == 4'ha",
+     "guard_lines": [
+      26
+     ],
+     "data": [],
+     "ctrl": [
+      "a",
+      "b",
+      "c",
+      "d"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {a,b,c,d} == 4'h0"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {a,b,c,d} == 4'h0"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {a,b,c,d} == 4'h0"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {a,b,c,d} == 4'h0"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {a,b,c,d} == 4'h1"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {a,b,c,d} == 4'h1"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {a,b,c,d} == 4'h1"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {a,b,c,d} == 4'h1"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {a,b,c,d} == 4'h3"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {a,b,c,d} == 4'h3"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {a,b,c,d} == 4'h3"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {a,b,c,d} == 4'h3"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {a,b,c,d} == 4'h2"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {a,b,c,d} == 4'h2"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {a,b,c,d} == 4'h2"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {a,b,c,d} == 4'h2"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {a,b,c,d} == 4'h4"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {a,b,c,d} == 4'h4"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {a,b,c,d} == 4'h4"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {a,b,c,d} == 4'h4"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {a,b,c,d} == 4'h5"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {a,b,c,d} == 4'h5"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {a,b,c,d} == 4'h5"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {a,b,c,d} == 4'h5"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {a,b,c,d} == 4'h7"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {a,b,c,d} == 4'h7"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {a,b,c,d} == 4'h7"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {a,b,c,d} == 4'h7"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {a,b,c,d} == 4'h6"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {a,b,c,d} == 4'h6"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {a,b,c,d} == 4'h6"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {a,b,c,d} == 4'h6"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {a,b,c,d} == 4'hc"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {a,b,c,d} == 4'hc"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {a,b,c,d} == 4'hc"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {a,b,c,d} == 4'hc"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {a,b,c,d} == 4'hd"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {a,b,c,d} == 4'hd"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {a,b,c,d} == 4'hd"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {a,b,c,d} == 4'hd"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {a,b,c,d} == 4'hf"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {a,b,c,d} == 4'hf"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {a,b,c,d} == 4'hf"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {a,b,c,d} == 4'hf"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case {a,b,c,d} == 4'he"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case {a,b,c,d} == 4'he"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case {a,b,c,d} == 4'he"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case {a,b,c,d} == 4'he"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case {a,b,c,d} == 4'h8"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case {a,b,c,d} == 4'h8"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case {a,b,c,d} == 4'h8"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case {a,b,c,d} == 4'h8"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case {a,b,c,d} == 4'h9"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case {a,b,c,d} == 4'h9"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case {a,b,c,d} == 4'h9"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case {a,b,c,d} == 4'h9"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case {a,b,c,d} == 4'hb"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case {a,b,c,d} == 4'hb"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case {a,b,c,d} == 4'hb"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case {a,b,c,d} == 4'hb"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case {a,b,c,d} == 4'ha"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case {a,b,c,d} == 4'ha"
+  },
+  {
+   "src": "c",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case {a,b,c,d} == 4'ha"
+  },
+  {
+   "src": "d",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case {a,b,c,d} == 4'ha"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:10:5: warning: 'case' missing 'default' label [-Wcase-default]",
+  "source:15:17: warning: implicit conversion from 'logic signed[31:0]' to 'reg' changes value from 2 to 1'b0 [-Wconstant-conversion]"
+ ]
+}

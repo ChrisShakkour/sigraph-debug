@@ -1,0 +1,437 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "state": {
+   "name": "state",
+   "dir": "in",
+   "width": 10,
+   "type": "logic[9:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "next_state": {
+   "name": "next_state",
+   "dir": "out",
+   "width": 10,
+   "type": "logic[9:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "next_state[0] = !in && (|state[4:0] | state[7] | state[8] | state[9])",
+     "rhs": "!in && (|state[4:0] | state[7] | state[8] | state[9])",
+     "kind": "comb",
+     "block": "assign@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "next_state[1] = in && (state[0] | state[8] | state[9])",
+     "rhs": "in && (state[0] | state[8] | state[9])",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "next_state[2] = in && state[1]",
+     "rhs": "in && state[1]",
+     "kind": "comb",
+     "block": "assign@14",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "next_state[3] = in && state[2]",
+     "rhs": "in && state[2]",
+     "kind": "comb",
+     "block": "assign@15",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "next_state[4] = in && state[2]",
+     "rhs": "in && state[2]",
+     "kind": "comb",
+     "block": "assign@16",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "next_state[5] = in && state[4]",
+     "rhs": "in && state[4]",
+     "kind": "comb",
+     "block": "assign@17",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "next_state[6] = in && state[5]",
+     "rhs": "in && state[5]",
+     "kind": "comb",
+     "block": "assign@18",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "next_state[7] = in && (state[6] | state[7])",
+     "rhs": "in && (state[6] | state[7])",
+     "kind": "comb",
+     "block": "assign@19",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "next_state[8] = !in && state[5]",
+     "rhs": "!in && state[5]",
+     "kind": "comb",
+     "block": "assign@20",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "next_state[9] = !in && state[6]",
+     "rhs": "!in && state[6]",
+     "kind": "comb",
+     "block": "assign@21",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out1": {
+   "name": "out1",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "out1 = state[8] | state[9]",
+     "rhs": "state[8] | state[9]",
+     "kind": "comb",
+     "block": "assign@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out2": {
+   "name": "out2",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "out2 = state[7] | state[9]",
+     "rhs": "state[7] | state[9]",
+     "kind": "comb",
+     "block": "assign@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 16,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 18,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 19,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 20,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "next_state",
+   "dep": "data",
+   "kind": "comb",
+   "line": 21,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "out1",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "out2",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

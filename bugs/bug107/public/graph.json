@@ -1,0 +1,143 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "c": {
+   "name": "c",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "d": {
+   "name": "d",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "mux_in": {
+   "name": "mux_in",
+   "dir": "out",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 7,
+     "line_end": 7,
+     "stmt": "mux_in[0] = c | d",
+     "rhs": "c | d",
+     "kind": "comb",
+     "block": "assign@7",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "d"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "mux_in[1] = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "assign@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "mux_in[2] = d",
+     "rhs": "d",
+     "kind": "comb",
+     "block": "assign@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "d"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "mux_in[3] = c&d",
+     "rhs": "c&d",
+     "kind": "comb",
+     "block": "assign@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "c",
+      "d"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "c",
+   "dst": "mux_in",
+   "dep": "data",
+   "kind": "comb",
+   "line": 7,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "mux_in",
+   "dep": "data",
+   "kind": "comb",
+   "line": 7,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "mux_in",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "c",
+   "dst": "mux_in",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  },
+  {
+   "src": "d",
+   "dst": "mux_in",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

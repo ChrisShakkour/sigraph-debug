@@ -1,0 +1,184 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "do_sub": {
+   "name": "do_sub",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "a": {
+   "name": "a",
+   "dir": "in",
+   "width": 8,
+   "type": "logic[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "b": {
+   "name": "b",
+   "dir": "in",
+   "width": 8,
+   "type": "logic[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "out = a + b",
+     "rhs": "a + b",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case do_sub == 0",
+     "guard_lines": [
+      11
+     ],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [
+      "do_sub"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "out = a - b",
+     "rhs": "a - b",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "case do_sub == 1",
+     "guard_lines": [
+      12
+     ],
+     "data": [
+      "a",
+      "b"
+     ],
+     "ctrl": [
+      "do_sub"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "result_is_zero": {
+   "name": "result_is_zero",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "result_is_zero = (out != 0)",
+     "rhs": "out != 0",
+     "kind": "comb",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "out"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case do_sub == 0"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case do_sub == 0"
+  },
+  {
+   "src": "do_sub",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case do_sub == 0"
+  },
+  {
+   "src": "a",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case do_sub == 1"
+  },
+  {
+   "src": "b",
+   "dst": "out",
+   "dep": "data",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case do_sub == 1"
+  },
+  {
+   "src": "do_sub",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case do_sub == 1"
+  },
+  {
+   "src": "out",
+   "dst": "result_is_zero",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": [
+  "source:10:5: warning: 'case' missing 'default' label [-Wcase-default]"
+ ]
+}

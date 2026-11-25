@@ -1,0 +1,482 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "pos": {
+   "name": "pos",
+   "dir": "out",
+   "width": 2,
+   "type": "reg[1:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h0",
+     "guard_lines": [
+      8
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h1",
+     "guard_lines": [
+      9
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "pos = 2'h1",
+     "rhs": "2'h1",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h2",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h3",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "pos = 2'h2",
+     "rhs": "2'h2",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h4",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "pos = 2'h3",
+     "rhs": "2'h3",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h5",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "pos = 2'h1",
+     "rhs": "2'h1",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h6",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h7",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "pos = 2'h3",
+     "rhs": "2'h3",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h8",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'h9",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "pos = 2'h1",
+     "rhs": "2'h1",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'ha",
+     "guard_lines": [
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'hb",
+     "guard_lines": [
+      19
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "pos = 2'h2",
+     "rhs": "2'h2",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'hc",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'hd",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "pos = 2'h1",
+     "rhs": "2'h1",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'he",
+     "guard_lines": [
+      22
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "pos = 2'h0",
+     "rhs": "2'h0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == 4'hf",
+     "guard_lines": [
+      23
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "pos = 2'b0",
+     "rhs": "2'b0",
+     "kind": "comb",
+     "block": "always@6",
+     "guard": "case in == default",
+     "guard_lines": [
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "in"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 8,
+   "guard": "case in == 4'h0"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "case in == 4'h1"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 10,
+   "guard": "case in == 4'h2"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case in == 4'h3"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case in == 4'h4"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case in == 4'h5"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case in == 4'h6"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case in == 4'h7"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case in == 4'h8"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case in == 4'h9"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case in == 4'ha"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case in == 4'hb"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case in == 4'hc"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case in == 4'hd"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 22,
+   "guard": "case in == 4'he"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 23,
+   "guard": "case in == 4'hf"
+  },
+  {
+   "src": "in",
+   "dst": "pos",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 24,
+   "guard": "case in == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@6",
+   "kind": "comb",
+   "line": 6,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

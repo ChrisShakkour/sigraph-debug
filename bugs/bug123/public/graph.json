@@ -1,0 +1,196 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "load": {
+   "name": "load",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "ena": {
+   "name": "ena",
+   "dir": "in",
+   "width": 2,
+   "type": "logic[1:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "data": {
+   "name": "data",
+   "dir": "in",
+   "width": 100,
+   "type": "logic[99:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q": {
+   "name": "q",
+   "dir": "out",
+   "width": 100,
+   "type": "reg[99:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "q <= data",
+     "rhs": "data",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "if (load)",
+     "guard_lines": [
+      10
+     ],
+     "data": [
+      "data"
+     ],
+     "ctrl": [
+      "load"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "q <= {q[0], q[99:1]}",
+     "rhs": "{q[0], q[99:1]}",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(load) && if (ena != 2'h1)",
+     "guard_lines": [
+      10,
+      12
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "q <= {q[98:0], q[99]}",
+     "rhs": "{q[98:0], q[99]}",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(load) && !(ena != 2'h1) && if (ena == 2'h2)",
+     "guard_lines": [
+      10,
+      12,
+      14
+     ],
+     "data": [
+      "q"
+     ],
+     "ctrl": [
+      "load",
+      "ena"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "data",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (load)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (load)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(load) && if (ena != 2'h1)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(load) && if (ena != 2'h1)"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 13,
+   "guard": "!(load) && if (ena != 2'h1)"
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && !(ena != 2'h1) && if (ena == 2'h2)"
+  },
+  {
+   "src": "load",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && !(ena != 2'h1) && if (ena == 2'h2)"
+  },
+  {
+   "src": "ena",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "!(load) && !(ena != 2'h1) && if (ena == 2'h2)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "seq",
+   "line": 9,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

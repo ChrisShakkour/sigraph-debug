@@ -1,0 +1,150 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "out_both": {
+   "name": "out_both",
+   "dir": "out",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "out_both[2:0] = in[2:0] & in[3:1]",
+     "rhs": "in[2:0] & in[3:1]",
+     "kind": "comb",
+     "block": "assign@8",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "out_both[3] = 1'bx",
+     "rhs": "1'bx",
+     "kind": "comb",
+     "block": "assign@12",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_any": {
+   "name": "out_any",
+   "dir": "out",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "out_any[3:1] = in[2:0] | in[3:1]",
+     "rhs": "in[2:0] | in[3:1]",
+     "kind": "comb",
+     "block": "assign@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out_any[0] = 1'bx",
+     "rhs": "1'bx",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "out_different": {
+   "name": "out_different",
+   "dir": "out",
+   "width": 4,
+   "type": "logic[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "out_different = in|{in[0], in[3:1]}",
+     "rhs": "in|{in[0], in[3:1]}",
+     "kind": "comb",
+     "block": "assign@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "in",
+   "dst": "out_both",
+   "dep": "data",
+   "kind": "comb",
+   "line": 8,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "out_any",
+   "dep": "data",
+   "kind": "comb",
+   "line": 9,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "out_different",
+   "dep": "data",
+   "kind": "comb",
+   "line": 10,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [],
+ "diagnostics": []
+}

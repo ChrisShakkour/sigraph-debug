@@ -1,0 +1,611 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "x": {
+   "name": "x",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "y": {
+   "name": "y",
+   "dir": "in",
+   "width": 3,
+   "type": "logic[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "Y0": {
+   "name": "Y0",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "Y0 = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h0",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h1",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h2",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h3",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "Y0 = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h4",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h5",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h6",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "Y0 = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h7",
+     "guard_lines": [
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "Y0 = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h8",
+     "guard_lines": [
+      19
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "Y0 = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == 4'h9",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "Y0 = 1'bx",
+     "rhs": "1'bx",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case {y[2:0], x} == default",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "x"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "z": {
+   "name": "z",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "z = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == 3'h0",
+     "guard_lines": [
+      25
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "z = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == 3'h1",
+     "guard_lines": [
+      26
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "z = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == 3'h2",
+     "guard_lines": [
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 28,
+     "line_end": 28,
+     "stmt": "z = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == 3'h3",
+     "guard_lines": [
+      28
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 29,
+     "line_end": 29,
+     "stmt": "z = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == 3'h4",
+     "guard_lines": [
+      29
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 30,
+     "line_end": 30,
+     "stmt": "z = 1'bx",
+     "rhs": "1'bx",
+     "kind": "comb",
+     "block": "alwayscomb@9",
+     "guard": "case y[2:0] == default",
+     "guard_lines": [
+      30
+     ],
+     "data": [],
+     "ctrl": [
+      "y"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {y[2:0], x} == 4'h0"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {y[2:0], x} == 4'h0"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {y[2:0], x} == 4'h1"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {y[2:0], x} == 4'h1"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {y[2:0], x} == 4'h2"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {y[2:0], x} == 4'h2"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {y[2:0], x} == 4'h3"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {y[2:0], x} == 4'h3"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {y[2:0], x} == 4'h4"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {y[2:0], x} == 4'h4"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {y[2:0], x} == 4'h5"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {y[2:0], x} == 4'h5"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {y[2:0], x} == 4'h6"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {y[2:0], x} == 4'h6"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {y[2:0], x} == 4'h7"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {y[2:0], x} == 4'h7"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {y[2:0], x} == 4'h8"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {y[2:0], x} == 4'h8"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {y[2:0], x} == 4'h9"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {y[2:0], x} == 4'h9"
+  },
+  {
+   "src": "y",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {y[2:0], x} == default"
+  },
+  {
+   "src": "x",
+   "dst": "Y0",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {y[2:0], x} == default"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 25,
+   "guard": "case y[2:0] == 3'h0"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 26,
+   "guard": "case y[2:0] == 3'h1"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 27,
+   "guard": "case y[2:0] == 3'h2"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 28,
+   "guard": "case y[2:0] == 3'h3"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 29,
+   "guard": "case y[2:0] == 3'h4"
+  },
+  {
+   "src": "y",
+   "dst": "z",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 30,
+   "guard": "case y[2:0] == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "alwayscomb@9",
+   "kind": "comb",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

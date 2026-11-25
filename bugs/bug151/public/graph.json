@@ -1,0 +1,364 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "code": {
+   "name": "code",
+   "dir": "in",
+   "width": 8,
+   "type": "logic[7:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "out": {
+   "name": "out",
+   "dir": "out",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 8,
+     "line_end": 8,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "out = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h45",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "out = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h16",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "out = 2",
+     "rhs": "2",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h1e",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "out = 3",
+     "rhs": "3",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h26",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "out = 4",
+     "rhs": "4",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h25",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "out = 5",
+     "rhs": "5",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h2e",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "out = 6",
+     "rhs": "6",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h36",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "out = 7",
+     "rhs": "7",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h3d",
+     "guard_lines": [
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "out = 9",
+     "rhs": "9",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h3e",
+     "guard_lines": [
+      19
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "out = 9",
+     "rhs": "9",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == 8'h46",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "valid": {
+   "name": "valid",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "valid = 1",
+     "rhs": "1",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "valid = 0",
+     "rhs": "0",
+     "kind": "comb",
+     "block": "always@7",
+     "guard": "case code == default",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "code"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case code == 8'h45"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case code == 8'h16"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case code == 8'h1e"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case code == 8'h26"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case code == 8'h25"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case code == 8'h2e"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case code == 8'h36"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case code == 8'h3d"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case code == 8'h3e"
+  },
+  {
+   "src": "code",
+   "dst": "out",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case code == 8'h46"
+  },
+  {
+   "src": "code",
+   "dst": "valid",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case code == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@7",
+   "kind": "comb",
+   "line": 7,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

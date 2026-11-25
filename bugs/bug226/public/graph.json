@@ -1,0 +1,974 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "ena": {
+   "name": "ena",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "pm": {
+   "name": "pm",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "{pm,hh,mm,ss} <= 25'h0120000",
+     "rhs": "25'h0120000",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "if (reset)",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 42,
+     "line_end": 42,
+     "stmt": "pm <= ~pm",
+     "rhs": "~pm",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[6])",
+     "guard_lines": [
+      21,
+      23,
+      42
+     ],
+     "data": [
+      "pm"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "hh": {
+   "name": "hh",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "{pm,hh,mm,ss} <= 25'h0120000",
+     "rhs": "25'h0120000",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "if (reset)",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 36,
+     "line_end": 36,
+     "stmt": "hh[3:0] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[4] && hh[3:0] == 4'h9)",
+     "guard_lines": [
+      21,
+      23,
+      36
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "hh"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 37,
+     "line_end": 37,
+     "stmt": "hh[3:0] <= hh[3:0] + 1",
+     "rhs": "hh[3:0] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[4] && hh[3:0] == 4'h9) && if (enable[4])",
+     "guard_lines": [
+      21,
+      23,
+      36,
+      37
+     ],
+     "data": [
+      "hh"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 39,
+     "line_end": 39,
+     "stmt": "hh[7:0] <= 8'h1",
+     "rhs": "8'h1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[4] && hh[7:0] == 8'h12)",
+     "guard_lines": [
+      21,
+      23,
+      39
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "hh"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 40,
+     "line_end": 40,
+     "stmt": "hh[7:4] <= hh[7:4] + 1",
+     "rhs": "hh[7:4] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[4] && hh[7:0] == 8'h12) && if (enable[4])",
+     "guard_lines": [
+      21,
+      23,
+      39,
+      40
+     ],
+     "data": [
+      "hh"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "mm": {
+   "name": "mm",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "{pm,hh,mm,ss} <= 25'h0120000",
+     "rhs": "25'h0120000",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "if (reset)",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 30,
+     "line_end": 30,
+     "stmt": "mm[3:0] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[2] && mm[3:0] == 9)",
+     "guard_lines": [
+      21,
+      23,
+      30
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "mm"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 31,
+     "line_end": 31,
+     "stmt": "mm[3:0] <= mm[3:0] + 1",
+     "rhs": "mm[3:0] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[2] && mm[3:0] == 9) && if (enable[2])",
+     "guard_lines": [
+      21,
+      23,
+      30,
+      31
+     ],
+     "data": [
+      "mm"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 33,
+     "line_end": 33,
+     "stmt": "mm[7:4] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[3] && mm[7:4] == 4'h5)",
+     "guard_lines": [
+      21,
+      23,
+      33
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "mm"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 34,
+     "line_end": 34,
+     "stmt": "mm[7:4] <= mm[7:4] + 1",
+     "rhs": "mm[7:4] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[3] && mm[7:4] == 4'h5) && if (enable[3])",
+     "guard_lines": [
+      21,
+      23,
+      33,
+      34
+     ],
+     "data": [
+      "mm"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "ss": {
+   "name": "ss",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "{pm,hh,mm,ss} <= 25'h0120000",
+     "rhs": "25'h0120000",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "if (reset)",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "ss[3:0] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[0] && ss[3:0] == 9)",
+     "guard_lines": [
+      21,
+      23,
+      24
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "ss"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "ss[3:0] <= ss[3:0] + 1",
+     "rhs": "ss[3:0] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[0] && ss[3:0] == 9) && if (enable[0])",
+     "guard_lines": [
+      21,
+      23,
+      24,
+      25
+     ],
+     "data": [
+      "ss"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "ss[7:4] <= 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && if (enable[1] && ss[7:4] == 4'h5)",
+     "guard_lines": [
+      21,
+      23,
+      27
+     ],
+     "data": [],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable",
+      "ss"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 28,
+     "line_end": 28,
+     "stmt": "ss[7:4] <= ss[7:4] + 1",
+     "rhs": "ss[7:4] + 1",
+     "kind": "seq",
+     "block": "always@20",
+     "guard": "!(reset) && if (ena) && !(enable[1] && ss[7:4] == 4'h5) && if (enable[1])",
+     "guard_lines": [
+      21,
+      23,
+      27,
+      28
+     ],
+     "data": [
+      "ss"
+     ],
+     "ctrl": [
+      "reset",
+      "ena",
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "enable": {
+   "name": "enable",
+   "dir": "internal",
+   "width": 7,
+   "type": "logic[6:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "enable = { {hh[7:0],mm[7:0],ss[7:0]}==24'h115959, {hh[3:0],mm[7:0],ss[7:0]}==20'h95959, {mm[7:0],ss[7:0]}==16'h5959, {mm[3:0],ss[7:0]}==12'h959, ss[7:0]==8'h59, ss[3:0] == 4'h9, 1'b1}",
+     "rhs": "{ {hh[7:0],mm[7:0],ss[7:0]}==24'h115959, {hh[3:0],mm[7:0],ss[7:0]}==20'h95959, {mm[7:0],ss[7:0]}==16'h5959, {mm[3:0],ss[7:0]}==12'h959, ss[7:0]==8'h59, ss[3:0] == 4'h9, 1'b1}",
+     "kind": "comb",
+     "block": "wire@enable",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "hh",
+      "mm",
+      "ss"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "reset",
+   "dst": "pm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "pm",
+   "dst": "pm",
+   "dep": "data",
+   "kind": "seq",
+   "line": 42,
+   "guard": "!(reset) && if (ena) && if (enable[6])"
+  },
+  {
+   "src": "reset",
+   "dst": "pm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 42,
+   "guard": "!(reset) && if (ena) && if (enable[6])"
+  },
+  {
+   "src": "ena",
+   "dst": "pm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 42,
+   "guard": "!(reset) && if (ena) && if (enable[6])"
+  },
+  {
+   "src": "enable",
+   "dst": "pm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 42,
+   "guard": "!(reset) && if (ena) && if (enable[6])"
+  },
+  {
+   "src": "reset",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[3:0] == 4'h9)"
+  },
+  {
+   "src": "ena",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[3:0] == 4'h9)"
+  },
+  {
+   "src": "enable",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[3:0] == 4'h9)"
+  },
+  {
+   "src": "hh",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 36,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[3:0] == 4'h9)"
+  },
+  {
+   "src": "hh",
+   "dst": "hh",
+   "dep": "data",
+   "kind": "seq",
+   "line": 37,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[3:0] == 4'h9) && if (enable[4])"
+  },
+  {
+   "src": "reset",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 37,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[3:0] == 4'h9) && if (enable[4])"
+  },
+  {
+   "src": "ena",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 37,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[3:0] == 4'h9) && if (enable[4])"
+  },
+  {
+   "src": "enable",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 37,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[3:0] == 4'h9) && if (enable[4])"
+  },
+  {
+   "src": "reset",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 39,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[7:0] == 8'h12)"
+  },
+  {
+   "src": "ena",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 39,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[7:0] == 8'h12)"
+  },
+  {
+   "src": "enable",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 39,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[7:0] == 8'h12)"
+  },
+  {
+   "src": "hh",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 39,
+   "guard": "!(reset) && if (ena) && if (enable[4] && hh[7:0] == 8'h12)"
+  },
+  {
+   "src": "hh",
+   "dst": "hh",
+   "dep": "data",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[7:0] == 8'h12) && if (enable[4])"
+  },
+  {
+   "src": "reset",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[7:0] == 8'h12) && if (enable[4])"
+  },
+  {
+   "src": "ena",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[7:0] == 8'h12) && if (enable[4])"
+  },
+  {
+   "src": "enable",
+   "dst": "hh",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 40,
+   "guard": "!(reset) && if (ena) && !(enable[4] && hh[7:0] == 8'h12) && if (enable[4])"
+  },
+  {
+   "src": "reset",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 30,
+   "guard": "!(reset) && if (ena) && if (enable[2] && mm[3:0] == 9)"
+  },
+  {
+   "src": "ena",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 30,
+   "guard": "!(reset) && if (ena) && if (enable[2] && mm[3:0] == 9)"
+  },
+  {
+   "src": "enable",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 30,
+   "guard": "!(reset) && if (ena) && if (enable[2] && mm[3:0] == 9)"
+  },
+  {
+   "src": "mm",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 30,
+   "guard": "!(reset) && if (ena) && if (enable[2] && mm[3:0] == 9)"
+  },
+  {
+   "src": "mm",
+   "dst": "mm",
+   "dep": "data",
+   "kind": "seq",
+   "line": 31,
+   "guard": "!(reset) && if (ena) && !(enable[2] && mm[3:0] == 9) && if (enable[2])"
+  },
+  {
+   "src": "reset",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 31,
+   "guard": "!(reset) && if (ena) && !(enable[2] && mm[3:0] == 9) && if (enable[2])"
+  },
+  {
+   "src": "ena",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 31,
+   "guard": "!(reset) && if (ena) && !(enable[2] && mm[3:0] == 9) && if (enable[2])"
+  },
+  {
+   "src": "enable",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 31,
+   "guard": "!(reset) && if (ena) && !(enable[2] && mm[3:0] == 9) && if (enable[2])"
+  },
+  {
+   "src": "reset",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(reset) && if (ena) && if (enable[3] && mm[7:4] == 4'h5)"
+  },
+  {
+   "src": "ena",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(reset) && if (ena) && if (enable[3] && mm[7:4] == 4'h5)"
+  },
+  {
+   "src": "enable",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(reset) && if (ena) && if (enable[3] && mm[7:4] == 4'h5)"
+  },
+  {
+   "src": "mm",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 33,
+   "guard": "!(reset) && if (ena) && if (enable[3] && mm[7:4] == 4'h5)"
+  },
+  {
+   "src": "mm",
+   "dst": "mm",
+   "dep": "data",
+   "kind": "seq",
+   "line": 34,
+   "guard": "!(reset) && if (ena) && !(enable[3] && mm[7:4] == 4'h5) && if (enable[3])"
+  },
+  {
+   "src": "reset",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 34,
+   "guard": "!(reset) && if (ena) && !(enable[3] && mm[7:4] == 4'h5) && if (enable[3])"
+  },
+  {
+   "src": "ena",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 34,
+   "guard": "!(reset) && if (ena) && !(enable[3] && mm[7:4] == 4'h5) && if (enable[3])"
+  },
+  {
+   "src": "enable",
+   "dst": "mm",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 34,
+   "guard": "!(reset) && if (ena) && !(enable[3] && mm[7:4] == 4'h5) && if (enable[3])"
+  },
+  {
+   "src": "reset",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "if (reset)"
+  },
+  {
+   "src": "reset",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 24,
+   "guard": "!(reset) && if (ena) && if (enable[0] && ss[3:0] == 9)"
+  },
+  {
+   "src": "ena",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 24,
+   "guard": "!(reset) && if (ena) && if (enable[0] && ss[3:0] == 9)"
+  },
+  {
+   "src": "enable",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 24,
+   "guard": "!(reset) && if (ena) && if (enable[0] && ss[3:0] == 9)"
+  },
+  {
+   "src": "ss",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 24,
+   "guard": "!(reset) && if (ena) && if (enable[0] && ss[3:0] == 9)"
+  },
+  {
+   "src": "ss",
+   "dst": "ss",
+   "dep": "data",
+   "kind": "seq",
+   "line": 25,
+   "guard": "!(reset) && if (ena) && !(enable[0] && ss[3:0] == 9) && if (enable[0])"
+  },
+  {
+   "src": "reset",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 25,
+   "guard": "!(reset) && if (ena) && !(enable[0] && ss[3:0] == 9) && if (enable[0])"
+  },
+  {
+   "src": "ena",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 25,
+   "guard": "!(reset) && if (ena) && !(enable[0] && ss[3:0] == 9) && if (enable[0])"
+  },
+  {
+   "src": "enable",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 25,
+   "guard": "!(reset) && if (ena) && !(enable[0] && ss[3:0] == 9) && if (enable[0])"
+  },
+  {
+   "src": "reset",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 27,
+   "guard": "!(reset) && if (ena) && if (enable[1] && ss[7:4] == 4'h5)"
+  },
+  {
+   "src": "ena",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 27,
+   "guard": "!(reset) && if (ena) && if (enable[1] && ss[7:4] == 4'h5)"
+  },
+  {
+   "src": "enable",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 27,
+   "guard": "!(reset) && if (ena) && if (enable[1] && ss[7:4] == 4'h5)"
+  },
+  {
+   "src": "ss",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 27,
+   "guard": "!(reset) && if (ena) && if (enable[1] && ss[7:4] == 4'h5)"
+  },
+  {
+   "src": "ss",
+   "dst": "ss",
+   "dep": "data",
+   "kind": "seq",
+   "line": 28,
+   "guard": "!(reset) && if (ena) && !(enable[1] && ss[7:4] == 4'h5) && if (enable[1])"
+  },
+  {
+   "src": "reset",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 28,
+   "guard": "!(reset) && if (ena) && !(enable[1] && ss[7:4] == 4'h5) && if (enable[1])"
+  },
+  {
+   "src": "ena",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 28,
+   "guard": "!(reset) && if (ena) && !(enable[1] && ss[7:4] == 4'h5) && if (enable[1])"
+  },
+  {
+   "src": "enable",
+   "dst": "ss",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 28,
+   "guard": "!(reset) && if (ena) && !(enable[1] && ss[7:4] == 4'h5) && if (enable[1])"
+  },
+  {
+   "src": "hh",
+   "dst": "enable",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "mm",
+   "dst": "enable",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "ss",
+   "dst": "enable",
+   "dep": "data",
+   "kind": "comb",
+   "line": 11,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@20",
+   "kind": "seq",
+   "line": 20,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

@@ -1,0 +1,247 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "predict_valid": {
+   "name": "predict_valid",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "predict_taken": {
+   "name": "predict_taken",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "predict_history": {
+   "name": "predict_history",
+   "dir": "out",
+   "width": 32,
+   "type": "logic[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "predict_history = 0",
+     "rhs": "0",
+     "kind": "seq",
+     "block": "always@13",
+     "guard": "if (areset)",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "predict_history <= {train_history, train_taken}",
+     "rhs": "{train_history, train_taken}",
+     "kind": "seq",
+     "block": "always@13",
+     "guard": "!(areset) && if (train_mispredicted)",
+     "guard_lines": [
+      14,
+      17
+     ],
+     "data": [
+      "train_history",
+      "train_taken"
+     ],
+     "ctrl": [
+      "areset",
+      "train_mispredicted"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "predict_history <= {predict_history, predict_taken}",
+     "rhs": "{predict_history, predict_taken}",
+     "kind": "seq",
+     "block": "always@13",
+     "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))",
+     "guard_lines": [
+      14,
+      17,
+      19
+     ],
+     "data": [
+      "predict_history",
+      "predict_taken"
+     ],
+     "ctrl": [
+      "areset",
+      "train_mispredicted",
+      "predict_valid"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "train_mispredicted": {
+   "name": "train_mispredicted",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_taken": {
+   "name": "train_taken",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_history": {
+   "name": "train_history",
+   "dir": "in",
+   "width": 32,
+   "type": "logic[31:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  }
+ },
+ "edges": [
+  {
+   "src": "areset",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 15,
+   "guard": "if (areset)"
+  },
+  {
+   "src": "train_history",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(areset) && if (train_mispredicted)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(areset) && if (train_mispredicted)"
+  },
+  {
+   "src": "areset",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(areset) && if (train_mispredicted)"
+  },
+  {
+   "src": "train_mispredicted",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 18,
+   "guard": "!(areset) && if (train_mispredicted)"
+  },
+  {
+   "src": "predict_history",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))"
+  },
+  {
+   "src": "predict_taken",
+   "dst": "predict_history",
+   "dep": "data",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))"
+  },
+  {
+   "src": "areset",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))"
+  },
+  {
+   "src": "train_mispredicted",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))"
+  },
+  {
+   "src": "predict_valid",
+   "dst": "predict_history",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "!(areset) && !(train_mispredicted) && if (!(predict_valid))"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@13",
+   "kind": "seq",
+   "line": 13,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  }
+ ],
+ "diagnostics": [
+  "source:18:28: warning: implicit conversion truncates from 33 to 32 bits [-Wwidth-trunc]",
+  "source:20:28: warning: implicit conversion truncates from 33 to 32 bits [-Wwidth-trunc]"
+ ]
+}

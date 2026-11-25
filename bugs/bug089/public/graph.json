@@ -1,0 +1,191 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "enable": {
+   "name": "enable",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "S": {
+   "name": "S",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "A": {
+   "name": "A",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "B": {
+   "name": "B",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "C": {
+   "name": "C",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "Z": {
+   "name": "Z",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "Z = q[ {A, B, C} ]",
+     "rhs": "q[ {A, B, C} ]",
+     "kind": "comb",
+     "block": "assign@17",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "q",
+      "A",
+      "B",
+      "C"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "q": {
+   "name": "q",
+   "dir": "internal",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "q <= {q[6:0], S}",
+     "rhs": "{q[6:0], S}",
+     "kind": "seq",
+     "block": "always@12",
+     "guard": "if (!(enable))",
+     "guard_lines": [
+      13
+     ],
+     "data": [
+      "q",
+      "S"
+     ],
+     "ctrl": [
+      "enable"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "q",
+   "dst": "Z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "A",
+   "dst": "Z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "B",
+   "dst": "Z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "C",
+   "dst": "Z",
+   "dep": "data",
+   "kind": "comb",
+   "line": 17,
+   "guard": ""
+  },
+  {
+   "src": "q",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "if (!(enable))"
+  },
+  {
+   "src": "S",
+   "dst": "q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "if (!(enable))"
+  },
+  {
+   "src": "enable",
+   "dst": "q",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "if (!(enable))"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@12",
+   "kind": "seq",
+   "line": 12,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

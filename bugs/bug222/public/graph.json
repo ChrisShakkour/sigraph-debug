@@ -1,0 +1,609 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "reset": {
+   "name": "reset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "disc": {
+   "name": "disc",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "disc = state == SDISC",
+     "rhs": "state == SDISC",
+     "kind": "comb",
+     "block": "assign@13",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "flag": {
+   "name": "flag",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "flag = state == SFLAG",
+     "rhs": "state == SFLAG",
+     "kind": "comb",
+     "block": "assign@14",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "err": {
+   "name": "err",
+   "dir": "out",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "err = state == SERR",
+     "rhs": "state == SERR",
+     "kind": "comb",
+     "block": "assign@15",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "state"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  },
+  "state": {
+   "name": "state",
+   "dir": "internal",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": [
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "state <= in ? S1 : S0",
+     "rhs": "in ? S1 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S0",
+     "guard_lines": [
+      19
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "state <= in ? S2 : S0",
+     "rhs": "in ? S2 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S1",
+     "guard_lines": [
+      20
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "state <= in ? S3 : S1",
+     "rhs": "in ? S3 : S1",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S2",
+     "guard_lines": [
+      21
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 22,
+     "line_end": 22,
+     "stmt": "state <= in ? S4 : S0",
+     "rhs": "in ? S4 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S3",
+     "guard_lines": [
+      22
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 23,
+     "line_end": 23,
+     "stmt": "state <= in ? S5 : S0",
+     "rhs": "in ? S5 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S4",
+     "guard_lines": [
+      23
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 24,
+     "line_end": 24,
+     "stmt": "state <= in ? S6 : SDISC",
+     "rhs": "in ? S6 : SDISC",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S5",
+     "guard_lines": [
+      24
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 25,
+     "line_end": 25,
+     "stmt": "state <= in ? SERR : SFLAG",
+     "rhs": "in ? SERR : SFLAG",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == S6",
+     "guard_lines": [
+      25
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 26,
+     "line_end": 26,
+     "stmt": "state <= in ? SERR : S0",
+     "rhs": "in ? SERR : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == SERR",
+     "guard_lines": [
+      26
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 27,
+     "line_end": 27,
+     "stmt": "state <= in ? S1 : S0",
+     "rhs": "in ? S1 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == SFLAG",
+     "guard_lines": [
+      27
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 28,
+     "line_end": 28,
+     "stmt": "state <= in ? S1 : S0",
+     "rhs": "in ? S1 : S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == SDISC",
+     "guard_lines": [
+      28
+     ],
+     "data": [
+      "in"
+     ],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 29,
+     "line_end": 29,
+     "stmt": "state <= 'x",
+     "rhs": "'x",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "case state == default",
+     "guard_lines": [
+      29
+     ],
+     "data": [],
+     "ctrl": [
+      "state"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 32,
+     "line_end": 32,
+     "stmt": "state <= S0",
+     "rhs": "S0",
+     "kind": "seq",
+     "block": "always@17",
+     "guard": "if (reset)",
+     "guard_lines": [
+      32
+     ],
+     "data": [],
+     "ctrl": [
+      "reset"
+     ],
+     "nonblocking": true,
+     "const_rhs": "S0"
+    }
+   ]
+  },
+  "next": {
+   "name": "next",
+   "dir": "internal",
+   "width": 4,
+   "type": "reg[3:0]",
+   "memory": false,
+   "roles": [
+    "unused"
+   ],
+   "drivers": []
+  }
+ },
+ "edges": [
+  {
+   "src": "state",
+   "dst": "disc",
+   "dep": "data",
+   "kind": "comb",
+   "line": 13,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "flag",
+   "dep": "data",
+   "kind": "comb",
+   "line": 14,
+   "guard": ""
+  },
+  {
+   "src": "state",
+   "dst": "err",
+   "dep": "data",
+   "kind": "comb",
+   "line": 15,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 19,
+   "guard": "case state == S0"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 19,
+   "guard": "case state == S0"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 20,
+   "guard": "case state == S1"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 20,
+   "guard": "case state == S1"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 21,
+   "guard": "case state == S2"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 21,
+   "guard": "case state == S2"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 22,
+   "guard": "case state == S3"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 22,
+   "guard": "case state == S3"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 23,
+   "guard": "case state == S4"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 23,
+   "guard": "case state == S4"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 24,
+   "guard": "case state == S5"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 24,
+   "guard": "case state == S5"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 25,
+   "guard": "case state == S6"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 25,
+   "guard": "case state == S6"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 26,
+   "guard": "case state == SERR"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 26,
+   "guard": "case state == SERR"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 27,
+   "guard": "case state == SFLAG"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 27,
+   "guard": "case state == SFLAG"
+  },
+  {
+   "src": "in",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 28,
+   "guard": "case state == SDISC"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 28,
+   "guard": "case state == SDISC"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 29,
+   "guard": "case state == default"
+  },
+  {
+   "src": "reset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 32,
+   "guard": "if (reset)"
+  }
+ ],
+ "constants": {
+  "S0": "4'b0",
+  "S1": "4'b1",
+  "S2": "4'b10",
+  "S3": "4'b11",
+  "S4": "4'b100",
+  "S5": "4'b101",
+  "S6": "4'b110",
+  "SERR": "4'b111",
+  "SDISC": "4'b1000",
+  "SFLAG": "4'b1001"
+ },
+ "state_constants": [
+  "S0",
+  "S1",
+  "S2",
+  "S3",
+  "S4",
+  "S5",
+  "S6",
+  "SDISC",
+  "SERR",
+  "SFLAG"
+ ],
+ "blocks": [
+  {
+   "id": "always@17",
+   "kind": "seq",
+   "line": 17,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

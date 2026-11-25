@@ -1,0 +1,130 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "L": {
+   "name": "L",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "q_in": {
+   "name": "q_in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "r_in": {
+   "name": "r_in",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "Q": {
+   "name": "Q",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "Q=1",
+     "rhs": "1",
+     "kind": "init",
+     "block": "initial@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "Q <= L ? r_in : q_in",
+     "rhs": "L ? r_in : q_in",
+     "kind": "seq",
+     "block": "always@10",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "L",
+      "r_in",
+      "q_in"
+     ],
+     "ctrl": [],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "L",
+   "dst": "Q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "r_in",
+   "dst": "Q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "q_in",
+   "dst": "Q",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "initial@9",
+   "kind": "init",
+   "line": 9,
+   "clock": null,
+   "async_reset": []
+  },
+  {
+   "id": "always@10",
+   "kind": "seq",
+   "line": 10,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

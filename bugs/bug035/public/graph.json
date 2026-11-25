@@ -1,0 +1,116 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "in": {
+   "name": "in",
+   "dir": "in",
+   "width": 8,
+   "type": "logic[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "pedge": {
+   "name": "pedge",
+   "dir": "out",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "pedge <= in & ~d_last",
+     "rhs": "in & ~d_last",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in",
+      "d_last"
+     ],
+     "ctrl": [],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  },
+  "d_last": {
+   "name": "d_last",
+   "dir": "internal",
+   "width": 8,
+   "type": "reg[7:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "d_last = in",
+     "rhs": "in",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "",
+     "guard_lines": [],
+     "data": [
+      "in"
+     ],
+     "ctrl": [],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "in",
+   "dst": "pedge",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "d_last",
+   "dst": "pedge",
+   "dep": "data",
+   "kind": "seq",
+   "line": 11,
+   "guard": ""
+  },
+  {
+   "src": "in",
+   "dst": "d_last",
+   "dep": "data",
+   "kind": "seq",
+   "line": 10,
+   "guard": ""
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "seq",
+   "line": 9,
+   "clock": "clk",
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}

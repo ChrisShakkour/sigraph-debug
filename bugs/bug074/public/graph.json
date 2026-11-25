@@ -1,0 +1,210 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "clk": {
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "clock"
+   ],
+   "drivers": []
+  },
+  "areset": {
+   "name": "areset",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "reset"
+   ],
+   "drivers": []
+  },
+  "train_valid": {
+   "name": "train_valid",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "train_taken": {
+   "name": "train_taken",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [],
+   "drivers": []
+  },
+  "state": {
+   "name": "state",
+   "dir": "out",
+   "width": 2,
+   "type": "logic[1:0]",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "state <= 2",
+     "rhs": "2",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "if (areset)",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "areset"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "state <= state + 1",
+     "rhs": "state + 1",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(areset) && if (train_valid) && if (state < 3 && train_taken)",
+     "guard_lines": [
+      10,
+      12,
+      13
+     ],
+     "data": [
+      "state"
+     ],
+     "ctrl": [
+      "areset",
+      "train_valid",
+      "train_taken"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "state <= state - 1",
+     "rhs": "state - 1",
+     "kind": "seq",
+     "block": "always@9",
+     "guard": "!(areset) && if (train_valid) && !(state < 3 && train_taken) && if (state > 0 && !train_taken)",
+     "guard_lines": [
+      10,
+      12,
+      13,
+      15
+     ],
+     "data": [
+      "state"
+     ],
+     "ctrl": [
+      "areset",
+      "train_valid",
+      "train_taken"
+     ],
+     "nonblocking": true,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 11,
+   "guard": "if (areset)"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(areset) && if (train_valid) && if (state < 3 && train_taken)"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(areset) && if (train_valid) && if (state < 3 && train_taken)"
+  },
+  {
+   "src": "train_valid",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(areset) && if (train_valid) && if (state < 3 && train_taken)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 14,
+   "guard": "!(areset) && if (train_valid) && if (state < 3 && train_taken)"
+  },
+  {
+   "src": "state",
+   "dst": "state",
+   "dep": "data",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(areset) && if (train_valid) && !(state < 3 && train_taken) && if (state > 0 && !train_taken)"
+  },
+  {
+   "src": "areset",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(areset) && if (train_valid) && !(state < 3 && train_taken) && if (state > 0 && !train_taken)"
+  },
+  {
+   "src": "train_valid",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(areset) && if (train_valid) && !(state < 3 && train_taken) && if (state > 0 && !train_taken)"
+  },
+  {
+   "src": "train_taken",
+   "dst": "state",
+   "dep": "ctrl",
+   "kind": "seq",
+   "line": 16,
+   "guard": "!(areset) && if (train_valid) && !(state < 3 && train_taken) && if (state > 0 && !train_taken)"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "always@9",
+   "kind": "seq",
+   "line": 9,
+   "clock": "clk",
+   "async_reset": [
+    "areset"
+   ]
+  }
+ ],
+ "diagnostics": []
+}

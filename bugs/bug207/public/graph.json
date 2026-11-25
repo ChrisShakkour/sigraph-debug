@@ -1,0 +1,506 @@
+{
+ "module": "TopModule",
+ "nodes": {
+  "y": {
+   "name": "y",
+   "dir": "in",
+   "width": 3,
+   "type": "logic[2:0]",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "w": {
+   "name": "w",
+   "dir": "in",
+   "width": 1,
+   "type": "logic",
+   "memory": false,
+   "roles": [
+    "fsm_state"
+   ],
+   "drivers": []
+  },
+  "Y1": {
+   "name": "Y1",
+   "dir": "out",
+   "width": 1,
+   "type": "reg",
+   "memory": false,
+   "roles": [],
+   "drivers": [
+    {
+     "line": 9,
+     "line_end": 9,
+     "stmt": "Y1 = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h0",
+     "guard_lines": [
+      9
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 10,
+     "line_end": 10,
+     "stmt": "Y1 = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h1",
+     "guard_lines": [
+      10
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 11,
+     "line_end": 11,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h2",
+     "guard_lines": [
+      11
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 12,
+     "line_end": 12,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h3",
+     "guard_lines": [
+      12
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 13,
+     "line_end": 13,
+     "stmt": "Y1 = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h4",
+     "guard_lines": [
+      13
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 14,
+     "line_end": 14,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h5",
+     "guard_lines": [
+      14
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 15,
+     "line_end": 15,
+     "stmt": "Y1 = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h6",
+     "guard_lines": [
+      15
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 16,
+     "line_end": 16,
+     "stmt": "Y1 = 1'b0",
+     "rhs": "1'b0",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h7",
+     "guard_lines": [
+      16
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 17,
+     "line_end": 17,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h8",
+     "guard_lines": [
+      17
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 18,
+     "line_end": 18,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'h9",
+     "guard_lines": [
+      18
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 19,
+     "line_end": 19,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'ha",
+     "guard_lines": [
+      19
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 20,
+     "line_end": 20,
+     "stmt": "Y1 = 1'b1",
+     "rhs": "1'b1",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == 4'hb",
+     "guard_lines": [
+      20
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    },
+    {
+     "line": 21,
+     "line_end": 21,
+     "stmt": "Y1 = 1'bx",
+     "rhs": "1'bx",
+     "kind": "comb",
+     "block": "alwayscomb@8",
+     "guard": "case {y, w} == default",
+     "guard_lines": [
+      21
+     ],
+     "data": [],
+     "ctrl": [
+      "y",
+      "w"
+     ],
+     "nonblocking": false,
+     "const_rhs": null
+    }
+   ]
+  }
+ },
+ "edges": [
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "case {y, w} == 4'h0"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 9,
+   "guard": "case {y, w} == 4'h0"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 10,
+   "guard": "case {y, w} == 4'h1"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 10,
+   "guard": "case {y, w} == 4'h1"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {y, w} == 4'h2"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 11,
+   "guard": "case {y, w} == 4'h2"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {y, w} == 4'h3"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 12,
+   "guard": "case {y, w} == 4'h3"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {y, w} == 4'h4"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 13,
+   "guard": "case {y, w} == 4'h4"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {y, w} == 4'h5"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 14,
+   "guard": "case {y, w} == 4'h5"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {y, w} == 4'h6"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 15,
+   "guard": "case {y, w} == 4'h6"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {y, w} == 4'h7"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 16,
+   "guard": "case {y, w} == 4'h7"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {y, w} == 4'h8"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 17,
+   "guard": "case {y, w} == 4'h8"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {y, w} == 4'h9"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 18,
+   "guard": "case {y, w} == 4'h9"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {y, w} == 4'ha"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 19,
+   "guard": "case {y, w} == 4'ha"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {y, w} == 4'hb"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 20,
+   "guard": "case {y, w} == 4'hb"
+  },
+  {
+   "src": "y",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {y, w} == default"
+  },
+  {
+   "src": "w",
+   "dst": "Y1",
+   "dep": "ctrl",
+   "kind": "comb",
+   "line": 21,
+   "guard": "case {y, w} == default"
+  }
+ ],
+ "constants": {},
+ "state_constants": [],
+ "blocks": [
+  {
+   "id": "alwayscomb@8",
+   "kind": "comb",
+   "line": 8,
+   "clock": null,
+   "async_reset": []
+  }
+ ],
+ "diagnostics": []
+}
