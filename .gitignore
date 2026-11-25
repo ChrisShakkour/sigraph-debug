@@ -11,3 +11,4 @@ tb_reseed/
 
 # experiment run outputs (trajectories can be large; results summaries are committed separately)
 runs/
+runs_*.log
