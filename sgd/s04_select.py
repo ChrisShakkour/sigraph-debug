@@ -84,7 +84,8 @@ def pick(cands: list[dict], n: int, long_k: int, rng: random.Random) -> list[dic
 
 
 def filter_vcd(src: Path, dst: Path, dut_scope: str = "tb.top_module1") -> None:
-    """Write a VCD containing only the DUT scope plus TB '<out>_ref' signals renamed to tb_expected.<out>."""
+    """Write a VCD with only the DUT scope, the TB's '<out>_ref' signals renamed to tb_expected.<out>,
+    and the TB sampling clock as tb_sample.clk."""
     keep: dict[str, list[tuple[str, str, str]]] = defaultdict(list)  # scope -> [(type width code name...)]
     keep_codes: set[str] = set()
     scope: list[str] = []
@@ -106,6 +107,9 @@ def filter_vcd(src: Path, dst: Path, dut_scope: str = "tb.top_module1") -> None:
             vtype, width, code, name = tok[1], tok[2], tok[3], " ".join(tok[4:-1])
             if sc == dut_scope:
                 keep["top_module1"].append((vtype, width, code, name))
+                keep_codes.add(code)
+            elif sc == "tb.stim1" and name.split()[0] == "clk":
+                keep["tb_sample"].append((vtype, width, code, name))  # TB sampling clock (stimulus timing)
                 keep_codes.add(code)
             elif sc == "tb" and name.split()[0].endswith("_ref"):
                 keep["tb_expected"].append((vtype, width, code, name.replace("_ref", "", 1)))
