@@ -32,7 +32,12 @@ Every arm gets the same model, caps, spec text and TB log.
 - Known limitation: iverilog does not dump memories (e.g. gshare `pht`). Ground truth falls back to the
   mutated statement's LHS.
 
-## Phase 2: treatment system
+## Phase 2: treatment system (done: `sgd/graph.py`, `waves.py`, `tools.py`, `s05`, `tests/`)
+Implemented as below, with two corrections found while testing. (1) Windows are sampled on both edges of
+the TB clock (`tb_sample.clk` in the public VCD) using the **pre-edge value**, matching the scoreboard.
+(2) gt_signals = targets of the graph driver whose span, guard, or always-header covers the mutated line,
+which fixes multi-line statements and concat LHS. Hops failing-output → gt: 0:177 1:49 2:40 3:3.
+
 - Graph builder (pyslang): nodes are ports/regs/wires (width, kind, FSM-state flag); edges are one per
   driver `src → dst` with kind comb/seq, guard path (enclosing if/case), assignment text and line.
   clk/reset are tagged and hidden by default.
