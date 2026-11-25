@@ -1,0 +1,57 @@
+{
+ "problem": "Prob139_2013_q2bfsm",
+ "k": 30,
+ "op": "state_swap",
+ "category": "control",
+ "line": 34,
+ "old": "  assign g = (state == G1) || (state == G2) || (state == P1);",
+ "new": "  assign g = (state == G1) || (state == P0) || (state == P1);",
+ "note": "G2->P0",
+ "body_lines": 21,
+ "sequential": true,
+ "n_lines": 36,
+ "text_lhs": [
+  "g"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 320,
+ "samples": 1002,
+ "t_fail": 1960,
+ "out_first_mismatch": {
+  "g": 1960
+ },
+ "out_mismatch_count": {
+  "g": 320
+ },
+ "valid": true,
+ "t_act": 1955,
+ "cyc_act": 196,
+ "div_signals": [
+  "g"
+ ],
+ "div_order": [
+  [
+   "g",
+   1955,
+   196
+  ]
+ ],
+ "clk_edges": 501,
+ "cyc_fail": 196,
+ "failing_outputs": [
+  "g"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 196,
+ "bug_id": "bug221",
+ "split": "test",
+ "gt_line": 34,
+ "gt_signals": [
+  "g"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,57 @@
+{
+ "problem": "Prob079_fsm3onehot",
+ "k": 18,
+ "op": "drop_not",
+ "category": "datapath",
+ "line": 12,
+ "old": "  assign next_state[C] = (state[B] | state[D]) & ~in;",
+ "new": "  assign next_state[C] = (state[B] | state[D]) & in;",
+ "note": "",
+ "body_lines": 6,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "next_state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 101,
+ "samples": 200,
+ "t_fail": 15,
+ "out_first_mismatch": {
+  "next_state": 15
+ },
+ "out_mismatch_count": {
+  "next_state": 101
+ },
+ "valid": true,
+ "t_act": 10,
+ "cyc_act": 2,
+ "div_signals": [
+  "next_state"
+ ],
+ "div_order": [
+  [
+   "next_state",
+   10,
+   1
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "next_state"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug081",
+ "split": "dev",
+ "gt_line": 12,
+ "gt_signals": [
+  "next_state"
+ ],
+ "long_horizon": false
+}

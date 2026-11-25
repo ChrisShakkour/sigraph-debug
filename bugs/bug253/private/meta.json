@@ -1,0 +1,83 @@
+{
+ "problem": "Prob151_review2015_fsm",
+ "k": 14,
+ "op": "state_swap",
+ "category": "control",
+ "line": 26,
+ "old": "      B2: next = B3;",
+ "new": "      B2: next = Count;",
+ "note": "B3->Count",
+ "body_lines": 32,
+ "sequential": true,
+ "n_lines": 54,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 798,
+ "samples": 5069,
+ "t_fail": 120,
+ "out_first_mismatch": {
+  "shift_ena": 120,
+  "counting": 120,
+  "done": 140
+ },
+ "out_mismatch_count": {
+  "shift_ena": 796,
+  "counting": 798,
+  "done": 740
+ },
+ "valid": true,
+ "t_act": 105,
+ "cyc_act": 12,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   105,
+   11
+  ],
+  [
+   "counting",
+   115,
+   12
+  ],
+  [
+   "shift_ena",
+   115,
+   12
+  ],
+  [
+   "state",
+   115,
+   12
+  ],
+  [
+   "done",
+   135,
+   14
+  ]
+ ],
+ "clk_edges": 2535,
+ "cyc_fail": 12,
+ "failing_outputs": [
+  "shift_ena",
+  "counting",
+  "done"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 11,
+ "bug_id": "bug253",
+ "split": "test",
+ "gt_line": 26,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

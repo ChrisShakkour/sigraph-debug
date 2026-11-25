@@ -1,0 +1,11 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset doesn't seem to be working.
+<verilog-eval>/Prob149_ece241_2013_q4_test.sv:84: $finish called at 10200 (1ps)
+Hint: Output 'fr2' has 1411 mismatches. First mismatch occurred at time 10.
+Hint: Output 'fr1' has 805 mismatches. First mismatch occurred at time 10.
+Hint: Output 'fr0' has 236 mismatches. First mismatch occurred at time 10.
+Hint: Output 'dfr' has 807 mismatches. First mismatch occurred at time 10.
+Hint: Total mismatched samples is 1411 out of 2040 samples
+
+Simulation finished at 10200 ps
+Mismatches: 1411 in 2040 samples

@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset should be asynchronous, but doesn't appear to be.
+<verilog-eval>/Prob110_fsm2_test.sv:74: $finish called at 1206 (1ps)
+Hint: Output 'out' has 22 mismatches. First mismatch occurred at time 5.
+Hint: Total mismatched samples is 22 out of 241 samples
+
+Simulation finished at 1206 ps
+Mismatches: 22 in 241 samples

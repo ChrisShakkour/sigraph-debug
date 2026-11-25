@@ -1,0 +1,57 @@
+{
+ "problem": "Prob045_edgedetect2",
+ "k": 0,
+ "op": "nb_to_b",
+ "category": "state",
+ "line": 10,
+ "old": "    d_last <= in;",
+ "new": "    d_last = in;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 14,
+ "text_lhs": [
+  "d_last"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 205,
+ "samples": 228,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "anyedge": 40
+ },
+ "out_mismatch_count": {
+  "anyedge": 205
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "anyedge"
+ ],
+ "div_order": [
+  [
+   "anyedge",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 114,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "anyedge"
+ ],
+ "latency_cycles": 3,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug022",
+ "split": "test",
+ "gt_line": 10,
+ "gt_signals": [
+  "d_last"
+ ],
+ "long_horizon": false
+}

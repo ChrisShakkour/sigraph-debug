@@ -1,0 +1,72 @@
+{
+ "problem": "Prob068_countbcd",
+ "k": 2,
+ "op": "rel_op",
+ "category": "datapath",
+ "line": 11,
+ "old": "    for (int i=0;i<4;i++) begin",
+ "new": "    for (int i=0;i>4;i++) begin",
+ "note": "",
+ "body_lines": 9,
+ "sequential": true,
+ "n_lines": 18,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 39804,
+ "samples": 39805,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "ena": 10,
+  "q": 10
+ },
+ "out_mismatch_count": {
+  "ena": 39804,
+  "q": 39804
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "ena",
+  "enable",
+  "q"
+ ],
+ "div_order": [
+  [
+   "ena",
+   5,
+   1
+  ],
+  [
+   "enable",
+   5,
+   1
+  ],
+  [
+   "q",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 19903,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "ena",
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug057",
+ "split": "test",
+ "gt_line": 11,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

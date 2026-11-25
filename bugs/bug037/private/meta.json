@@ -1,0 +1,57 @@
+{
+ "problem": "Prob055_conditional",
+ "k": 2,
+ "op": "rel_op",
+ "category": "datapath",
+ "line": 11,
+ "old": "    if (min > b) min = b;",
+ "new": "    if (min < b) min = b;",
+ "note": "",
+ "body_lines": 7,
+ "sequential": false,
+ "n_lines": 16,
+ "text_lhs": [
+  "min"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 59,
+ "samples": 112,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "min": 5
+ },
+ "out_mismatch_count": {
+  "min": 59
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "min"
+ ],
+ "div_order": [
+  [
+   "min",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 56,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "min"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug037",
+ "split": "dev",
+ "gt_line": 11,
+ "gt_signals": [
+  "min"
+ ],
+ "long_horizon": false
+}

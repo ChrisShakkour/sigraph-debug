@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob118_history_shift_test.sv:104: $finish called at 10276 (1ps)
+Hint: Output 'predict_history' has 1969 mismatches. First mismatch occurred at time 30.
+Hint: Total mismatched samples is 1969 out of 2055 samples
+
+Simulation finished at 10276 ps
+Mismatches: 1969 in 2055 samples

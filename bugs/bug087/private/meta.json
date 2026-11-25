@@ -1,0 +1,62 @@
+{
+ "problem": "Prob082_lfsr32",
+ "k": 7,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 12,
+ "old": "    q_next[1] ^= q[0];",
+ "new": "    q_next[1] ^= q[1];",
+ "note": "",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 23,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": true,
+ "mismatches": 199953,
+ "samples": 200000,
+ "t_fail": 190,
+ "out_first_mismatch": {
+  "q": 190
+ },
+ "out_mismatch_count": {
+  "q": 199953
+ },
+ "valid": true,
+ "t_act": 175,
+ "cyc_act": 19,
+ "div_signals": [
+  "q_next"
+ ],
+ "div_order": [
+  [
+   "q_next",
+   175,
+   18
+  ],
+  [
+   "q",
+   185,
+   19
+  ]
+ ],
+ "clk_edges": 100000,
+ "cyc_fail": 19,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 18,
+ "bug_id": "bug087",
+ "split": "dev",
+ "gt_line": 12,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

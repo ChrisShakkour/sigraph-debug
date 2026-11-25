@@ -1,0 +1,67 @@
+{
+ "problem": "Prob137_fsm_serial",
+ "k": 8,
+ "op": "state_swap",
+ "category": "control",
+ "line": 20,
+ "old": "      B5: next = B6;",
+ "new": "      B5: next = B7;",
+ "note": "B6->B7",
+ "body_lines": 22,
+ "sequential": true,
+ "n_lines": 36,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 66,
+ "samples": 905,
+ "t_fail": 110,
+ "out_first_mismatch": {
+  "done": 110
+ },
+ "out_mismatch_count": {
+  "done": 66
+ },
+ "valid": true,
+ "t_act": 65,
+ "cyc_act": 8,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   65,
+   7
+  ],
+  [
+   "state",
+   75,
+   8
+  ],
+  [
+   "done",
+   105,
+   11
+  ]
+ ],
+ "clk_edges": 453,
+ "cyc_fail": 11,
+ "failing_outputs": [
+  "done"
+ ],
+ "latency_cycles": 3,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 7,
+ "bug_id": "bug215",
+ "split": "dev",
+ "gt_line": 20,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

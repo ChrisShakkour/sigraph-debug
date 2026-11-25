@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob069_truthtable1_test.sv:34: $finish called at 290 (1ps)
+Hint: Output 'f' has 4 mismatches. First mismatch occurred at time 20.
+Hint: Total mismatched samples is 4 out of 58 samples
+
+Simulation finished at 290 ps
+Mismatches: 4 in 58 samples

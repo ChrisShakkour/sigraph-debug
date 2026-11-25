@@ -1,0 +1,69 @@
+{
+ "problem": "Prob138_2012_q2fsm",
+ "k": 0,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 11,
+ "old": "  always @(posedge clk)",
+ "new": "  always @(posedge clk, posedge reset)",
+ "note": "",
+ "body_lines": 16,
+ "sequential": true,
+ "n_lines": 29,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1,
+ "samples": 400,
+ "t_fail": 1885,
+ "out_first_mismatch": {
+  "z": 1885
+ },
+ "out_mismatch_count": {
+  "z": 1
+ },
+ "valid": true,
+ "t_act": 170,
+ "cyc_act": 17,
+ "div_signals": [
+  "next",
+  "state",
+  "z"
+ ],
+ "div_order": [
+  [
+   "next",
+   170,
+   17
+  ],
+  [
+   "state",
+   170,
+   17
+  ],
+  [
+   "z",
+   170,
+   17
+  ]
+ ],
+ "clk_edges": 200,
+ "cyc_fail": 189,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 172,
+ "fails_seed1234": false,
+ "fails_seed98765": false,
+ "cyc_act_any": 17,
+ "bug_id": "bug216",
+ "split": "dev",
+ "gt_line": 11,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

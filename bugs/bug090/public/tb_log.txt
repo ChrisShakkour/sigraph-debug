@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob085_shift4_test.sv:76: $finish called at 2136 (1ps)
+Hint: Output 'q' has 133 mismatches. First mismatch occurred at time 30.
+Hint: Total mismatched samples is 133 out of 427 samples
+
+Simulation finished at 2136 ps
+Mismatches: 133 in 427 samples

@@ -1,0 +1,53 @@
+{
+ "problem": "Prob124_rule110",
+ "k": 6,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 13,
+ "old": "      ~((q[$bits(q)-1:1] & q[$bits(q)-1:0] & {q[$bits(q)-2:0], 1'b0}) |",
+ "new": "      ~((q[$bits(q)-1:1] & q[$bits(q)-1:0] & {q[$bits(q)-2:0], 1'b1}) |",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 20,
+ "text_lhs": [],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 2018,
+ "samples": 6283,
+ "t_fail": 50,
+ "out_first_mismatch": {
+  "q": 50
+ },
+ "out_mismatch_count": {
+  "q": 2018
+ },
+ "valid": true,
+ "t_act": 45,
+ "cyc_act": 5,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   45,
+   5
+  ]
+ ],
+ "clk_edges": 3142,
+ "cyc_fail": 5,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 5,
+ "bug_id": "bug181",
+ "split": "test",
+ "gt_line": 13,
+ "gt_signals": [],
+ "long_horizon": false
+}

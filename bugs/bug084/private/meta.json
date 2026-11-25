@@ -1,0 +1,57 @@
+{
+ "problem": "Prob080_timer",
+ "k": 10,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 14,
+ "old": "  assign tc = count_value == 0;",
+ "new": "  assign tc = count_value == 1;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "tc"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 2160,
+ "samples": 7127,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "tc": 40
+ },
+ "out_mismatch_count": {
+  "tc": 2160
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 4,
+ "div_signals": [
+  "tc"
+ ],
+ "div_order": [
+  [
+   "tc",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 3564,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "tc"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug084",
+ "split": "test",
+ "gt_line": 14,
+ "gt_signals": [
+  "tc"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,57 @@
+{
+ "problem": "Prob077_wire_decl",
+ "k": 3,
+ "op": "drop_not",
+ "category": "datapath",
+ "line": 14,
+ "old": "  assign out_n = ~out;",
+ "new": "  assign out_n = out;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": false,
+ "n_lines": 16,
+ "text_lhs": [
+  "out_n"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 122,
+ "samples": 122,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "out_n": 5
+ },
+ "out_mismatch_count": {
+  "out_n": 122
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "out_n"
+ ],
+ "div_order": [
+  [
+   "out_n",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 61,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out_n"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug078",
+ "split": "dev",
+ "gt_line": 14,
+ "gt_signals": [
+  "out_n"
+ ],
+ "long_horizon": false
+}

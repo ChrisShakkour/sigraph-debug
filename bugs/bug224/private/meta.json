@@ -1,0 +1,78 @@
+{
+ "problem": "Prob140_fsm_hdlc",
+ "k": 12,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 20,
+ "old": "      S1: state <= in ? S2 : S0;",
+ "new": "      S1: state <= in ? S0 : S2;",
+ "note": "",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 35,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 158,
+ "samples": 801,
+ "t_fail": 80,
+ "out_first_mismatch": {
+  "disc": 480,
+  "flag": 1550,
+  "err": 80
+ },
+ "out_mismatch_count": {
+  "disc": 10,
+  "flag": 8,
+  "err": 140
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "state"
+ ],
+ "div_order": [
+  [
+   "state",
+   25,
+   3
+  ],
+  [
+   "err",
+   75,
+   8
+  ],
+  [
+   "disc",
+   475,
+   48
+  ],
+  [
+   "flag",
+   1545,
+   155
+  ]
+ ],
+ "clk_edges": 401,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "err",
+  "disc",
+  "flag"
+ ],
+ "latency_cycles": 5,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug224",
+ "split": "test",
+ "gt_line": 20,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob108_rule90_test.sv:75: $finish called at 35606 (1ps)
+Hint: Output 'q' has 7120 mismatches. First mismatch occurred at time 10.
+Hint: Total mismatched samples is 7120 out of 7121 samples
+
+Simulation finished at 35606 ps
+Mismatches: 7120 in 7121 samples

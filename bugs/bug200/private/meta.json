@@ -1,0 +1,57 @@
+{
+ "problem": "Prob132_always_if2",
+ "k": 6,
+ "op": "drop_not",
+ "category": "control",
+ "line": 18,
+ "old": "      keep_driving = !gas_tank_empty;",
+ "new": "      keep_driving = gas_tank_empty;",
+ "note": "",
+ "body_lines": 13,
+ "sequential": false,
+ "n_lines": 23,
+ "text_lhs": [
+  "keep_driving"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 60,
+ "samples": 121,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "keep_driving": 30
+ },
+ "out_mismatch_count": {
+  "keep_driving": 60
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "keep_driving"
+ ],
+ "div_order": [
+  [
+   "keep_driving",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 61,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "keep_driving"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug200",
+ "split": "test",
+ "gt_line": 18,
+ "gt_signals": [
+  "keep_driving"
+ ],
+ "long_horizon": false
+}

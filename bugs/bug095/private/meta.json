@@ -1,0 +1,62 @@
+{
+ "problem": "Prob086_lfsr5",
+ "k": 2,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 11,
+ "old": "    q_next[2] ^= q[0];",
+ "new": "    q_next[1] ^= q[0];",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 21,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 3732,
+ "samples": 4443,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "q": 40
+ },
+ "out_mismatch_count": {
+  "q": 3732
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 4,
+ "div_signals": [
+  "q_next"
+ ],
+ "div_order": [
+  [
+   "q_next",
+   5,
+   1
+  ],
+  [
+   "q",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 2222,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug095",
+ "split": "test",
+ "gt_line": 11,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

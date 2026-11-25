@@ -1,0 +1,57 @@
+{
+ "problem": "Prob113_2012_q1g",
+ "k": 14,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 17,
+ "old": "      4'h9: f = 0;",
+ "new": "      4'h9: f = 1;",
+ "note": "",
+ "body_lines": 21,
+ "sequential": false,
+ "n_lines": 27,
+ "text_lhs": [
+  "f"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 7,
+ "samples": 100,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "f": 20
+ },
+ "out_mismatch_count": {
+  "f": 7
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "f"
+ ],
+ "div_order": [
+  [
+   "f",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 50,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "f"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug147",
+ "split": "test",
+ "gt_line": 17,
+ "gt_signals": [
+  "f"
+ ],
+ "long_horizon": false
+}

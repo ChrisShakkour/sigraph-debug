@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob148_2013_q2afsm_test.sv:93: $finish called at 5271 (1ps)
+Hint: Output 'g' has 136 mismatches. First mismatch occurred at time 160.
+Hint: Total mismatched samples is 136 out of 1054 samples
+
+Simulation finished at 5271 ps
+Mismatches: 136 in 1054 samples

@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob136_m2014_q6_test.sv:18: $finish called at 1001 (1ps)
+Hint: Output 'z' has 6 mismatches. First mismatch occurred at time 410.
+Hint: Total mismatched samples is 6 out of 200 samples
+
+Simulation finished at 1001 ps
+Mismatches: 6 in 200 samples

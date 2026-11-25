@@ -1,0 +1,62 @@
+{
+ "problem": "Prob074_ece241_2014_q4",
+ "k": 2,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 10,
+ "old": "    s <= { s[2] ^ x, ~s[1] & x, ~s[0] | x };",
+ "new": "    s <= { s[2] | x, ~s[1] & x, ~s[0] | x };",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 15,
+ "text_lhs": [
+  "s"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 16,
+ "samples": 118,
+ "t_fail": 260,
+ "out_first_mismatch": {
+  "z": 260
+ },
+ "out_mismatch_count": {
+  "z": 16
+ },
+ "valid": true,
+ "t_act": 75,
+ "cyc_act": 8,
+ "div_signals": [
+  "s"
+ ],
+ "div_order": [
+  [
+   "s",
+   75,
+   8
+  ],
+  [
+   "z",
+   255,
+   26
+  ]
+ ],
+ "clk_edges": 59,
+ "cyc_fail": 26,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 18,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 8,
+ "bug_id": "bug071",
+ "split": "test",
+ "gt_line": 10,
+ "gt_signals": [
+  "s"
+ ],
+ "long_horizon": true
+}

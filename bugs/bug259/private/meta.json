@@ -1,0 +1,75 @@
+{
+ "problem": "Prob153_gshare",
+ "k": 40,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 44,
+ "old": "  assign predict_taken = predict_valid ? pht[predict_index][1] : 1'bx;",
+ "new": "  assign predict_taken = predict_valid ? pht[predict_index][0] : 1'bx;",
+ "note": "",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 47,
+ "text_lhs": [
+  "predict_taken"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 598,
+ "samples": 1083,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "predict_taken": 20,
+  "predict_history": 110
+ },
+ "out_mismatch_count": {
+  "predict_taken": 387,
+  "predict_history": 569
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "predict_taken"
+ ],
+ "div_order": [
+  [
+   "predict_taken",
+   15,
+   2
+  ],
+  [
+   "predict_history",
+   105,
+   11
+  ],
+  [
+   "predict_history_r",
+   105,
+   11
+  ],
+  [
+   "predict_index",
+   105,
+   11
+  ]
+ ],
+ "clk_edges": 542,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "predict_taken",
+  "predict_history"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug259",
+ "split": "test",
+ "gt_line": 44,
+ "gt_signals": [
+  "predict_taken"
+ ],
+ "long_horizon": false
+}

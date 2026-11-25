@@ -1,0 +1,57 @@
+{
+ "problem": "Prob115_shift18",
+ "k": 7,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 15,
+ "old": "      2'b01: q <= {q[55:0], 8'b0};",
+ "new": "      2'b01: q <= {q[55:0], 8'b11111111};",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 22,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 3050,
+ "samples": 4041,
+ "t_fail": 60,
+ "out_first_mismatch": {
+  "q": 60
+ },
+ "out_mismatch_count": {
+  "q": 3050
+ },
+ "valid": true,
+ "t_act": 55,
+ "cyc_act": 6,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   55,
+   6
+  ]
+ ],
+ "clk_edges": 2021,
+ "cyc_fail": 6,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 6,
+ "bug_id": "bug154",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

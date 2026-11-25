@@ -1,0 +1,63 @@
+{
+ "problem": "Prob144_conwaylife",
+ "k": 23,
+ "op": "arith_op",
+ "category": "state",
+ "line": 25,
+ "old": "        ((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] +",
+ "new": "        ((q_pad[(i+1)*18+j+1 -1+18] + q_pad[(i+1)*18+j+1 +18] + q_pad[(i+1)*18+j+1 +1+18] -",
+ "note": "",
+ "body_lines": 22,
+ "sequential": true,
+ "n_lines": 35,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 778,
+ "samples": 5023,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "q": 20
+ },
+ "out_mismatch_count": {
+  "q": 778
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "q",
+  "q_pad"
+ ],
+ "div_order": [
+  [
+   "q",
+   15,
+   2
+  ],
+  [
+   "q_pad",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 2512,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": false,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug236",
+ "split": "dev",
+ "gt_line": 25,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

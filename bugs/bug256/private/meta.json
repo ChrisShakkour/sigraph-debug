@@ -1,0 +1,96 @@
+{
+ "problem": "Prob152_lemmings3",
+ "k": 29,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 37,
+ "old": "    if (areset) state <= WL;",
+ "new": "    if (!(areset)) state <= WL;",
+ "note": "",
+ "body_lines": 26,
+ "sequential": true,
+ "n_lines": 46,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 334,
+ "samples": 443,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "walk_left": 5,
+  "walk_right": 5,
+  "aaah": 5,
+  "digging": 5
+ },
+ "out_mismatch_count": {
+  "walk_left": 334,
+  "walk_right": 71,
+  "aaah": 37,
+  "digging": 236
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 0,
+ "div_signals": [
+  "aaah",
+  "digging",
+  "next",
+  "state",
+  "walk_left",
+  "walk_right"
+ ],
+ "div_order": [
+  [
+   "aaah",
+   0,
+   0
+  ],
+  [
+   "digging",
+   0,
+   0
+  ],
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   0,
+   0
+  ],
+  [
+   "walk_left",
+   0,
+   0
+  ],
+  [
+   "walk_right",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 222,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "walk_left",
+  "walk_right",
+  "aaah",
+  "digging"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug256",
+ "split": "dev",
+ "gt_line": 37,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

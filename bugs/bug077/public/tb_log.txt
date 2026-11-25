@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob077_wire_decl_test.sv:39: $finish called at 611 (1ps)
+Hint: Output 'out' has 46 mismatches. First mismatch occurred at time 30.
+Hint: Output 'out_n' has 46 mismatches. First mismatch occurred at time 30.
+Hint: Total mismatched samples is 46 out of 122 samples
+
+Simulation finished at 611 ps
+Mismatches: 46 in 122 samples

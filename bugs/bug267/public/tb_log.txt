@@ -1,0 +1,10 @@
+VCD info: dumpfile wave.vcd opened for output.
+TIMEOUT
+<verilog-eval>/Prob156_review2015_fancytimer_test.sv:216: $finish called at 1000000 (1ps)
+Hint: Output 'count' has 32978 mismatches. First mismatch occurred at time 694890.
+Hint: Output 'counting' has 152 mismatches. First mismatch occurred at time 694580.
+Hint: Output 'done' has 22 mismatches. First mismatch occurred at time 784580.
+Hint: Total mismatched samples is 33086 out of 200000 samples
+
+Simulation finished at 1000000 ps
+Mismatches: 33086 in 200000 samples

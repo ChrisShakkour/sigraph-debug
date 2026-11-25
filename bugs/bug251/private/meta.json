@@ -1,0 +1,57 @@
+{
+ "problem": "Prob150_review2015_fsmonehot",
+ "k": 30,
+ "op": "state_swap",
+ "category": "control",
+ "line": 26,
+ "old": "  assign shift_ena = |state[B3:B0];",
+ "new": "  assign shift_ena = |state[Count:B0];",
+ "note": "B3->Count",
+ "body_lines": 9,
+ "sequential": false,
+ "n_lines": 28,
+ "text_lhs": [
+  "shift_ena"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 27,
+ "samples": 300,
+ "t_fail": 130,
+ "out_first_mismatch": {
+  "shift_ena": 130
+ },
+ "out_mismatch_count": {
+  "shift_ena": 27
+ },
+ "valid": true,
+ "t_act": 125,
+ "cyc_act": 13,
+ "div_signals": [
+  "shift_ena"
+ ],
+ "div_order": [
+  [
+   "shift_ena",
+   125,
+   13
+  ]
+ ],
+ "clk_edges": 150,
+ "cyc_fail": 13,
+ "failing_outputs": [
+  "shift_ena"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 13,
+ "bug_id": "bug251",
+ "split": "test",
+ "gt_line": 26,
+ "gt_signals": [
+  "shift_ena"
+ ],
+ "long_horizon": false
+}

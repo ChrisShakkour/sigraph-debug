@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob132_always_if2_test.sv:45: $finish called at 605 (1ps)
+Hint: Output 'shut_off_computer' has 116 mismatches. First mismatch occurred at time 30.
+Hint: Output 'keep_driving' has no mismatches.
+Hint: Total mismatched samples is 116 out of 121 samples
+
+Simulation finished at 605 ps
+Mismatches: 116 in 121 samples

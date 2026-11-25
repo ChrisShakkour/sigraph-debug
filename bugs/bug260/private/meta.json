@@ -1,0 +1,75 @@
+{
+ "problem": "Prob153_gshare",
+ "k": 35,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 38,
+ "old": "          pht[train_index] <= pht[train_index] - 1;",
+ "new": "          pht[train_index] <= pht[train_index] - 2;",
+ "note": "",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 47,
+ "text_lhs": [
+  "pht"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 466,
+ "samples": 1083,
+ "t_fail": 425,
+ "out_first_mismatch": {
+  "predict_taken": 425,
+  "predict_history": 440
+ },
+ "out_mismatch_count": {
+  "predict_taken": 208,
+  "predict_history": 455
+ },
+ "valid": true,
+ "t_act": 420,
+ "cyc_act": 43,
+ "div_signals": [
+  "predict_taken"
+ ],
+ "div_order": [
+  [
+   "predict_taken",
+   420,
+   42
+  ],
+  [
+   "predict_history_r",
+   425,
+   43
+  ],
+  [
+   "predict_history",
+   435,
+   44
+  ],
+  [
+   "predict_index",
+   435,
+   44
+  ]
+ ],
+ "clk_edges": 542,
+ "cyc_fail": 43,
+ "failing_outputs": [
+  "predict_taken",
+  "predict_history"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 42,
+ "bug_id": "bug260",
+ "split": "test",
+ "gt_line": 38,
+ "gt_signals": [
+  "pht"
+ ],
+ "long_horizon": false
+}

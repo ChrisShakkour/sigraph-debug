@@ -1,0 +1,69 @@
+{
+ "problem": "Prob111_fsm2s",
+ "k": 2,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 20,
+ "old": "    always @(posedge clk) begin",
+ "new": "    always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 27,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 21,
+ "samples": 241,
+ "t_fail": 75,
+ "out_first_mismatch": {
+  "out": 75
+ },
+ "out_mismatch_count": {
+  "out": 21
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 0,
+ "div_signals": [
+  "next",
+  "out",
+  "state"
+ ],
+ "div_order": [
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "out",
+   0,
+   0
+  ],
+  [
+   "state",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 121,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 8,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug140",
+ "split": "test",
+ "gt_line": 20,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

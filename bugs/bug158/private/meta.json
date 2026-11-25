@@ -1,0 +1,57 @@
+{
+ "problem": "Prob117_circuit9",
+ "k": 5,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 10,
+ "old": "    else if (q == 6)",
+ "new": "    else if (q != 6)",
+ "note": "",
+ "body_lines": 8,
+ "sequential": true,
+ "n_lines": 15,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 186,
+ "samples": 245,
+ "t_fail": 60,
+ "out_first_mismatch": {
+  "q": 60
+ },
+ "out_mismatch_count": {
+  "q": 186
+ },
+ "valid": true,
+ "t_act": 55,
+ "cyc_act": 6,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   55,
+   6
+  ]
+ ],
+ "clk_edges": 123,
+ "cyc_fail": 6,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 6,
+ "bug_id": "bug158",
+ "split": "dev",
+ "gt_line": 10,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,70 @@
+{
+ "problem": "Prob141_count_clock",
+ "k": 86,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 40,
+ "old": "      else if (enable[5]) hh[7:4] <= hh[7:4] + 1;",
+ "new": "      else if (enable[4]) hh[7:4] <= hh[7:4] + 1;",
+ "note": "",
+ "body_lines": 19,
+ "sequential": true,
+ "n_lines": 45,
+ "text_lhs": [
+  "hh"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": true,
+ "mismatches": 170747,
+ "samples": 200000,
+ "t_fail": 74270,
+ "out_first_mismatch": {
+  "pm": 434270,
+  "hh": 74270
+ },
+ "out_mismatch_count": {
+  "pm": 86400,
+  "hh": 156347
+ },
+ "valid": true,
+ "t_act": 74265,
+ "cyc_act": 7427,
+ "div_signals": [
+  "hh"
+ ],
+ "div_order": [
+  [
+   "hh",
+   74265,
+   7427
+  ],
+  [
+   "enable",
+   362255,
+   36226
+  ],
+  [
+   "pm",
+   434265,
+   43427
+  ]
+ ],
+ "clk_edges": 100000,
+ "cyc_fail": 7427,
+ "failing_outputs": [
+  "hh",
+  "pm"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 7427,
+ "bug_id": "bug226",
+ "split": "test",
+ "gt_line": 40,
+ "gt_signals": [
+  "hh"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,57 @@
+{
+ "problem": "Prob079_fsm3onehot",
+ "k": 7,
+ "op": "state_swap",
+ "category": "control",
+ "line": 11,
+ "old": "  assign next_state[B] = (state[A] | state[B] | state[D]) & in;",
+ "new": "  assign next_state[B] = (state[B] | state[B] | state[D]) & in;",
+ "note": "A->B",
+ "body_lines": 6,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "next_state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 18,
+ "samples": 200,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "next_state": 10
+ },
+ "out_mismatch_count": {
+  "next_state": 18
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "next_state"
+ ],
+ "div_order": [
+  [
+   "next_state",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "next_state"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug080",
+ "split": "dev",
+ "gt_line": 11,
+ "gt_signals": [
+  "next_state"
+ ],
+ "long_horizon": false
+}

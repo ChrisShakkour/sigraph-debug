@@ -1,0 +1,70 @@
+{
+ "problem": "Prob068_countbcd",
+ "k": 17,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 15,
+ "old": "        q[i*4 +:4] <= q[i*4 +:4]+1;",
+ "new": "        q[i*4 +:4] <= q[i*4 +:4]+0;",
+ "note": "",
+ "body_lines": 9,
+ "sequential": true,
+ "n_lines": 18,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 39774,
+ "samples": 39805,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "ena": 160,
+  "q": 30
+ },
+ "out_mismatch_count": {
+  "ena": 3972,
+  "q": 39774
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   25,
+   3
+  ],
+  [
+   "ena",
+   155,
+   16
+  ],
+  [
+   "enable",
+   155,
+   16
+  ]
+ ],
+ "clk_edges": 19903,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "q",
+  "ena"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug058",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

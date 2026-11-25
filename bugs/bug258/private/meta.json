@@ -1,0 +1,75 @@
+{
+ "problem": "Prob153_gshare",
+ "k": 32,
+ "op": "drop_not",
+ "category": "control",
+ "line": 37,
+ "old": "        else if(pht[train_index] > 0 && !train_taken)",
+ "new": "        else if(pht[train_index] > 0 && train_taken)",
+ "note": "",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 47,
+ "text_lhs": [
+  "pht"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 436,
+ "samples": 1083,
+ "t_fail": 220,
+ "out_first_mismatch": {
+  "predict_taken": 220,
+  "predict_history": 230
+ },
+ "out_mismatch_count": {
+  "predict_taken": 195,
+  "predict_history": 422
+ },
+ "valid": true,
+ "t_act": 215,
+ "cyc_act": 22,
+ "div_signals": [
+  "predict_taken"
+ ],
+ "div_order": [
+  [
+   "predict_taken",
+   215,
+   22
+  ],
+  [
+   "predict_history",
+   225,
+   23
+  ],
+  [
+   "predict_history_r",
+   225,
+   23
+  ],
+  [
+   "predict_index",
+   225,
+   23
+  ]
+ ],
+ "clk_edges": 542,
+ "cyc_fail": 22,
+ "failing_outputs": [
+  "predict_taken",
+  "predict_history"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 22,
+ "bug_id": "bug258",
+ "split": "test",
+ "gt_line": 37,
+ "gt_signals": [
+  "pht"
+ ],
+ "long_horizon": false
+}

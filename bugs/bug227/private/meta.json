@@ -1,0 +1,86 @@
+{
+ "problem": "Prob141_count_clock",
+ "k": 13,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 24,
+ "old": "      if (enable[0] && ss[3:0] == 9) ss[3:0] <= 0;",
+ "new": "      if (enable[0] && ss[3:0] == 9) ss[3:0] <= 1;",
+ "note": "",
+ "body_lines": 19,
+ "sequential": true,
+ "n_lines": 45,
+ "text_lhs": [
+  "ss"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": true,
+ "mismatches": 199613,
+ "samples": 200000,
+ "t_fail": 170,
+ "out_first_mismatch": {
+  "pm": 391080,
+  "hh": 34680,
+  "mm": 2820,
+  "ss": 170
+ },
+ "out_mismatch_count": {
+  "pm": 25916,
+  "hh": 167127,
+  "mm": 195747,
+  "ss": 196301
+ },
+ "valid": true,
+ "t_act": 165,
+ "cyc_act": 17,
+ "div_signals": [
+  "ss"
+ ],
+ "div_order": [
+  [
+   "ss",
+   165,
+   17
+  ],
+  [
+   "enable",
+   1095,
+   110
+  ],
+  [
+   "mm",
+   2815,
+   282
+  ],
+  [
+   "hh",
+   34675,
+   3468
+  ],
+  [
+   "pm",
+   391075,
+   39108
+  ]
+ ],
+ "clk_edges": 100000,
+ "cyc_fail": 17,
+ "failing_outputs": [
+  "ss",
+  "mm",
+  "hh",
+  "pm"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 17,
+ "bug_id": "bug227",
+ "split": "test",
+ "gt_line": 24,
+ "gt_signals": [
+  "ss"
+ ],
+ "long_horizon": false
+}

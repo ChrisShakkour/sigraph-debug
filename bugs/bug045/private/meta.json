@@ -1,0 +1,57 @@
+{
+ "problem": "Prob061_2014_q4a",
+ "k": 2,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 13,
+ "old": "    else if (E)",
+ "new": "    else if (!(E))",
+ "note": "",
+ "body_lines": 6,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "Q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 56,
+ "samples": 200,
+ "t_fail": 50,
+ "out_first_mismatch": {
+  "Q": 50
+ },
+ "out_mismatch_count": {
+  "Q": 56
+ },
+ "valid": true,
+ "t_act": 45,
+ "cyc_act": 5,
+ "div_signals": [
+  "Q"
+ ],
+ "div_order": [
+  [
+   "Q",
+   45,
+   5
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 5,
+ "failing_outputs": [
+  "Q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 5,
+ "bug_id": "bug045",
+ "split": "test",
+ "gt_line": 13,
+ "gt_signals": [
+  "Q"
+ ],
+ "long_horizon": false
+}

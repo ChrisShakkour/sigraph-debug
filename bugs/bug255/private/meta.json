@@ -1,0 +1,57 @@
+{
+ "problem": "Prob152_lemmings3",
+ "k": 35,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 42,
+ "old": "  assign walk_right = (state==WR);",
+ "new": "  assign walk_right = (state!=WR);",
+ "note": "",
+ "body_lines": 26,
+ "sequential": true,
+ "n_lines": 46,
+ "text_lhs": [
+  "walk_right"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 443,
+ "samples": 443,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "walk_right": 5
+ },
+ "out_mismatch_count": {
+  "walk_right": 443
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "walk_right"
+ ],
+ "div_order": [
+  [
+   "walk_right",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 222,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "walk_right"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug255",
+ "split": "dev",
+ "gt_line": 42,
+ "gt_signals": [
+  "walk_right"
+ ],
+ "long_horizon": false
+}

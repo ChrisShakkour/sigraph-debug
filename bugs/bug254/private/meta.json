@@ -1,0 +1,57 @@
+{
+ "problem": "Prob151_review2015_fsm",
+ "k": 42,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 42,
+ "old": "      shift_ena = 1;",
+ "new": "      shift_ena = 2;",
+ "note": "",
+ "body_lines": 32,
+ "sequential": true,
+ "n_lines": 54,
+ "text_lhs": [
+  "shift_ena"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 256,
+ "samples": 5069,
+ "t_fail": 90,
+ "out_first_mismatch": {
+  "shift_ena": 90
+ },
+ "out_mismatch_count": {
+  "shift_ena": 256
+ },
+ "valid": true,
+ "t_act": 85,
+ "cyc_act": 9,
+ "div_signals": [
+  "shift_ena"
+ ],
+ "div_order": [
+  [
+   "shift_ena",
+   85,
+   9
+  ]
+ ],
+ "clk_edges": 2535,
+ "cyc_fail": 9,
+ "failing_outputs": [
+  "shift_ena"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 9,
+ "bug_id": "bug254",
+ "split": "test",
+ "gt_line": 42,
+ "gt_signals": [
+  "shift_ena"
+ ],
+ "long_horizon": false
+}

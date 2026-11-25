@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob112_always_case2_test.sv:38: $finish called at 470 (1ps)
+Hint: Output 'pos' has 5 mismatches. First mismatch occurred at time 50.
+Hint: Total mismatched samples is 5 out of 94 samples
+
+Simulation finished at 470 ps
+Mismatches: 5 in 94 samples

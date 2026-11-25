@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob105_rotate100_test.sv:25: $finish called at 20026 (1ps)
+Hint: Output 'q' has 3194 mismatches. First mismatch occurred at time 60.
+Hint: Total mismatched samples is 3194 out of 4005 samples
+
+Simulation finished at 20026 ps
+Mismatches: 3194 in 4005 samples

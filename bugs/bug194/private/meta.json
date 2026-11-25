@@ -1,0 +1,67 @@
+{
+ "problem": "Prob129_ece241_2013_q8",
+ "k": 8,
+ "op": "state_swap",
+ "category": "control",
+ "line": 19,
+ "old": "      S: next = x ? S1 : S;",
+ "new": "      S: next = x ? S1 : S1;",
+ "note": "S->S1",
+ "body_lines": 22,
+ "sequential": true,
+ "n_lines": 35,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 10,
+ "samples": 440,
+ "t_fail": 650,
+ "out_first_mismatch": {
+  "z": 650
+ },
+ "out_mismatch_count": {
+  "z": 10
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 2,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   15,
+   2
+  ],
+  [
+   "z",
+   645,
+   65
+  ]
+ ],
+ "clk_edges": 220,
+ "cyc_fail": 65,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 63,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug194",
+ "split": "test",
+ "gt_line": 19,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": true
+}

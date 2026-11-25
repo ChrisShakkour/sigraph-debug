@@ -1,0 +1,65 @@
+{
+ "problem": "Prob123_bugs_addsubz",
+ "k": 0,
+ "op": "arith_op",
+ "category": "datapath",
+ "line": 11,
+ "old": "      0: out = a + b;",
+ "new": "      0: out = a - b;",
+ "note": "",
+ "body_lines": 8,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 56,
+ "samples": 118,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "out": 5,
+  "result_is_zero": 40
+ },
+ "out_mismatch_count": {
+  "out": 56,
+  "result_is_zero": 4
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   0,
+   0
+  ],
+  [
+   "result_is_zero",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 59,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out",
+  "result_is_zero"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug178",
+ "split": "dev",
+ "gt_line": 11,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

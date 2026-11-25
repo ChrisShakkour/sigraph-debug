@@ -1,0 +1,69 @@
+{
+ "problem": "Prob128_fsm_ps2",
+ "k": 8,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 23,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 30,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1,
+ "samples": 400,
+ "t_fail": 935,
+ "out_first_mismatch": {
+  "done": 935
+ },
+ "out_mismatch_count": {
+  "done": 1
+ },
+ "valid": true,
+ "t_act": 170,
+ "cyc_act": 17,
+ "div_signals": [
+  "done",
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "done",
+   170,
+   17
+  ],
+  [
+   "next",
+   170,
+   17
+  ],
+  [
+   "state",
+   170,
+   17
+  ]
+ ],
+ "clk_edges": 200,
+ "cyc_fail": 94,
+ "failing_outputs": [
+  "done"
+ ],
+ "latency_cycles": 77,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 17,
+ "bug_id": "bug191",
+ "split": "test",
+ "gt_line": 23,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

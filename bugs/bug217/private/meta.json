@@ -1,0 +1,67 @@
+{
+ "problem": "Prob138_2012_q2fsm",
+ "k": 5,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 17,
+ "old": "      A: next = w ? B : A;",
+ "new": "      A: next = w ? A : B;",
+ "note": "",
+ "body_lines": 16,
+ "sequential": true,
+ "n_lines": 29,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 46,
+ "samples": 400,
+ "t_fail": 210,
+ "out_first_mismatch": {
+  "z": 210
+ },
+ "out_mismatch_count": {
+  "z": 46
+ },
+ "valid": true,
+ "t_act": 175,
+ "cyc_act": 19,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   175,
+   18
+  ],
+  [
+   "state",
+   185,
+   19
+  ],
+  [
+   "z",
+   205,
+   21
+  ]
+ ],
+ "clk_edges": 200,
+ "cyc_fail": 21,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 2,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 18,
+ "bug_id": "bug217",
+ "split": "dev",
+ "gt_line": 17,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

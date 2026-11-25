@@ -1,0 +1,10 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob106_always_nolatches_test.sv:43: $finish called at 150100 (1ps)
+Hint: Output 'left' has no mismatches.
+Hint: Output 'down' has no mismatches.
+Hint: Output 'right' has 30015 mismatches. First mismatch occurred at time 20.
+Hint: Output 'up' has no mismatches.
+Hint: Total mismatched samples is 30015 out of 30020 samples
+
+Simulation finished at 150100 ps
+Mismatches: 30015 in 30020 samples

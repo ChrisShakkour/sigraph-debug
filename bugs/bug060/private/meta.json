@@ -1,0 +1,53 @@
+{
+ "problem": "Prob069_truthtable1",
+ "k": 9,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 10,
+ "old": "        ( x3 & ~x2 & x1 ) |",
+ "new": "        ( x3 | ~x2 & x1 ) |",
+ "note": "",
+ "body_lines": 5,
+ "sequential": false,
+ "n_lines": 13,
+ "text_lhs": [],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 6,
+ "samples": 58,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "f": 30
+ },
+ "out_mismatch_count": {
+  "f": 6
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "f"
+ ],
+ "div_order": [
+  [
+   "f",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 29,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "f"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug060",
+ "split": "test",
+ "gt_line": 10,
+ "gt_signals": [],
+ "long_horizon": false
+}

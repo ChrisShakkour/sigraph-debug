@@ -1,0 +1,67 @@
+{
+ "problem": "Prob136_m2014_q6",
+ "k": 21,
+ "op": "state_swap",
+ "category": "control",
+ "line": 24,
+ "old": "      F: next = w ? D : C;",
+ "new": "      F: next = w ? E : C;",
+ "note": "D->E",
+ "body_lines": 18,
+ "sequential": true,
+ "n_lines": 31,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 6,
+ "samples": 200,
+ "t_fail": 410,
+ "out_first_mismatch": {
+  "z": 410
+ },
+ "out_mismatch_count": {
+  "z": 6
+ },
+ "valid": true,
+ "t_act": 400,
+ "cyc_act": 41,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   400,
+   40
+  ],
+  [
+   "state",
+   405,
+   41
+  ],
+  [
+   "z",
+   405,
+   41
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 41,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 40,
+ "bug_id": "bug211",
+ "split": "test",
+ "gt_line": 24,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob122_kmap4_test.sv:38: $finish called at 1161 (1ps)
+Hint: Output 'out' has 19 mismatches. First mismatch occurred at time 100.
+Hint: Total mismatched samples is 19 out of 232 samples
+
+Simulation finished at 1161 ps
+Mismatches: 19 in 232 samples

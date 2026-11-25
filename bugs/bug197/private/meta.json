@@ -1,0 +1,57 @@
+{
+ "problem": "Prob130_circuit5",
+ "k": 1,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 16,
+ "old": "      default: q = 4'hf;",
+ "new": "      default: q = 4'he;",
+ "note": "",
+ "body_lines": 9,
+ "sequential": false,
+ "n_lines": 19,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 96,
+ "samples": 141,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "q": 40
+ },
+ "out_mismatch_count": {
+  "q": 96
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 4,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 71,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug197",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

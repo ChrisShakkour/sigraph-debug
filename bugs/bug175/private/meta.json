@@ -1,0 +1,57 @@
+{
+ "problem": "Prob122_kmap4",
+ "k": 6,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 15,
+ "old": "      4'h4: out = 1;",
+ "new": "      4'h4: out = 2;",
+ "note": "",
+ "body_lines": 21,
+ "sequential": false,
+ "n_lines": 30,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 10,
+ "samples": 232,
+ "t_fail": 50,
+ "out_first_mismatch": {
+  "out": 50
+ },
+ "out_mismatch_count": {
+  "out": 10
+ },
+ "valid": true,
+ "t_act": 45,
+ "cyc_act": 5,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   45,
+   5
+  ]
+ ],
+ "clk_edges": 116,
+ "cyc_fail": 5,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 5,
+ "bug_id": "bug175",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

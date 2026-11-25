@@ -1,0 +1,75 @@
+{
+ "problem": "Prob127_lemmings1",
+ "k": 0,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 16,
+ "old": "      WL: next = bump_left ? WR : WL;",
+ "new": "      WL: next = bump_left ? WL : WR;",
+ "note": "",
+ "body_lines": 13,
+ "sequential": true,
+ "n_lines": 29,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 75,
+ "samples": 229,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "walk_left": 30,
+  "walk_right": 30
+ },
+ "out_mismatch_count": {
+  "walk_left": 75,
+  "walk_right": 75
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 3,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   25,
+   3
+  ],
+  [
+   "walk_left",
+   25,
+   3
+  ],
+  [
+   "walk_right",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 115,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "walk_left",
+  "walk_right"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug188",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,63 @@
+{
+ "problem": "Prob070_ece241_2013_q2",
+ "k": 10,
+ "op": "drop_not",
+ "category": "datapath",
+ "line": 12,
+ "old": "  assign pos0 = c & (~b|d)&(~a|b);",
+ "new": "  assign pos0 = c & (~b|d)&(a|b);",
+ "note": "",
+ "body_lines": 5,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "pos0"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 24,
+ "samples": 107,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "out_pos": 30
+ },
+ "out_mismatch_count": {
+  "out_pos": 24
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "out_pos",
+  "pos0"
+ ],
+ "div_order": [
+  [
+   "out_pos",
+   25,
+   3
+  ],
+  [
+   "pos0",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 54,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "out_pos"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug063",
+ "split": "test",
+ "gt_line": 12,
+ "gt_signals": [
+  "pos0"
+ ],
+ "long_horizon": false
+}

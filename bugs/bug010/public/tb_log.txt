@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob037_review2015_count1k_test.sv:71: $finish called at 40136 (1ps)
+Hint: Output 'q' has 8000 mismatches. First mismatch occurred at time 30.
+Hint: Total mismatched samples is 8000 out of 8027 samples
+
+Simulation finished at 40136 ps
+Mismatches: 8000 in 8027 samples

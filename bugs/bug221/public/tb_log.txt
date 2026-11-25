@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob139_2013_q2bfsm_test.sv:24: $finish called at 5011 (1ps)
+Hint: Output 'f' has no mismatches.
+Hint: Output 'g' has 320 mismatches. First mismatch occurred at time 1960.
+Hint: Total mismatched samples is 320 out of 1002 samples
+
+Simulation finished at 5011 ps
+Mismatches: 320 in 1002 samples

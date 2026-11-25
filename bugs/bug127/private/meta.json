@@ -1,0 +1,57 @@
+{
+ "problem": "Prob106_always_nolatches",
+ "k": 5,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 14,
+ "old": "      16'he074: right = 1;",
+ "new": "      16'he074: right = 2;",
+ "note": "",
+ "body_lines": 10,
+ "sequential": false,
+ "n_lines": 19,
+ "text_lhs": [
+  "right"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 2,
+ "samples": 30020,
+ "t_fail": 80,
+ "out_first_mismatch": {
+  "right": 80
+ },
+ "out_mismatch_count": {
+  "right": 2
+ },
+ "valid": true,
+ "t_act": 75,
+ "cyc_act": 8,
+ "div_signals": [
+  "right"
+ ],
+ "div_order": [
+  [
+   "right",
+   75,
+   8
+  ]
+ ],
+ "clk_edges": 15010,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "right"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 8,
+ "bug_id": "bug127",
+ "split": "test",
+ "gt_line": 14,
+ "gt_signals": [
+  "right"
+ ],
+ "long_horizon": false
+}

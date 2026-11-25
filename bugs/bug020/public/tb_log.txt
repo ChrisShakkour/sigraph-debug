@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset doesn't seem to be working.
+<verilog-eval>/Prob041_dff8r_test.sv:65: $finish called at 2161 (1ps)
+Hint: Output 'q' has 431 mismatches. First mismatch occurred at time 10.
+Hint: Total mismatched samples is 431 out of 432 samples
+
+Simulation finished at 2161 ps
+Mismatches: 431 in 432 samples

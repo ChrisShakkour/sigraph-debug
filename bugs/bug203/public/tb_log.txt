@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob133_2014_q3fsm_test.sv:59: $finish called at 7071 (1ps)
+Hint: Output 'z' has 1413 mismatches. First mismatch occurred at time 10.
+Hint: Total mismatched samples is 1413 out of 1414 samples
+
+Simulation finished at 7071 ps
+Mismatches: 1413 in 1414 samples

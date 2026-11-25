@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob084_ece241_2013_q12_test.sv:55: $finish called at 2650 (1ps)
+Hint: Output 'Z' has 292 mismatches. First mismatch occurred at time 40.
+Hint: Total mismatched samples is 292 out of 530 samples
+
+Simulation finished at 2650 ps
+Mismatches: 292 in 530 samples

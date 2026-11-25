@@ -1,0 +1,57 @@
+{
+ "problem": "Prob123_bugs_addsubz",
+ "k": 2,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 14,
+ "old": "    result_is_zero = (out == 0);",
+ "new": "    result_is_zero = (out != 0);",
+ "note": "",
+ "body_lines": 8,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "result_is_zero"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 118,
+ "samples": 118,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "result_is_zero": 5
+ },
+ "out_mismatch_count": {
+  "result_is_zero": 118
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "result_is_zero"
+ ],
+ "div_order": [
+  [
+   "result_is_zero",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 59,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "result_is_zero"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug176",
+ "split": "dev",
+ "gt_line": 14,
+ "gt_signals": [
+  "result_is_zero"
+ ],
+ "long_horizon": false
+}

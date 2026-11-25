@@ -1,0 +1,68 @@
+{
+ "problem": "Prob148_2013_q2afsm",
+ "k": 3,
+ "op": "state_swap",
+ "category": "state",
+ "line": 12,
+ "old": "    if (~resetn) state <= A;",
+ "new": "    if (~resetn) state <= B;",
+ "note": "A->B",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 33,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 25,
+ "samples": 1054,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "g": 10
+ },
+ "out_mismatch_count": {
+  "g": 25
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "g",
+  "state"
+ ],
+ "div_order": [
+  [
+   "g",
+   5,
+   1
+  ],
+  [
+   "state",
+   5,
+   1
+  ],
+  [
+   "next",
+   3550,
+   355
+  ]
+ ],
+ "clk_edges": 527,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "g"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug245",
+ "split": "test",
+ "gt_line": 12,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

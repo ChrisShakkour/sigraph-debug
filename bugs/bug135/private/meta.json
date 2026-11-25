@@ -1,0 +1,69 @@
+{
+ "problem": "Prob109_fsm1",
+ "k": 3,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 20,
+ "old": "    if (areset) state <= B;",
+ "new": "    if (!(areset)) state <= B;",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 26,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 125,
+ "samples": 228,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "out": 5
+ },
+ "out_mismatch_count": {
+  "out": 125
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 0,
+ "div_signals": [
+  "next",
+  "out",
+  "state"
+ ],
+ "div_order": [
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "out",
+   0,
+   0
+  ],
+  [
+   "state",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 114,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug135",
+ "split": "test",
+ "gt_line": 20,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

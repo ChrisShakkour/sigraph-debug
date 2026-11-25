@@ -1,0 +1,57 @@
+{
+ "problem": "Prob088_ece241_2014_q5b",
+ "k": 12,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 21,
+ "old": "  assign z = (state == A && x==1) | (state == B && x==0);",
+ "new": "  assign z = (state == A && x==1) | (state != B && x==0);",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 23,
+ "text_lhs": [
+  "z"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 231,
+ "samples": 436,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "z": 5
+ },
+ "out_mismatch_count": {
+  "z": 231
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "z"
+ ],
+ "div_order": [
+  [
+   "z",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 218,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug099",
+ "split": "test",
+ "gt_line": 21,
+ "gt_signals": [
+  "z"
+ ],
+ "long_horizon": false
+}

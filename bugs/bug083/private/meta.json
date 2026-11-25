@@ -1,0 +1,63 @@
+{
+ "problem": "Prob080_timer",
+ "k": 0,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 11,
+ "old": "    if(load) count_value <= data;",
+ "new": "    if(!(load)) count_value <= data;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "count_value"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 4114,
+ "samples": 7127,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "tc": 20
+ },
+ "out_mismatch_count": {
+  "tc": 4114
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "count_value",
+  "tc"
+ ],
+ "div_order": [
+  [
+   "count_value",
+   15,
+   2
+  ],
+  [
+   "tc",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 3564,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "tc"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug083",
+ "split": "test",
+ "gt_line": 11,
+ "gt_signals": [
+  "count_value"
+ ],
+ "long_horizon": false
+}

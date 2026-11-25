@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob128_fsm_ps2_test.sv:18: $finish called at 2001 (1ps)
+Hint: Output 'done' has 94 mismatches. First mismatch occurred at time 230.
+Hint: Total mismatched samples is 94 out of 400 samples
+
+Simulation finished at 2001 ps
+Mismatches: 94 in 400 samples

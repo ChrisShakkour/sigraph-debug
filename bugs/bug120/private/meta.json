@@ -1,0 +1,57 @@
+{
+ "problem": "Prob100_fsm3comb",
+ "k": 11,
+ "op": "state_swap",
+ "category": "control",
+ "line": 15,
+ "old": "      D: next_state = in ? B : C;",
+ "new": "      D: next_state = in ? B : D;",
+ "note": "C->D",
+ "body_lines": 10,
+ "sequential": false,
+ "n_lines": 21,
+ "text_lhs": [
+  "next_state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 5,
+ "samples": 100,
+ "t_fail": 60,
+ "out_first_mismatch": {
+  "next_state": 60
+ },
+ "out_mismatch_count": {
+  "next_state": 5
+ },
+ "valid": true,
+ "t_act": 55,
+ "cyc_act": 6,
+ "div_signals": [
+  "next_state"
+ ],
+ "div_order": [
+  [
+   "next_state",
+   55,
+   6
+  ]
+ ],
+ "clk_edges": 50,
+ "cyc_fail": 6,
+ "failing_outputs": [
+  "next_state"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 6,
+ "bug_id": "bug120",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "next_state"
+ ],
+ "long_horizon": false
+}

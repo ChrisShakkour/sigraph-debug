@@ -1,0 +1,13 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: The first test case should count for 2000 cycles. Your circuit counted 52
+Hint: The second test case should count for 15000 cycles. Your circuit counted 0
+Hint: Your FSM didn't pass the sample timing diagram posted with the problem statement. Perhaps try debugging that?
+TIMEOUT
+<verilog-eval>/Prob156_review2015_fancytimer_test.sv:216: $finish called at 1000000 (1ps)
+Hint: Output 'count' has 190573 mismatches. First mismatch occurred at time 390.
+Hint: Output 'counting' has 84082 mismatches. First mismatch occurred at time 650.
+Hint: Output 'done' has 72930 mismatches. First mismatch occurred at time 650.
+Hint: Total mismatched samples is 191361 out of 200000 samples
+
+Simulation finished at 1000000 ps
+Mismatches: 191361 in 200000 samples

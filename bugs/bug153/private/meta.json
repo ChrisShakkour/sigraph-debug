@@ -1,0 +1,57 @@
+{
+ "problem": "Prob115_shift18",
+ "k": 9,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 16,
+ "old": "      2'b10: q <= {q[63], q[63:1]};",
+ "new": "      2'b10: q <= {q[62], q[63:1]};",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 22,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 410,
+ "samples": 4041,
+ "t_fail": 160,
+ "out_first_mismatch": {
+  "q": 160
+ },
+ "out_mismatch_count": {
+  "q": 410
+ },
+ "valid": true,
+ "t_act": 155,
+ "cyc_act": 16,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   155,
+   16
+  ]
+ ],
+ "clk_edges": 2021,
+ "cyc_fail": 16,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 16,
+ "bug_id": "bug153",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

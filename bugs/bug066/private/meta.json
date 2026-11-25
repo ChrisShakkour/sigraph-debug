@@ -1,0 +1,57 @@
+{
+ "problem": "Prob071_always_casez",
+ "k": 2,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 9,
+ "old": "      8'bzzzzzzz1: pos = 3'h0;",
+ "new": "      8'bzzzzzzz1: pos = 3'h1;",
+ "note": "",
+ "body_lines": 14,
+ "sequential": false,
+ "n_lines": 20,
+ "text_lhs": [
+  "pos"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 169,
+ "samples": 346,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "pos": 20
+ },
+ "out_mismatch_count": {
+  "pos": 169
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "pos"
+ ],
+ "div_order": [
+  [
+   "pos",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 173,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "pos"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug066",
+ "split": "test",
+ "gt_line": 9,
+ "gt_signals": [
+  "pos"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob096_review2015_fsmseq_test.sv:74: $finish called at 3216 (1ps)
+Hint: Output 'start_shifting' has 30 mismatches. First mismatch occurred at time 1960.
+Hint: Total mismatched samples is 30 out of 643 samples
+
+Simulation finished at 3216 ps
+Mismatches: 30 in 643 samples

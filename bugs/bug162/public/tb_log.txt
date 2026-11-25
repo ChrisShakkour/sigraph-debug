@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset doesn't seem to be working.
+<verilog-eval>/Prob118_history_shift_test.sv:104: $finish called at 10276 (1ps)
+Hint: Output 'predict_history' has 2048 mismatches. First mismatch occurred at time 10.
+Hint: Total mismatched samples is 2048 out of 2055 samples
+
+Simulation finished at 10276 ps
+Mismatches: 2048 in 2055 samples

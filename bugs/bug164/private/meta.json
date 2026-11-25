@@ -1,0 +1,67 @@
+{
+ "problem": "Prob119_fsm3",
+ "k": 2,
+ "op": "state_swap",
+ "category": "control",
+ "line": 14,
+ "old": "    A: next = in ? B : A;",
+ "new": "    A: next = in ? B : B;",
+ "note": "A->B",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 28,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 4,
+ "samples": 230,
+ "t_fail": 650,
+ "out_first_mismatch": {
+  "out": 650
+ },
+ "out_mismatch_count": {
+  "out": 4
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 25,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   245,
+   25
+  ],
+  [
+   "out",
+   645,
+   65
+  ]
+ ],
+ "clk_edges": 115,
+ "cyc_fail": 65,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 40,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug164",
+ "split": "test",
+ "gt_line": 14,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": true
+}

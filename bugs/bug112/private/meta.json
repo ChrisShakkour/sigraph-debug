@@ -1,0 +1,67 @@
+{
+ "problem": "Prob095_review2015_fsmshift",
+ "k": 1,
+ "op": "state_swap",
+ "category": "control",
+ "line": 14,
+ "old": "      B1: next = B2;",
+ "new": "      B1: next = B3;",
+ "note": "B2->B3",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 27,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 2,
+ "samples": 200,
+ "t_fail": 380,
+ "out_first_mismatch": {
+  "shift_ena": 380
+ },
+ "out_mismatch_count": {
+  "shift_ena": 2
+ },
+ "valid": true,
+ "t_act": 355,
+ "cyc_act": 37,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   355,
+   36
+  ],
+  [
+   "state",
+   365,
+   37
+  ],
+  [
+   "shift_ena",
+   375,
+   38
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 38,
+ "failing_outputs": [
+  "shift_ena"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 36,
+ "bug_id": "bug112",
+ "split": "test",
+ "gt_line": 14,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

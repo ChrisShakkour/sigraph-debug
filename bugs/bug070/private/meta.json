@@ -1,0 +1,57 @@
+{
+ "problem": "Prob073_dff16e",
+ "k": 1,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 10,
+ "old": "    if (!resetn)",
+ "new": "    if (!(!resetn))",
+ "note": "",
+ "body_lines": 11,
+ "sequential": true,
+ "n_lines": 20,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 442,
+ "samples": 443,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "q": 10
+ },
+ "out_mismatch_count": {
+  "q": 442
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 222,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug070",
+ "split": "test",
+ "gt_line": 10,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

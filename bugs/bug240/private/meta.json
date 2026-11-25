@@ -1,0 +1,75 @@
+{
+ "problem": "Prob146_fsm_serialdata",
+ "k": 11,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 26,
+ "old": "      STOP: next = in ? DONE : ERR;",
+ "new": "      STOP: next = in ? ERR : DONE;",
+ "note": "",
+ "body_lines": 26,
+ "sequential": true,
+ "n_lines": 44,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 64,
+ "samples": 905,
+ "t_fail": 110,
+ "out_first_mismatch": {
+  "out_byte": 110,
+  "done": 110
+ },
+ "out_mismatch_count": {
+  "out_byte": 38,
+  "done": 64
+ },
+ "valid": true,
+ "t_act": 95,
+ "cyc_act": 11,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   95,
+   10
+  ],
+  [
+   "done",
+   105,
+   11
+  ],
+  [
+   "out_byte",
+   105,
+   11
+  ],
+  [
+   "state",
+   105,
+   11
+  ]
+ ],
+ "clk_edges": 453,
+ "cyc_fail": 11,
+ "failing_outputs": [
+  "out_byte",
+  "done"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 10,
+ "bug_id": "bug240",
+ "split": "test",
+ "gt_line": 26,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

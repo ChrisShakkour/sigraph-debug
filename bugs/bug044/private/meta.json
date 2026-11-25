@@ -1,0 +1,63 @@
+{
+ "problem": "Prob060_m2014_q4k",
+ "k": 0,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 10,
+ "old": "    if (~resetn)",
+ "new": "    if (!(~resetn))",
+ "note": "",
+ "body_lines": 8,
+ "sequential": true,
+ "n_lines": 18,
+ "text_lhs": [
+  "sr"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 84,
+ "samples": 299,
+ "t_fail": 60,
+ "out_first_mismatch": {
+  "out": 60
+ },
+ "out_mismatch_count": {
+  "out": 84
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "out",
+  "sr"
+ ],
+ "div_order": [
+  [
+   "out",
+   15,
+   2
+  ],
+  [
+   "sr",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 150,
+ "cyc_fail": 6,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 4,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug044",
+ "split": "test",
+ "gt_line": 10,
+ "gt_signals": [
+  "sr"
+ ],
+ "long_horizon": false
+}

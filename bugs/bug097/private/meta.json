@@ -1,0 +1,57 @@
+{
+ "problem": "Prob087_gates",
+ "k": 4,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 16,
+ "old": "  assign out_nand = ~(a&b);",
+ "new": "  assign out_nand = ~(a|b);",
+ "note": "",
+ "body_lines": 8,
+ "sequential": false,
+ "n_lines": 21,
+ "text_lhs": [
+  "out_nand"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 121,
+ "samples": 210,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "out_nand": 30
+ },
+ "out_mismatch_count": {
+  "out_nand": 121
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "out_nand"
+ ],
+ "div_order": [
+  [
+   "out_nand",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 105,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "out_nand"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug097",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "out_nand"
+ ],
+ "long_horizon": false
+}

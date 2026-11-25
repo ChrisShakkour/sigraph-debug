@@ -1,0 +1,67 @@
+{
+ "problem": "Prob128_fsm_ps2",
+ "k": 0,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 16,
+ "old": "      BYTE1: next = in3 ? BYTE2 : BYTE1;",
+ "new": "      BYTE1: next = in3 ? BYTE1 : BYTE2;",
+ "note": "",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 30,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 143,
+ "samples": 400,
+ "t_fail": 210,
+ "out_first_mismatch": {
+  "done": 210
+ },
+ "out_mismatch_count": {
+  "done": 143
+ },
+ "valid": true,
+ "t_act": 175,
+ "cyc_act": 19,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   175,
+   18
+  ],
+  [
+   "state",
+   185,
+   19
+  ],
+  [
+   "done",
+   205,
+   21
+  ]
+ ],
+ "clk_edges": 200,
+ "cyc_fail": 21,
+ "failing_outputs": [
+  "done"
+ ],
+ "latency_cycles": 2,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 18,
+ "bug_id": "bug193",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

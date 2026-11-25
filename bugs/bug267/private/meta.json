@@ -1,0 +1,103 @@
+{
+ "problem": "Prob156_review2015_fancytimer",
+ "k": 11,
+ "op": "state_swap",
+ "category": "control",
+ "line": 27,
+ "old": "      S110: next = States'(data ? B0 : S);",
+ "new": "      S110: next = States'(data ? B0 : S1);",
+ "note": "S->S1",
+ "body_lines": 46,
+ "sequential": true,
+ "n_lines": 74,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": true,
+ "mismatches": 33086,
+ "samples": 200000,
+ "t_fail": 694580,
+ "out_first_mismatch": {
+  "count": 694890,
+  "counting": 694580,
+  "done": 784580
+ },
+ "out_mismatch_count": {
+  "count": 32978,
+  "counting": 152,
+  "done": 22
+ },
+ "valid": true,
+ "t_act": 172415,
+ "cyc_act": 17243,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   172415,
+   17242
+  ],
+  [
+   "state",
+   172425,
+   17243
+  ],
+  [
+   "shift_ena",
+   694535,
+   69454
+  ],
+  [
+   "scount",
+   694545,
+   69455
+  ],
+  [
+   "count",
+   694575,
+   69458
+  ],
+  [
+   "counting",
+   694575,
+   69458
+  ],
+  [
+   "fcount",
+   694585,
+   69459
+  ],
+  [
+   "done_counting",
+   784565,
+   78457
+  ],
+  [
+   "done",
+   784575,
+   78458
+  ]
+ ],
+ "clk_edges": 100000,
+ "cyc_fail": 69458,
+ "failing_outputs": [
+  "counting",
+  "count",
+  "done"
+ ],
+ "latency_cycles": 52215,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 17242,
+ "bug_id": "bug267",
+ "split": "dev",
+ "gt_line": 27,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": true
+}

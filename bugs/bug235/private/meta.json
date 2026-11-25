@@ -1,0 +1,62 @@
+{
+ "problem": "Prob144_conwaylife",
+ "k": 4,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 10,
+ "old": "    for (int i=0;i<16;i++)",
+ "new": "    for (int i=0;i<15;i++)",
+ "note": "",
+ "body_lines": 22,
+ "sequential": true,
+ "n_lines": 35,
+ "text_lhs": [
+  "q_pad"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 5008,
+ "samples": 5023,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "q": 20
+ },
+ "out_mismatch_count": {
+  "q": 5008
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 2,
+ "div_signals": [
+  "q_pad"
+ ],
+ "div_order": [
+  [
+   "q_pad",
+   5,
+   1
+  ],
+  [
+   "q",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 2512,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug235",
+ "split": "dev",
+ "gt_line": 10,
+ "gt_signals": [
+  "q_pad"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,11 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset doesn't seem to be working.
+<verilog-eval>/Prob152_lemmings3_test.sv:94: $finish called at 2216 (1ps)
+Hint: Output 'walk_left' has no mismatches.
+Hint: Output 'walk_right' has 443 mismatches. First mismatch occurred at time 5.
+Hint: Output 'aaah' has no mismatches.
+Hint: Output 'digging' has no mismatches.
+Hint: Total mismatched samples is 443 out of 443 samples
+
+Simulation finished at 2216 ps
+Mismatches: 443 in 443 samples

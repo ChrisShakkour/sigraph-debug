@@ -1,0 +1,10 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob152_lemmings3_test.sv:94: $finish called at 2216 (1ps)
+Hint: Output 'walk_left' has 334 mismatches. First mismatch occurred at time 5.
+Hint: Output 'walk_right' has 71 mismatches. First mismatch occurred at time 5.
+Hint: Output 'aaah' has 37 mismatches. First mismatch occurred at time 5.
+Hint: Output 'digging' has 236 mismatches. First mismatch occurred at time 5.
+Hint: Total mismatched samples is 334 out of 443 samples
+
+Simulation finished at 2216 ps
+Mismatches: 334 in 443 samples

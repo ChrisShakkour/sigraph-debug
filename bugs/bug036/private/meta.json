@@ -1,0 +1,57 @@
+{
+ "problem": "Prob055_conditional",
+ "k": 6,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 13,
+ "old": "    if (min > d) min = d;",
+ "new": "    if (!(min > d)) min = d;",
+ "note": "",
+ "body_lines": 7,
+ "sequential": false,
+ "n_lines": 16,
+ "text_lhs": [
+  "min"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 112,
+ "samples": 112,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "min": 5
+ },
+ "out_mismatch_count": {
+  "min": 112
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "min"
+ ],
+ "div_order": [
+  [
+   "min",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 56,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "min"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug036",
+ "split": "dev",
+ "gt_line": 13,
+ "gt_signals": [
+  "min"
+ ],
+ "long_horizon": false
+}

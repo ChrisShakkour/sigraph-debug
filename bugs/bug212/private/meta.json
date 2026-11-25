@@ -1,0 +1,57 @@
+{
+ "problem": "Prob136_m2014_q6",
+ "k": 26,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 29,
+ "old": "  assign z = (state == E || state == F);",
+ "new": "  assign z = (state == E || state != F);",
+ "note": "",
+ "body_lines": 18,
+ "sequential": true,
+ "n_lines": 31,
+ "text_lhs": [
+  "z"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 144,
+ "samples": 200,
+ "t_fail": 220,
+ "out_first_mismatch": {
+  "z": 220
+ },
+ "out_mismatch_count": {
+  "z": 144
+ },
+ "valid": true,
+ "t_act": 215,
+ "cyc_act": 22,
+ "div_signals": [
+  "z"
+ ],
+ "div_order": [
+  [
+   "z",
+   215,
+   22
+  ]
+ ],
+ "clk_edges": 100,
+ "cyc_fail": 22,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 22,
+ "bug_id": "bug212",
+ "split": "test",
+ "gt_line": 29,
+ "gt_signals": [
+  "z"
+ ],
+ "long_horizon": false
+}

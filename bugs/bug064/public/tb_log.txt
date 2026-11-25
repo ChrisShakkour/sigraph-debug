@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob070_ece241_2013_q2_test.sv:63: $finish called at 535 (1ps)
+Hint: Output 'out_sop' has 43 mismatches. First mismatch occurred at time 10.
+Hint: Output 'out_pos' has no mismatches.
+Hint: Total mismatched samples is 43 out of 107 samples
+
+Simulation finished at 535 ps
+Mismatches: 43 in 107 samples

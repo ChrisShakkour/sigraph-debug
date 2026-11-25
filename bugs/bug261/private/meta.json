@@ -1,0 +1,77 @@
+{
+ "problem": "Prob154_fsm_ps2data",
+ "k": 8,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 24,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 17,
+ "sequential": true,
+ "n_lines": 37,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1,
+ "samples": 1619,
+ "t_fail": 935,
+ "out_first_mismatch": {
+  "out_bytes": 935,
+  "done": 935
+ },
+ "out_mismatch_count": {
+  "out_bytes": 1,
+  "done": 1
+ },
+ "valid": true,
+ "t_act": 170,
+ "cyc_act": 17,
+ "div_signals": [
+  "done",
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "done",
+   170,
+   17
+  ],
+  [
+   "next",
+   170,
+   17
+  ],
+  [
+   "state",
+   170,
+   17
+  ],
+  [
+   "out_bytes",
+   930,
+   93
+  ]
+ ],
+ "clk_edges": 810,
+ "cyc_fail": 94,
+ "failing_outputs": [
+  "out_bytes",
+  "done"
+ ],
+ "latency_cycles": 77,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 17,
+ "bug_id": "bug261",
+ "split": "dev",
+ "gt_line": 24,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

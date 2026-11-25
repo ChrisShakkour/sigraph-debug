@@ -1,0 +1,57 @@
+{
+ "problem": "Prob135_m2014_q6b",
+ "k": 8,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 17,
+ "old": "      4'h8: Y1 = 1'b0;",
+ "new": "      4'h8: Y1 = 1'b1;",
+ "note": "",
+ "body_lines": 18,
+ "sequential": false,
+ "n_lines": 25,
+ "text_lhs": [
+  "Y1"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 5,
+ "samples": 100,
+ "t_fail": 130,
+ "out_first_mismatch": {
+  "Y1": 130
+ },
+ "out_mismatch_count": {
+  "Y1": 5
+ },
+ "valid": true,
+ "t_act": 125,
+ "cyc_act": 13,
+ "div_signals": [
+  "Y1"
+ ],
+ "div_order": [
+  [
+   "Y1",
+   125,
+   13
+  ]
+ ],
+ "clk_edges": 50,
+ "cyc_fail": 13,
+ "failing_outputs": [
+  "Y1"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 13,
+ "bug_id": "bug207",
+ "split": "test",
+ "gt_line": 17,
+ "gt_signals": [
+  "Y1"
+ ],
+ "long_horizon": false
+}

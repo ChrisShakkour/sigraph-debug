@@ -1,0 +1,67 @@
+{
+ "problem": "Prob133_2014_q3fsm",
+ "k": 19,
+ "op": "state_swap",
+ "category": "control",
+ "line": 23,
+ "old": "      S11: next = w ? S22 : S21;",
+ "new": "      S11: next = w ? S22 : S22;",
+ "note": "S21->S22",
+ "body_lines": 19,
+ "sequential": true,
+ "n_lines": 33,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 130,
+ "samples": 1414,
+ "t_fail": 110,
+ "out_first_mismatch": {
+  "z": 110
+ },
+ "out_mismatch_count": {
+  "z": 130
+ },
+ "valid": true,
+ "t_act": 90,
+ "cyc_act": 10,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   90,
+   9
+  ],
+  [
+   "state",
+   95,
+   10
+  ],
+  [
+   "z",
+   105,
+   11
+  ]
+ ],
+ "clk_edges": 707,
+ "cyc_fail": 11,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 9,
+ "bug_id": "bug202",
+ "split": "test",
+ "gt_line": 23,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

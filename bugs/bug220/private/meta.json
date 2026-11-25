@@ -1,0 +1,78 @@
+{
+ "problem": "Prob139_2013_q2bfsm",
+ "k": 0,
+ "op": "cond_invert",
+ "category": "state",
+ "line": 14,
+ "old": "    if (~resetn) state <= A;",
+ "new": "    if (!(~resetn)) state <= A;",
+ "note": "",
+ "body_lines": 21,
+ "sequential": true,
+ "n_lines": 36,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 551,
+ "samples": 1002,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "f": 10,
+  "g": 10
+ },
+ "out_mismatch_count": {
+  "f": 37,
+  "g": 516
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "f",
+  "g",
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "f",
+   5,
+   1
+  ],
+  [
+   "g",
+   5,
+   1
+  ],
+  [
+   "next",
+   5,
+   1
+  ],
+  [
+   "state",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 501,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "f",
+  "g"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug220",
+ "split": "test",
+ "gt_line": 14,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

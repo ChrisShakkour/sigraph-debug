@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob153_gshare_test.sv:161: $finish called at 5416 (1ps)
+Hint: Output 'predict_taken' has 195 mismatches. First mismatch occurred at time 220.
+Hint: Output 'predict_history' has 422 mismatches. First mismatch occurred at time 230.
+Hint: Total mismatched samples is 436 out of 1083 samples
+
+Simulation finished at 5416 ps
+Mismatches: 436 in 1083 samples

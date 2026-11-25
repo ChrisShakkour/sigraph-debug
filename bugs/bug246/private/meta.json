@@ -1,0 +1,96 @@
+{
+ "problem": "Prob149_ece241_2013_q4",
+ "k": 40,
+ "op": "state_swap",
+ "category": "control",
+ "line": 26,
+ "old": "      D1: next = s[2] ? D1 : C2;",
+ "new": "      D1: next = s[2] ? D1 : D1;",
+ "note": "C2->D1",
+ "body_lines": 28,
+ "sequential": true,
+ "n_lines": 44,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1781,
+ "samples": 2040,
+ "t_fail": 160,
+ "out_first_mismatch": {
+  "fr2": 200,
+  "fr1": 180,
+  "fr0": 160,
+  "dfr": 160
+ },
+ "out_mismatch_count": {
+  "fr2": 622,
+  "fr1": 1214,
+  "fr0": 1781,
+  "dfr": 1226
+ },
+ "valid": true,
+ "t_act": 145,
+ "cyc_act": 16,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   145,
+   15
+  ],
+  [
+   "dfr",
+   155,
+   16
+  ],
+  [
+   "fr",
+   155,
+   16
+  ],
+  [
+   "fr0",
+   155,
+   16
+  ],
+  [
+   "state",
+   155,
+   16
+  ],
+  [
+   "fr1",
+   175,
+   18
+  ],
+  [
+   "fr2",
+   195,
+   20
+  ]
+ ],
+ "clk_edges": 1020,
+ "cyc_fail": 16,
+ "failing_outputs": [
+  "fr0",
+  "dfr",
+  "fr1",
+  "fr2"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 15,
+ "bug_id": "bug246",
+ "split": "test",
+ "gt_line": 26,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

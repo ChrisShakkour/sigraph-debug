@@ -1,0 +1,57 @@
+{
+ "problem": "Prob066_edgecapture",
+ "k": 5,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 15,
+ "old": "      out <= out | (~in & d_last);",
+ "new": "      out <= out & (~in & d_last);",
+ "note": "",
+ "body_lines": 8,
+ "sequential": true,
+ "n_lines": 18,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 227,
+ "samples": 266,
+ "t_fail": 100,
+ "out_first_mismatch": {
+  "out": 100
+ },
+ "out_mismatch_count": {
+  "out": 227
+ },
+ "valid": true,
+ "t_act": 95,
+ "cyc_act": 10,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   95,
+   10
+  ]
+ ],
+ "clk_edges": 133,
+ "cyc_fail": 10,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 10,
+ "bug_id": "bug051",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

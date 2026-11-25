@@ -1,0 +1,75 @@
+{
+ "problem": "Prob154_fsm_ps2data",
+ "k": 6,
+ "op": "state_swap",
+ "category": "control",
+ "line": 20,
+ "old": "      DONE: next = in3 ? BYTE2 : BYTE1;",
+ "new": "      DONE: next = in3 ? BYTE3 : BYTE1;",
+ "note": "BYTE2->BYTE3",
+ "body_lines": 17,
+ "sequential": true,
+ "n_lines": 37,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 608,
+ "samples": 1619,
+ "t_fail": 230,
+ "out_first_mismatch": {
+  "out_bytes": 240,
+  "done": 230
+ },
+ "out_mismatch_count": {
+  "out_bytes": 276,
+  "done": 608
+ },
+ "valid": true,
+ "t_act": 205,
+ "cyc_act": 22,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   205,
+   21
+  ],
+  [
+   "state",
+   215,
+   22
+  ],
+  [
+   "done",
+   225,
+   23
+  ],
+  [
+   "out_bytes",
+   225,
+   23
+  ]
+ ],
+ "clk_edges": 810,
+ "cyc_fail": 23,
+ "failing_outputs": [
+  "done",
+  "out_bytes"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 21,
+ "bug_id": "bug262",
+ "split": "dev",
+ "gt_line": 20,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

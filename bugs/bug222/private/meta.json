@@ -1,0 +1,62 @@
+{
+ "problem": "Prob140_fsm_hdlc",
+ "k": 18,
+ "op": "state_swap",
+ "category": "control",
+ "line": 21,
+ "old": "      S2: state <= in ? S3 : S0;",
+ "new": "      S2: state <= in ? S3 : S1;",
+ "note": "S0->S1",
+ "body_lines": 20,
+ "sequential": true,
+ "n_lines": 35,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 6,
+ "samples": 801,
+ "t_fail": 1800,
+ "out_first_mismatch": {
+  "err": 1800
+ },
+ "out_mismatch_count": {
+  "err": 6
+ },
+ "valid": true,
+ "t_act": 545,
+ "cyc_act": 55,
+ "div_signals": [
+  "state"
+ ],
+ "div_order": [
+  [
+   "state",
+   545,
+   55
+  ],
+  [
+   "err",
+   1795,
+   180
+  ]
+ ],
+ "clk_edges": 401,
+ "cyc_fail": 180,
+ "failing_outputs": [
+  "err"
+ ],
+ "latency_cycles": 125,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 55,
+ "bug_id": "bug222",
+ "split": "test",
+ "gt_line": 21,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

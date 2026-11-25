@@ -1,0 +1,57 @@
+{
+ "problem": "Prob118_history_shift",
+ "k": 5,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 19,
+ "old": "      else if (predict_valid)",
+ "new": "      else if (!(predict_valid))",
+ "note": "",
+ "body_lines": 10,
+ "sequential": true,
+ "n_lines": 23,
+ "text_lhs": [
+  "predict_history"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1969,
+ "samples": 2055,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "predict_history": 30
+ },
+ "out_mismatch_count": {
+  "predict_history": 1969
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "predict_history"
+ ],
+ "div_order": [
+  [
+   "predict_history",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 1028,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "predict_history"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug163",
+ "split": "test",
+ "gt_line": 19,
+ "gt_signals": [
+  "predict_history"
+ ],
+ "long_horizon": false
+}

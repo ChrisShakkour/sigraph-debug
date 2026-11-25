@@ -1,0 +1,57 @@
+{
+ "problem": "Prob145_circuit8",
+ "k": 1,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 12,
+ "old": "    if (clock)",
+ "new": "    if (!(clock))",
+ "note": "",
+ "body_lines": 6,
+ "sequential": true,
+ "n_lines": 15,
+ "text_lhs": [
+  "p"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 113,
+ "samples": 240,
+ "t_fail": 75,
+ "out_first_mismatch": {
+  "p": 75
+ },
+ "out_mismatch_count": {
+  "p": 113
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 8,
+ "div_signals": [
+  "p"
+ ],
+ "div_order": [
+  [
+   "p",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 120,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "p"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug237",
+ "split": "test",
+ "gt_line": 12,
+ "gt_signals": [
+  "p"
+ ],
+ "long_horizon": false
+}

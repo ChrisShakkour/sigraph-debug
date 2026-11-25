@@ -1,0 +1,57 @@
+{
+ "problem": "Prob147_circuit10",
+ "k": 6,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 13,
+ "old": "  assign q = a^b^c;",
+ "new": "  assign q = a|b^c;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 6,
+ "samples": 232,
+ "t_fail": 70,
+ "out_first_mismatch": {
+  "q": 70
+ },
+ "out_mismatch_count": {
+  "q": 6
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 7,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 116,
+ "cyc_fail": 7,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug242",
+ "split": "test",
+ "gt_line": 13,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

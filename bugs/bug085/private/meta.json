@@ -1,0 +1,62 @@
+{
+ "problem": "Prob080_timer",
+ "k": 8,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 12,
+ "old": "    else if(count_value != 0) count_value <= count_value - 1;",
+ "new": "    else if(count_value != 0) count_value <= count_value - 0;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "count_value"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1824,
+ "samples": 7127,
+ "t_fail": 50,
+ "out_first_mismatch": {
+  "tc": 50
+ },
+ "out_mismatch_count": {
+  "tc": 1824
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "count_value"
+ ],
+ "div_order": [
+  [
+   "count_value",
+   25,
+   3
+  ],
+  [
+   "tc",
+   45,
+   5
+  ]
+ ],
+ "clk_edges": 3564,
+ "cyc_fail": 5,
+ "failing_outputs": [
+  "tc"
+ ],
+ "latency_cycles": 2,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug085",
+ "split": "test",
+ "gt_line": 12,
+ "gt_signals": [
+  "count_value"
+ ],
+ "long_horizon": false
+}

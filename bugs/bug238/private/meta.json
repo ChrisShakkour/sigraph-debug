@@ -1,0 +1,77 @@
+{
+ "problem": "Prob146_fsm_serialdata",
+ "k": 20,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 32,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 26,
+ "sequential": true,
+ "n_lines": 44,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 16,
+ "samples": 905,
+ "t_fail": 2220,
+ "out_first_mismatch": {
+  "out_byte": 2220,
+  "done": 2220
+ },
+ "out_mismatch_count": {
+  "out_byte": 12,
+  "done": 16
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 0,
+ "div_signals": [
+  "done",
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "done",
+   0,
+   0
+  ],
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   0,
+   0
+  ],
+  [
+   "out_byte",
+   2215,
+   222
+  ]
+ ],
+ "clk_edges": 453,
+ "cyc_fail": 222,
+ "failing_outputs": [
+  "out_byte",
+  "done"
+ ],
+ "latency_cycles": 222,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug238",
+ "split": "test",
+ "gt_line": 32,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

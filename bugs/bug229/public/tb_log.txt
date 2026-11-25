@@ -1,0 +1,10 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset doesn't seem to be working.
+<verilog-eval>/Prob142_lemmings2_test.sv:80: $finish called at 2206 (1ps)
+Hint: Output 'walk_left' has 90 mismatches. First mismatch occurred at time 5.
+Hint: Output 'walk_right' has 90 mismatches. First mismatch occurred at time 5.
+Hint: Output 'aaah' has no mismatches.
+Hint: Total mismatched samples is 90 out of 441 samples
+
+Simulation finished at 2206 ps
+Mismatches: 90 in 441 samples

@@ -1,0 +1,67 @@
+{
+ "problem": "Prob121_2014_q3bfsm",
+ "k": 17,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 22,
+ "old": "      E: next = x ? E : D;",
+ "new": "      E: next = x ? D : E;",
+ "note": "",
+ "body_lines": 16,
+ "sequential": true,
+ "n_lines": 29,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 458,
+ "samples": 1006,
+ "t_fail": 80,
+ "out_first_mismatch": {
+  "z": 80
+ },
+ "out_mismatch_count": {
+  "z": 458
+ },
+ "valid": true,
+ "t_act": 55,
+ "cyc_act": 7,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   55,
+   6
+  ],
+  [
+   "state",
+   65,
+   7
+  ],
+  [
+   "z",
+   75,
+   8
+  ]
+ ],
+ "clk_edges": 503,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 1,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 6,
+ "bug_id": "bug172",
+ "split": "test",
+ "gt_line": 22,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

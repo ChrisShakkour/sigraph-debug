@@ -1,0 +1,11 @@
+VCD info: dumpfile wave.vcd opened for output.
+TIMEOUT
+<verilog-eval>/Prob141_count_clock_test.sv:261: $finish called at 1000000 (1ps)
+Hint: Output 'pm' has 25916 mismatches. First mismatch occurred at time 391080.
+Hint: Output 'hh' has 167127 mismatches. First mismatch occurred at time 34680.
+Hint: Output 'mm' has 195747 mismatches. First mismatch occurred at time 2820.
+Hint: Output 'ss' has 196301 mismatches. First mismatch occurred at time 170.
+Hint: Total mismatched samples is 199613 out of 200000 samples
+
+Simulation finished at 1000000 ps
+Mismatches: 199613 in 200000 samples

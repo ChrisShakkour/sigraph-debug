@@ -1,0 +1,57 @@
+{
+ "problem": "Prob125_kmap3",
+ "k": 7,
+ "op": "const_pm1",
+ "category": "datapath",
+ "line": 17,
+ "old": "      4'h7: out = 0;",
+ "new": "      4'h7: out = 1;",
+ "note": "",
+ "body_lines": 21,
+ "sequential": false,
+ "n_lines": 30,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 13,
+ "samples": 232,
+ "t_fail": 80,
+ "out_first_mismatch": {
+  "out": 80
+ },
+ "out_mismatch_count": {
+  "out": 13
+ },
+ "valid": true,
+ "t_act": 75,
+ "cyc_act": 8,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   75,
+   8
+  ]
+ ],
+ "clk_edges": 116,
+ "cyc_fail": 8,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 8,
+ "bug_id": "bug182",
+ "split": "test",
+ "gt_line": 17,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

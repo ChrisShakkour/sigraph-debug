@@ -1,0 +1,57 @@
+{
+ "problem": "Prob089_ece241_2014_q5a",
+ "k": 17,
+ "op": "state_swap",
+ "category": "control",
+ "line": 22,
+ "old": "  assign z = (state == C);",
+ "new": "  assign z = (state == A);",
+ "note": "C->A",
+ "body_lines": 13,
+ "sequential": true,
+ "n_lines": 24,
+ "text_lhs": [
+  "z"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 246,
+ "samples": 436,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "z": 5
+ },
+ "out_mismatch_count": {
+  "z": 246
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "z"
+ ],
+ "div_order": [
+  [
+   "z",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 218,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug104",
+ "split": "dev",
+ "gt_line": 22,
+ "gt_signals": [
+  "z"
+ ],
+ "long_horizon": false
+}

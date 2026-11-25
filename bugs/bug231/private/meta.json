@@ -1,0 +1,57 @@
+{
+ "problem": "Prob143_fsm_onehot",
+ "k": 7,
+ "op": "drop_not",
+ "category": "control",
+ "line": 12,
+ "old": "  assign next_state[0] = !in && (|state[4:0] | state[7] | state[8] | state[9]);",
+ "new": "  assign next_state[0] = in && (|state[4:0] | state[7] | state[8] | state[9]);",
+ "note": "",
+ "body_lines": 13,
+ "sequential": false,
+ "n_lines": 23,
+ "text_lhs": [
+  "next_state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 172,
+ "samples": 224,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "next_state": 20
+ },
+ "out_mismatch_count": {
+  "next_state": 172
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "next_state"
+ ],
+ "div_order": [
+  [
+   "next_state",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 112,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "next_state"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug231",
+ "split": "test",
+ "gt_line": 12,
+ "gt_signals": [
+  "next_state"
+ ],
+ "long_horizon": false
+}

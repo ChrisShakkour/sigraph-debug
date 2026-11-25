@@ -1,0 +1,57 @@
+{
+ "problem": "Prob056_ece241_2013_q7",
+ "k": 2,
+ "op": "drop_not",
+ "category": "datapath",
+ "line": 9,
+ "old": "    Q <= j&~Q | ~k&Q;",
+ "new": "    Q <= j&Q | ~k&Q;",
+ "note": "",
+ "body_lines": 3,
+ "sequential": true,
+ "n_lines": 11,
+ "text_lhs": [
+  "Q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 189,
+ "samples": 422,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "Q": 40
+ },
+ "out_mismatch_count": {
+  "Q": 189
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 4,
+ "div_signals": [
+  "Q"
+ ],
+ "div_order": [
+  [
+   "Q",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 211,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "Q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug039",
+ "split": "test",
+ "gt_line": 9,
+ "gt_signals": [
+  "Q"
+ ],
+ "long_horizon": false
+}

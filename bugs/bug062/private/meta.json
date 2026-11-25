@@ -1,0 +1,57 @@
+{
+ "problem": "Prob070_ece241_2013_q2",
+ "k": 19,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 15,
+ "old": "  assign out_pos = (pos0 == pos1) ? pos0 : 1'bx;",
+ "new": "  assign out_pos = (pos0 == pos1) ? 1'bx : pos0;",
+ "note": "",
+ "body_lines": 5,
+ "sequential": false,
+ "n_lines": 17,
+ "text_lhs": [
+  "out_pos"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 103,
+ "samples": 107,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "out_pos": 10
+ },
+ "out_mismatch_count": {
+  "out_pos": 103
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "out_pos"
+ ],
+ "div_order": [
+  [
+   "out_pos",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 54,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out_pos"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug062",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "out_pos"
+ ],
+ "long_horizon": false
+}

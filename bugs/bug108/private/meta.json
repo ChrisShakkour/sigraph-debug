@@ -1,0 +1,57 @@
+{
+ "problem": "Prob094_gatesv",
+ "k": 0,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 8,
+ "old": "  assign out_both[2:0] = in[2:0] & in[3:1];",
+ "new": "  assign out_both[2:0] = in[2:0] | in[3:1];",
+ "note": "",
+ "body_lines": 6,
+ "sequential": false,
+ "n_lines": 15,
+ "text_lhs": [
+  "out_both"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 195,
+ "samples": 213,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "out_both": 5
+ },
+ "out_mismatch_count": {
+  "out_both": 195
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "out_both"
+ ],
+ "div_order": [
+  [
+   "out_both",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 107,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out_both"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug108",
+ "split": "dev",
+ "gt_line": 8,
+ "gt_signals": [
+  "out_both"
+ ],
+ "long_horizon": false
+}

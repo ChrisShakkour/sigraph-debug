@@ -1,0 +1,57 @@
+{
+ "problem": "Prob060_m2014_q4k",
+ "k": 4,
+ "op": "index_shift",
+ "category": "datapath",
+ "line": 16,
+ "old": "  assign out = sr[3];",
+ "new": "  assign out = sr[2];",
+ "note": "",
+ "body_lines": 8,
+ "sequential": true,
+ "n_lines": 18,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 100,
+ "samples": 299,
+ "t_fail": 50,
+ "out_first_mismatch": {
+  "out": 50
+ },
+ "out_mismatch_count": {
+  "out": 100
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 5,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 150,
+ "cyc_fail": 5,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug043",
+ "split": "test",
+ "gt_line": 16,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

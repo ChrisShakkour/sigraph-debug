@@ -1,0 +1,57 @@
+{
+ "problem": "Prob150_review2015_fsmonehot",
+ "k": 2,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 19,
+ "old": "  assign S_next = state[S]&~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack;",
+ "new": "  assign S_next = state[S]|~d | state[S1]&~d | state[S110]&~d | state[Wait]&ack;",
+ "note": "",
+ "body_lines": 9,
+ "sequential": false,
+ "n_lines": 28,
+ "text_lhs": [
+  "S_next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 96,
+ "samples": 300,
+ "t_fail": 5,
+ "out_first_mismatch": {
+  "S_next": 5
+ },
+ "out_mismatch_count": {
+  "S_next": 96
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 1,
+ "div_signals": [
+  "S_next"
+ ],
+ "div_order": [
+  [
+   "S_next",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 150,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "S_next"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug250",
+ "split": "test",
+ "gt_line": 19,
+ "gt_signals": [
+  "S_next"
+ ],
+ "long_horizon": false
+}

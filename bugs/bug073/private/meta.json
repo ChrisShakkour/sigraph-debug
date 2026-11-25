@@ -1,0 +1,57 @@
+{
+ "problem": "Prob075_counter_2bc",
+ "k": 19,
+ "op": "rel_op",
+ "category": "datapath",
+ "line": 15,
+ "old": "      else if(state > 0 && !train_taken)",
+ "new": "      else if(state < 0 && !train_taken)",
+ "note": "",
+ "body_lines": 11,
+ "sequential": true,
+ "n_lines": 20,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 792,
+ "samples": 1051,
+ "t_fail": 200,
+ "out_first_mismatch": {
+  "state": 200
+ },
+ "out_mismatch_count": {
+  "state": 792
+ },
+ "valid": true,
+ "t_act": 195,
+ "cyc_act": 20,
+ "div_signals": [
+  "state"
+ ],
+ "div_order": [
+  [
+   "state",
+   195,
+   20
+  ]
+ ],
+ "clk_edges": 526,
+ "cyc_fail": 20,
+ "failing_outputs": [
+  "state"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 20,
+ "bug_id": "bug073",
+ "split": "test",
+ "gt_line": 15,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": false
+}

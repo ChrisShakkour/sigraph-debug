@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob068_countbcd_test.sv:68: $finish called at 199026 (1ps)
+Hint: Output 'ena' has 3972 mismatches. First mismatch occurred at time 160.
+Hint: Output 'q' has 39774 mismatches. First mismatch occurred at time 30.
+Hint: Total mismatched samples is 39774 out of 39805 samples
+
+Simulation finished at 199026 ps
+Mismatches: 39774 in 39805 samples

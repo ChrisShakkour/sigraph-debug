@@ -1,0 +1,63 @@
+{
+ "problem": "Prob082_lfsr32",
+ "k": 11,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 16,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 23,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": true,
+ "mismatches": 21,
+ "samples": 200000,
+ "t_fail": 935,
+ "out_first_mismatch": {
+  "q": 935
+ },
+ "out_mismatch_count": {
+  "q": 21
+ },
+ "valid": true,
+ "t_act": 165,
+ "cyc_act": 17,
+ "div_signals": [
+  "q",
+  "q_next"
+ ],
+ "div_order": [
+  [
+   "q",
+   165,
+   17
+  ],
+  [
+   "q_next",
+   165,
+   17
+  ]
+ ],
+ "clk_edges": 100000,
+ "cyc_fail": 94,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 77,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 17,
+ "bug_id": "bug086",
+ "split": "dev",
+ "gt_line": 16,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": true
+}

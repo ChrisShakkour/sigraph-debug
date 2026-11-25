@@ -1,0 +1,69 @@
+{
+ "problem": "Prob137_fsm_serial",
+ "k": 20,
+ "op": "sync_to_async",
+ "category": "state",
+ "line": 29,
+ "old": "  always @(posedge clk) begin",
+ "new": "  always @(posedge clk, posedge reset) begin",
+ "note": "",
+ "body_lines": 22,
+ "sequential": true,
+ "n_lines": 36,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 16,
+ "samples": 905,
+ "t_fail": 2220,
+ "out_first_mismatch": {
+  "done": 2220
+ },
+ "out_mismatch_count": {
+  "done": 16
+ },
+ "valid": true,
+ "t_act": 0,
+ "cyc_act": 0,
+ "div_signals": [
+  "done",
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "done",
+   0,
+   0
+  ],
+  [
+   "next",
+   0,
+   0
+  ],
+  [
+   "state",
+   0,
+   0
+  ]
+ ],
+ "clk_edges": 453,
+ "cyc_fail": 222,
+ "failing_outputs": [
+  "done"
+ ],
+ "latency_cycles": 222,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 0,
+ "bug_id": "bug213",
+ "split": "dev",
+ "gt_line": 29,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

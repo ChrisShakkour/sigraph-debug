@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob137_fsm_serial_test.sv:45: $finish called at 4526 (1ps)
+Hint: Output 'done' has 16 mismatches. First mismatch occurred at time 2220.
+Hint: Total mismatched samples is 16 out of 905 samples
+
+Simulation finished at 4526 ps
+Mismatches: 16 in 905 samples

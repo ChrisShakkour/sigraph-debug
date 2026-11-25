@@ -1,0 +1,57 @@
+{
+ "problem": "Prob107_fsm1s",
+ "k": 6,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 24,
+ "old": "  assign out = (state==B);",
+ "new": "  assign out = (state!=B);",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 26,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 229,
+ "samples": 230,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "out": 10
+ },
+ "out_mismatch_count": {
+  "out": 229
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 115,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug131",
+ "split": "test",
+ "gt_line": 24,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

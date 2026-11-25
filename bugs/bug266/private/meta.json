@@ -1,0 +1,80 @@
+{
+ "problem": "Prob155_lemmings4",
+ "k": 59,
+ "op": "const_pm1",
+ "category": "state",
+ "line": 50,
+ "old": "      fall_counter <= 0;",
+ "new": "      fall_counter <= 1;",
+ "note": "",
+ "body_lines": 35,
+ "sequential": true,
+ "n_lines": 58,
+ "text_lhs": [
+  "fall_counter"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 44,
+ "samples": 1003,
+ "t_fail": 360,
+ "out_first_mismatch": {
+  "walk_left": 360,
+  "aaah": 370
+ },
+ "out_mismatch_count": {
+  "walk_left": 2,
+  "aaah": 42
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "fall_counter"
+ ],
+ "div_order": [
+  [
+   "fall_counter",
+   5,
+   1
+  ],
+  [
+   "next",
+   345,
+   35
+  ],
+  [
+   "state",
+   355,
+   36
+  ],
+  [
+   "walk_left",
+   355,
+   36
+  ],
+  [
+   "aaah",
+   365,
+   37
+  ]
+ ],
+ "clk_edges": 502,
+ "cyc_fail": 36,
+ "failing_outputs": [
+  "walk_left",
+  "aaah"
+ ],
+ "latency_cycles": 35,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug266",
+ "split": "test",
+ "gt_line": 50,
+ "gt_signals": [
+  "fall_counter"
+ ],
+ "long_horizon": true
+}

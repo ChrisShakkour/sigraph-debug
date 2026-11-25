@@ -1,0 +1,67 @@
+{
+ "problem": "Prob110_fsm2",
+ "k": 1,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 16,
+ "old": "      B: next = k ? A : B;",
+ "new": "      B: next = k ? B : A;",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 27,
+ "text_lhs": [
+  "next"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 64,
+ "samples": 241,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "out": 30
+ },
+ "out_mismatch_count": {
+  "out": 64
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 3,
+ "div_signals": [
+  "next"
+ ],
+ "div_order": [
+  [
+   "next",
+   15,
+   2
+  ],
+  [
+   "out",
+   25,
+   3
+  ],
+  [
+   "state",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 121,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug139",
+ "split": "dev",
+ "gt_line": 16,
+ "gt_signals": [
+  "next"
+ ],
+ "long_horizon": false
+}

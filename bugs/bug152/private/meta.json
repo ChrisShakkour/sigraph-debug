@@ -1,0 +1,57 @@
+{
+ "problem": "Prob115_shift18",
+ "k": 2,
+ "op": "cond_invert",
+ "category": "control",
+ "line": 13,
+ "old": "    else if (ena) case (amount)",
+ "new": "    else if (!(ena)) case (amount)",
+ "note": "",
+ "body_lines": 12,
+ "sequential": true,
+ "n_lines": 22,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 3736,
+ "samples": 4041,
+ "t_fail": 30,
+ "out_first_mismatch": {
+  "q": 30
+ },
+ "out_mismatch_count": {
+  "q": 3736
+ },
+ "valid": true,
+ "t_act": 25,
+ "cyc_act": 3,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   25,
+   3
+  ]
+ ],
+ "clk_edges": 2021,
+ "cyc_fail": 3,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 3,
+ "bug_id": "bug152",
+ "split": "test",
+ "gt_line": 13,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

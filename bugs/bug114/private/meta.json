@@ -1,0 +1,68 @@
+{
+ "problem": "Prob096_review2015_fsmseq",
+ "k": 16,
+ "op": "state_swap",
+ "category": "state",
+ "line": 23,
+ "old": "    if (reset) state <= S;",
+ "new": "    if (reset) state <= S1;",
+ "note": "S->S1",
+ "body_lines": 14,
+ "sequential": true,
+ "n_lines": 28,
+ "text_lhs": [
+  "state"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 22,
+ "samples": 643,
+ "t_fail": 2750,
+ "out_first_mismatch": {
+  "start_shifting": 2750
+ },
+ "out_mismatch_count": {
+  "start_shifting": 22
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "next",
+  "state"
+ ],
+ "div_order": [
+  [
+   "next",
+   5,
+   1
+  ],
+  [
+   "state",
+   5,
+   1
+  ],
+  [
+   "start_shifting",
+   2745,
+   275
+  ]
+ ],
+ "clk_edges": 322,
+ "cyc_fail": 275,
+ "failing_outputs": [
+  "start_shifting"
+ ],
+ "latency_cycles": 274,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug114",
+ "split": "test",
+ "gt_line": 23,
+ "gt_signals": [
+  "state"
+ ],
+ "long_horizon": true
+}

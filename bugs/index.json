@@ -1,0 +1,5171 @@
+[
+ {
+  "bug_id": "bug001",
+  "problem": "Prob028_m2014_q4a",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 48,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug002",
+  "problem": "Prob030_popcount255",
+  "split": "test",
+  "op": "arith_op",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 204,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug003",
+  "problem": "Prob030_popcount255",
+  "split": "test",
+  "op": "rel_op",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 215,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug004",
+  "problem": "Prob030_popcount255",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 7,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 215,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug005",
+  "problem": "Prob034_dff8",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 1,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug006",
+  "problem": "Prob035_count1to10",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 438,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug007",
+  "problem": "Prob035_count1to10",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 386,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug008",
+  "problem": "Prob035_count1to10",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 420,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug009",
+  "problem": "Prob037_review2015_count1k",
+  "split": "test",
+  "op": "logic_op",
+  "category": "control",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 8026,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug010",
+  "problem": "Prob037_review2015_count1k",
+  "split": "test",
+  "op": "arith_op",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 8000,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug011",
+  "problem": "Prob037_review2015_count1k",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 8026,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug012",
+  "problem": "Prob038_count15",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 398,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug013",
+  "problem": "Prob038_count15",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 382,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug014",
+  "problem": "Prob038_count15",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 7,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 7,
+  "long_horizon": false,
+  "mismatches": 185,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug015",
+  "problem": "Prob040_count10",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 386,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug016",
+  "problem": "Prob040_count10",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 398,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug017",
+  "problem": "Prob040_count10",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 420,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug018",
+  "problem": "Prob041_dff8r",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 46,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug019",
+  "problem": "Prob041_dff8r",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 6,
+  "long_horizon": false,
+  "mismatches": 41,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug020",
+  "problem": "Prob041_dff8r",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 431,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug021",
+  "problem": "Prob045_edgedetect2",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "anyedge"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 181,
+  "failing_outputs": [
+   "anyedge"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug022",
+  "problem": "Prob045_edgedetect2",
+  "split": "test",
+  "op": "nb_to_b",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "d_last"
+  ],
+  "latency_cycles": 3,
+  "long_horizon": false,
+  "mismatches": 205,
+  "failing_outputs": [
+   "anyedge"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug023",
+  "problem": "Prob046_dff8p",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 34,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug024",
+  "problem": "Prob046_dff8p",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 434,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug025",
+  "problem": "Prob047_dff8ar",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 436,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug026",
+  "problem": "Prob047_dff8ar",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 94,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug027",
+  "problem": "Prob047_dff8ar",
+  "split": "test",
+  "op": "async_to_sync",
+  "category": "state",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 44,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug028",
+  "problem": "Prob048_m2014_q4c",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 53,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug029",
+  "problem": "Prob048_m2014_q4c",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 45,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug030",
+  "problem": "Prob049_m2014_q4b",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 40,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug031",
+  "problem": "Prob049_m2014_q4b",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 82,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug032",
+  "problem": "Prob049_m2014_q4b",
+  "split": "test",
+  "op": "async_to_sync",
+  "category": "state",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 17,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug033",
+  "problem": "Prob053_m2014_q4d",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 1,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug034",
+  "problem": "Prob054_edgedetect",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "pedge"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 226,
+  "failing_outputs": [
+   "pedge"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug035",
+  "problem": "Prob054_edgedetect",
+  "split": "test",
+  "op": "nb_to_b",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "d_last"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 182,
+  "failing_outputs": [
+   "pedge"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug036",
+  "problem": "Prob055_conditional",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "min"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 112,
+  "failing_outputs": [
+   "min"
+  ],
+  "sequential": false,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug037",
+  "problem": "Prob055_conditional",
+  "split": "dev",
+  "op": "rel_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "min"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 59,
+  "failing_outputs": [
+   "min"
+  ],
+  "sequential": false,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug038",
+  "problem": "Prob055_conditional",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "min"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 93,
+  "failing_outputs": [
+   "min"
+  ],
+  "sequential": false,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug039",
+  "problem": "Prob056_ece241_2013_q7",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "Q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 189,
+  "failing_outputs": [
+   "Q"
+  ],
+  "sequential": true,
+  "body_lines": 3
+ },
+ {
+  "bug_id": "bug040",
+  "problem": "Prob058_alwaysblock2",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "out_always_comb"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 48,
+  "failing_outputs": [
+   "out_always_comb"
+  ],
+  "sequential": true,
+  "body_lines": 4
+ },
+ {
+  "bug_id": "bug041",
+  "problem": "Prob058_alwaysblock2",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "out_assign"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 48,
+  "failing_outputs": [
+   "out_assign"
+  ],
+  "sequential": true,
+  "body_lines": 4
+ },
+ {
+  "bug_id": "bug042",
+  "problem": "Prob058_alwaysblock2",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "out_always_ff"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 54,
+  "failing_outputs": [
+   "out_always_ff"
+  ],
+  "sequential": true,
+  "body_lines": 4
+ },
+ {
+  "bug_id": "bug043",
+  "problem": "Prob060_m2014_q4k",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 100,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug044",
+  "problem": "Prob060_m2014_q4k",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "sr"
+  ],
+  "latency_cycles": 4,
+  "long_horizon": false,
+  "mismatches": 84,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug045",
+  "problem": "Prob061_2014_q4a",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "Q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 56,
+  "failing_outputs": [
+   "Q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug046",
+  "problem": "Prob061_2014_q4a",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 11,
+  "gt_signals": [
+   "Q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 113,
+  "failing_outputs": [
+   "Q"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug047",
+  "problem": "Prob063_review2015_shiftcount",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1764,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug048",
+  "problem": "Prob063_review2015_shiftcount",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1758,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug049",
+  "problem": "Prob063_review2015_shiftcount",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1946,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug050",
+  "problem": "Prob066_edgecapture",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "d_last"
+  ],
+  "latency_cycles": 10,
+  "long_horizon": true,
+  "mismatches": 100,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug051",
+  "problem": "Prob066_edgecapture",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 227,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug052",
+  "problem": "Prob066_edgecapture",
+  "split": "test",
+  "op": "nb_to_b",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "d_last"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 227,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug053",
+  "problem": "Prob067_countslow",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 426,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug054",
+  "problem": "Prob067_countslow",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 170,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug055",
+  "problem": "Prob067_countslow",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 498,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug056",
+  "problem": "Prob068_countbcd",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 39774,
+  "failing_outputs": [
+   "q",
+   "ena"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug057",
+  "problem": "Prob068_countbcd",
+  "split": "test",
+  "op": "rel_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 39804,
+  "failing_outputs": [
+   "ena",
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug058",
+  "problem": "Prob068_countbcd",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 15,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 39774,
+  "failing_outputs": [
+   "q",
+   "ena"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug059",
+  "problem": "Prob069_truthtable1",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug060",
+  "problem": "Prob069_truthtable1",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug061",
+  "problem": "Prob069_truthtable1",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug062",
+  "problem": "Prob070_ece241_2013_q2",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "out_pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 103,
+  "failing_outputs": [
+   "out_pos"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug063",
+  "problem": "Prob070_ece241_2013_q2",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "pos0"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 24,
+  "failing_outputs": [
+   "out_pos"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug064",
+  "problem": "Prob070_ece241_2013_q2",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "out_sop"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 43,
+  "failing_outputs": [
+   "out_sop"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug065",
+  "problem": "Prob071_always_casez",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug066",
+  "problem": "Prob071_always_casez",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 169,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug067",
+  "problem": "Prob071_always_casez",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug068",
+  "problem": "Prob073_dff16e",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 432,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug069",
+  "problem": "Prob073_dff16e",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 170,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug070",
+  "problem": "Prob073_dff16e",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 442,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug071",
+  "problem": "Prob074_ece241_2014_q4",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "s"
+  ],
+  "latency_cycles": 18,
+  "long_horizon": true,
+  "mismatches": 16,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug072",
+  "problem": "Prob075_counter_2bc",
+  "split": "test",
+  "op": "drop_term",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 666,
+  "failing_outputs": [
+   "state"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug073",
+  "problem": "Prob075_counter_2bc",
+  "split": "test",
+  "op": "rel_op",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 792,
+  "failing_outputs": [
+   "state"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug074",
+  "problem": "Prob075_counter_2bc",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 21,
+  "failing_outputs": [
+   "state"
+  ],
+  "sequential": true,
+  "body_lines": 11
+ },
+ {
+  "bug_id": "bug075",
+  "problem": "Prob076_always_case",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 20,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 28,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug076",
+  "problem": "Prob077_wire_decl",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "w2"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 51,
+  "failing_outputs": [
+   "out",
+   "out_n"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug077",
+  "problem": "Prob077_wire_decl",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 46,
+  "failing_outputs": [
+   "out",
+   "out_n"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug078",
+  "problem": "Prob077_wire_decl",
+  "split": "dev",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "out_n"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 122,
+  "failing_outputs": [
+   "out_n"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug079",
+  "problem": "Prob078_dualedge",
+  "split": "dev",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 93,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 7
+ },
+ {
+  "bug_id": "bug080",
+  "problem": "Prob079_fsm3onehot",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 11,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 18,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug081",
+  "problem": "Prob079_fsm3onehot",
+  "split": "dev",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 101,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug082",
+  "problem": "Prob079_fsm3onehot",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 89,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug083",
+  "problem": "Prob080_timer",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 11,
+  "gt_signals": [
+   "count_value"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4114,
+  "failing_outputs": [
+   "tc"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug084",
+  "problem": "Prob080_timer",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "tc"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2160,
+  "failing_outputs": [
+   "tc"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug085",
+  "problem": "Prob080_timer",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "count_value"
+  ],
+  "latency_cycles": 2,
+  "long_horizon": false,
+  "mismatches": 1824,
+  "failing_outputs": [
+   "tc"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug086",
+  "problem": "Prob082_lfsr32",
+  "split": "dev",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 16,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 77,
+  "long_horizon": true,
+  "mismatches": 21,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug087",
+  "problem": "Prob082_lfsr32",
+  "split": "dev",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 199953,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug088",
+  "problem": "Prob082_lfsr32",
+  "split": "dev",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "q_next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 199953,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug089",
+  "problem": "Prob084_ece241_2013_q12",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 292,
+  "failing_outputs": [
+   "Z"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug090",
+  "problem": "Prob085_shift4",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 133,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug091",
+  "problem": "Prob085_shift4",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 90,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug092",
+  "problem": "Prob085_shift4",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 369,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug093",
+  "problem": "Prob086_lfsr5",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "q_next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4238,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug094",
+  "problem": "Prob086_lfsr5",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 14,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 7,
+  "long_horizon": false,
+  "mismatches": 26,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug095",
+  "problem": "Prob086_lfsr5",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3732,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug096",
+  "problem": "Prob087_gates",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "out_or"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 121,
+  "failing_outputs": [
+   "out_or"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug097",
+  "problem": "Prob087_gates",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "out_nand"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 121,
+  "failing_outputs": [
+   "out_nand"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug098",
+  "problem": "Prob087_gates",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 19,
+  "gt_signals": [
+   "out_anotb"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 87,
+  "failing_outputs": [
+   "out_anotb"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug099",
+  "problem": "Prob088_ece241_2014_q5b",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 21,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 231,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug100",
+  "problem": "Prob088_ece241_2014_q5b",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 410,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug101",
+  "problem": "Prob088_ece241_2014_q5b",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 28,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug102",
+  "problem": "Prob089_ece241_2014_q5a",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 10,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug103",
+  "problem": "Prob089_ece241_2014_q5a",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 220,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug104",
+  "problem": "Prob089_ece241_2014_q5a",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 22,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 246,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug105",
+  "problem": "Prob093_ece241_2014_q3",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "mux_in"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 38,
+  "failing_outputs": [
+   "mux_in"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug106",
+  "problem": "Prob093_ece241_2014_q3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "mux_in"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 60,
+  "failing_outputs": [
+   "mux_in"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug107",
+  "problem": "Prob093_ece241_2014_q3",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "mux_in"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 60,
+  "failing_outputs": [
+   "mux_in"
+  ],
+  "sequential": false,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug108",
+  "problem": "Prob094_gatesv",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "out_both"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 195,
+  "failing_outputs": [
+   "out_both"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug109",
+  "problem": "Prob094_gatesv",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "out_different"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 135,
+  "failing_outputs": [
+   "out_different"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug110",
+  "problem": "Prob094_gatesv",
+  "split": "dev",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "out_any"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 195,
+  "failing_outputs": [
+   "out_any"
+  ],
+  "sequential": false,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug111",
+  "problem": "Prob095_review2015_fsmshift",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 22,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 37,
+  "long_horizon": true,
+  "mismatches": 123,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug112",
+  "problem": "Prob095_review2015_fsmshift",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 2,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug113",
+  "problem": "Prob095_review2015_fsmshift",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 25,
+  "gt_signals": [
+   "shift_ena"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 125,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug114",
+  "problem": "Prob096_review2015_fsmseq",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 23,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 274,
+  "long_horizon": true,
+  "mismatches": 22,
+  "failing_outputs": [
+   "start_shifting"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug115",
+  "problem": "Prob096_review2015_fsmseq",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 166,
+  "long_horizon": true,
+  "mismatches": 72,
+  "failing_outputs": [
+   "start_shifting"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug116",
+  "problem": "Prob096_review2015_fsmseq",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 74,
+  "long_horizon": true,
+  "mismatches": 30,
+  "failing_outputs": [
+   "start_shifting"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug117",
+  "problem": "Prob098_circuit7",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 120,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 3
+ },
+ {
+  "bug_id": "bug118",
+  "problem": "Prob100_fsm3comb",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 13,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug119",
+  "problem": "Prob100_fsm3comb",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 9,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug120",
+  "problem": "Prob100_fsm3comb",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug121",
+  "problem": "Prob104_mt2015_muxdff",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 11,
+  "gt_signals": [
+   "Q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 116,
+  "failing_outputs": [
+   "Q"
+  ],
+  "sequential": true,
+  "body_lines": 4
+ },
+ {
+  "bug_id": "bug122",
+  "problem": "Prob104_mt2015_muxdff",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 9,
+  "gt_signals": [
+   "Q"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 1,
+  "failing_outputs": [
+   "Q"
+  ],
+  "sequential": true,
+  "body_lines": 4
+ },
+ {
+  "bug_id": "bug123",
+  "problem": "Prob105_rotate100",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3798,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug124",
+  "problem": "Prob105_rotate100",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3194,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug125",
+  "problem": "Prob105_rotate100",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 14,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3496,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug126",
+  "problem": "Prob106_always_nolatches",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "down"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2,
+  "failing_outputs": [
+   "down"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug127",
+  "problem": "Prob106_always_nolatches",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "right"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2,
+  "failing_outputs": [
+   "right"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug128",
+  "problem": "Prob106_always_nolatches",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "left"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 30015,
+  "failing_outputs": [
+   "right"
+  ],
+  "sequential": false,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug129",
+  "problem": "Prob107_fsm1s",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 19,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 9,
+  "long_horizon": true,
+  "mismatches": 57,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug130",
+  "problem": "Prob107_fsm1s",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 118,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug131",
+  "problem": "Prob107_fsm1s",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 24,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 229,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug132",
+  "problem": "Prob108_rule90",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 7120,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug133",
+  "problem": "Prob108_rule90",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 7028,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug134",
+  "problem": "Prob109_fsm1",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 24,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 228,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug135",
+  "problem": "Prob109_fsm1",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 20,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 125,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug136",
+  "problem": "Prob109_fsm1",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 79,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug137",
+  "problem": "Prob110_fsm2",
+  "split": "dev",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 94,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug138",
+  "problem": "Prob110_fsm2",
+  "split": "dev",
+  "op": "async_to_sync",
+  "category": "state",
+  "gt_line": 20,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 22,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug139",
+  "problem": "Prob110_fsm2",
+  "split": "dev",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 16,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 64,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug140",
+  "problem": "Prob111_fsm2s",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 20,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 8,
+  "long_horizon": true,
+  "mismatches": 21,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug141",
+  "problem": "Prob111_fsm2s",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 16,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 82,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug142",
+  "problem": "Prob111_fsm2s",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 104,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug143",
+  "problem": "Prob112_always_case2",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 8,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug144",
+  "problem": "Prob112_always_case2",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug145",
+  "problem": "Prob112_always_case2",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 21,
+  "gt_signals": [
+   "pos"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 12,
+  "failing_outputs": [
+   "pos"
+  ],
+  "sequential": false,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug146",
+  "problem": "Prob113_2012_q1g",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug147",
+  "problem": "Prob113_2012_q1g",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 17,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 7,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug148",
+  "problem": "Prob113_2012_q1g",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 22,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug149",
+  "problem": "Prob114_bugs_case",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 7,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug150",
+  "problem": "Prob114_bugs_case",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug151",
+  "problem": "Prob114_bugs_case",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 19,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug152",
+  "problem": "Prob115_shift18",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3736,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug153",
+  "problem": "Prob115_shift18",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 410,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug154",
+  "problem": "Prob115_shift18",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 15,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 3050,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug155",
+  "problem": "Prob116_m2014_q3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 22,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug156",
+  "problem": "Prob116_m2014_q3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug157",
+  "problem": "Prob116_m2014_q3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 19,
+  "gt_signals": [
+   "f"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "f"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug158",
+  "problem": "Prob117_circuit9",
+  "split": "dev",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 10,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 186,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug159",
+  "problem": "Prob117_circuit9",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 244,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug160",
+  "problem": "Prob117_circuit9",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 8,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 220,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug161",
+  "problem": "Prob118_history_shift",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 17,
+  "gt_signals": [
+   "predict_history"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2039,
+  "failing_outputs": [
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug162",
+  "problem": "Prob118_history_shift",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 14,
+  "gt_signals": [
+   "predict_history"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2048,
+  "failing_outputs": [
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug163",
+  "problem": "Prob118_history_shift",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "predict_history"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1969,
+  "failing_outputs": [
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 10
+ },
+ {
+  "bug_id": "bug164",
+  "problem": "Prob119_fsm3",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 40,
+  "long_horizon": true,
+  "mismatches": 4,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug165",
+  "problem": "Prob119_fsm3",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 22,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 32,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug166",
+  "problem": "Prob119_fsm3",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 17,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 23,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug167",
+  "problem": "Prob120_fsm3s",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 16,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 9,
+  "long_horizon": true,
+  "mismatches": 4,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug168",
+  "problem": "Prob120_fsm3s",
+  "split": "dev",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 21,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 7,
+  "long_horizon": false,
+  "mismatches": 3,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug169",
+  "problem": "Prob120_fsm3s",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 15,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 28,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug170",
+  "problem": "Prob121_2014_q3bfsm",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 20,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 9,
+  "long_horizon": true,
+  "mismatches": 136,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug171",
+  "problem": "Prob121_2014_q3bfsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 4,
+  "long_horizon": false,
+  "mismatches": 30,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug172",
+  "problem": "Prob121_2014_q3bfsm",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 22,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 458,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug173",
+  "problem": "Prob122_kmap4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 24,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 19,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug174",
+  "problem": "Prob122_kmap4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 25,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 22,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug175",
+  "problem": "Prob122_kmap4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 10,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug176",
+  "problem": "Prob123_bugs_addsubz",
+  "split": "dev",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "result_is_zero"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 118,
+  "failing_outputs": [
+   "result_is_zero"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug177",
+  "problem": "Prob123_bugs_addsubz",
+  "split": "dev",
+  "op": "arith_op",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 61,
+  "failing_outputs": [
+   "out",
+   "result_is_zero"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug178",
+  "problem": "Prob123_bugs_addsubz",
+  "split": "dev",
+  "op": "arith_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 56,
+  "failing_outputs": [
+   "out",
+   "result_is_zero"
+  ],
+  "sequential": false,
+  "body_lines": 8
+ },
+ {
+  "bug_id": "bug179",
+  "problem": "Prob124_rule110",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 9,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6282,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug180",
+  "problem": "Prob124_rule110",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6220,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug181",
+  "problem": "Prob124_rule110",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 13,
+  "gt_signals": [],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 2018,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug182",
+  "problem": "Prob125_kmap3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 17,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 13,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug183",
+  "problem": "Prob125_kmap3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 9,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug184",
+  "problem": "Prob125_kmap3",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "out"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 23,
+  "failing_outputs": [
+   "out"
+  ],
+  "sequential": false,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug185",
+  "problem": "Prob126_circuit6",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 15,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 12,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": false,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug186",
+  "problem": "Prob126_circuit6",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 9,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": false,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug187",
+  "problem": "Prob126_circuit6",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 22,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": false,
+  "body_lines": 12
+ },
+ {
+  "bug_id": "bug188",
+  "problem": "Prob127_lemmings1",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 16,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 75,
+  "failing_outputs": [
+   "walk_left",
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug189",
+  "problem": "Prob127_lemmings1",
+  "split": "test",
+  "op": "async_to_sync",
+  "category": "state",
+  "gt_line": 21,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 7,
+  "failing_outputs": [
+   "walk_left",
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug190",
+  "problem": "Prob127_lemmings1",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 27,
+  "gt_signals": [
+   "walk_right"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 229,
+  "failing_outputs": [
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug191",
+  "problem": "Prob128_fsm_ps2",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 23,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 77,
+  "long_horizon": true,
+  "mismatches": 1,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug192",
+  "problem": "Prob128_fsm_ps2",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 94,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug193",
+  "problem": "Prob128_fsm_ps2",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 16,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 2,
+  "long_horizon": false,
+  "mismatches": 143,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 14
+ },
+ {
+  "bug_id": "bug194",
+  "problem": "Prob129_ece241_2013_q8",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 63,
+  "long_horizon": true,
+  "mismatches": 10,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug195",
+  "problem": "Prob129_ece241_2013_q8",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 28,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 144,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug196",
+  "problem": "Prob129_ece241_2013_q8",
+  "split": "test",
+  "op": "drop_not",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 49,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug197",
+  "problem": "Prob130_circuit5",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 96,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": false,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug198",
+  "problem": "Prob132_always_if2",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 10,
+  "gt_signals": [
+   "shut_off_computer"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 116,
+  "failing_outputs": [
+   "shut_off_computer"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug199",
+  "problem": "Prob132_always_if2",
+  "split": "test",
+  "op": "drop_not",
+  "category": "datapath",
+  "gt_line": 17,
+  "gt_signals": [
+   "keep_driving"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 53,
+  "failing_outputs": [
+   "keep_driving"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug200",
+  "problem": "Prob132_always_if2",
+  "split": "test",
+  "op": "drop_not",
+  "category": "control",
+  "gt_line": 18,
+  "gt_signals": [
+   "keep_driving"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 60,
+  "failing_outputs": [
+   "keep_driving"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug201",
+  "problem": "Prob133_2014_q3fsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 13,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 107,
+  "long_horizon": true,
+  "mismatches": 248,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug202",
+  "problem": "Prob133_2014_q3fsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 23,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 130,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug203",
+  "problem": "Prob133_2014_q3fsm",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 31,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1413,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug204",
+  "problem": "Prob134_2014_q3c",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 28,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 24,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": false,
+  "body_lines": 24
+ },
+ {
+  "bug_id": "bug205",
+  "problem": "Prob134_2014_q3c",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "Y0"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 13,
+  "failing_outputs": [
+   "Y0"
+  ],
+  "sequential": false,
+  "body_lines": 24
+ },
+ {
+  "bug_id": "bug206",
+  "problem": "Prob134_2014_q3c",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 20,
+  "gt_signals": [
+   "Y0"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 10,
+  "failing_outputs": [
+   "Y0"
+  ],
+  "sequential": false,
+  "body_lines": 24
+ },
+ {
+  "bug_id": "bug207",
+  "problem": "Prob135_m2014_q6b",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 17,
+  "gt_signals": [
+   "Y1"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5,
+  "failing_outputs": [
+   "Y1"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug208",
+  "problem": "Prob135_m2014_q6b",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 12,
+  "gt_signals": [
+   "Y1"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6,
+  "failing_outputs": [
+   "Y1"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug209",
+  "problem": "Prob135_m2014_q6b",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 14,
+  "gt_signals": [
+   "Y1"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 9,
+  "failing_outputs": [
+   "Y1"
+  ],
+  "sequential": false,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug210",
+  "problem": "Prob136_m2014_q6",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 13,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 62,
+  "long_horizon": true,
+  "mismatches": 4,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug211",
+  "problem": "Prob136_m2014_q6",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 24,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug212",
+  "problem": "Prob136_m2014_q6",
+  "split": "test",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 29,
+  "gt_signals": [
+   "z"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 144,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 18
+ },
+ {
+  "bug_id": "bug213",
+  "problem": "Prob137_fsm_serial",
+  "split": "dev",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 29,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 222,
+  "long_horizon": true,
+  "mismatches": 16,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug214",
+  "problem": "Prob137_fsm_serial",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 14,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 9,
+  "long_horizon": true,
+  "mismatches": 66,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug215",
+  "problem": "Prob137_fsm_serial",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 20,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 3,
+  "long_horizon": false,
+  "mismatches": 66,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug216",
+  "problem": "Prob138_2012_q2fsm",
+  "split": "dev",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 11,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 172,
+  "long_horizon": true,
+  "mismatches": 1,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug217",
+  "problem": "Prob138_2012_q2fsm",
+  "split": "dev",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 17,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 2,
+  "long_horizon": false,
+  "mismatches": 46,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug218",
+  "problem": "Prob138_2012_q2fsm",
+  "split": "dev",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 22,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 14,
+  "long_horizon": true,
+  "mismatches": 20,
+  "failing_outputs": [
+   "z"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug219",
+  "problem": "Prob139_2013_q2bfsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 21,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 330,
+  "long_horizon": true,
+  "mismatches": 198,
+  "failing_outputs": [
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug220",
+  "problem": "Prob139_2013_q2bfsm",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 14,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 551,
+  "failing_outputs": [
+   "f",
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug221",
+  "problem": "Prob139_2013_q2bfsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 34,
+  "gt_signals": [
+   "g"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 320,
+  "failing_outputs": [
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 21
+ },
+ {
+  "bug_id": "bug222",
+  "problem": "Prob140_fsm_hdlc",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 21,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 125,
+  "long_horizon": true,
+  "mismatches": 6,
+  "failing_outputs": [
+   "err"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug223",
+  "problem": "Prob140_fsm_hdlc",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 32,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 6,
+  "long_horizon": false,
+  "mismatches": 18,
+  "failing_outputs": [
+   "err",
+   "disc",
+   "flag"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug224",
+  "problem": "Prob140_fsm_hdlc",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 20,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 5,
+  "long_horizon": false,
+  "mismatches": 158,
+  "failing_outputs": [
+   "err",
+   "disc",
+   "flag"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug225",
+  "problem": "Prob141_count_clock",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 28,
+  "gt_signals": [
+   "ss"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 199915,
+  "failing_outputs": [
+   "ss",
+   "mm",
+   "hh",
+   "pm"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug226",
+  "problem": "Prob141_count_clock",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 40,
+  "gt_signals": [
+   "hh"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 170747,
+  "failing_outputs": [
+   "hh",
+   "pm"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug227",
+  "problem": "Prob141_count_clock",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 24,
+  "gt_signals": [
+   "ss"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 199613,
+  "failing_outputs": [
+   "ss",
+   "mm",
+   "hh",
+   "pm"
+  ],
+  "sequential": true,
+  "body_lines": 19
+ },
+ {
+  "bug_id": "bug228",
+  "problem": "Prob142_lemmings2",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 21,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 4,
+  "failing_outputs": [
+   "walk_left",
+   "aaah",
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug229",
+  "problem": "Prob142_lemmings2",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 26,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 90,
+  "failing_outputs": [
+   "walk_left",
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug230",
+  "problem": "Prob142_lemmings2",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 219,
+  "failing_outputs": [
+   "walk_right",
+   "aaah",
+   "walk_left"
+  ],
+  "sequential": true,
+  "body_lines": 16
+ },
+ {
+  "bug_id": "bug231",
+  "problem": "Prob143_fsm_onehot",
+  "split": "test",
+  "op": "drop_not",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 172,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug232",
+  "problem": "Prob143_fsm_onehot",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 16,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 18,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug233",
+  "problem": "Prob143_fsm_onehot",
+  "split": "test",
+  "op": "logic_op",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "next_state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 118,
+  "failing_outputs": [
+   "next_state"
+  ],
+  "sequential": false,
+  "body_lines": 13
+ },
+ {
+  "bug_id": "bug234",
+  "problem": "Prob144_conwaylife",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 30,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5022,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug235",
+  "problem": "Prob144_conwaylife",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 10,
+  "gt_signals": [
+   "q_pad"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 5008,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug236",
+  "problem": "Prob144_conwaylife",
+  "split": "dev",
+  "op": "arith_op",
+  "category": "state",
+  "gt_line": 25,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 778,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 22
+ },
+ {
+  "bug_id": "bug237",
+  "problem": "Prob145_circuit8",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "control",
+  "gt_line": 12,
+  "gt_signals": [
+   "p"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 113,
+  "failing_outputs": [
+   "p"
+  ],
+  "sequential": true,
+  "body_lines": 6
+ },
+ {
+  "bug_id": "bug238",
+  "problem": "Prob146_fsm_serialdata",
+  "split": "test",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 32,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 222,
+  "long_horizon": true,
+  "mismatches": 16,
+  "failing_outputs": [
+   "out_byte",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug239",
+  "problem": "Prob146_fsm_serialdata",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 27,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 37,
+  "long_horizon": true,
+  "mismatches": 22,
+  "failing_outputs": [
+   "done",
+   "out_byte"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug240",
+  "problem": "Prob146_fsm_serialdata",
+  "split": "test",
+  "op": "ternary_swap",
+  "category": "control",
+  "gt_line": 26,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 64,
+  "failing_outputs": [
+   "out_byte",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug241",
+  "problem": "Prob147_circuit10",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 11,
+  "gt_signals": [
+   "c"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 12,
+  "failing_outputs": [
+   "q",
+   "state"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug242",
+  "problem": "Prob147_circuit10",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 13,
+  "gt_signals": [
+   "q"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 6,
+  "failing_outputs": [
+   "q"
+  ],
+  "sequential": true,
+  "body_lines": 5
+ },
+ {
+  "bug_id": "bug243",
+  "problem": "Prob148_2013_q2afsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 22,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 604,
+  "failing_outputs": [
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug244",
+  "problem": "Prob148_2013_q2afsm",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 23,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 136,
+  "failing_outputs": [
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug245",
+  "problem": "Prob148_2013_q2afsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 12,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 25,
+  "failing_outputs": [
+   "g"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug246",
+  "problem": "Prob149_ece241_2013_q4",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 26,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1781,
+  "failing_outputs": [
+   "fr0",
+   "dfr",
+   "fr1",
+   "fr2"
+  ],
+  "sequential": true,
+  "body_lines": 28
+ },
+ {
+  "bug_id": "bug247",
+  "problem": "Prob149_ece241_2013_q4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 34,
+  "gt_signals": [
+   "fr"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 636,
+  "failing_outputs": [
+   "fr2",
+   "fr1",
+   "fr0",
+   "dfr"
+  ],
+  "sequential": true,
+  "body_lines": 28
+ },
+ {
+  "bug_id": "bug248",
+  "problem": "Prob149_ece241_2013_q4",
+  "split": "test",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 15,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 1411,
+  "failing_outputs": [
+   "fr2",
+   "fr1",
+   "fr0",
+   "dfr"
+  ],
+  "sequential": true,
+  "body_lines": 28
+ },
+ {
+  "bug_id": "bug249",
+  "problem": "Prob150_review2015_fsmonehot",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 24,
+  "gt_signals": [
+   "done"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 52,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": false,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug250",
+  "problem": "Prob150_review2015_fsmonehot",
+  "split": "test",
+  "op": "bit_op",
+  "category": "datapath",
+  "gt_line": 19,
+  "gt_signals": [
+   "S_next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 96,
+  "failing_outputs": [
+   "S_next"
+  ],
+  "sequential": false,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug251",
+  "problem": "Prob150_review2015_fsmonehot",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 26,
+  "gt_signals": [
+   "shift_ena"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 27,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": false,
+  "body_lines": 9
+ },
+ {
+  "bug_id": "bug252",
+  "problem": "Prob151_review2015_fsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "state",
+  "gt_line": 35,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 385,
+  "long_horizon": true,
+  "mismatches": 44,
+  "failing_outputs": [
+   "shift_ena",
+   "counting",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 32
+ },
+ {
+  "bug_id": "bug253",
+  "problem": "Prob151_review2015_fsm",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 26,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 798,
+  "failing_outputs": [
+   "shift_ena",
+   "counting",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 32
+ },
+ {
+  "bug_id": "bug254",
+  "problem": "Prob151_review2015_fsm",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 42,
+  "gt_signals": [
+   "shift_ena"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 256,
+  "failing_outputs": [
+   "shift_ena"
+  ],
+  "sequential": true,
+  "body_lines": 32
+ },
+ {
+  "bug_id": "bug255",
+  "problem": "Prob152_lemmings3",
+  "split": "dev",
+  "op": "eq_neq",
+  "category": "control",
+  "gt_line": 42,
+  "gt_signals": [
+   "walk_right"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 443,
+  "failing_outputs": [
+   "walk_right"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug256",
+  "problem": "Prob152_lemmings3",
+  "split": "dev",
+  "op": "cond_invert",
+  "category": "state",
+  "gt_line": 37,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 334,
+  "failing_outputs": [
+   "walk_left",
+   "walk_right",
+   "aaah",
+   "digging"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug257",
+  "problem": "Prob152_lemmings3",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 22,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 69,
+  "failing_outputs": [
+   "walk_right",
+   "aaah",
+   "walk_left",
+   "digging"
+  ],
+  "sequential": true,
+  "body_lines": 26
+ },
+ {
+  "bug_id": "bug258",
+  "problem": "Prob153_gshare",
+  "split": "test",
+  "op": "drop_not",
+  "category": "control",
+  "gt_line": 37,
+  "gt_signals": [
+   "pht"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 436,
+  "failing_outputs": [
+   "predict_taken",
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug259",
+  "problem": "Prob153_gshare",
+  "split": "test",
+  "op": "index_shift",
+  "category": "datapath",
+  "gt_line": 44,
+  "gt_signals": [
+   "predict_taken"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 598,
+  "failing_outputs": [
+   "predict_taken",
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug260",
+  "problem": "Prob153_gshare",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 38,
+  "gt_signals": [
+   "pht"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 466,
+  "failing_outputs": [
+   "predict_taken",
+   "predict_history"
+  ],
+  "sequential": true,
+  "body_lines": 20
+ },
+ {
+  "bug_id": "bug261",
+  "problem": "Prob154_fsm_ps2data",
+  "split": "dev",
+  "op": "sync_to_async",
+  "category": "state",
+  "gt_line": 24,
+  "gt_signals": [
+   "state"
+  ],
+  "latency_cycles": 77,
+  "long_horizon": true,
+  "mismatches": 1,
+  "failing_outputs": [
+   "out_bytes",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 17
+ },
+ {
+  "bug_id": "bug262",
+  "problem": "Prob154_fsm_ps2data",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 20,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 1,
+  "long_horizon": false,
+  "mismatches": 608,
+  "failing_outputs": [
+   "done",
+   "out_bytes"
+  ],
+  "sequential": true,
+  "body_lines": 17
+ },
+ {
+  "bug_id": "bug263",
+  "problem": "Prob154_fsm_ps2data",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 19,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 490,
+  "failing_outputs": [
+   "out_bytes",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 17
+ },
+ {
+  "bug_id": "bug264",
+  "problem": "Prob155_lemmings4",
+  "split": "test",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 45,
+  "gt_signals": [
+   "fall_counter"
+  ],
+  "latency_cycles": 100,
+  "long_horizon": true,
+  "mismatches": 38,
+  "failing_outputs": [
+   "walk_right",
+   "walk_left",
+   "digging",
+   "aaah"
+  ],
+  "sequential": true,
+  "body_lines": 35
+ },
+ {
+  "bug_id": "bug265",
+  "problem": "Prob155_lemmings4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 32,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 38,
+  "failing_outputs": [
+   "walk_right",
+   "walk_left",
+   "digging",
+   "aaah"
+  ],
+  "sequential": true,
+  "body_lines": 35
+ },
+ {
+  "bug_id": "bug266",
+  "problem": "Prob155_lemmings4",
+  "split": "test",
+  "op": "const_pm1",
+  "category": "state",
+  "gt_line": 50,
+  "gt_signals": [
+   "fall_counter"
+  ],
+  "latency_cycles": 35,
+  "long_horizon": true,
+  "mismatches": 44,
+  "failing_outputs": [
+   "walk_left",
+   "aaah"
+  ],
+  "sequential": true,
+  "body_lines": 35
+ },
+ {
+  "bug_id": "bug267",
+  "problem": "Prob156_review2015_fancytimer",
+  "split": "dev",
+  "op": "state_swap",
+  "category": "control",
+  "gt_line": 27,
+  "gt_signals": [
+   "next"
+  ],
+  "latency_cycles": 52215,
+  "long_horizon": true,
+  "mismatches": 33086,
+  "failing_outputs": [
+   "counting",
+   "count",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 46
+ },
+ {
+  "bug_id": "bug268",
+  "problem": "Prob156_review2015_fancytimer",
+  "split": "dev",
+  "op": "const_pm1",
+  "category": "datapath",
+  "gt_line": 50,
+  "gt_signals": [
+   "done"
+  ],
+  "latency_cycles": 0,
+  "long_horizon": false,
+  "mismatches": 524,
+  "failing_outputs": [
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 46
+ },
+ {
+  "bug_id": "bug269",
+  "problem": "Prob156_review2015_fancytimer",
+  "split": "dev",
+  "op": "arith_op",
+  "category": "state",
+  "gt_line": 70,
+  "gt_signals": [
+   "fcount"
+  ],
+  "latency_cycles": 25,
+  "long_horizon": true,
+  "mismatches": 191361,
+  "failing_outputs": [
+   "count",
+   "counting",
+   "done"
+  ],
+  "sequential": true,
+  "body_lines": 46
+ }
+]

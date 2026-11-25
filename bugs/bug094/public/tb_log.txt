@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+Hint: Your reset should be synchronous, but doesn't appear to be.
+<verilog-eval>/Prob086_lfsr5_test.sv:65: $finish called at 22216 (1ps)
+Hint: Output 'q' has 26 mismatches. First mismatch occurred at time 65.
+Hint: Total mismatched samples is 26 out of 4443 samples
+
+Simulation finished at 22216 ps
+Mismatches: 26 in 4443 samples

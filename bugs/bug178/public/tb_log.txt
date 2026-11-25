@@ -1,0 +1,8 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob123_bugs_addsubz_test.sv:57: $finish called at 590 (1ps)
+Hint: Output 'out' has 56 mismatches. First mismatch occurred at time 5.
+Hint: Output 'result_is_zero' has 4 mismatches. First mismatch occurred at time 40.
+Hint: Total mismatched samples is 56 out of 118 samples
+
+Simulation finished at 590 ps
+Mismatches: 56 in 118 samples

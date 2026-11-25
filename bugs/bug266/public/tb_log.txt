@@ -1,0 +1,10 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob155_lemmings4_test.sv:158: $finish called at 5016 (1ps)
+Hint: Output 'walk_left' has 2 mismatches. First mismatch occurred at time 360.
+Hint: Output 'walk_right' has no mismatches.
+Hint: Output 'aaah' has 42 mismatches. First mismatch occurred at time 370.
+Hint: Output 'digging' has no mismatches.
+Hint: Total mismatched samples is 44 out of 1003 samples
+
+Simulation finished at 5016 ps
+Mismatches: 44 in 1003 samples

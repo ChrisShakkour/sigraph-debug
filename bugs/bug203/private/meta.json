@@ -1,0 +1,57 @@
+{
+ "problem": "Prob133_2014_q3fsm",
+ "k": 27,
+ "op": "eq_neq",
+ "category": "control",
+ "line": 31,
+ "old": "  assign z = (state == C);",
+ "new": "  assign z = (state != C);",
+ "note": "",
+ "body_lines": 19,
+ "sequential": true,
+ "n_lines": 33,
+ "text_lhs": [
+  "z"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 1413,
+ "samples": 1414,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "z": 10
+ },
+ "out_mismatch_count": {
+  "z": 1413
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "z"
+ ],
+ "div_order": [
+  [
+   "z",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 707,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "z"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug203",
+ "split": "test",
+ "gt_line": 31,
+ "gt_signals": [
+  "z"
+ ],
+ "long_horizon": false
+}

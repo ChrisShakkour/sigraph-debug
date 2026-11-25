@@ -1,0 +1,57 @@
+{
+ "problem": "Prob069_truthtable1",
+ "k": 3,
+ "op": "drop_not",
+ "category": "datapath",
+ "line": 8,
+ "old": "  assign f = ( ~x3 & x2 & ~x1 ) |",
+ "new": "  assign f = ( ~x3 & x2 & x1 ) |",
+ "note": "",
+ "body_lines": 5,
+ "sequential": false,
+ "n_lines": 13,
+ "text_lhs": [
+  "f"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 2,
+ "samples": 58,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "f": 40
+ },
+ "out_mismatch_count": {
+  "f": 2
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 4,
+ "div_signals": [
+  "f"
+ ],
+ "div_order": [
+  [
+   "f",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 29,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "f"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug061",
+ "split": "test",
+ "gt_line": 8,
+ "gt_signals": [
+  "f"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,57 @@
+{
+ "problem": "Prob030_popcount255",
+ "k": 6,
+ "op": "arith_op",
+ "category": "datapath",
+ "line": 9,
+ "old": "      out = out + in[i];",
+ "new": "      out = out - in[i];",
+ "note": "",
+ "body_lines": 6,
+ "sequential": false,
+ "n_lines": 12,
+ "text_lhs": [
+  "out"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 204,
+ "samples": 215,
+ "t_fail": 20,
+ "out_first_mismatch": {
+  "out": 20
+ },
+ "out_mismatch_count": {
+  "out": 204
+ },
+ "valid": true,
+ "t_act": 15,
+ "cyc_act": 2,
+ "div_signals": [
+  "out"
+ ],
+ "div_order": [
+  [
+   "out",
+   15,
+   2
+  ]
+ ],
+ "clk_edges": 108,
+ "cyc_fail": 2,
+ "failing_outputs": [
+  "out"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 2,
+ "bug_id": "bug002",
+ "split": "test",
+ "gt_line": 9,
+ "gt_signals": [
+  "out"
+ ],
+ "long_horizon": false
+}

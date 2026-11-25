@@ -1,0 +1,57 @@
+{
+ "problem": "Prob078_dualedge",
+ "k": 2,
+ "op": "ternary_swap",
+ "category": "control",
+ "line": 14,
+ "old": "    q <= clk ? qp : qn;",
+ "new": "    q <= clk ? qn : qp;",
+ "note": "",
+ "body_lines": 7,
+ "sequential": true,
+ "n_lines": 16,
+ "text_lhs": [
+  "q"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 93,
+ "samples": 224,
+ "t_fail": 10,
+ "out_first_mismatch": {
+  "q": 10
+ },
+ "out_mismatch_count": {
+  "q": 93
+ },
+ "valid": true,
+ "t_act": 5,
+ "cyc_act": 1,
+ "div_signals": [
+  "q"
+ ],
+ "div_order": [
+  [
+   "q",
+   5,
+   1
+  ]
+ ],
+ "clk_edges": 112,
+ "cyc_fail": 1,
+ "failing_outputs": [
+  "q"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 1,
+ "bug_id": "bug079",
+ "split": "dev",
+ "gt_line": 14,
+ "gt_signals": [
+  "q"
+ ],
+ "long_horizon": false
+}

@@ -1,0 +1,57 @@
+{
+ "problem": "Prob058_alwaysblock2",
+ "k": 1,
+ "op": "bit_op",
+ "category": "datapath",
+ "line": 11,
+ "old": "  always @(*) out_always_comb = a ^ b;",
+ "new": "  always @(*) out_always_comb = a | b;",
+ "note": "",
+ "body_lines": 4,
+ "sequential": true,
+ "n_lines": 14,
+ "text_lhs": [
+  "out_always_comb"
+ ],
+ "compiled": true,
+ "wall_timeout": false,
+ "tb_watchdog": false,
+ "mismatches": 48,
+ "samples": 219,
+ "t_fail": 40,
+ "out_first_mismatch": {
+  "out_always_comb": 40
+ },
+ "out_mismatch_count": {
+  "out_always_comb": 48
+ },
+ "valid": true,
+ "t_act": 35,
+ "cyc_act": 4,
+ "div_signals": [
+  "out_always_comb"
+ ],
+ "div_order": [
+  [
+   "out_always_comb",
+   35,
+   4
+  ]
+ ],
+ "clk_edges": 110,
+ "cyc_fail": 4,
+ "failing_outputs": [
+  "out_always_comb"
+ ],
+ "latency_cycles": 0,
+ "fails_seed1234": true,
+ "fails_seed98765": true,
+ "cyc_act_any": 4,
+ "bug_id": "bug040",
+ "split": "dev",
+ "gt_line": 11,
+ "gt_signals": [
+  "out_always_comb"
+ ],
+ "long_horizon": false
+}

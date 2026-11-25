@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+<verilog-eval>/Prob055_conditional_test.sv:38: $finish called at 560 (1ps)
+Hint: Output 'min' has 112 mismatches. First mismatch occurred at time 5.
+Hint: Total mismatched samples is 112 out of 112 samples
+
+Simulation finished at 560 ps
+Mismatches: 112 in 112 samples
